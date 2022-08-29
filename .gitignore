@@ -35,3 +35,16 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+packages/ui/node_modules
+packages/ui/.next
+hafas-client/dist
+.idea
+
+
+.turbo
+.yarnrc
+.yarn
+
+**/node_modules
+

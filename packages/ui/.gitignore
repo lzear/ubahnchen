@@ -1,0 +1,12 @@
+.idea
+coverage
+.next
+
+# Sentry
+.sentryclirc
+
+node_modules
+.vercel
+
+# Sentry
+.sentryclirc

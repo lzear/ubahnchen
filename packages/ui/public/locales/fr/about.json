@@ -1,0 +1,35 @@
+{
+  "firstDescr": "<0>Ubähnchen</0> est une carte animée des trains de la ville de Berlin. Le design est inspiré du jeu Minimetro.",
+  "about": "À propos",
+  "how": {
+    "title": "Comment ça marche?",
+    "text": "Les deux modes de données peuvent être changés en cliquant sur <1>Temps réel</1> ou <3>Horaires prévus</3> en haut à droite."
+  },
+  "disclaimer": {
+    "text": "Ubähnchen est un site amateur indépendant, sans publicité ni cookies publicitaires. Les données affichées ne sont pas nécessairement valides.",
+    "title": "Clausse de non-responsabilité"
+  },
+  "explain": {
+    "cuteSuffix": "suffixe mignon",
+    "train": "train",
+    "underground": "souterrain"
+  },
+  "links": {
+    "author": "Site de l'auteur",
+    "email": "Courriel",
+    "sourceCode": "Code source",
+    "title": "Liens",
+    "twitter": "Twitter de l'auteur"
+  },
+  "live": {
+    "title": "Mode temps-réel (beta)",
+    "vbbDisclaimer": "Powered by VBB GmbH. Toutes les informations fournies sans garantie.",
+    "text": "L'<2>API HAFAS <1></1></2> a une fonctionalité « radar » qui donne la position de tous les trains, des <5>données d'animation</5>, des données sur les arrêts (origine, destinations, heure) et paramètre <7>proc</7>, qui signifie probablement <10>„position entre les deux arrêts en pourcent“</10>.",
+    "unfortunately": "Malheureusement il existe des erreurs dans l'implementation : les trains peuvent soudainement bouger à toute vitesse ou disparaître de la carte."
+  },
+  "planned": {
+    "title": "Mode « horaires prévus »",
+    "text": "Les horaires sont extraits <2>des données GTFS de la VBB<1></1></2> (téléchargées le <5>{{fileDateInUse}}</5>). Les  <7>horaires d'arrivée</7> et <10>horaires de départ</10> sont calculés pour toutes heures de toutes journées. Le mouvement des trains est simulé à vitesse constante entre les stations.",
+    "outdate": "⚠️ Des nouvelles données GTFS sont disponibles datant du <2>{{gtfsLastModified}}</2>."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "timeControl": "Time control",
+  "buggyBeta": "buggy demo",
+  "changeDateTime": "Change time and date",
+  "learnMore": "Learn more...",
+  "liveMode": "Live data",
+  "ok": "OK",
+  "planned": "Planned schedule",
+  "speed": "Speed",
+  "switchToDark": "Switch to dark mode",
+  "switchToLight": "Switch to light mode",
+  "switchToLive": "Switch to real time mode",
+  "switchToPlanned": "See the plan program at accelerated speed",
+  "switchToSU": "Show U-Bahn and S-Bahn",
+  "switchToU": "Show S-Bahn only",
+
+  "about": "Information",
+  "stats": "Statistics",
+  "copyLink": "Copy link to selected time",
+  "settings": {
+    "showWater": "Display city map in the background (S+U mode only)",
+    "language": "Language",
+    "name": "Settings",
+    "highRes": "High resolution",
+    "fadeInOut": "Trains fade-in and fade-out",
+    "displayStations": "Display stations",
+    "displayStationNames": "Display station names",
+    "extraDevInfo": "Developer mode",
+    "precision": "Precision",
+    "shadowBrightness": "Shadow brightness",
+    "fps": "FPS",
+    "max": "Max"
+  },
+  "urlCopied": "URL copied",
+  "forDate": "For date",
+  "time": {
+    "shortHour": "h",
+    "shortDay": "d",
+    "now": "now",
+    "nowLabel": "Set the date to the current moment"
+  },
+  "poweredByVBB": "powered by VBB GmbH",
+  "mobileWarning": {
+    "title": "Desktop optimized",
+    "description": "Running this application on mobile"
+  }
+}

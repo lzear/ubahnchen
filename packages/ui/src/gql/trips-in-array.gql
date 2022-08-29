@@ -1,0 +1,16 @@
+
+query FindManyTrips($where: TripsWhereInput) {
+    findManyTrips(where: $where) {
+        route_id
+        trip_id
+        routes {
+            route_name
+        }
+        stop_times {
+            stops {
+                stop_id
+                stop_name
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    //    "target": "es5",
+    "target": "es2019",
+    "lib": ["dom", "dom.iterable", "esnext", "es2019", "esnext.asynciterable"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    //    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    //    "jsx": "preserve",
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    // Sindre
+    "allowSyntheticDefaultImports": true,
+    // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import. This flag tells TypeScript that it's okay to use import on CommonJS modules.
+    //    "resolveJsonModule": false, // ESM doesn't yet support JSON modules.
+    "jsx": "preserve",
+    "declaration": true,
+    "pretty": true,
+    "newLine": "lf",
+    "stripInternal": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noEmitOnError": true,
+    "useDefineForClassFields": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

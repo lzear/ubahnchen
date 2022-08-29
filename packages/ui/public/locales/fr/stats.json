@@ -1,0 +1,10 @@
+{
+  "info": "Les données de cette page sont calculées à partir des données GTFS entre les dates {{date1}} et {{date2}} ({{dayCount}} jours).",
+  "trainHistogram": {
+    "title": "Histogramme des activité quotidiennes des lignes (moyenne)"
+  },
+  "stationHistogram": {
+    "title": "Arrêts en quotidiens station (moyenne)"
+  },
+  "total": "total"
+}

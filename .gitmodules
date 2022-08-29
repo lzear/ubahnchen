@@ -1,0 +1,4 @@
+[submodule "hafas-client"]
+	path = hafas-client
+	url = https://github.com/lzear/hafas-client.git
+	branch = master

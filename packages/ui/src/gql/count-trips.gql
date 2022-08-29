@@ -1,0 +1,8 @@
+query CountTrips {
+    groupByTrips(by: route_id) {
+        _count {
+            trip_id
+        }
+        route_id
+    }
+}

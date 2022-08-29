@@ -1,0 +1,145 @@
+[
+  {
+    "route_name": "S1",
+    "paths": ["S1-5", "S8-1"]
+  },
+  {
+    "route_name": "S2",
+    "paths": ["S2-6", "S2_nord", "S1-5", "S8-1"]
+  },
+  {
+    "route_name": "S25",
+    "paths": ["S25_nord", "S2-6", "S25_süd"]
+  },
+  {
+    "route_name": "S26",
+    "paths": ["S25_süd", "S25_nord", "S2-6"]
+  },
+  {
+    "route_name": "S3",
+    "paths": ["s3_1_", "S7_x2F_75"]
+  },
+  {
+    "route_name": "S41",
+    "paths": ["S41", "S8-1", "S9-1"]
+  },
+  {
+    "route_name": "S42",
+    "paths": ["S42", "S9-1"]
+  },
+  {
+    "route_name": "S45",
+    "paths": ["S45_sudring_2_", "S45_bbi", "s_bbi__x28_ready..._x29_", "S9-1"]
+  },
+  {
+    "route_name": "S46",
+    "paths": ["S45_sudring_2_", "S9-1"]
+  },
+  {
+    "route_name": "S47",
+    "paths": ["S45_sudring_2_", "S47", "S9-1"]
+  },
+  {
+    "route_name": "S5",
+    "paths": ["s5_2_", "s3_1_", "S7_x2F_75"]
+  },
+  {
+    "route_name": "S7",
+    "paths": ["S7_ost", "S7_x2F_75", "s3_1_"],
+    "hardcode": [
+      {
+        "stop_id": "de:11000:900025423",
+        "stop_name": "S Messe Süd (Berlin)",
+        "path": "s3_1_"
+      }
+    ]
+  },
+  {
+    "route_name": "S75",
+    "paths": ["S7_x2F_75", "S7_ost"]
+  },
+  {
+    "route_name": "S8",
+    "paths": ["S8-1", "S1-5", "S45_sudring_2_", "S9-1"]
+  },
+  {
+    "route_name": "S85",
+    "paths": ["S8-1", "S1-5", "S9-1"]
+  },
+  {
+    "route_name": "S9",
+    "paths": [
+      "S9-1",
+      "S45_sudring_2_",
+      "s_bbi__x28_ready..._x29_",
+      "S7_x2F_75",
+      "S8-1"
+    ],
+    "hardcode": [
+      {
+        "stop_id": "de:11000:900120003",
+        "stop_name": "S Ostkreuz Bhf (Berlin)",
+        "path": "S7_x2F_75"
+      }
+    ]
+  },
+  {
+    "route_name": "U1",
+    "paths": ["U1"]
+  },
+  {
+    "route_name": "U2",
+    "paths": ["U2", "U3"],
+    "hardcode": [
+      {
+        "stop_id": "de:11000:900056102",
+        "stop_name": "U Nollendorfplatz (Berlin)",
+        "path": "U2"
+      }
+    ]
+  },
+  {
+    "route_name": "U3",
+    "paths": ["U3", "U2"],
+    "hardcode": [
+      {
+        "stop_id": "de:11000:900056104",
+        "stop_name": "U Bülowstr. (Berlin)",
+        "path": "U2"
+      },
+      {
+        "stop_id": "de:11000:900056102",
+        "stop_name": "U Nollendorfplatz (Berlin)",
+        "path": "U3"
+      }
+    ]
+  },
+  {
+    "route_name": "U4",
+    "paths": ["U4"]
+  },
+  {
+    "route_name": "U5",
+    "paths": ["U5"]
+  },
+  {
+    "route_name": "U6",
+    "paths": ["U6"]
+  },
+  {
+    "route_name": "U7",
+    "paths": ["U7"]
+  },
+  {
+    "route_name": "U8",
+    "paths": ["U8"]
+  },
+  {
+    "route_name": "U9",
+    "paths": ["U9"]
+  },
+  {
+    "route_name": "U12",
+    "paths": ["U1", "U2", "U3"]
+  }
+]

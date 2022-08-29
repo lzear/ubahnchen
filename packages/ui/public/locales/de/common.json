@@ -1,0 +1,47 @@
+{
+  "timeControl": "Zeitkontrolle",
+  "buggyBeta": "defekt beta",
+  "changeDateTime": "Datum und Uhrzeit ändern",
+  "learnMore": "Lern mehr...",
+  "liveMode": "Echtzeit",
+  "ok": "OK",
+  "planned": "Fahrplankarte",
+  "speed": "Geschwindigkeit",
+  "switchToDark": "Dunkelmodus aktivieren",
+  "switchToLight": "Hellmodus aktivieren",
+  "switchToLive": "zu Echtzeitmodus wechseln",
+  "switchToPlanned": "zu geplante Fahrplan wechseln",
+  "switchToSU": "zu S+U Bahn Karte wechseln und echter Karte zeigen",
+  "switchToU": "zu U Bahn Karte wechseln und schematisiert Karte zeigen",
+
+  "about": "Information",
+  "stats": "Statistiken",
+  "copyLink": "Link zum ausgewählten Moment kopieren",
+  "settings": {
+    "showWater": "Stadtplan im Hintergrund anzeigen (nur in S+U Modus)",
+    "language": "Sprache",
+    "name": "Einstellungen",
+    "highRes": "Hohe Pixelauflösung",
+    "fadeInOut": "Züge animiert ein- und ausblenden",
+    "displayStations": "Stationen anzeigen",
+    "displayStationNames": "Stationsnamen anzeigen",
+    "extraDevInfo": "Zusätzliche Entwicklerausgaben",
+    "precision": "Präzision",
+    "shadowBrightness": "Schattenhelligkeit",
+    "fps": "FPS",
+    "max": "Max"
+  },
+  "urlCopied": "URL kopiert",
+  "forDate": "Für Zeit",
+  "time": {
+    "shortHour": "Std",
+    "shortDay": "t",
+    "now": "jetzt",
+    "nowLabel": "Stellen Sie die Zeit auf jetzt"
+  },
+  "poweredByVBB": "powered by VBB GmbH",
+  "mobileWarning": {
+    "title": "Optimisiert für Komputer",
+    "description": "Diese Website funktioniert möglicherweise nicht richtig im mobilen Browser"
+  }
+}

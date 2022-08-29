@@ -1,0 +1,35 @@
+{
+  "firstDescr": "<0>Ubähnchen</0> is a map of the Berlin trains. The design is inspired by the game Minimetro.",
+  "about": "About",
+  "how": {
+    "title": "How it works",
+    "text": "Modes can be toggled by clicking <1>Live mode</1> or <3>Scheduled mode</3>, on the top right of the window."
+  },
+  "disclaimer": {
+    "text": "Ubähnchen is an independent amateur website, not connected to any company or organisation. It's free, free of ads and cookies. The displayed date can be inacurate. Use at your own risk, blablabla...",
+    "title": "Disclaimer"
+  },
+  "explain": {
+    "cuteSuffix": "cute suffix",
+    "train": "train",
+    "underground": "underground"
+  },
+  "links": {
+    "author": "Author's website",
+    "email": "Email address",
+    "sourceCode": "Source code",
+    "title": "Links",
+    "twitter": "Author's Twitter"
+  },
+  "live": {
+    "title": "Live mode (beta)",
+    "vbbDisclaimer": "Powered by VBB GmbH. All information without guarantee.",
+    "text": "The <2>HAFAS API <1></1></2> has a “radar” endpoint, giving the position of all trains and <5>animation data</5>, containing stops information (origin, target, time) and a <7>proc</7> value, which I think means <10>“position between 2 stops in percent“</10>.",
+    "unfortunately": "Unfortunately, there are some implementation mistakes in Ubähnchen causing trains to move weirdly or disappear."
+  },
+  "planned": {
+    "title": "Planned mode",
+    "text": "Schedules are extracted from the <2>GTFS data of the VBB<1></1></2> (loaded on <5>{{fileDateInUse}}</5>) which contains <7>arrival time</7> and <10>departure time</10> of every hour of every day. The movement of the train is simulated at constant speed between stations.",
+    "outdate": "⚠️ New GTFS data from VBB is available, making this website out of date. It was uploaded on <2>{{gtfsLastModified}}</2>."
+  }
+}

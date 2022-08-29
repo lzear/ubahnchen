@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "pages/api/trips.ts": {
+      "includeFiles": "gtfs/mini/**"
+    }
+  }
+}

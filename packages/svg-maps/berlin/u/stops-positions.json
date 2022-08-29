@@ -1,0 +1,1402 @@
+[
+  {
+    "point": [
+      1170.72265,
+      613.4105
+    ],
+    "stop_id": "de:11000:900120004",
+    "stop_name": "S+U Warschauer Str. (Berlin)"
+  },
+  {
+    "point": [
+      1117.64307,
+      607.39563
+    ],
+    "stop_id": "de:11000:900014102",
+    "stop_name": "U Schlesisches Tor (Berlin)"
+  },
+  {
+    "point": [
+      1069.89307,
+      607.39563
+    ],
+    "stop_id": "de:11000:900014101",
+    "stop_name": "U Görlitzer Bahnhof (Berlin)"
+  },
+  {
+    "point": [
+      1017.97265,
+      613.4105
+    ],
+    "stop_id": "de:11000:900013102",
+    "stop_name": "U Kottbusser Tor (Berlin)"
+  },
+  {
+    "point": [
+      959.64331,
+      607.39563
+    ],
+    "stop_id": "de:11000:900013103",
+    "stop_name": "U Prinzenstr. (Berlin)"
+  },
+  {
+    "point": [
+      900.28365,
+      613.4105
+    ],
+    "stop_id": "de:11000:900012103",
+    "stop_name": "U Hallesches Tor (Berlin)"
+  },
+  {
+    "point": [
+      843.12405,
+      619.4103
+    ],
+    "stop_id": "de:11000:900017104",
+    "stop_name": "U Möckernbrücke (Berlin)"
+  },
+  {
+    "point": [
+      785.86425,
+      613.4105
+    ],
+    "stop_id": "de:11000:900017103",
+    "stop_name": "U Gleisdreieck (Berlin)"
+  },
+  {
+    "point": [
+      752.04297,
+      607.39563
+    ],
+    "stop_id": "de:11000:900005201",
+    "stop_name": "U Kurfürstenstr. (Berlin)"
+  },
+  {
+    "point": [
+      685.12645,
+      607.4105
+    ],
+    "stop_id": "de:11000:900056102",
+    "stop_name": "U Nollendorfplatz (Berlin)"
+  },
+  {
+    "point": [
+      635.74515,
+      607.4105
+    ],
+    "stop_id": "de:11000:900056101",
+    "stop_name": "U Wittenbergplatz (Berlin)"
+  },
+  {
+    "point": [
+      579.1779550000001,
+      607.4150050000001
+    ],
+    "stop_id": "de:11000:900023203",
+    "stop_name": "U Kurfürstendamm (Berlin)"
+  },
+  {
+    "point": [
+      512.427955,
+      607.4150650000001
+    ],
+    "stop_id": "de:11000:900023301",
+    "stop_name": "U Uhlandstr. (Berlin)"
+  },
+  {
+    "point": [
+      1070.272685,
+      255.59331499999996
+    ],
+    "stop_id": "de:11000:900130002",
+    "stop_name": "S+U Pankow (Berlin)"
+  },
+  {
+    "point": [
+      1070.18995,
+      286.12219
+    ],
+    "stop_id": "de:11000:900130011",
+    "stop_name": "U Vinetastr. (Berlin)"
+  },
+  {
+    "point": [
+      1070.18995,
+      316.65466
+    ],
+    "stop_id": "de:11000:900110001",
+    "stop_name": "S+U Schönhauser Allee (Berlin)"
+  },
+  {
+    "point": [
+      1070.18995,
+      347.15466
+    ],
+    "stop_id": "de:11000:900110006",
+    "stop_name": "U Eberswalder Str. (Berlin)"
+  },
+  {
+    "point": [
+      1070.18995,
+      377.65466
+    ],
+    "stop_id": "de:11000:900110005",
+    "stop_name": "U Senefelderplatz (Berlin)"
+  },
+  {
+    "point": [
+      1059.00977,
+      404.97485
+    ],
+    "stop_id": "de:11000:900100016",
+    "stop_name": "U Rosa-Luxemburg-Platz (Berlin)"
+  },
+  {
+    "point": [
+      1017.912335,
+      446.00240499999995
+    ],
+    "stop_id": "de:11000:900100003",
+    "stop_name": "S+U Alexanderplatz Bhf (Berlin)"
+  },
+  {
+    "point": [
+      989.18262,
+      474.80163
+    ],
+    "stop_id": "de:11000:900100015",
+    "stop_name": "U Klosterstr. (Berlin)"
+  },
+  {
+    "point": [
+      970.79786,
+      493.18652
+    ],
+    "stop_id": "de:11000:900100014",
+    "stop_name": "U Märkisches Museum (Berlin)"
+  },
+  {
+    "point": [
+      952.41333,
+      511.57116999999994
+    ],
+    "stop_id": "de:11000:900100013",
+    "stop_name": "U Spittelmarkt (Berlin)"
+  },
+  {
+    "point": [
+      926.85376,
+      527.91809
+    ],
+    "stop_id": "de:11000:900100012",
+    "stop_name": "U Hausvogteiplatz (Berlin)"
+  },
+  {
+    "point": [
+      900.291725,
+      527.949525
+    ],
+    "stop_id": "de:11000:900100011",
+    "stop_name": "U Stadtmitte (Berlin)"
+  },
+  {
+    "point": [
+      846.60132,
+      527.91809
+    ],
+    "stop_id": "de:11000:900100010",
+    "stop_name": "U Mohrenstr. (Berlin)"
+  },
+  {
+    "point": [
+      809.93482,
+      527.91809
+    ],
+    "stop_id": "de:11000:900100020",
+    "stop_name": "S+U Potsdamer Platz Bhf (Berlin)"
+  },
+  {
+    "point": [
+      785.88355,
+      554.59936
+    ],
+    "stop_id": "de:11000:900005252",
+    "stop_name": "U Mendelssohn-Bartholdy-Park (Berlin)"
+  },
+  {
+    "point": [
+      765.91431,
+      645.51178
+    ],
+    "stop_id": "de:11000:900056104",
+    "stop_name": "U Bülowstr. (Berlin)"
+  },
+  {
+    "point": [
+      579.1779550000001,
+      550.9118350000001
+    ],
+    "stop_id": "de:11000:900023201",
+    "stop_name": "S+U Zoologischer Garten Bhf (Berlin)"
+  },
+  {
+    "point": [
+      537.84375,
+      532.18188
+    ],
+    "stop_id": "de:11000:900023101",
+    "stop_name": "U Ernst-Reuter-Platz (Berlin)"
+  },
+  {
+    "point": [
+      492.94263,
+      532.18201
+    ],
+    "stop_id": "de:11000:900022201",
+    "stop_name": "U Deutsche Oper (Berlin)"
+  },
+  {
+    "point": [
+      434.208715,
+      532.2259750000001
+    ],
+    "stop_id": "de:11000:900024201",
+    "stop_name": "U Bismarckstr. (Berlin)"
+  },
+  {
+    "point": [
+      392.17994,
+      532.18188
+    ],
+    "stop_id": "de:11000:900022101",
+    "stop_name": "U Sophie-Charlotte-Platz (Berlin)"
+  },
+  {
+    "point": [
+      352.17994,
+      532.18201
+    ],
+    "stop_id": "de:11000:900026202",
+    "stop_name": "U Kaiserdamm (Berlin)"
+  },
+  {
+    "point": [
+      312.17969,
+      532.18201
+    ],
+    "stop_id": "de:11000:900026201",
+    "stop_name": "U Theodor-Heuss-Platz (Berlin)"
+  },
+  {
+    "point": [
+      278.77222,
+      512.77759
+    ],
+    "stop_id": "de:11000:900026101",
+    "stop_name": "U Neu-Westend (Berlin)"
+  },
+  {
+    "point": [
+      254.02344,
+      488.02856
+    ],
+    "stop_id": "de:11000:900025203",
+    "stop_name": "U Olympia-Stadion (Berlin)"
+  },
+  {
+    "point": [
+      220.83371499999998,
+      454.808225
+    ],
+    "stop_id": "de:11000:900025202",
+    "stop_name": "U Ruhleben (Berlin)"
+  },
+  {
+    "point": [
+      604.56519,
+      634.43561
+    ],
+    "stop_id": "de:11000:900023202",
+    "stop_name": "U Augsburger Str. (Berlin)"
+  },
+  {
+    "point": [
+      579.1779550000001,
+      659.8190549999999
+    ],
+    "stop_id": "de:11000:900042101",
+    "stop_name": "U Spichernstr. (Berlin)"
+  },
+  {
+    "point": [
+      553.17188,
+      685.81732
+    ],
+    "stop_id": "de:11000:900043101",
+    "stop_name": "U Hohenzollernplatz (Berlin)"
+  },
+  {
+    "point": [
+      519.9279550000001,
+      719.2476449999999
+    ],
+    "stop_id": "de:11000:900041101",
+    "stop_name": "U Fehrbelliner Platz (Berlin)"
+  },
+  {
+    "point": [
+      493.3169,
+      745.68384
+    ],
+    "stop_id": "de:11000:900045102",
+    "stop_name": "S+U Heidelberger Platz (Berlin)"
+  },
+  {
+    "point": [
+      468.8169,
+      770.18378
+    ],
+    "stop_id": "de:11000:900045101",
+    "stop_name": "U Rüdesheimer Platz (Berlin)"
+  },
+  {
+    "point": [
+      444.31861,
+      794.68207
+    ],
+    "stop_id": "de:11000:900051202",
+    "stop_name": "U Breitenbachplatz (Berlin)"
+  },
+  {
+    "point": [
+      419.81446,
+      819.18597
+    ],
+    "stop_id": "de:11000:900051302",
+    "stop_name": "U Podbielskiallee (Berlin)"
+  },
+  {
+    "point": [
+      395.31617,
+      843.68432
+    ],
+    "stop_id": "de:11000:900051303",
+    "stop_name": "U Dahlem-Dorf (Berlin)"
+  },
+  {
+    "point": [
+      370.79419,
+      868.20672
+    ],
+    "stop_id": "de:11000:900051201",
+    "stop_name": "U Freie Universität (Thielplatz) (Berlin)"
+  },
+  {
+    "point": [
+      346.29615,
+      892.70489
+    ],
+    "stop_id": "de:11000:900051301",
+    "stop_name": "U Oskar-Helene-Heim (Berlin)"
+  },
+  {
+    "point": [
+      321.79175,
+      917.20886
+    ],
+    "stop_id": "de:11000:900050282",
+    "stop_name": "U Onkel Toms Hütte (Berlin)"
+  },
+  {
+    "point": [
+      296.279515,
+      942.726715
+    ],
+    "stop_id": "de:11000:900050201",
+    "stop_name": "U Krumme Lanke (Berlin)"
+  },
+  {
+    "point": [
+      685.1399,
+      669.47845
+    ],
+    "stop_id": "de:11000:900055101",
+    "stop_name": "U Viktoria-Luise-Platz (Berlin)"
+  },
+  {
+    "point": [
+      685.155495,
+      719.2476449999999
+    ],
+    "stop_id": "de:11000:900055102",
+    "stop_name": "U Bayerischer Platz (Berlin)"
+  },
+  {
+    "point": [
+      685.14014,
+      762.3551
+    ],
+    "stop_id": "de:11000:900054101",
+    "stop_name": "U Rathaus Schöneberg (Berlin)"
+  },
+  {
+    "point": [
+      685.155495,
+      800.7475850000001
+    ],
+    "stop_id": "de:11000:900054105",
+    "stop_name": "S+U Innsbrucker Platz (Berlin)"
+  },
+  {
+    "point": [
+      1610.7551050000002,
+      337.29009499999995
+    ],
+    "stop_id": "de:11000:900175010",
+    "stop_name": "U Hönow (Berlin)"
+  },
+  {
+    "point": [
+      1585.97168,
+      361.8457
+    ],
+    "stop_id": "de:11000:900175015",
+    "stop_name": "U Louis-Lewin-Str. (Berlin)"
+  },
+  {
+    "point": [
+      1565.56153,
+      382.2633
+    ],
+    "stop_id": "de:11000:900175007",
+    "stop_name": "U Hellersdorf (Berlin)"
+  },
+  {
+    "point": [
+      1545.13623,
+      402.68127
+    ],
+    "stop_id": "de:11000:900175006",
+    "stop_name": "U Cottbusser Platz (Berlin)"
+  },
+  {
+    "point": [
+      1524.62793,
+      423.18945
+    ],
+    "stop_id": "de:11000:900175005",
+    "stop_name": "U Kienberg (Gärten der Welt) (Berlin)"
+  },
+  {
+    "point": [
+      1504.21778,
+      443.60718
+    ],
+    "stop_id": "de:11000:900175004",
+    "stop_name": "U Kaulsdorf-Nord (Berlin)"
+  },
+  {
+    "point": [
+      1483.79248,
+      464.02478
+    ],
+    "stop_id": "de:11000:900175001",
+    "stop_name": "S+U Wuhletal (Berlin)"
+  },
+  {
+    "point": [
+      1463.38233,
+      484.44238
+    ],
+    "stop_id": "de:11000:900171006",
+    "stop_name": "U Elsterwerdaer Platz (Berlin)"
+  },
+  {
+    "point": [
+      1443.07911,
+      504.81604
+    ],
+    "stop_id": "de:11000:900171005",
+    "stop_name": "U Biesdorf-Süd (Berlin)"
+  },
+  {
+    "point": [
+      1407.57911,
+      504.81604
+    ],
+    "stop_id": "de:11000:900161002",
+    "stop_name": "U Tierpark (Berlin)"
+  },
+  {
+    "point": [
+      1387.20557,
+      484.44275
+    ],
+    "stop_id": "de:11000:900161512",
+    "stop_name": "U Friedrichsfelde (Berlin)"
+  },
+  {
+    "point": [
+      1366.7876,
+      464.02502
+    ],
+    "stop_id": "de:11000:900160004",
+    "stop_name": "S+U Lichtenberg Bhf (Berlin)"
+  },
+  {
+    "point": [
+      1336.33057,
+      445.94275
+    ],
+    "stop_id": "de:11000:900160005",
+    "stop_name": "U Magdalenenstr. (Berlin)"
+  },
+  {
+    "point": [
+      1294.83057,
+      445.94287
+    ],
+    "stop_id": "de:11000:900120001",
+    "stop_name": "S+U Frankfurter Allee (Berlin)"
+  },
+  {
+    "point": [
+      1253.33057,
+      445.94287
+    ],
+    "stop_id": "de:11000:900120009",
+    "stop_name": "U Samariterstr. (Berlin)"
+  },
+  {
+    "point": [
+      1211.83057,
+      445.94287
+    ],
+    "stop_id": "de:11000:900120008",
+    "stop_name": "U Frankfurter Tor (Berlin)"
+  },
+  {
+    "point": [
+      1170.33057,
+      445.94287
+    ],
+    "stop_id": "de:11000:900120025",
+    "stop_name": "U Weberwiese (Berlin)"
+  },
+  {
+    "point": [
+      1128.83057,
+      445.94299
+    ],
+    "stop_id": "de:11000:900120006",
+    "stop_name": "U Strausberger Platz (Berlin)"
+  },
+  {
+    "point": [
+      1087.33057,
+      445.94287
+    ],
+    "stop_id": "de:11000:900100017",
+    "stop_name": "U Schillingstr. (Berlin)"
+  },
+  {
+    "point": [
+      983.95581,
+      445.94287
+    ],
+    "stop_id": "de:11000:900100045",
+    "stop_name": "U Rotes Rathaus (Berlin)"
+  },
+  {
+    "point": [
+      934.19312,
+      445.94287
+    ],
+    "stop_id": "de:11000:900100537",
+    "stop_name": "U Museumsinsel (Berlin)"
+  },
+  {
+    "point": [
+      900.3019850000001,
+      446.00240499999995
+    ],
+    "stop_id": "de:11000:900100513",
+    "stop_name": "U Unter den Linden (Berlin)"
+  },
+  {
+    "point": [
+      839.94483,
+      445.94299
+    ],
+    "stop_id": "de:11000:900100025",
+    "stop_name": "S+U Brandenburger Tor (Berlin)"
+  },
+  {
+    "point": [
+      791.82325,
+      445.94287
+    ],
+    "stop_id": "de:11000:900003254",
+    "stop_name": "U Bundestag (Berlin)"
+  },
+  {
+    "point": [
+      740.495825,
+      446.00240499999995
+    ],
+    "stop_id": "de:11000:900003201",
+    "stop_name": "S+U Berlin Hauptbahnhof"
+  },
+  {
+    "point": [
+      562.3864550000001,
+      93.861395
+    ],
+    "stop_id": "de:11000:900089301",
+    "stop_name": "U Alt-Tegel (Berlin)"
+  },
+  {
+    "point": [
+      586.61695,
+      117.9895
+    ],
+    "stop_id": "de:11000:900088202",
+    "stop_name": "U Borsigwerke (Berlin)"
+  },
+  {
+    "point": [
+      606.99048,
+      138.36304
+    ],
+    "stop_id": "de:11000:900088201",
+    "stop_name": "U Holzhauser Str. (Berlin)"
+  },
+  {
+    "point": [
+      627.40796,
+      158.78052
+    ],
+    "stop_id": "de:11000:900086101",
+    "stop_name": "U Otisstr. (Berlin)"
+  },
+  {
+    "point": [
+      647.80372,
+      179.17651
+    ],
+    "stop_id": "de:11000:900087101",
+    "stop_name": "U Scharnweberstr. (Berlin)"
+  },
+  {
+    "point": [
+      668.22144,
+      199.59399
+    ],
+    "stop_id": "de:11000:900086102",
+    "stop_name": "U Kurt-Schumacher-Platz (Berlin)"
+  },
+  {
+    "point": [
+      688.59497,
+      219.96741
+    ],
+    "stop_id": "de:11000:900011102",
+    "stop_name": "U Afrikanische Str. (Berlin)"
+  },
+  {
+    "point": [
+      709.01246,
+      240.38513
+    ],
+    "stop_id": "de:11000:900011101",
+    "stop_name": "U Rehberge (Berlin)"
+  },
+  {
+    "point": [
+      729.40894,
+      260.78149
+    ],
+    "stop_id": "de:11000:900009103",
+    "stop_name": "U Seestr. (Berlin)"
+  },
+  {
+    "point": [
+      756.1364550000001,
+      287.611215
+    ],
+    "stop_id": "de:11000:900009102",
+    "stop_name": "U Leopoldplatz (Berlin)"
+  },
+  {
+    "point": [
+      783.69019,
+      315.06274
+    ],
+    "stop_id": "de:11000:900009104",
+    "stop_name": "S+U Wedding (Berlin)"
+  },
+  {
+    "point": [
+      804.11548,
+      335.48779
+    ],
+    "stop_id": "de:11000:900008102",
+    "stop_name": "U Reinickendorfer Str. (Berlin)"
+  },
+  {
+    "point": [
+      824.51172,
+      355.88476
+    ],
+    "stop_id": "de:11000:900100501",
+    "stop_name": "U Schwartzkopffstr. (Berlin)"
+  },
+  {
+    "point": [
+      844.89673,
+      376.26916
+    ],
+    "stop_id": "de:11000:900100009",
+    "stop_name": "U Naturkundemuseum (Berlin)"
+  },
+  {
+    "point": [
+      865.29322,
+      396.66577
+    ],
+    "stop_id": "de:11000:900100019",
+    "stop_name": "U Oranienburger Tor (Berlin)"
+  },
+  {
+    "point": [
+      885.69214,
+      417.0647
+    ],
+    "stop_id": "de:11000:900100001",
+    "stop_name": "S+U Friedrichstr. Bhf (Berlin)"
+  },
+  {
+    "point": [
+      900.28956,
+      567.12134
+    ],
+    "stop_id": "de:11000:900012102",
+    "stop_name": "U Kochstr./Checkpoint Charlie (Berlin)"
+  },
+  {
+    "point": [
+      900.291725,
+      680.1542650000001
+    ],
+    "stop_id": "de:11000:900017101",
+    "stop_name": "U Mehringdamm (Berlin)"
+  },
+  {
+    "point": [
+      900.2898,
+      724.62128
+    ],
+    "stop_id": "de:11000:900017102",
+    "stop_name": "U Platz der Luftbrücke (Berlin)"
+  },
+  {
+    "point": [
+      900.2898,
+      754.62134
+    ],
+    "stop_id": "de:11000:900068101",
+    "stop_name": "U Paradestr. (Berlin)"
+  },
+  {
+    "point": [
+      900.29004,
+      784.6217
+    ],
+    "stop_id": "de:11000:900068201",
+    "stop_name": "S+U Tempelhof (Berlin)"
+  },
+  {
+    "point": [
+      900.2898,
+      814.6217
+    ],
+    "stop_id": "de:11000:900068202",
+    "stop_name": "U Alt-Tempelhof (Berlin)"
+  },
+  {
+    "point": [
+      900.2898,
+      844.6217
+    ],
+    "stop_id": "de:11000:900068302",
+    "stop_name": "U Kaiserin-Augusta-Str. (Berlin)"
+  },
+  {
+    "point": [
+      900.2898,
+      874.6217
+    ],
+    "stop_id": "de:11000:900069271",
+    "stop_name": "U Ullsteinstr. (Berlin)"
+  },
+  {
+    "point": [
+      900.2898,
+      904.6214
+    ],
+    "stop_id": "de:11000:900070101",
+    "stop_name": "U Westphalweg (Berlin)"
+  },
+  {
+    "point": [
+      900.190165,
+      938.529385
+    ],
+    "stop_id": "de:11000:900070301",
+    "stop_name": "U Alt-Mariendorf (Berlin)"
+  },
+  {
+    "point": [
+      75.625225,
+      410.95742500000006
+    ],
+    "stop_id": "de:11000:900029302",
+    "stop_name": "S+U Rathaus Spandau (Berlin)"
+  },
+  {
+    "point": [
+      127.33374,
+      410.96399
+    ],
+    "stop_id": "de:11000:900029301",
+    "stop_name": "U Altstadt Spandau (Berlin)"
+  },
+  {
+    "point": [
+      167.33399,
+      410.96374
+    ],
+    "stop_id": "de:11000:900033101",
+    "stop_name": "U Zitadelle (Berlin)"
+  },
+  {
+    "point": [
+      207.3335,
+      410.96387
+    ],
+    "stop_id": "de:11000:900034102",
+    "stop_name": "U Haselhorst (Berlin)"
+  },
+  {
+    "point": [
+      247.33399,
+      410.96399
+    ],
+    "stop_id": "de:11000:900034101",
+    "stop_name": "U Paulsternstr. (Berlin)"
+  },
+  {
+    "point": [
+      287.33374,
+      410.96387
+    ],
+    "stop_id": "de:11000:900036101",
+    "stop_name": "U Rohrdamm (Berlin)"
+  },
+  {
+    "point": [
+      327.33423,
+      410.96387
+    ],
+    "stop_id": "de:11000:900035101",
+    "stop_name": "U Siemensdamm (Berlin)"
+  },
+  {
+    "point": [
+      367.33423,
+      410.96387
+    ],
+    "stop_id": "de:11000:900018102",
+    "stop_name": "U Halemweg (Berlin)"
+  },
+  {
+    "point": [
+      407.33423,
+      410.96387
+    ],
+    "stop_id": "de:11000:900018101",
+    "stop_name": "U Jakob-Kaiser-Platz (Berlin)"
+  },
+  {
+    "point": [
+      434.18995,
+      434.24231
+    ],
+    "stop_id": "de:11000:900020201",
+    "stop_name": "S+U Jungfernheide Bhf (Berlin)"
+  },
+  {
+    "point": [
+      434.18995,
+      464.24267
+    ],
+    "stop_id": "de:11000:900019204",
+    "stop_name": "U Mierendorffplatz (Berlin)"
+  },
+  {
+    "point": [
+      434.18995,
+      494.24267
+    ],
+    "stop_id": "de:11000:900022202",
+    "stop_name": "U Richard-Wagner-Platz (Berlin)"
+  },
+  {
+    "point": [
+      434.18995,
+      604.90466
+    ],
+    "stop_id": "de:11000:900024202",
+    "stop_name": "U Wilmersdorfer Str. (Berlin)"
+  },
+  {
+    "point": [
+      434.18995,
+      654.1546
+    ],
+    "stop_id": "de:11000:900023302",
+    "stop_name": "U Adenauerplatz (Berlin)"
+  },
+  {
+    "point": [
+      452.27295,
+      701.03113
+    ],
+    "stop_id": "de:11000:900041201",
+    "stop_name": "U Konstanzer Str. (Berlin)"
+  },
+  {
+    "point": [
+      552.56519,
+      719.2464
+    ],
+    "stop_id": "de:11000:900041102",
+    "stop_name": "U Blissestr. (Berlin)"
+  },
+  {
+    "point": [
+      579.1779550000001,
+      719.2476449999999
+    ],
+    "stop_id": "de:11000:900044201",
+    "stop_name": "U Berliner Str. (Berlin)"
+  },
+  {
+    "point": [
+      755.94507,
+      710.16199
+    ],
+    "stop_id": "de:11000:900054103",
+    "stop_name": "U Eisenacher Str. (Berlin)"
+  },
+  {
+    "point": [
+      781.78711,
+      684.31958
+    ],
+    "stop_id": "de:11000:900054102",
+    "stop_name": "U Kleistpark (Berlin)"
+  },
+  {
+    "point": [
+      809.01075,
+      657.09631
+    ],
+    "stop_id": "de:11000:900058103",
+    "stop_name": "S+U Yorckstr. (Berlin)"
+  },
+  {
+    "point": [
+      941.04615,
+      700.67212
+    ],
+    "stop_id": "de:11000:900016101",
+    "stop_name": "U Gneisenaustr. (Berlin)"
+  },
+  {
+    "point": [
+      978.54639,
+      700.67212
+    ],
+    "stop_id": "de:11000:900016202",
+    "stop_name": "U Südstern (Berlin)"
+  },
+  {
+    "point": [
+      1017.912335,
+      700.5650250000001
+    ],
+    "stop_id": "de:11000:900078101",
+    "stop_name": "U Hermannplatz (Berlin)"
+  },
+  {
+    "point": [
+      1090.55811,
+      725.46606
+    ],
+    "stop_id": "de:11000:900078102",
+    "stop_name": "U Rathaus Neukölln (Berlin)"
+  },
+  {
+    "point": [
+      1111.771,
+      746.67883
+    ],
+    "stop_id": "de:11000:900078103",
+    "stop_name": "U Karl-Marx-Str. (Berlin)"
+  },
+  {
+    "point": [
+      1132.98438,
+      767.89209
+    ],
+    "stop_id": "de:11000:900078201",
+    "stop_name": "S+U Neukölln (Berlin)"
+  },
+  {
+    "point": [
+      1154.19727,
+      789.10516
+    ],
+    "stop_id": "de:11000:900080202",
+    "stop_name": "U Grenzallee (Berlin)"
+  },
+  {
+    "point": [
+      1175.41065,
+      810.3186
+    ],
+    "stop_id": "de:11000:900080201",
+    "stop_name": "U Blaschkoallee (Berlin)"
+  },
+  {
+    "point": [
+      1196.62403,
+      831.5318
+    ],
+    "stop_id": "de:11000:900080401",
+    "stop_name": "U Parchimer Allee (Berlin)"
+  },
+  {
+    "point": [
+      1217.83692,
+      852.74493
+    ],
+    "stop_id": "de:11000:900080402",
+    "stop_name": "U Britz-Süd (Berlin)"
+  },
+  {
+    "point": [
+      1239.0503,
+      873.95795
+    ],
+    "stop_id": "de:11000:900082202",
+    "stop_name": "U Johannisthaler Chaussee (Berlin)"
+  },
+  {
+    "point": [
+      1260.26368,
+      895.1712
+    ],
+    "stop_id": "de:11000:900082201",
+    "stop_name": "U Lipschitzallee (Berlin)"
+  },
+  {
+    "point": [
+      1281.47657,
+      916.38403
+    ],
+    "stop_id": "de:11000:900083102",
+    "stop_name": "U Wutzkyallee (Berlin)"
+  },
+  {
+    "point": [
+      1302.68946,
+      937.59735
+    ],
+    "stop_id": "de:11000:900083101",
+    "stop_name": "U Zwickauer Damm (Berlin)"
+  },
+  {
+    "point": [
+      1326.073465,
+      961.050935
+    ],
+    "stop_id": "de:11000:900083201",
+    "stop_name": "U Rudow (Berlin)"
+  },
+  {
+    "point": [
+      715.358135,
+      29.440704999999998
+    ],
+    "stop_id": "de:11000:900096101",
+    "stop_name": "S+U Wittenau (Berlin)"
+  },
+  {
+    "point": [
+      715.36499,
+      62.30688000000001
+    ],
+    "stop_id": "de:11000:900096410",
+    "stop_name": "U Rathaus Reinickendorf (Berlin)"
+  },
+  {
+    "point": [
+      715.36499,
+      87.3064
+    ],
+    "stop_id": "de:11000:900096458",
+    "stop_name": "S+U Karl-Bonhoeffer-Nervenklinik (Berlin)"
+  },
+  {
+    "point": [
+      722.76172,
+      122.04077
+    ],
+    "stop_id": "de:11000:900086160",
+    "stop_name": "U Lindauer Allee (Berlin)"
+  },
+  {
+    "point": [
+      745.48047,
+      144.75928
+    ],
+    "stop_id": "de:11000:900085104",
+    "stop_name": "U Paracelsus-Bad (Berlin)"
+  },
+  {
+    "point": [
+      768.16285,
+      167.44177
+    ],
+    "stop_id": "de:11000:900085203",
+    "stop_name": "U Residenzstr. (Berlin)"
+  },
+  {
+    "point": [
+      790.86402,
+      190.14282
+    ],
+    "stop_id": "de:11000:900085202",
+    "stop_name": "U Franz-Neumann-Platz (Berlin)"
+  },
+  {
+    "point": [
+      822.2614550000001,
+      221.48603500000002
+    ],
+    "stop_id": "de:11000:900009202",
+    "stop_name": "U Osloer Str. (Berlin)"
+  },
+  {
+    "point": [
+      854.292,
+      253.57068000000004
+    ],
+    "stop_id": "de:11000:900009203",
+    "stop_name": "U Pankstr. (Berlin)"
+  },
+  {
+    "point": [
+      881.92066,
+      281.19934
+    ],
+    "stop_id": "de:11000:900007102",
+    "stop_name": "S+U Gesundbrunnen Bhf (Berlin)"
+  },
+  {
+    "point": [
+      909.55323,
+      308.83191
+    ],
+    "stop_id": "de:11000:900007103",
+    "stop_name": "U Voltastr. (Berlin)"
+  },
+  {
+    "point": [
+      937.20728,
+      336.48645
+    ],
+    "stop_id": "de:11000:900007110",
+    "stop_name": "U Bernauer Str. (Berlin)"
+  },
+  {
+    "point": [
+      964.83985,
+      364.11877
+    ],
+    "stop_id": "de:11000:900100023",
+    "stop_name": "U Rosenthaler Platz (Berlin)"
+  },
+  {
+    "point": [
+      992.49097,
+      391.76965
+    ],
+    "stop_id": "de:11000:900100051",
+    "stop_name": "U Weinmeisterstr. (Berlin)"
+  },
+  {
+    "point": [
+      1018.05762,
+      497.42456
+    ],
+    "stop_id": "de:11000:900100004",
+    "stop_name": "S+U Jannowitzbrücke (Berlin)"
+  },
+  {
+    "point": [
+      1018.05762,
+      531.18152
+    ],
+    "stop_id": "de:11000:900100008",
+    "stop_name": "U Heinrich-Heine-Str. (Berlin)"
+  },
+  {
+    "point": [
+      1018.05762,
+      565.02478
+    ],
+    "stop_id": "de:11000:900013101",
+    "stop_name": "U Moritzplatz (Berlin)"
+  },
+  {
+    "point": [
+      1018.05713,
+      665.55011
+    ],
+    "stop_id": "de:11000:900016201",
+    "stop_name": "U Schönleinstr. (Berlin)"
+  },
+  {
+    "point": [
+      1018.05713,
+      748.28149
+    ],
+    "stop_id": "de:11000:900079202",
+    "stop_name": "U Boddinstr. (Berlin)"
+  },
+  {
+    "point": [
+      1018.05713,
+      777.27295
+    ],
+    "stop_id": "de:11000:900079201",
+    "stop_name": "U Leinestr. (Berlin)"
+  },
+  {
+    "point": [
+      1017.912335,
+      809.564905
+    ],
+    "stop_id": "de:11000:900079221",
+    "stop_name": "S+U Hermannstr. (Berlin)"
+  },
+  {
+    "point": [
+      790.97876,
+      253.15747
+    ],
+    "stop_id": "de:11000:900009201",
+    "stop_name": "U Nauener Platz (Berlin)"
+  },
+  {
+    "point": [
+      711.42969,
+      332.70654
+    ],
+    "stop_id": "de:11000:900009101",
+    "stop_name": "U Amrumer Str. (Berlin)"
+  },
+  {
+    "point": [
+      676.07398,
+      368.06189
+    ],
+    "stop_id": "de:11000:900001201",
+    "stop_name": "S+U Westhafen (Berlin)"
+  },
+  {
+    "point": [
+      640.71875,
+      403.4176
+    ],
+    "stop_id": "de:11000:900002201",
+    "stop_name": "U Birkenstr. (Berlin)"
+  },
+  {
+    "point": [
+      605.36353,
+      438.77258
+    ],
+    "stop_id": "de:11000:900003104",
+    "stop_name": "U Turmstr. (Berlin)"
+  },
+  {
+    "point": [
+      579.22828,
+      491.70788
+    ],
+    "stop_id": "de:11000:900003101",
+    "stop_name": "U Hansaplatz (Berlin)"
+  },
+  {
+    "point": [
+      579.15796,
+      691.05249
+    ],
+    "stop_id": "de:11000:900043201",
+    "stop_name": "U Güntzelstr. (Berlin)"
+  },
+  {
+    "point": [
+      579.15772,
+      762.47204
+    ],
+    "stop_id": "de:11000:900044202",
+    "stop_name": "S+U Bundesplatz (Berlin)"
+  },
+  {
+    "point": [
+      579.15772,
+      800.61481
+    ],
+    "stop_id": "de:11000:900061102",
+    "stop_name": "U Friedrich-Wilhelm-Platz (Berlin)"
+  },
+  {
+    "point": [
+      579.15772,
+      838.73987
+    ],
+    "stop_id": "de:11000:900061101",
+    "stop_name": "U Walther-Schreiber-Platz (Berlin)"
+  },
+  {
+    "point": [
+      560.90894,
+      866.92602
+    ],
+    "stop_id": "de:11000:900062203",
+    "stop_name": "U Schloßstr. (Berlin)"
+  },
+  {
+    "point": [
+      531.9777650000001,
+      895.858735
+    ],
+    "stop_id": "de:11000:900062202",
+    "stop_name": "S+U Rathaus Steglitz (Berlin)"
+  }
+]

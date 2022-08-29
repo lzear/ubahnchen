@@ -1,0 +1,46 @@
+{
+  "timeControl": "Gérer date et heure",
+  "buggyBeta": "demo buggée",
+  "changeDateTime": "Changer la date et l'heure",
+  "learnMore": "Plus d'infos...",
+  "liveMode": "En temps réel",
+  "ok": "OK",
+  "planned": "Horaires prévus",
+  "speed": "Vitesse",
+  "switchToDark": "Activer le mode sombre",
+  "switchToLight": "Activer le mode clair",
+  "switchToLive": "Voir les position actuelles",
+  "switchToPlanned": "Simuler la position des trains en accéléré",
+  "switchToSU": "Carte des SBahns et Ubahns (métros+RER)",
+  "switchToU": "Carte des Ubahns (métros) uniquement",
+  "about": "À props",
+  "stats": "Statistiques",
+  "copyLink": "Copier le lien vers la date sélectionnée",
+  "settings": {
+    "showWater": "Afficher le plan de la ville en arrière-plan en mode S+U",
+    "language": "Langage",
+    "name": "Paramètres",
+    "highRes": "Haute résolution",
+    "fadeInOut": "Animer l'apparition des trains",
+    "displayStations": "Afficher les stations",
+    "displayStationNames": "Afficher le nom des stations",
+    "extraDevInfo": "Mode développeur",
+    "precision": "Precision",
+    "shadowBrightness": "Claireté des ombres",
+    "fps": "FPS",
+    "max": "Max"
+  },
+  "urlCopied": "Lien hypertexte copié",
+  "forDate": "Pour la date",
+  "time": {
+    "shortHour": "h",
+    "shortDay": "j",
+    "now": "maintenant",
+    "nowLabel": "Selectionner la date courante"
+  },
+  "poweredByVBB": "powered by VBB GmbH",
+  "mobileWarning": {
+    "title": "Optimisé pour ordinateur",
+    "description": "Ce site web risque de ne pas fonctionner correctement sur navigateur mobile"
+  }
+}

@@ -1,0 +1,20 @@
+export const ubahns = ['U1', 'U2', 'U3', 'U4', 'U5', 'U6', 'U7', 'U8', 'U9']
+export const sbahns = [
+  'S2-6',
+  'S1-5',
+  'S42',
+  'S41',
+  'S45_bbi',
+  'S45_sudring_2_',
+  's3_1_',
+  's5_2_',
+  'S8-1',
+  'S9-1',
+  'S25_süd',
+  'S25_nord',
+  'S7_x2F_75',
+  'S7_ost',
+  'S2_nord',
+  's_bbi__x28_ready..._x29_',
+  'S47',
+]
