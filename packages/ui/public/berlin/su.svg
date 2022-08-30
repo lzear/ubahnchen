@@ -855,13 +855,13 @@
     <circle fill="none" stroke="#1A171B" stroke-width="0.8504" stroke-linejoin="bevel" cx="646.23" cy="1326.082"
             r="2.835"/>
    </g>
-   <g id="de:12072:900245027">
-    <circle fill="#FFFFFF" cx="1023.978" cy="1582.582" r="2.835"/>
-    <circle fill="none" stroke="#FFFFFF" stroke-width="1.9842" stroke-linejoin="bevel" cx="1023.978" cy="1582.582"
-            r="2.835"/>
-    <circle fill="none" stroke="#1A171B" stroke-width="0.8504" stroke-linejoin="bevel" cx="1023.978" cy="1582.582"
-            r="2.835"/>
-   </g>
+<!--   <g id="de:12072:900245027">-->
+<!--    <circle fill="#FFFFFF" cx="1023.978" cy="1582.582" r="2.835"/>-->
+<!--    <circle fill="none" stroke="#FFFFFF" stroke-width="1.9842" stroke-linejoin="bevel" cx="1023.978" cy="1582.582"-->
+<!--            r="2.835"/>-->
+<!--    <circle fill="none" stroke="#1A171B" stroke-width="0.8504" stroke-linejoin="bevel" cx="1023.978" cy="1582.582"-->
+<!--            r="2.835"/>-->
+<!--   </g>-->
    <g id="de:12061:900260009">
     <circle fill="#FFFFFF" cx="1290.771" cy="1483.207" r="2.835"/>
     <circle fill="none" stroke="#FFFFFF" stroke-width="1.9842" stroke-linejoin="bevel" cx="1290.771" cy="1483.207"
