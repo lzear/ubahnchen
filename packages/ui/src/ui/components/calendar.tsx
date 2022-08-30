@@ -4,6 +4,7 @@ import { formatInTimeZone, toDate } from 'date-fns-tz'
 import shallow from 'zustand/shallow'
 import { useColorMode } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
 import { useTripsCount } from '../query/use-trips-count'
 import { useStore } from '../store/store'
 import { computeVirtualTime } from '../utils/time-conversion'
@@ -137,6 +138,12 @@ const monthBorders = (startDate: Date, dayCount: number): JSX.Element[] => {
   return borders
 }
 
+const getWeekDaysLetter = (language: string) => {
+  if (language === 'fr') return ['L', 'M', 'M', 'J', 'V', 'S', 'D']
+  if (language === 'en') return ['M', 'T', 'W', 'T', 'F', 'S', 'S']
+  return ['M', 'D', 'M', 'D', 'F', 'S', 'S']
+}
+
 export const Calendar: React.FC = () => {
   const { colorMode } = useColorMode()
   const { data } = useTripsCount()
@@ -151,6 +158,8 @@ export const Calendar: React.FC = () => {
     }),
     shallow,
   )
+  const { i18n } = useTranslation()
+  const { language } = i18n
   const queryNoLiveUrl = useSetLiveUrl(false)
   if (!data) return <></>
   const start = data[0]
@@ -169,13 +178,9 @@ export const Calendar: React.FC = () => {
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div className="container">
       <div className="week-days">
-        <div>M</div>
-        <div>T</div>
-        <div>W</div>
-        <div>T</div>
-        <div>F</div>
-        <div>S</div>
-        <div>S</div>
+        {getWeekDaysLetter(language).map((l, k) => (
+          <div key={k}>{l}</div>
+        ))}
       </div>
       <div
         className="svg-container"
