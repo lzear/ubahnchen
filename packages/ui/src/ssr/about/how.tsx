@@ -7,9 +7,9 @@ import {
   UnorderedList,
 } from '@chakra-ui/react'
 import { ExternalLinkIcon, EmailIcon } from '@chakra-ui/icons'
-import headers from 'gtfs-loader/dist/db/headers.json'
 import React, { useEffect, useState } from 'react'
 import { Trans, useTranslation } from 'next-i18next'
+import headers from '../../../gtfs/db/headers.json'
 import { monoFont } from '../../lib/chakra'
 import { Spacer } from '../../lib/spacer'
 

@@ -1,7 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { BERLIN_GTFS_URL } from 'gtfs-loader/src/gtfs-url'
 import { setCachingHeader } from '../../src/api/utils/cache'
 
+const BERLIN_GTFS_URL =
+  'https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/gtfs-mastscharf/GTFS.zip'
 const FIVE_MINUTES = 60 * 5
 
 const gtfsLastModified = async (
