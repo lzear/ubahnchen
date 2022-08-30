@@ -29,7 +29,7 @@
   },
   "planned": {
     "title": "Planned mode",
-    "text": "Schedules are extracted from the <2>GTFS data of the VBB<1></1></2> (loaded on <5>{{fileDateInUse}}</5>) which contains <7>arrival time</7> and <10>departure time</10> of every hour of every day. The movement of the train is simulated at constant speed between stations.",
-    "outdate": "⚠️ New GTFS data from VBB is available, making this website out of date. It was uploaded on <2>{{gtfsLastModified}}</2>."
+    "text": "Schedules are extracted from the <2>GTFS data of the VBB<1></1></2> (released on <5>{{fileDateInUse}}</5>) which contains <7>arrival time</7> and <10>departure time</10> for a time period of several months. The movement of the trains is simulated at constant speed between stations.",
+    "outdate": "⚠️ New GTFS data from VBB is available, making this website out of date. It was released on <2>{{gtfsLastModified}}</2>."
   }
 }

@@ -5,15 +5,14 @@
   "learnMore": "Learn more...",
   "liveMode": "Live data",
   "ok": "OK",
-  "planned": "Planned schedule",
+  "planned": "Scheduled",
   "speed": "Speed",
   "switchToDark": "Switch to dark mode",
   "switchToLight": "Switch to light mode",
   "switchToLive": "Switch to real time mode",
   "switchToPlanned": "See the plan program at accelerated speed",
-  "switchToSU": "Show U-Bahn and S-Bahn",
-  "switchToU": "Show S-Bahn only",
-
+  "switchToSU": "Show U-Bahn and S-Bahn, and a more real map",
+  "switchToU": "Show U-Bahn only, and a simplified map",
   "about": "Information",
   "stats": "Statistics",
   "copyLink": "Copy link to selected time",
@@ -43,5 +42,6 @@
   "mobileWarning": {
     "title": "Desktop optimized",
     "description": "Running this application on mobile"
-  }
+  },
+  "fuckCars": "Fuck cars"
 }

@@ -31,5 +31,6 @@
     "title": "Mode « horaires prévus »",
     "text": "Les horaires sont extraits <2>des données GTFS de la VBB<1></1></2> (téléchargées le <5>{{fileDateInUse}}</5>). Les  <7>horaires d'arrivée</7> et <10>horaires de départ</10> sont calculés pour toutes heures de toutes journées. Le mouvement des trains est simulé à vitesse constante entre les stations.",
     "outdate": "⚠️ Des nouvelles données GTFS sont disponibles datant du <2>{{gtfsLastModified}}</2>."
-  }
+  },
+  "fuckCars": "Nique les voitures"
 }

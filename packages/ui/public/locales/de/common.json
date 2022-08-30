@@ -1,22 +1,22 @@
 {
   "timeControl": "Zeitkontrolle",
-  "buggyBeta": "defekt beta",
+  "buggyBeta": "buggy beta",
   "changeDateTime": "Datum und Uhrzeit ändern",
-  "learnMore": "Lern mehr...",
+  "learnMore": "Mehr info...",
   "liveMode": "Echtzeit",
   "ok": "OK",
-  "planned": "Fahrplankarte",
+  "planned": "Fahrplan",
   "speed": "Geschwindigkeit",
   "switchToDark": "Dunkelmodus aktivieren",
   "switchToLight": "Hellmodus aktivieren",
   "switchToLive": "zu Echtzeitmodus wechseln",
-  "switchToPlanned": "zu geplante Fahrplan wechseln",
-  "switchToSU": "zu S+U Bahn Karte wechseln und echter Karte zeigen",
-  "switchToU": "zu U Bahn Karte wechseln und schematisiert Karte zeigen",
+  "switchToPlanned": "zu Fahrplan wechseln",
+  "switchToSU": "zu S+U Bahn Karte wechseln und detaillierte Karte zeigen",
+  "switchToU": "zu U Bahn Karte wechseln und einfache Karte zeigen",
 
   "about": "Information",
   "stats": "Statistiken",
-  "copyLink": "Link zum ausgewählten Moment kopieren",
+  "copyLink": "Link zur ausgewählten Zeit kopieren",
   "settings": {
     "showWater": "Stadtplan im Hintergrund anzeigen (nur in S+U Modus)",
     "language": "Sprache",
@@ -32,16 +32,16 @@
     "max": "Max"
   },
   "urlCopied": "URL kopiert",
-  "forDate": "Für Zeit",
+  "forDate": "Datum",
   "time": {
     "shortHour": "Std",
-    "shortDay": "t",
+    "shortDay": "T",
     "now": "jetzt",
-    "nowLabel": "Stellen Sie die Zeit auf jetzt"
+    "nowLabel": "Stellen Sie die Zeit auf jetzt um"
   },
   "poweredByVBB": "powered by VBB GmbH",
   "mobileWarning": {
-    "title": "Optimisiert für Komputer",
+    "title": "Optimisiert für Desktop",
     "description": "Diese Website funktioniert möglicherweise nicht richtig im mobilen Browser"
   }
 }

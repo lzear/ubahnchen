@@ -3,10 +3,10 @@
   "about": "Uber",
   "how": {
     "title": "Wie funktioniert es?",
-    "text": "Die Modi können durch Klicken auf <1>Echtzeit</1> oder <3>Fahrplankarte</3> oben rechts geändert werden."
+    "text": "Die Modi können durch klicken auf <1>Echtzeit</1> oder <3>Fahrplan</3> oben rechts geändert werden."
   },
   "disclaimer": {
-    "text": "Ubähnchen ist eine Amateur-Website, mit keiner Firma oder Organisation verbunden oder angegliedert. Die Website ist kostenlos und frei von Werbung und Cookies. Die angezeigten Informationen stimmen möglicherweise nicht mit den tatsächlichen Daten überein. Benutzung auf eigene Gefahr, blablabla...",
+    "text": "Ubähnchen ist eine Amateur-Website, die mit keiner Firma oder Organisation verbunden ist. Die Website ist kostenlos und frei von Werbung und Cookies. Die angezeigten Informationen stimmen möglicherweise nicht mit den tatsächlichen Daten überein. Benutzung auf eigene Gefahr, blablabla...",
     "title": "Haftungsausschluss"
   },
   "explain": {
@@ -23,13 +23,14 @@
   },
   "live": {
     "title": "Livekarte (Beta)",
-    "vbbDisclaimer": "Powered by VBB GmbH. Alle Angaben ohne Gewähr..",
-    "text": "Die <2>HAFAS-API <1></1></2> hat einen „Radar“-Endpunkt, der die Position aller Züge und  <5>Animationsdaten</5> zurückgibt, die Haltestelleninformationen (Ursprung, Ziel) und eine <7>proc</7> Eigenschaft enthalten, was meiner Meinung nach  <10>„Position zwischen 2 Haltestellen in Prozent“</10> bedeutet.",
+    "vbbDisclaimer": "Powered by VBB GmbH. Alle Angaben ohne Gewähr.",
+    "text": "Die <2>HAFAS-API <1></1></2> hat einen „Radar“-Endpunkt, der die Position aller Züge und <5>Animationsdaten</5> zurückgibt, die Haltestelleninformationen (Ursprung, Ziel) und eine <7>proc</7> Eigenschaft enthalten, was meiner Meinung nach  <10>„Position zwischen 2 Haltestellen in Prozent“</10> bedeutet.",
     "unfortunately": "Leider gibt es ein paar Implementierungsfehler auf Ubähnchen und Züge verschwinden gelegentlich oder sprinten sehr schnell auf der Karte."
   },
   "planned": {
     "title": "Fahrplankarte",
-    "text": "Fahrplandaten werden aus den <2>GTFS-Daten des VBB extrahiert<1></1></2> (veröffentlicht am <5>{{fileDateInUse}}</5>). Daraus können aktive Fahrten und ihre Haltestellen <7>Ankunftszeit</7> und <10>Abfahrtszeit</10> für jede beliebige Stunde an jedem beliebigen Tag berechnet werden. Die Zugbewegung wird mit einer konstanten Geschwindigkeit zwischen den Stationen simuliert.",
+    "text": "Fahrplandaten werden aus den <2>GTFS-Daten des VBB <1></1></2> (veröffentlicht am <5>{{fileDateInUse}}</5>) extrahiert, die <7>Ankunftszeiten</7> und <10>Abfahrtszeiten</10> für einen Zeitraum von mehreren Monaten enthalten. Die Zugbewegung wird mit einer konstanten Geschwindigkeit zwischen den Stationen simuliert.",
     "outdate": "⚠️ Neue GTFS-Datei ist verfügbar. Es wurde am <2>{{gtfsLastModified}}</2> veröffentlicht."
-  }
+  },
+  "fuckCars": "Fick Autos"
 }

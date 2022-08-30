@@ -99,32 +99,34 @@ export const How: React.FC = () => {
           </Text>
         </>
       )}
+      <Spacer y={20} />
 
-      {/*<Heading as="h3" size="md">*/}
-      {/*  {t('live.title')}*/}
-      {/*</Heading>*/}
-      {/*<Text>{t('live.vbbDisclaimer')}</Text>*/}
-      {/*<Text>*/}
-      {/*  <Trans ns="about" i18nKey="live.text">*/}
-      {/*    The{' '}*/}
-      {/*    <Link*/}
-      {/*      isExternal*/}
-      {/*      href="https://github.com/public-transport/hafas-client"*/}
-      {/*    >*/}
-      {/*      HAFAS API <ExternalLinkIcon mx="2px" />*/}
-      {/*    </Link>{' '}*/}
-      {/*    has a &ldquo;radar&rdquo; endpoint which returns the position of all*/}
-      {/*    trains and <em>animation data</em> containing stops information*/}
-      {/*    (origin, destination) and a <Code>proc</Code>*/}
-      {/*    property, which I think means{' '}*/}
-      {/*    <em>&ldquo;position between 2 stops, in percents&rdquo;</em>.*/}
-      {/*  </Trans>*/}
-      {/*</Text>*/}
-      {/*<Text marginBottom="30px">*/}
-      {/*  {t('live.unfortunately')}*/}
-      {/*  /!*Unfortunately, there are a few bugs and trains occasionally disappear or*!/*/}
-      {/*  /!*sprint very fast on the map.*!/*/}
-      {/*</Text>*/}
+      <Heading as="h3" size="md">
+        {t('live.title')}
+      </Heading>
+      <Text>{t('live.vbbDisclaimer')}</Text>
+      <Text>
+        <Trans ns="about" i18nKey="live.text">
+          The{' '}
+          <Link
+            isExternal
+            href="https://github.com/public-transport/hafas-client"
+          >
+            HAFAS API <ExternalLinkIcon mx="2px" />
+          </Link>{' '}
+          has a &ldquo;radar&rdquo; endpoint which returns the position of all
+          trains and <em>animation data</em> containing stops information
+          (origin, destination) and a <Code>proc</Code>
+          property, which I think means{' '}
+          <em>&ldquo;position between 2 stops, in percents&rdquo;</em>.
+        </Trans>
+      </Text>
+      <Spacer y={10} />
+      <Text>
+        {t('live.unfortunately')}
+        {/*Unfortunately, there are a few bugs and trains occasionally disappear or*/}
+        {/*sprint very fast on the map.*/}
+      </Text>
       <Spacer y={40} />
       <Heading as="h2" size="lg">
         {t('links.title')}
@@ -157,7 +159,7 @@ export const How: React.FC = () => {
           </Link>
         </ListItem>
         <ListItem>
-          Fuck cars:{' '}
+          {t('fuckCars')}:{' '}
           <Link isExternal href="https://www.reddit.com/r/fuckcars/">
             r/fuckcars <ExternalLinkIcon mx="2px" />
           </Link>
