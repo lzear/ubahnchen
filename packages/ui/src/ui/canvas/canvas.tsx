@@ -8,16 +8,25 @@ import { useUrlParameterMap } from '../store/use-url-parameters'
 import { insertMaps } from '../paper/insert-maps'
 import { MapName } from '../../lib/enums'
 import { onKeys } from './use-keys'
-import { doShowStationNames } from './station-names'
+import { doShowStationNames, hideStationNames } from './station-names'
 import { paperView } from './paper-view'
 import { Hooks } from './hooks'
 
-const useDisplayStationNames = (loading: boolean) => {
+const useDisplayStationNames = () => {
   const { colorMode } = useColorMode()
-  const displayStationNames = useStore((s) => s.displayStationNames)
+  const { displayStationNames, animationFinishedAt, mapsObjs } = useStore(
+    (s) => ({
+      animationFinishedAt: s.animationFinishedAt,
+      displayStationNames: s.displayStationNames,
+      mapsObjs: s.mapsObjs,
+    }),
+  )
+
   useEffect(() => {
-    if (!loading && displayStationNames) doShowStationNames(colorMode)
-  }, [colorMode, displayStationNames, loading])
+    if (animationFinishedAt && displayStationNames && mapsObjs)
+      doShowStationNames(colorMode, mapsObjs)
+    else hideStationNames()
+  }, [colorMode, displayStationNames, animationFinishedAt, mapsObjs])
 }
 
 const sssetup = async (
@@ -41,7 +50,7 @@ const Canvas: React.FC = () => {
   const hidpi = useHidpi()
   const onInit = useOnInit()
   const [loading, setLoading] = useState(true)
-  useDisplayStationNames(loading)
+  useDisplayStationNames()
 
   useEffect(() => {
     return () => {

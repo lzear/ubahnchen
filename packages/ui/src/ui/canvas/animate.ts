@@ -49,7 +49,7 @@ class AnimateMaps {
   public start() {
     this.stop()
 
-    const { mapsObjs, suWater, mapName } = useStore.getState()
+    const { mapsObjs, suWater, mapName, setMaps } = useStore.getState()
     if (!mapsObjs) {
       return
     }
@@ -58,6 +58,7 @@ class AnimateMaps {
       console.error('Missing [suMap, uMap, aniMap]', [suMap, uMap, aniMap])
       return
     }
+    setMaps({ animationFinishedAt: 0 })
 
     const uBahns = getULines(uMap)
     const suBahns = getULines(suMap)

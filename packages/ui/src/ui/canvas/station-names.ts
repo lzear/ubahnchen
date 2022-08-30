@@ -2,16 +2,19 @@ import paper from 'paper'
 import { useStore } from '../store/store'
 import { MapName } from '../../lib/enums'
 import stopsById from '../../generated/stops-by-id.json'
+import type { MapsObjects } from '../store/maps'
 
 export const hideStationNames = () => {
   const { mapsObjs } = useStore.getState()
   if (!mapsObjs) return
   mapsObjs.gStationNames.removeChildren()
 }
-export const doShowStationNames = (colorMode: 'light' | 'dark') => {
+export const doShowStationNames = (
+  colorMode: 'light' | 'dark',
+  mapsObjs: MapsObjects,
+) => {
   hideStationNames()
-  const { mapsObjs, mapName, displayStationNames } = useStore.getState()
-  if (!mapsObjs || !displayStationNames) return
+  const { mapName } = useStore.getState()
 
   const gStations =
     mapName === MapName.U ? mapsObjs.uStations : mapsObjs.suStations

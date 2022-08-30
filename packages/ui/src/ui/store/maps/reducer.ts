@@ -4,7 +4,7 @@ import { MapSlice } from '../maps'
 
 export const createMapSlice: StateCreatorWithSubscribe<MapSlice> = (set) => {
   return {
-    animationFinishedAt: 0,
+    animationFinishedAt: +Date.now(),
     mapName: INIT_MAPNAME,
     mapsObjs: undefined,
     stopAnimate: undefined,

@@ -1,14 +1,11 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { parseISO } from 'date-fns'
-// import shallow from 'zustand/shallow'
-// import { MapName } from '../../lib/enums'
 import shallow from 'zustand/shallow'
 import { useTripIdParameter } from '../components/trip'
 import { MapName } from '../../lib/enums'
 import { anim } from '../canvas/animate'
 import { trainManager } from '../trains/train-manager'
-import { hideStationNames } from '../canvas/station-names'
 import { useUrlParameters } from '../utils/url-parameters'
 import { useStore } from './store'
 
@@ -55,7 +52,6 @@ const useMapType = () => {
     if (map !== mapName) {
       setMapForce(map)
       trainManager.clearTrains()
-      hideStationNames()
       anim.start()
     }
   }, [map, mapName, setMapForce])

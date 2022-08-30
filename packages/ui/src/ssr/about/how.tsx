@@ -69,6 +69,7 @@ export const How: React.FC = () => {
       <Heading as="h3" size="md">
         {t('planned.title')}
       </Heading>
+      <Spacer y={10} />
       <Text>
         <Trans ns="about" i18nKey="planned.text">
           Time table data are extracted from the{' '}
@@ -104,6 +105,7 @@ export const How: React.FC = () => {
       <Heading as="h3" size="md">
         {t('live.title')}
       </Heading>
+      <Spacer y={10} />
       <Text>{t('live.vbbDisclaimer')}</Text>
       <Text>
         <Trans ns="about" i18nKey="live.text">
