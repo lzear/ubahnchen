@@ -1,11 +1,8 @@
-import createClient from 'hafas-client'
-import dbProfile from 'hafas-client/p/vbb'
 import { MapName } from '../../lib/enums'
 import type { HafasRadarResponse, RadarDto, RadarTrip } from '../../lib/radar'
 import { Keyframe2 } from '../../lib/keyframe'
+import { hafasClient } from '../utils/hafas-client'
 import { aniToFrames } from './ani'
-
-const client = createClient(dbProfile, 'my-awesome-program')
 
 const productsOff = {
   suburban: false,
@@ -20,7 +17,7 @@ const productsOff = {
 export const radarHandler: (mapName: MapName) => Promise<RadarDto> = async (
   mapName: MapName,
 ) => {
-  const r = (await client?.radar?.(
+  const r = (await hafasClient?.radar?.(
     {
       north: 52.824_966,
       south: 52.262_152,
