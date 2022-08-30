@@ -1,14 +1,12 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
-import { Text } from '@chakra-ui/react'
-import { useTranslation } from 'next-i18next'
 import { useStore } from '../store/store'
 import { Spacer } from '../../lib/spacer'
 import { Settings } from './settings'
 import { DarkModeToggle } from './dark-mode-toggle'
 import { ToggleUsu } from './toggle-usu'
 import { Speed } from './speed'
-// import { ToggleLiveMode } from './toggle-live-mode'
+import { ToggleLiveMode } from './toggle-live-mode'
 import { Info } from './info'
 
 const Clock = dynamic(() => import('./clock'), {
@@ -16,7 +14,6 @@ const Clock = dynamic(() => import('./clock'), {
 })
 
 export const TopRight: React.FC = () => {
-  const { t } = useTranslation()
   const liveMode = useStore(({ liveMode }) => liveMode)
   return (
     <div className="top-right">
@@ -27,10 +24,7 @@ export const TopRight: React.FC = () => {
         <DarkModeToggle />
       </div>
       <Spacer y={12} />
-      <Text textAlign="center" fontSize="sm">
-        {t('planned')}
-      </Text>
-      {/*<ToggleLiveMode />*/}
+      <ToggleLiveMode />
       <Spacer y={12} />
       <Clock />
       <Spacer y={12} />
