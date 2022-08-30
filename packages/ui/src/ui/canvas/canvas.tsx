@@ -104,7 +104,7 @@ const Canvas: React.FC = () => {
         />
       ) : //eslint-disable-next-line unicorn/no-null
       null}
-      {/*<Development />*/}
+      {/*{!loading && <Development/>}*/}
       <Hooks />
       <style jsx>{`
         canvas {

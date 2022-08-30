@@ -9,6 +9,10 @@ export const myFetcher = <TData, TVariables>(
       variables: JSON.stringify(variables),
     })
     const response = await fetch(`/api/graphql?${parameters.toString()}`, {
+      // Uncomment this when generating routes
+      // const response = await fetch(`/api/graphql`, {
+      //   body: JSON.stringify({ query, variables }),
+      //   method: 'POST',
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
