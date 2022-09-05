@@ -530,77 +530,41 @@
             "absOffset": 1012.6046668908089
           },
           {
-            "stop_name": "S+U Yorckstr. (Berlin)",
-            "stop_id": "de:11000:900058103",
-            "offset": 713.1146603958819,
-            "absOffset": 1071.4035138605186
-          },
-          {
-            "stop_name": "S Südkreuz Bhf (Berlin)",
-            "stop_id": "de:11000:900058101",
-            "offset": 635.2808177066612,
-            "absOffset": 1149.2373565497394
-          },
-          {
-            "stop_name": "S Priesterweg (Berlin)",
-            "stop_id": "de:11000:900058102",
-            "offset": 560.2565889434536,
-            "absOffset": 1224.2615853129469
+            "stop_name": "S+U Yorckstr. (Großgörschenstr.) (Berlin)",
+            "stop_id": "de:11000:900057102",
+            "offset": 712.9908583713874,
+            "absOffset": 1071.5273158850132
           }
         ],
         "absStart": 597.8391455220443,
-        "absEnd": 1244.8005074404614,
+        "absEnd": 1071.5273158850132,
         "start": 1186.6790287343563,
-        "end": 539.7176668159391
+        "end": 712.9908583713874
       },
       {
-        "path": "S25_süd",
+        "path": "S1-5",
         "stops": [
           {
-            "stop_name": "S Südende (Berlin)",
-            "stop_id": "de:11000:900063452",
-            "offset": 331.1511923191472,
-            "absOffset": 1274.3581706139719
+            "stop_name": "S Julius-Leber-Brücke (Berlin)",
+            "stop_id": "de:11000:900057104",
+            "offset": 644.7354355357779,
+            "absOffset": 1102.8234532093586
           },
           {
-            "stop_name": "S Lankwitz (Berlin)",
-            "stop_id": "de:11000:900067221",
-            "offset": 278.3897971281017,
-            "absOffset": 1327.1195658050174
-          },
-          {
-            "stop_name": "S Lichterfelde Ost Bhf (Berlin)",
-            "stop_id": "de:11000:900064301",
-            "offset": 221.50307115515645,
-            "absOffset": 1384.0062917779626
-          },
-          {
-            "stop_name": "S Osdorfer Str. (Berlin)",
-            "stop_id": "de:11000:900064256",
-            "offset": 156.25765349221098,
-            "absOffset": 1449.2517094409081
-          },
-          {
-            "stop_name": "S Lichterfelde Süd (Berlin)",
-            "stop_id": "de:11000:900064201",
-            "offset": 115.67217549030913,
-            "absOffset": 1489.8371874428099
-          },
-          {
-            "stop_name": "S Teltow Stadt",
-            "stop_id": "de:12069:900220114",
-            "offset": 1.956083279405253,
-            "absOffset": 1603.5532796537136
+            "stop_name": "S Schöneberg (Berlin)",
+            "stop_id": "de:11000:900054104",
+            "offset": 600.0898821085191,
+            "absOffset": 1147.4690066366175
           }
         ],
-        "absStart": 1244.8005074404614,
-        "absEnd": 1603.5532796537136,
-        "start": 360.7088554926576,
-        "end": 1.956083279405253
+        "absStart": 1071.5273158850132,
+        "absEnd": 1147.4690066366175,
+        "start": 676.0315728601233,
+        "end": 600.0898821085191
       }
     ],
     "id": "S25",
-    "length": 1603.5532796537136
+    "length": 1147.4690066366175
   },
   {
     "route_name": "S26",
@@ -4955,6 +4919,202 @@
     "length": 347.29150784757644
   },
   {
+    "route_name": "S25",
+    "id": "S25-S1",
+    "sections": [
+      {
+        "path": "S25_nord",
+        "stops": [
+          {
+            "stop_name": "S Hennigsdorf Bhf",
+            "stop_id": "de:12065:900200000",
+            "offset": 598.6429056941464,
+            "absOffset": 0
+          },
+          {
+            "stop_name": "S Heiligensee (Berlin)",
+            "stop_id": "de:11000:900091203",
+            "offset": 500.08133774454785,
+            "absOffset": 98.56156794959855
+          },
+          {
+            "stop_name": "S Schulzendorf (Berlin)",
+            "stop_id": "de:11000:900091205",
+            "offset": 425.87657226140396,
+            "absOffset": 172.76633343274244
+          },
+          {
+            "stop_name": "S Tegel (Berlin)",
+            "stop_id": "de:11000:900089303",
+            "offset": 255.1210670013474,
+            "absOffset": 343.521838692799
+          },
+          {
+            "stop_name": "S Eichborndamm (Berlin)",
+            "stop_id": "de:11000:900096405",
+            "offset": 160.41944631474507,
+            "absOffset": 438.22345937940133
+          },
+          {
+            "stop_name": "S+U Karl-Bonhoeffer-Nervenklinik (Berlin)",
+            "stop_id": "de:11000:900096458",
+            "offset": 118.08466559784232,
+            "absOffset": 480.5582400963041
+          },
+          {
+            "stop_name": "S Alt-Reinickendorf (Berlin)",
+            "stop_id": "de:11000:900085105",
+            "offset": 67.78390461592525,
+            "absOffset": 530.8590010782211
+          }
+        ],
+        "absStart": 0,
+        "absEnd": 597.8391455220443,
+        "start": 598.6429056941464,
+        "end": 0.8037601721020483
+      },
+      {
+        "path": "S2-6",
+        "stops": [
+          {
+            "stop_name": "S Schönholz (Berlin)",
+            "stop_id": "de:11000:900085201",
+            "offset": 1164.6509360735265,
+            "absOffset": 619.8672381828741
+          },
+          {
+            "stop_name": "S Wollankstr. (Berlin)",
+            "stop_id": "de:11000:900130003",
+            "offset": 1123.7958261315598,
+            "absOffset": 660.7223481248408
+          },
+          {
+            "stop_name": "S Bornholmer Str. (Berlin)",
+            "stop_id": "de:11000:900110011",
+            "offset": 1068.0366636874946,
+            "absOffset": 716.481510568906
+          },
+          {
+            "stop_name": "S+U Gesundbrunnen Bhf (Berlin)",
+            "stop_id": "de:11000:900007102",
+            "offset": 1016.7867569241868,
+            "absOffset": 767.7314173322138
+          },
+          {
+            "stop_name": "S Humboldthain (Berlin)",
+            "stop_id": "de:11000:900008101",
+            "offset": 991.1923092688963,
+            "absOffset": 793.3258649875042
+          },
+          {
+            "stop_name": "S Nordbahnhof (Berlin)",
+            "stop_id": "de:11000:900007104",
+            "offset": 934.2817063416763,
+            "absOffset": 850.2364679147242
+          },
+          {
+            "stop_name": "S Oranienburger Str. (Berlin)",
+            "stop_id": "de:11000:900100007",
+            "offset": 897.0727514153256,
+            "absOffset": 887.445422841075
+          },
+          {
+            "stop_name": "S+U Friedrichstr. Bhf (Berlin)",
+            "stop_id": "de:11000:900100001",
+            "offset": 867.741327448908,
+            "absOffset": 916.7768468074926
+          },
+          {
+            "stop_name": "S+U Brandenburger Tor (Berlin)",
+            "stop_id": "de:11000:900100025",
+            "offset": 836.9615476989162,
+            "absOffset": 947.5566265574844
+          },
+          {
+            "stop_name": "S+U Potsdamer Platz Bhf (Berlin)",
+            "stop_id": "de:11000:900100020",
+            "offset": 802.384914623208,
+            "absOffset": 982.1332596331926
+          },
+          {
+            "stop_name": "S Anhalter Bahnhof (Berlin)",
+            "stop_id": "de:11000:900012101",
+            "offset": 771.9135073655917,
+            "absOffset": 1012.6046668908089
+          },
+          {
+            "stop_name": "S+U Yorckstr. (Berlin)",
+            "stop_id": "de:11000:900058103",
+            "offset": 713.1146603958819,
+            "absOffset": 1071.4035138605186
+          },
+          {
+            "stop_name": "S Südkreuz Bhf (Berlin)",
+            "stop_id": "de:11000:900058101",
+            "offset": 635.2808177066612,
+            "absOffset": 1149.2373565497394
+          },
+          {
+            "stop_name": "S Priesterweg (Berlin)",
+            "stop_id": "de:11000:900058102",
+            "offset": 560.2565889434536,
+            "absOffset": 1224.2615853129469
+          }
+        ],
+        "absStart": 597.8391455220443,
+        "absEnd": 1244.8005074404614,
+        "start": 1186.6790287343563,
+        "end": 539.7176668159391
+      },
+      {
+        "path": "S25_süd",
+        "stops": [
+          {
+            "stop_name": "S Südende (Berlin)",
+            "stop_id": "de:11000:900063452",
+            "offset": 331.1511923191472,
+            "absOffset": 1274.3581706139719
+          },
+          {
+            "stop_name": "S Lankwitz (Berlin)",
+            "stop_id": "de:11000:900067221",
+            "offset": 278.3897971281017,
+            "absOffset": 1327.1195658050174
+          },
+          {
+            "stop_name": "S Lichterfelde Ost Bhf (Berlin)",
+            "stop_id": "de:11000:900064301",
+            "offset": 221.50307115515645,
+            "absOffset": 1384.0062917779626
+          },
+          {
+            "stop_name": "S Osdorfer Str. (Berlin)",
+            "stop_id": "de:11000:900064256",
+            "offset": 156.25765349221098,
+            "absOffset": 1449.2517094409081
+          },
+          {
+            "stop_name": "S Lichterfelde Süd (Berlin)",
+            "stop_id": "de:11000:900064201",
+            "offset": 115.67217549030913,
+            "absOffset": 1489.8371874428099
+          },
+          {
+            "stop_name": "S Teltow Stadt",
+            "stop_id": "de:12069:900220114",
+            "offset": 1.956083279405253,
+            "absOffset": 1603.5532796537136
+          }
+        ],
+        "absStart": 1244.8005074404614,
+        "absEnd": 1603.5532796537136,
+        "start": 360.7088554926576,
+        "end": 1.956083279405253
+      }
+    ],
+    "length": 1603.5532796537136
+  },
+  {
     "route_name": "S26",
     "id": "S26-S2",
     "sections": [
@@ -4962,55 +5122,127 @@
         "path": "S2-6",
         "stops": [
           {
+            "stop_name": "S Waidmannslust (Berlin)",
+            "stop_id": "de:11000:900094101",
+            "offset": 1388.1805060781667,
+            "absOffset": 0
+          },
+          {
+            "stop_name": "S+U Wittenau (Berlin)",
+            "stop_id": "de:11000:900096101",
+            "offset": 1326.188012687334,
+            "absOffset": 61.99249339083258
+          },
+          {
+            "stop_name": "S Wilhelmsruh (Berlin)",
+            "stop_id": "de:11000:900084101",
+            "offset": 1231.079672635239,
+            "absOffset": 157.10083344292775
+          },
+          {
+            "stop_name": "S Schönholz (Berlin)",
+            "stop_id": "de:11000:900085201",
+            "offset": 1164.6509360735265,
+            "absOffset": 223.52957000464016
+          },
+          {
+            "stop_name": "S Wollankstr. (Berlin)",
+            "stop_id": "de:11000:900130003",
+            "offset": 1123.7958261315598,
+            "absOffset": 264.38467994660687
+          },
+          {
+            "stop_name": "S Bornholmer Str. (Berlin)",
+            "stop_id": "de:11000:900110011",
+            "offset": 1068.0366636874946,
+            "absOffset": 320.14384239067203
+          },
+          {
+            "stop_name": "S+U Gesundbrunnen Bhf (Berlin)",
+            "stop_id": "de:11000:900007102",
+            "offset": 1016.7867569241868,
+            "absOffset": 371.3937491539799
+          },
+          {
+            "stop_name": "S Humboldthain (Berlin)",
+            "stop_id": "de:11000:900008101",
+            "offset": 991.1923092688963,
+            "absOffset": 396.98819680927033
+          },
+          {
+            "stop_name": "S Nordbahnhof (Berlin)",
+            "stop_id": "de:11000:900007104",
+            "offset": 934.2817063416763,
+            "absOffset": 453.89879973649033
+          },
+          {
+            "stop_name": "S Oranienburger Str. (Berlin)",
+            "stop_id": "de:11000:900100007",
+            "offset": 897.0727514153256,
+            "absOffset": 491.1077546628411
+          },
+          {
+            "stop_name": "S+U Friedrichstr. Bhf (Berlin)",
+            "stop_id": "de:11000:900100001",
+            "offset": 867.741327448908,
+            "absOffset": 520.4391786292587
+          },
+          {
+            "stop_name": "S+U Brandenburger Tor (Berlin)",
+            "stop_id": "de:11000:900100025",
+            "offset": 836.9615476989162,
+            "absOffset": 551.2189583792505
+          },
+          {
             "stop_name": "S+U Potsdamer Platz Bhf (Berlin)",
             "stop_id": "de:11000:900100020",
             "offset": 802.384914623208,
-            "absOffset": 0
+            "absOffset": 585.7955914549586
           },
           {
             "stop_name": "S Anhalter Bahnhof (Berlin)",
             "stop_id": "de:11000:900012101",
             "offset": 771.9135073655917,
-            "absOffset": 30.471407257616306
+            "absOffset": 616.266998712575
           },
           {
             "stop_name": "S+U Yorckstr. (Berlin)",
             "stop_id": "de:11000:900058103",
             "offset": 713.1146603958819,
-            "absOffset": 89.27025422732618
+            "absOffset": 675.0658456822848
           },
           {
             "stop_name": "S Südkreuz Bhf (Berlin)",
             "stop_id": "de:11000:900058101",
             "offset": 635.2808177066612,
-            "absOffset": 167.10409691654684
+            "absOffset": 752.8996883715055
           },
           {
             "stop_name": "S Priesterweg (Berlin)",
             "stop_id": "de:11000:900058102",
             "offset": 560.2565889434536,
-            "absOffset": 242.12832567975443
+            "absOffset": 827.9239171347131
           },
           {
             "stop_name": "S Attilastr. (Berlin)",
             "stop_id": "de:11000:900068301",
             "offset": 505.5541187091418,
-            "absOffset": 296.83079591406624
+            "absOffset": 882.6263873690249
           },
           {
             "stop_name": "S Marienfelde (Berlin)",
             "stop_id": "de:11000:900073101",
             "offset": 398.13415175469714,
-            "absOffset": 404.2507628685109
+            "absOffset": 990.0463543234696
           }
         ],
         "absStart": 0,
-        "absEnd": 404.2507628685109,
-        "start": 802.384914623208,
+        "absEnd": 990.0463543234696,
+        "start": 1388.1805060781667,
         "end": 398.13415175469714
       }
     ],
-    "length": 404.2507628685109
+    "length": 990.0463543234696
   },
   {
     "id": "S3-bis",
@@ -7022,15 +7254,33 @@
         "path": "s3_1_",
         "stops": [
           {
+            "stop_name": "S Pichelsberg (Berlin)",
+            "stop_id": "de:11000:900025424",
+            "offset": 163.96141500067557,
+            "absOffset": 0
+          },
+          {
             "stop_name": "S Olympiastadion (Berlin)",
             "stop_id": "de:11000:900025321",
             "offset": 215.37520276229986,
-            "absOffset": 0
+            "absOffset": 51.41378776162429
+          },
+          {
+            "stop_name": "S Heerstr. (Berlin)",
+            "stop_id": "de:11000:900026105",
+            "offset": 262.962473642191,
+            "absOffset": 99.00105864151544
+          },
+          {
+            "stop_name": "S Messe Süd (Berlin)",
+            "stop_id": "de:11000:900025423",
+            "offset": 315.52104956243085,
+            "absOffset": 151.55963456175527
           }
         ],
         "absStart": 0,
-        "absEnd": 109.6294136500959,
-        "start": 215.37520276229986,
+        "absEnd": 161.0432014117202,
+        "start": 163.96141500067557,
         "end": 325.00461641239576
       },
       {
@@ -7040,113 +7290,113 @@
             "stop_name": "S Westkreuz (Berlin)",
             "stop_id": "de:11000:900024102",
             "offset": 813.3971747970113,
-            "absOffset": 137.86118473843305
+            "absOffset": 189.27497250005734
           },
           {
             "stop_name": "S Charlottenburg Bhf (Berlin)",
             "stop_id": "de:11000:900024101",
             "offset": 878.3921597894029,
-            "absOffset": 202.8561697308246
+            "absOffset": 254.2699574924489
           },
           {
             "stop_name": "S Savignyplatz (Berlin)",
             "stop_id": "de:11000:900024203",
             "offset": 920.2297231441171,
-            "absOffset": 244.69373308553884
+            "absOffset": 296.10752084716313
           },
           {
             "stop_name": "S+U Zoologischer Garten Bhf (Berlin)",
             "stop_id": "de:11000:900023201",
             "offset": 948.6970540403258,
-            "absOffset": 273.1610639817476
+            "absOffset": 324.5748517433719
           },
           {
             "stop_name": "S Tiergarten (Berlin)",
             "stop_id": "de:11000:900003103",
             "offset": 987.8266814762515,
-            "absOffset": 312.2906914176732
+            "absOffset": 363.7044791792975
           },
           {
             "stop_name": "S Bellevue (Berlin)",
             "stop_id": "de:11000:900003102",
             "offset": 1039.2048846183834,
-            "absOffset": 363.66889455980515
+            "absOffset": 415.08268232142944
           },
           {
             "stop_name": "S+U Berlin Hauptbahnhof",
             "stop_id": "de:11000:900003201",
             "offset": 1100.511477426489,
-            "absOffset": 424.97548736791066
+            "absOffset": 476.38927512953495
           },
           {
             "stop_name": "S+U Friedrichstr. Bhf (Berlin)",
             "stop_id": "de:11000:900100001",
             "offset": 1155.190189639277,
-            "absOffset": 479.6541995806987
+            "absOffset": 531.067987342323
           },
           {
             "stop_name": "S Hackescher Markt (Berlin)",
             "stop_id": "de:11000:900100002",
             "offset": 1197.423916787995,
-            "absOffset": 521.8879267294168
+            "absOffset": 573.3017144910411
           },
           {
             "stop_name": "S+U Alexanderplatz Bhf (Berlin)",
             "stop_id": "de:11000:900100003",
             "offset": 1232.4027390453243,
-            "absOffset": 556.8667489867461
+            "absOffset": 608.2805367483704
           },
           {
             "stop_name": "S+U Jannowitzbrücke (Berlin)",
             "stop_id": "de:11000:900100004",
             "offset": 1263.7065479412076,
-            "absOffset": 588.1705578826294
+            "absOffset": 639.5843456442537
           },
           {
             "stop_name": "S Ostbahnhof (Berlin)",
             "stop_id": "de:11000:900120005",
             "offset": 1312.9291696911635,
-            "absOffset": 637.3931796325852
+            "absOffset": 688.8069673942096
           },
           {
             "stop_name": "S+U Warschauer Str. (Berlin)",
             "stop_id": "de:11000:900120004",
             "offset": 1356.101192291447,
-            "absOffset": 680.5652022328687
+            "absOffset": 731.9789899944931
           },
           {
             "stop_name": "S Ostkreuz Bhf (Berlin)",
             "stop_id": "de:11000:900120003",
             "offset": 1412.7158840330803,
-            "absOffset": 737.1798939745021
+            "absOffset": 788.5936817361264
           },
           {
             "stop_name": "S Nöldnerplatz (Berlin)",
             "stop_id": "de:11000:900160003",
             "offset": 1451.7893270453098,
-            "absOffset": 776.2533369867316
+            "absOffset": 827.667124748356
           },
           {
             "stop_name": "S+U Lichtenberg Bhf (Berlin)",
             "stop_id": "de:11000:900160004",
             "offset": 1505.4192928879697,
-            "absOffset": 829.8833028293915
+            "absOffset": 881.2970905910158
           },
           {
             "stop_name": "S Friedrichsfelde Ost (Berlin)",
             "stop_id": "de:11000:900171002",
             "offset": 1565.7517935832725,
-            "absOffset": 890.2158035246943
+            "absOffset": 941.6295912863186
           },
           {
             "stop_name": "S Springpfuhl (Berlin)",
             "stop_id": "de:11000:900171003",
             "offset": 1667.2775990095902,
-            "absOffset": 991.7416089510119
+            "absOffset": 1043.1553967126363
           }
         ],
-        "absStart": 109.6294136500959,
-        "absEnd": 1009.8538216839814,
+        "absStart": 161.0432014117202,
+        "absEnd": 1061.2676094456058,
         "start": 785.1654037086741,
         "end": 1685.3898117425597
       },
@@ -7157,40 +7407,40 @@
             "stop_name": "S Poelchaustr. (Berlin)",
             "stop_id": "de:11000:900170005",
             "offset": 25.593120436725613,
-            "absOffset": 1032.989932578349
+            "absOffset": 1084.4037203399735
           },
           {
             "stop_name": "S Marzahn (Berlin)",
             "stop_id": "de:11000:900170001",
             "offset": 65.40159728610635,
-            "absOffset": 1072.7984094277297
+            "absOffset": 1124.2121971893541
           },
           {
             "stop_name": "S Raoul-Wallenberg-Str. (Berlin)",
             "stop_id": "de:11000:900170002",
             "offset": 100.29392945786368,
-            "absOffset": 1107.6907415994872
+            "absOffset": 1159.1045293611114
           },
           {
             "stop_name": "S Mehrower Allee (Berlin)",
             "stop_id": "de:11000:900170003",
             "offset": 138.01607920165043,
-            "absOffset": 1145.412891343274
+            "absOffset": 1196.8266791048982
           },
           {
             "stop_name": "S Ahrensfelde Bhf (Berlin)",
             "stop_id": "de:11000:900170004",
             "offset": 204.14507423470445,
-            "absOffset": 1211.541886376328
+            "absOffset": 1262.9556741379522
           }
         ],
-        "absStart": 1009.8538216839814,
-        "absEnd": 1211.541886376328,
+        "absStart": 1061.2676094456058,
+        "absEnd": 1262.9556741379522,
         "start": 2.4570095423580223,
         "end": 204.14507423470445
       }
     ],
-    "length": 1211.541886376328
+    "length": 1262.9556741379522
   },
   {
     "id": "S8-Flughafen",

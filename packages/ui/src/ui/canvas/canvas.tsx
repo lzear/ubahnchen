@@ -7,6 +7,7 @@ import { Oninit, useOnInit } from '../store/maps'
 import { useUrlParameterMap } from '../store/use-url-parameters'
 import { insertMaps } from '../paper/insert-maps'
 import { MapName } from '../../lib/enums'
+// import { Development } from '../development'
 import { onKeys } from './use-keys'
 import { doShowStationNames, hideStationNames } from './station-names'
 import { paperView } from './paper-view'
@@ -104,7 +105,7 @@ const Canvas: React.FC = () => {
         />
       ) : //eslint-disable-next-line unicorn/no-null
       null}
-      {/*{!loading && <Development/>}*/}
+      {/*{!loading && <Development />}*/}
       <Hooks />
       <style jsx>{`
         canvas {

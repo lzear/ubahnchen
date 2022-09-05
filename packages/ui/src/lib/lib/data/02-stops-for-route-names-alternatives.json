@@ -310,9 +310,171 @@
     ]
   },
   {
+    "route_name": "S25",
+    "id": "S25-S1",
+    "stops": [
+      {
+        "stop_id": "de:12065:900200000",
+        "stop_name": "S Hennigsdorf Bhf"
+      },
+      {
+        "stop_id": "de:11000:900091203",
+        "stop_name": "S Heiligensee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900091205",
+        "stop_name": "S Schulzendorf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900089303",
+        "stop_name": "S Tegel (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900096405",
+        "stop_name": "S Eichborndamm (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900096458",
+        "stop_name": "S+U Karl-Bonhoeffer-Nervenklinik (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900085105",
+        "stop_name": "S Alt-Reinickendorf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900085201",
+        "stop_name": "S Schönholz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900130003",
+        "stop_name": "S Wollankstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110011",
+        "stop_name": "S Bornholmer Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900007102",
+        "stop_name": "S+U Gesundbrunnen Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900008101",
+        "stop_name": "S Humboldthain (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900007104",
+        "stop_name": "S Nordbahnhof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100007",
+        "stop_name": "S Oranienburger Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100001",
+        "stop_name": "S+U Friedrichstr. Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100025",
+        "stop_name": "S+U Brandenburger Tor (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100020",
+        "stop_name": "S+U Potsdamer Platz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900012101",
+        "stop_name": "S Anhalter Bahnhof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900058103",
+        "stop_name": "S+U Yorckstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900058101",
+        "stop_name": "S Südkreuz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900058102",
+        "stop_name": "S Priesterweg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900063452",
+        "stop_name": "S Südende (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900067221",
+        "stop_name": "S Lankwitz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900064301",
+        "stop_name": "S Lichterfelde Ost Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900064256",
+        "stop_name": "S Osdorfer Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900064201",
+        "stop_name": "S Lichterfelde Süd (Berlin)"
+      },
+      {
+        "stop_id": "de:12069:900220114",
+        "stop_name": "S Teltow Stadt"
+      }
+    ]
+  },
+  {
     "route_name": "S26",
     "id": "S26-S2",
     "stops": [
+      {
+        "stop_id": "de:11000:900094101",
+        "stop_name": "S Waidmannslust (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900096101",
+        "stop_name": "S+U Wittenau (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900084101",
+        "stop_name": "S Wilhelmsruh (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900085201",
+        "stop_name": "S Schönholz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900130003",
+        "stop_name": "S Wollankstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110011",
+        "stop_name": "S Bornholmer Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900007102",
+        "stop_name": "S+U Gesundbrunnen Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900008101",
+        "stop_name": "S Humboldthain (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900007104",
+        "stop_name": "S Nordbahnhof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100007",
+        "stop_name": "S Oranienburger Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100001",
+        "stop_name": "S+U Friedrichstr. Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100025",
+        "stop_name": "S+U Brandenburger Tor (Berlin)"
+      },
       {
         "stop_id": "de:11000:900100020",
         "stop_name": "S+U Potsdamer Platz Bhf (Berlin)"
@@ -1538,8 +1700,20 @@
     "route_name": "S7",
     "stops": [
       {
+        "stop_id": "de:11000:900025424",
+        "stop_name": "S Pichelsberg (Berlin)"
+      },
+      {
         "stop_id": "de:11000:900025321",
         "stop_name": "S Olympiastadion (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900026105",
+        "stop_name": "S Heerstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900025423",
+        "stop_name": "S Messe Süd (Berlin)"
       },
       {
         "stop_id": "de:11000:900024102",

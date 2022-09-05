@@ -9,7 +9,7 @@
   },
   {
     "route_name": "S25",
-    "paths": ["S25_nord", "S2-6", "S25_süd"]
+    "paths": ["S25_nord", "S2-6", "S25_süd", "S1-5"]
   },
   {
     "route_name": "S26",

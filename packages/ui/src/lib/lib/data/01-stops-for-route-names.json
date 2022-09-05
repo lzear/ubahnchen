@@ -329,40 +329,16 @@
         "stop_name": "S Anhalter Bahnhof (Berlin)"
       },
       {
-        "stop_id": "de:11000:900058103",
-        "stop_name": "S+U Yorckstr. (Berlin)"
+        "stop_id": "de:11000:900057102",
+        "stop_name": "S+U Yorckstr. (Großgörschenstr.) (Berlin)"
       },
       {
-        "stop_id": "de:11000:900058101",
-        "stop_name": "S Südkreuz Bhf (Berlin)"
+        "stop_id": "de:11000:900057104",
+        "stop_name": "S Julius-Leber-Brücke (Berlin)"
       },
       {
-        "stop_id": "de:11000:900058102",
-        "stop_name": "S Priesterweg (Berlin)"
-      },
-      {
-        "stop_id": "de:11000:900063452",
-        "stop_name": "S Südende (Berlin)"
-      },
-      {
-        "stop_id": "de:11000:900067221",
-        "stop_name": "S Lankwitz (Berlin)"
-      },
-      {
-        "stop_id": "de:11000:900064301",
-        "stop_name": "S Lichterfelde Ost Bhf (Berlin)"
-      },
-      {
-        "stop_id": "de:11000:900064256",
-        "stop_name": "S Osdorfer Str. (Berlin)"
-      },
-      {
-        "stop_id": "de:11000:900064201",
-        "stop_name": "S Lichterfelde Süd (Berlin)"
-      },
-      {
-        "stop_id": "de:12069:900220114",
-        "stop_name": "S Teltow Stadt"
+        "stop_id": "de:11000:900054104",
+        "stop_name": "S Schöneberg (Berlin)"
       }
     ]
   },
