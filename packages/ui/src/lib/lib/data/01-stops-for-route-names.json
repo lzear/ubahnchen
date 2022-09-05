@@ -891,6 +891,58 @@
     "route_name": "S46",
     "stops": [
       {
+        "stop_id": "de:11000:900190001",
+        "stop_name": "S Treptower Park (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900120003",
+        "stop_name": "S Ostkreuz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900120001",
+        "stop_name": "S+U Frankfurter Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110012",
+        "stop_name": "S Storkower Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110004",
+        "stop_name": "S Landsberger Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110003",
+        "stop_name": "S Greifswalder Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110002",
+        "stop_name": "S Prenzlauer Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110001",
+        "stop_name": "S+U Schönhauser Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900007102",
+        "stop_name": "S+U Gesundbrunnen Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900009104",
+        "stop_name": "S+U Wedding (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900001201",
+        "stop_name": "S+U Westhafen (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900020202",
+        "stop_name": "S Beusselstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900020201",
+        "stop_name": "S+U Jungfernheide Bhf (Berlin)"
+      },
+      {
         "stop_id": "de:11000:900026207",
         "stop_name": "S Westend (Berlin)"
       },

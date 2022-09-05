@@ -14,7 +14,7 @@ const PAGE_SIZE = 1000
 const day = '2022-06-26'
 
 const MAX_SPEED = {
-  [MapName.SU]: 0.9,
+  [MapName.SU]: 1.01,
   [MapName.U]: 1.4,
 }
 

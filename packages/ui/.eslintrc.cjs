@@ -3,13 +3,6 @@ module.exports = {
     node: true,
   },
   parser: '@typescript-eslint/parser',
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
-  },
   parserOptions: {
     ecmaVersion: 2022,
     sourceType: 'module',

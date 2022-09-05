@@ -23,6 +23,8 @@ const isOutdated = async () => {
     oldHeaderDataJson !== newHeaderDataJson || !fs.existsSync(GTFS_ZIP_PATH)
   const oldHeaderData = oldHeaderDataJson && JSON.parse(oldHeaderDataJson)
 
+  console.log(`new gtfs.zip file from ${newHeaderData['last-modified']}`)
+
   if (isOutdated) {
     if (oldHeaderData)
       console.log(

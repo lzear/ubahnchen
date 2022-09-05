@@ -33,7 +33,7 @@
   },
   {
     "route_name": "S46",
-    "paths": ["S45_sudring_2_", "S9-1"]
+    "paths": ["S45_sudring_2_", "S9-1", "S42"]
   },
   {
     "route_name": "S47",
@@ -64,7 +64,7 @@
   },
   {
     "route_name": "S85",
-    "paths": ["S8-1", "S1-5", "S9-1"]
+    "paths": ["S8-1", "S1-5", "S9-1", "S42"]
   },
   {
     "route_name": "S9",
