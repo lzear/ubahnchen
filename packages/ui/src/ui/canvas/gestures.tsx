@@ -6,10 +6,13 @@ import {
   wheelAction,
 } from '@use-gesture/react'
 import { useRef } from 'react'
+import _ from 'lodash'
 import { setCenter } from './set-center'
 import { paperView } from './paper-view'
 
 const useGesture = createUseGesture([dragAction, pinchAction, wheelAction])
+
+const clampZoom = (z: number) => _.clamp(z, 0.05, 200)
 
 export const useGestures = () => {
   const v0 = useRef(0)
@@ -27,23 +30,16 @@ export const useGestures = () => {
       },
       onPinch: (state) => {
         const view = paperView()
-        if (view) view.zoom = state.offset[0] * v0.current
-        // Paper.view.zoom = (z0.current * state.offset[0]) / o0.current
-        // state.event.preventDefault()
-        // state.event.stopPropagation()
+        if (view) view.zoom = clampZoom(state.offset[0] * v0.current)
       },
       onPinchStart: (state) => {
-        // z0.current = Paper.view.zoom
-        // o0.current = state.offset[0]
-
         const view = paperView()
         if (view) v0.current = view.zoom / state.offset[0]
       },
       onWheel: (state) => {
-        // state.event.preventDefault()
-
         const view = paperView()
-        if (view) view.zoom = view.zoom * (1 - state.delta[1] * 0.001)
+        if (view)
+          view.zoom = clampZoom(view.zoom * (1 - state.delta[1] * 0.001))
       },
     },
     {
