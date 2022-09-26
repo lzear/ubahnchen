@@ -260,8 +260,8 @@ const TimeV: React.FC = () => {
 
       <style jsx>{`
         .mono {
-          font-family: 'JetBrains Mono', SFMono-Regular, Consolas,
-            'Liberation Mono', Menlo, Courier, monospace;
+          font-family: 'JetBrains Mono', Consolas, 'Liberation Mono', Menlo,
+            Courier, monospace;
         }
       `}</style>
     </span>

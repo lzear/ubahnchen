@@ -45,7 +45,7 @@ const colors = {
 }
 
 export const monoFont =
-  "'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Courier, monospace"
+  "'JetBrains Mono', Consolas, 'Liberation Mono', Courier, monospace"
 
 const config: ThemeConfig = {
   initialColorMode: 'dark',

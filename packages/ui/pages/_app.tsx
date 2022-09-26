@@ -6,8 +6,9 @@ import App from 'next/app'
 import { Hydrate, QueryClientProvider } from '@tanstack/react-query'
 import { appWithTranslation } from 'next-i18next'
 import { queryClient } from '../src/lib/client'
-import '../src/lib/main.css'
 import { Chakra } from '../src/lib/chakra'
+import '@fontsource/jetbrains-mono'
+import '../src/lib/main.css'
 
 const MyApp = ({ Component, pageProps }: AppProps<Record<string, unknown>>) => {
   return (

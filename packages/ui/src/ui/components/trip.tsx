@@ -161,8 +161,8 @@ export const Trip: React.FC = () => {
               //overflow: auto;
               //font-size: 10px;
               //padding-right: 10px;
-              font-family: 'JetBrains Mono', SFMono-Regular, Consolas,
-                'Liberation Mono', Courier, monospace;
+              font-family: 'JetBrains Mono', Consolas, 'Liberation Mono',
+                Courier, monospace;
             }
           `}</style>
         </PopoverBody>
