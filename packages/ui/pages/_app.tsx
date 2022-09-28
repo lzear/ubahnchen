@@ -18,7 +18,7 @@ const MyApp = ({ Component, pageProps }: AppProps<Record<string, unknown>>) => {
       </Head>
       <PlausibleProvider domain="ubahnchen.vercel.app">
         <QueryClientProvider client={queryClient}>
-          <Hydrate state={pageProps.dehydratedState}>
+          <Hydrate state={pageProps['dehydratedState']}>
             <Chakra>
               {/* @ts-ignore*/}
               <Component {...pageProps} />
