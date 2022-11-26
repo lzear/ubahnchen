@@ -534,6 +534,14 @@
     "route_name": "S3",
     "stops": [
       {
+        "stop_id": "de:11000:900053301",
+        "stop_name": "S Wannsee Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900052201",
+        "stop_name": "S Nikolassee (Berlin)"
+      },
+      {
         "stop_id": "de:11000:900048101",
         "stop_name": "S Grunewald (Berlin)"
       },
@@ -1262,6 +1270,90 @@
     ]
   },
   {
+    "id": "S45-but-S8",
+    "route_name": "S45",
+    "stops": [
+      {
+        "stop_id": "de:11000:900190001",
+        "stop_name": "S Treptower Park (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191002",
+        "stop_name": "S Plänterwald (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191001",
+        "stop_name": "S Baumschulenweg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900192001",
+        "stop_name": "S Schöneweide Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193001",
+        "stop_name": "S Johannisthal (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193002",
+        "stop_name": "S Adlershof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900195510",
+        "stop_name": "S Altglienicke (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900196001",
+        "stop_name": "S Grünbergallee (Berlin)"
+      },
+      {
+        "stop_id": "de:12061:900260005",
+        "stop_name": "Flughafen BER - Terminal 5"
+      },
+      {
+        "stop_id": "de:12061:900260080",
+        "stop_name": "S Waßmannsdorf"
+      },
+      {
+        "stop_id": "de:12061:900260009",
+        "stop_name": "Flughafen BER - Terminal 1-2"
+      }
+    ]
+  },
+  {
+    "id": "S45-but-another",
+    "route_name": "S45",
+    "stops": [
+      {
+        "stop_id": "de:11000:900190001",
+        "stop_name": "S Treptower Park (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191002",
+        "stop_name": "S Plänterwald (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191001",
+        "stop_name": "S Baumschulenweg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900192001",
+        "stop_name": "S Schöneweide Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193001",
+        "stop_name": "S Johannisthal (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193002",
+        "stop_name": "S Adlershof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900186001",
+        "stop_name": "S Grünau (Berlin)"
+      }
+    ]
+  },
+  {
     "id": "S46-bis",
     "route_name": "S46",
     "stops": [
@@ -1958,6 +2050,44 @@
     ]
   },
   {
+    "id": "S75-bis",
+    "route_name": "S75",
+    "stops": [
+      {
+        "stop_id": "de:11000:900120004",
+        "stop_name": "S+U Warschauer Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900120003",
+        "stop_name": "S Ostkreuz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900160003",
+        "stop_name": "S Nöldnerplatz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900160004",
+        "stop_name": "S+U Lichtenberg Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900171002",
+        "stop_name": "S Friedrichsfelde Ost (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900171003",
+        "stop_name": "S Springpfuhl (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900170005",
+        "stop_name": "S Poelchaustr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900170001",
+        "stop_name": "S Marzahn (Berlin)"
+      }
+    ]
+  },
+  {
     "id": "S8-Flughafen",
     "route_name": "S8",
     "stops": [
@@ -2052,6 +2182,76 @@
       {
         "stop_id": "de:11000:900195510",
         "stop_name": "S Altglienicke (Berlin)"
+      }
+    ]
+  },
+  {
+    "id": "S8-ring",
+    "route_name": "S8",
+    "stops": [
+      {
+        "stop_id": "de:11000:900009104",
+        "stop_name": "S+U Wedding (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900007102",
+        "stop_name": "S+U Gesundbrunnen Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110001",
+        "stop_name": "S+U Schönhauser Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110002",
+        "stop_name": "S Prenzlauer Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110003",
+        "stop_name": "S Greifswalder Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110004",
+        "stop_name": "S Landsberger Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110012",
+        "stop_name": "S Storkower Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900120001",
+        "stop_name": "S+U Frankfurter Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900120003",
+        "stop_name": "S Ostkreuz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900190001",
+        "stop_name": "S Treptower Park (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191002",
+        "stop_name": "S Plänterwald (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191001",
+        "stop_name": "S Baumschulenweg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900192001",
+        "stop_name": "S Schöneweide Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193001",
+        "stop_name": "S Johannisthal (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193002",
+        "stop_name": "S Adlershof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900186001",
+        "stop_name": "S Grünau (Berlin)"
       }
     ]
   },
@@ -2156,6 +2356,18 @@
       {
         "stop_id": "de:11000:900192001",
         "stop_name": "S Schöneweide Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193001",
+        "stop_name": "S Johannisthal (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193002",
+        "stop_name": "S Adlershof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900186001",
+        "stop_name": "S Grünau (Berlin)"
       }
     ]
   },
