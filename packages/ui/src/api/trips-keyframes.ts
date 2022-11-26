@@ -309,7 +309,7 @@ const getKeyFramesRingbahn = (
         },
         {
           path: section.path,
-          offset: !isWay1 ? 0 : section.end,
+          offset: isWay1 ? section.end : 0,
           arrival_time: time,
         },
         thisStop,

@@ -29,9 +29,9 @@ const TogglingButton: React.FC<Props> = ({
   const onHover = useCallback(
     (isHovered: boolean) => {
       const [spanToShow, spanToHide] =
-        isChild1On !== isHovered
-          ? [child1span.current, child2span.current]
-          : [child2span.current, child1span.current]
+        isChild1On === isHovered
+          ? [child2span.current, child1span.current]
+          : [child1span.current, child2span.current]
 
       if (spanToShow) {
         spanToShow.style.visibility = 'visible'
@@ -83,7 +83,7 @@ const TogglingButton: React.FC<Props> = ({
           visibility: ${isChild1On ? 'visible' : 'hidden'};
         }
         .child2 {
-          visibility: ${!isChild1On ? 'visible' : 'hidden'};
+          visibility: ${isChild1On ? 'hidden' : 'visible'};
         }
       `}</style>
     </>
