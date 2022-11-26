@@ -52,7 +52,7 @@ export const TimeButtonGroup = () => {
             size="sm"
             onClick={() => setVirtualTimeZero()}
             pointerEvents="auto"
-            aria-label={t('time.nowLabel')}
+            aria-label={t('time.nowLabel') || 'now'}
           />
         </Tooltip>
         <Button

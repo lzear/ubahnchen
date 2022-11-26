@@ -24,9 +24,10 @@ export const DarkModeToggle = () => {
           icon={
             hovered === (colorMode === 'light') ? <MoonIcon /> : <SunIcon />
           }
-          aria-label={t(
-            colorMode === 'light' ? 'switchToDark' : 'switchToLight',
-          )}
+          aria-label={
+            t(colorMode === 'light' ? 'switchToDark' : 'switchToLight') ||
+            'switch color mode'
+          }
           pointerEvents="auto"
           onClick={() => {
             toggleColorMode()

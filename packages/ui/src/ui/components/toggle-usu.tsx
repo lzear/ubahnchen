@@ -45,7 +45,9 @@ const BButtton: React.FC = forwardRef(
             }}
             className="usu-toggle"
             variant="ghost"
-            aria-label={t(other === 'U' ? 'switchToU' : 'switchToSU')}
+            aria-label={
+              t(other === 'U' ? 'switchToU' : 'switchToSU') || undefined
+            }
             style={{ pointerEvents: 'auto' }}
             onClick={(event) => {
               if (usuReference.current) usuReference.current.textContent = other

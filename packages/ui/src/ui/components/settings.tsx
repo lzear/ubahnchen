@@ -218,7 +218,7 @@ const SettingsBody = () => {
                   size="sm"
                   id="precision"
                   pointerEvents="auto"
-                  aria-label={t('ariaPrecision')}
+                  aria-label={t('ariaPrecision') || undefined}
                   // defaultValue={30}
                   step={0.5}
                   min={-OFFSET_DELTA_MAX}
@@ -265,7 +265,7 @@ const SettingsBody = () => {
                   isDisabled={temporaryShadow === undefined}
                   id="shadow"
                   pointerEvents="auto"
-                  aria-label={t('ariaShadowBrightness')}
+                  aria-label={t('ariaShadowBrightness') || undefined}
                   // defaultValue={30}
                   step={0.05}
                   min={0}
@@ -301,7 +301,7 @@ const SettingsBody = () => {
                   size="sm"
                   id="throttle-fps"
                   pointerEvents="auto"
-                  aria-label={t('ariaFps')}
+                  aria-label={t('ariaFps') || undefined}
                   // defaultValue={30}
                   step={0.1}
                   min={-THROTTLE_MAX}
@@ -363,7 +363,7 @@ export const Settings: React.ComponentType = () => {
         openDelay={800}
       >
         <IconButton
-          aria-label={t('settings.name')}
+          aria-label={t('settings.name') || 'settings'}
           size="sm"
           onClick={onOpen}
           pointerEvents="auto"
@@ -378,7 +378,7 @@ export const Settings: React.ComponentType = () => {
           <ModalCloseButton />
           <SettingsBody />
           <ModalFooter>
-            <Button onClick={onClose} aria-label={t('ok')}>
+            <Button onClick={onClose} aria-label={t('ok') || undefined}>
               {t('ok')}
             </Button>
           </ModalFooter>
