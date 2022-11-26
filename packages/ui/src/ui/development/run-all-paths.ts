@@ -1,6 +1,5 @@
 import * as paper from 'paper'
 import { getTrainPosition } from '../trains/get-position'
-import { stopIndexById } from '../trains/stop-idxs'
 import { useStore } from '../store/store'
 import { selectPaths } from '../store/maps'
 import type { SectionWithAbs } from '../../lib/intineraries'
@@ -15,14 +14,10 @@ export const positionsForRatio = (linee: LineStop, ratio: number) => {
   const stop1 = linee.sections[0]?.stops[0]
   const stop2 = linee.sections.at(-1)?.stops.at(-1)
 
-  if (!stop1 || !stop2) throw new Error('sdfsd')
-  const stop_index1 = stopIndexById[stop1.stop_id]
-  const stop_index2 = stopIndexById[stop2.stop_id]
-
-  if (!stop_index1 || !stop_index2) throw new Error('sdfsd')
+  if (!stop1 || !stop2) throw new Error('sdfsd11')
   return getTrainPosition({
-    stop_idx1: stop_index1,
-    stop_idx2: stop_index2,
+    stop_id1: stop1.stop_id,
+    stop_id2: stop2.stop_id,
     route: linee,
     ratio,
   })
