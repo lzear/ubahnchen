@@ -1,6 +1,5 @@
 import { MapName } from '../../lib/enums'
 import { itineraries, SectionWithAbs } from '../../lib/intineraries'
-import { stopIdByIndex } from './stop-idxs'
 
 type Route = { sections: SectionWithAbs[] }
 
@@ -19,20 +18,20 @@ export const findRouteWithName = (
 }
 
 export const getTrainPosition = ({
-  stop_idx1,
-  stop_idx2,
+  stop_id1,
+  stop_id2,
   ratio,
   route,
 }: {
-  stop_idx1: number
-  stop_idx2: number
+  stop_id1: string
+  stop_id2: string
   ratio: number
   route: Route
 }) => {
   const routeStops = route.sections.flatMap((s) => s.stops)
 
-  const stop1 = routeStops.find((s) => s.stop_id === stopIdByIndex[stop_idx1])
-  const stop2 = routeStops.find((s) => s.stop_id === stopIdByIndex[stop_idx2])
+  const stop1 = routeStops.find((s) => s.stop_id === stop_id1)
+  const stop2 = routeStops.find((s) => s.stop_id === stop_id2)
 
   if (!stop1 || !stop2) throw new Error('Stop not found')
 
