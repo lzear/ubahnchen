@@ -17,7 +17,7 @@ export const TogglingIconButton: React.FC<
       size="sm"
       className="button-toggle"
       variant="ghost"
-      icon={hovered !== isChild1On ? child1 : child2}
+      icon={hovered === isChild1On ? child2 : child1}
       pointerEvents="auto"
       onClick={() => {
         toggle()

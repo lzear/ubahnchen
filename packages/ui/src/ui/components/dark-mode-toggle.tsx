@@ -22,7 +22,7 @@ export const DarkModeToggle = () => {
           className="dark-mode-button-toggle"
           variant="ghost"
           icon={
-            hovered !== (colorMode === 'light') ? <SunIcon /> : <MoonIcon />
+            hovered === (colorMode === 'light') ? <MoonIcon /> : <SunIcon />
           }
           aria-label={t(
             colorMode === 'light' ? 'switchToDark' : 'switchToLight',

@@ -13,9 +13,9 @@ const isHandledLocale = (loc: string): loc is Locals => {
 
 export const formatInLocale: typeof format = (date, formatString, options) => {
   const localeId =
-    typeof window !== 'undefined'
-      ? (window as any)['__localeId__']
-      : (global as any)['__localeId__']
+    typeof window === 'undefined'
+      ? (global as any)['__localeId__']
+      : (window as any)['__localeId__']
 
   const locale = isHandledLocale(localeId) ? locales[localeId] : de
   return format(date, formatString, { locale, ...options })
@@ -27,9 +27,9 @@ export const formatTzInLocale: typeof formatTz = (
   options,
 ) => {
   const localeId =
-    typeof window !== 'undefined'
-      ? (window as any)['__localeId__']
-      : (global as any)['__localeId__']
+    typeof window === 'undefined'
+      ? (global as any)['__localeId__']
+      : (window as any)['__localeId__']
 
   const locale = isHandledLocale(localeId) ? locales[localeId] : de
   return formatTz(date, formatString, { locale, ...options })

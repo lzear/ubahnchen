@@ -43,7 +43,7 @@ export const useGestures = () => {
       },
     },
     {
-      target: typeof window !== 'undefined' ? window : undefined,
+      target: typeof window === 'undefined' ? undefined : window,
       drag: { threshold: 3, triggerAllEvents: true },
       // pinch: { eventOptions: { passive: true } },
       // wheel: { eventOptions: { passive: true } },
