@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregateRoutesResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const AggregateRoutesArgs_1 = require("./args/AggregateRoutesArgs");
 const Routes_1 = require("../../../models/Routes");
 const AggregateRoutes_1 = require("../../outputs/AggregateRoutes");
@@ -12,7 +11,7 @@ let AggregateRoutesResolver = class AggregateRoutesResolver {
     async aggregateRoutes(ctx, info, args) {
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.aggregate({
             ...args,
-            ...(0, helpers_1.transformFields)((0, graphql_fields_1.default)(info)),
+            ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
         });
     }
 };

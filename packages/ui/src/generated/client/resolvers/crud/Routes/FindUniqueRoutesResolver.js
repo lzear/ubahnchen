@@ -3,13 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindUniqueRoutesResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const FindUniqueRoutesArgs_1 = require("./args/FindUniqueRoutesArgs");
 const Routes_1 = require("../../../models/Routes");
 const helpers_1 = require("../../../helpers");
 let FindUniqueRoutesResolver = class FindUniqueRoutesResolver {
     async findUniqueRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.findUnique({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),

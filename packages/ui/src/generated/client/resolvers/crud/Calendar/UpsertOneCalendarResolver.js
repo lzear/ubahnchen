@@ -3,13 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpsertOneCalendarResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const UpsertOneCalendarArgs_1 = require("./args/UpsertOneCalendarArgs");
 const Calendar_1 = require("../../../models/Calendar");
 const helpers_1 = require("../../../helpers");
 let UpsertOneCalendarResolver = class UpsertOneCalendarResolver {
     async upsertOneCalendar(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar.upsert({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),

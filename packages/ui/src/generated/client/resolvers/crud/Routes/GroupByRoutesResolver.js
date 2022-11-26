@@ -3,14 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GroupByRoutesResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const GroupByRoutesArgs_1 = require("./args/GroupByRoutesArgs");
 const Routes_1 = require("../../../models/Routes");
 const RoutesGroupBy_1 = require("../../outputs/RoutesGroupBy");
 const helpers_1 = require("../../../helpers");
 let GroupByRoutesResolver = class GroupByRoutesResolver {
     async groupByRoutes(ctx, info, args) {
-        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.groupBy({
             ...args,
             ...Object.fromEntries(Object.entries({ _count, _avg, _sum, _min, _max }).filter(([_, v]) => v != null)),

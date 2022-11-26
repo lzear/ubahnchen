@@ -868,21 +868,33 @@ export type Query = {
   calendar?: Maybe<Calendar>;
   calendars: Array<Calendar>;
   findFirstCalendar?: Maybe<Calendar>;
+  findFirstCalendarOrThrow?: Maybe<Calendar>;
   findFirstCalendar_dates?: Maybe<Calendar_Dates>;
+  findFirstCalendar_datesOrThrow?: Maybe<Calendar_Dates>;
   findFirstRoutes?: Maybe<Routes>;
+  findFirstRoutesOrThrow?: Maybe<Routes>;
   findFirstStop_times?: Maybe<Stop_Times>;
+  findFirstStop_timesOrThrow?: Maybe<Stop_Times>;
   findFirstStops?: Maybe<Stops>;
+  findFirstStopsOrThrow?: Maybe<Stops>;
   findFirstTrips?: Maybe<Trips>;
+  findFirstTripsOrThrow?: Maybe<Trips>;
   findManyCalendar_dates: Array<Calendar_Dates>;
   findManyRoutes: Array<Routes>;
   findManyStop_times: Array<Stop_Times>;
   findManyStops: Array<Stops>;
   findManyTrips: Array<Trips>;
   findUniqueCalendar_dates?: Maybe<Calendar_Dates>;
+  findUniqueCalendar_datesOrThrow?: Maybe<Calendar_Dates>;
   findUniqueRoutes?: Maybe<Routes>;
+  findUniqueRoutesOrThrow?: Maybe<Routes>;
   findUniqueStop_times?: Maybe<Stop_Times>;
+  findUniqueStop_timesOrThrow?: Maybe<Stop_Times>;
   findUniqueStops?: Maybe<Stops>;
+  findUniqueStopsOrThrow?: Maybe<Stops>;
   findUniqueTrips?: Maybe<Trips>;
+  findUniqueTripsOrThrow?: Maybe<Trips>;
+  getCalendar?: Maybe<Calendar>;
   groupByCalendar: Array<CalendarGroupBy>;
   groupByCalendar_dates: Array<Calendar_DatesGroupBy>;
   groupByRoutes: Array<RoutesGroupBy>;
@@ -971,7 +983,27 @@ export type QueryFindFirstCalendarArgs = {
 };
 
 
+export type QueryFindFirstCalendarOrThrowArgs = {
+  cursor?: InputMaybe<CalendarWhereUniqueInput>;
+  distinct?: InputMaybe<Array<CalendarScalarFieldEnum>>;
+  orderBy?: InputMaybe<Array<CalendarOrderByWithRelationInput>>;
+  skip?: InputMaybe<Scalars['Int']>;
+  take?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<CalendarWhereInput>;
+};
+
+
 export type QueryFindFirstCalendar_DatesArgs = {
+  cursor?: InputMaybe<Calendar_DatesWhereUniqueInput>;
+  distinct?: InputMaybe<Array<Calendar_DatesScalarFieldEnum>>;
+  orderBy?: InputMaybe<Array<Calendar_DatesOrderByWithRelationInput>>;
+  skip?: InputMaybe<Scalars['Int']>;
+  take?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<Calendar_DatesWhereInput>;
+};
+
+
+export type QueryFindFirstCalendar_DatesOrThrowArgs = {
   cursor?: InputMaybe<Calendar_DatesWhereUniqueInput>;
   distinct?: InputMaybe<Array<Calendar_DatesScalarFieldEnum>>;
   orderBy?: InputMaybe<Array<Calendar_DatesOrderByWithRelationInput>>;
@@ -991,7 +1023,27 @@ export type QueryFindFirstRoutesArgs = {
 };
 
 
+export type QueryFindFirstRoutesOrThrowArgs = {
+  cursor?: InputMaybe<RoutesWhereUniqueInput>;
+  distinct?: InputMaybe<Array<RoutesScalarFieldEnum>>;
+  orderBy?: InputMaybe<Array<RoutesOrderByWithRelationInput>>;
+  skip?: InputMaybe<Scalars['Int']>;
+  take?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<RoutesWhereInput>;
+};
+
+
 export type QueryFindFirstStop_TimesArgs = {
+  cursor?: InputMaybe<Stop_TimesWhereUniqueInput>;
+  distinct?: InputMaybe<Array<Stop_TimesScalarFieldEnum>>;
+  orderBy?: InputMaybe<Array<Stop_TimesOrderByWithRelationInput>>;
+  skip?: InputMaybe<Scalars['Int']>;
+  take?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<Stop_TimesWhereInput>;
+};
+
+
+export type QueryFindFirstStop_TimesOrThrowArgs = {
   cursor?: InputMaybe<Stop_TimesWhereUniqueInput>;
   distinct?: InputMaybe<Array<Stop_TimesScalarFieldEnum>>;
   orderBy?: InputMaybe<Array<Stop_TimesOrderByWithRelationInput>>;
@@ -1011,7 +1063,27 @@ export type QueryFindFirstStopsArgs = {
 };
 
 
+export type QueryFindFirstStopsOrThrowArgs = {
+  cursor?: InputMaybe<StopsWhereUniqueInput>;
+  distinct?: InputMaybe<Array<StopsScalarFieldEnum>>;
+  orderBy?: InputMaybe<Array<StopsOrderByWithRelationInput>>;
+  skip?: InputMaybe<Scalars['Int']>;
+  take?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<StopsWhereInput>;
+};
+
+
 export type QueryFindFirstTripsArgs = {
+  cursor?: InputMaybe<TripsWhereUniqueInput>;
+  distinct?: InputMaybe<Array<TripsScalarFieldEnum>>;
+  orderBy?: InputMaybe<Array<TripsOrderByWithRelationInput>>;
+  skip?: InputMaybe<Scalars['Int']>;
+  take?: InputMaybe<Scalars['Int']>;
+  where?: InputMaybe<TripsWhereInput>;
+};
+
+
+export type QueryFindFirstTripsOrThrowArgs = {
   cursor?: InputMaybe<TripsWhereUniqueInput>;
   distinct?: InputMaybe<Array<TripsScalarFieldEnum>>;
   orderBy?: InputMaybe<Array<TripsOrderByWithRelationInput>>;
@@ -1076,7 +1148,17 @@ export type QueryFindUniqueCalendar_DatesArgs = {
 };
 
 
+export type QueryFindUniqueCalendar_DatesOrThrowArgs = {
+  where: Calendar_DatesWhereUniqueInput;
+};
+
+
 export type QueryFindUniqueRoutesArgs = {
+  where: RoutesWhereUniqueInput;
+};
+
+
+export type QueryFindUniqueRoutesOrThrowArgs = {
   where: RoutesWhereUniqueInput;
 };
 
@@ -1086,13 +1168,33 @@ export type QueryFindUniqueStop_TimesArgs = {
 };
 
 
+export type QueryFindUniqueStop_TimesOrThrowArgs = {
+  where: Stop_TimesWhereUniqueInput;
+};
+
+
 export type QueryFindUniqueStopsArgs = {
+  where: StopsWhereUniqueInput;
+};
+
+
+export type QueryFindUniqueStopsOrThrowArgs = {
   where: StopsWhereUniqueInput;
 };
 
 
 export type QueryFindUniqueTripsArgs = {
   where: TripsWhereUniqueInput;
+};
+
+
+export type QueryFindUniqueTripsOrThrowArgs = {
+  where: TripsWhereUniqueInput;
+};
+
+
+export type QueryGetCalendarArgs = {
+  where: CalendarWhereUniqueInput;
 };
 
 

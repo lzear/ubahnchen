@@ -3,13 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DeleteOneTripsResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const DeleteOneTripsArgs_1 = require("./args/DeleteOneTripsArgs");
 const Trips_1 = require("../../../models/Trips");
 const helpers_1 = require("../../../helpers");
 let DeleteOneTripsResolver = class DeleteOneTripsResolver {
     async deleteOneTrips(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).trips.delete({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),

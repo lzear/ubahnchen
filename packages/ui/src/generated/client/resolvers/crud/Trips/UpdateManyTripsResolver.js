@@ -3,14 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateManyTripsResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const UpdateManyTripsArgs_1 = require("./args/UpdateManyTripsArgs");
 const Trips_1 = require("../../../models/Trips");
 const AffectedRowsOutput_1 = require("../../outputs/AffectedRowsOutput");
 const helpers_1 = require("../../../helpers");
 let UpdateManyTripsResolver = class UpdateManyTripsResolver {
     async updateManyTrips(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).trips.updateMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),

@@ -3,13 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.FindFirstStopsResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const FindFirstStopsArgs_1 = require("./args/FindFirstStopsArgs");
 const Stops_1 = require("../../../models/Stops");
 const helpers_1 = require("../../../helpers");
 let FindFirstStopsResolver = class FindFirstStopsResolver {
     async findFirstStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.findFirst({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),

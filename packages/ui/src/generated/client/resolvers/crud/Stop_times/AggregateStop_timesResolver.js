@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregateStop_timesResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const AggregateStop_timesArgs_1 = require("./args/AggregateStop_timesArgs");
 const Stop_times_1 = require("../../../models/Stop_times");
 const AggregateStop_times_1 = require("../../outputs/AggregateStop_times");
@@ -12,7 +11,7 @@ let AggregateStop_timesResolver = class AggregateStop_timesResolver {
     async aggregateStop_times(ctx, info, args) {
         return (0, helpers_1.getPrismaFromContext)(ctx).stop_times.aggregate({
             ...args,
-            ...(0, helpers_1.transformFields)((0, graphql_fields_1.default)(info)),
+            ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
         });
     }
 };
