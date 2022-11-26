@@ -10,12 +10,17 @@ export const Breadcrumbs: React.FC<{ current: string }> = ({ current }) => {
     { name: 'stats', href: '/stats' },
   ]
   return (
-    <Breadcrumb separator=" | " textAlign="center" marginBottom={100}>
+    <Breadcrumb
+      separator=" | "
+      display="flex"
+      justifyContent="center"
+      marginBottom={100}
+    >
       {links.map((l) => {
         const isCurrentPage = l.href === current
         return (
           <BreadcrumbItem key={l.href} isCurrentPage={isCurrentPage}>
-            <NextLink href={l.href} passHref>
+            <NextLink href={l.href} legacyBehavior passHref>
               <Link
                 margin="0 40px"
                 fontWeight={isCurrentPage ? 'bold' : undefined}

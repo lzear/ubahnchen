@@ -15,7 +15,7 @@ export const About: React.FC = () => {
         <title>{title}</title>
       </Head>
 
-      <NextLink href="/" passHref>
+      <NextLink href="/" passHref legacyBehavior>
         <Link>
           <CloseButton size="lg" position="fixed" right="10px" top="10px" />
         </Link>

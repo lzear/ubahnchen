@@ -7,7 +7,7 @@ import { useTranslation } from 'next-i18next'
 export const Info: React.FC = () => {
   const { t } = useTranslation()
   return (
-    <NextLink href="/about" passHref>
+    <NextLink href="/about" passHref legacyBehavior>
       <Link color="inherit" tabIndex={-1}>
         <Tooltip
           label={t('learnMore')}
