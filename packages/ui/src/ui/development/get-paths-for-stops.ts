@@ -15,7 +15,7 @@ type LinePath = {
 
 const DELTA = {
   [MapName.SU]: 11.09,
-  [MapName.U]: 12.1,
+  [MapName.U]: 13.2,
 }
 
 let gdots: paper.Item | undefined
@@ -57,7 +57,7 @@ export const _getPathsForStops = (
         : linePath.hardcode?.find((h) => h.stop_id === stop_id)
 
       const station = stations.get(stop_id)
-      if (!station) throw new Error('fsdf234')
+      if (!station) throw new Error('fsdf234 ' + stop_id)
 
       if (hardcoded) {
         const path = paths.get(hardcoded.path)
@@ -88,7 +88,7 @@ export const _getPathsForStops = (
       }
 
       throw new Error(
-        `${stop_id}: Couldnt find nearby path. Nearest:${bestPath} (${bestDistance})`,
+        `${stop_id}: Couldnt find nearby path. Nearest:${bestPath} (${bestDistance}, ${linePath.route_name})`,
       )
     },
   )
