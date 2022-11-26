@@ -29,7 +29,7 @@
   },
   {
     "route_name": "S45",
-    "paths": ["S45_sudring_2_", "S45_bbi", "s_bbi__x28_ready..._x29_", "S9-1"]
+    "paths": ["S45_sudring_2_", "S45_bbi", "s_bbi__x28_ready..._x29_", "S9-1", "S42"]
   },
   {
     "route_name": "S46",
@@ -60,7 +60,7 @@
   },
   {
     "route_name": "S8",
-    "paths": ["S8-1", "S1-5", "S45_sudring_2_", "S9-1"]
+    "paths": ["S8-1", "S1-5", "S45_sudring_2_", "S9-1", "S42"]
   },
   {
     "route_name": "S85",

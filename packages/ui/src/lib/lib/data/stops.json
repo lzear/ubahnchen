@@ -845,16 +845,6 @@
     "stop_name": "U Holzhauser Str. (Berlin)"
   },
   {
-    "stop_idx": 170,
-    "stop_id": "de:11000:900088202",
-    "stop_name": "U Borsigwerke (Berlin)"
-  },
-  {
-    "stop_idx": 171,
-    "stop_id": "de:11000:900089301",
-    "stop_name": "U Alt-Tegel (Berlin)"
-  },
-  {
     "stop_idx": 172,
     "stop_id": "de:11000:900089303",
     "stop_name": "S Tegel (Berlin)"

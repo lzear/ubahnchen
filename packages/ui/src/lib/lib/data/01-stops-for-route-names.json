@@ -250,6 +250,14 @@
       {
         "stop_id": "de:11000:900074201",
         "stop_name": "S Lichtenrade (Berlin)"
+      },
+      {
+        "stop_id": "de:12072:900245028",
+        "stop_name": "S Mahlow"
+      },
+      {
+        "stop_id": "de:12072:900245027",
+        "stop_name": "S Blankenfelde (TF) Bhf"
       }
     ]
   },
@@ -793,6 +801,38 @@
   {
     "route_name": "S45",
     "stops": [
+      {
+        "stop_id": "de:11000:900110003",
+        "stop_name": "S Greifswalder Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110002",
+        "stop_name": "S Prenzlauer Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110001",
+        "stop_name": "S+U Schönhauser Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900007102",
+        "stop_name": "S+U Gesundbrunnen Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900009104",
+        "stop_name": "S+U Wedding (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900001201",
+        "stop_name": "S+U Westhafen (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900020202",
+        "stop_name": "S Beusselstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900020201",
+        "stop_name": "S+U Jungfernheide Bhf (Berlin)"
+      },
       {
         "stop_id": "de:11000:900026207",
         "stop_name": "S Westend (Berlin)"
@@ -2184,26 +2224,6 @@
   {
     "route_name": "U6",
     "stops": [
-      {
-        "stop_id": "de:11000:900089301",
-        "stop_name": "U Alt-Tegel (Berlin)"
-      },
-      {
-        "stop_id": "de:11000:900088202",
-        "stop_name": "U Borsigwerke (Berlin)"
-      },
-      {
-        "stop_id": "de:11000:900088201",
-        "stop_name": "U Holzhauser Str. (Berlin)"
-      },
-      {
-        "stop_id": "de:11000:900086101",
-        "stop_name": "U Otisstr. (Berlin)"
-      },
-      {
-        "stop_id": "de:11000:900087101",
-        "stop_name": "U Scharnweberstr. (Berlin)"
-      },
       {
         "stop_id": "de:11000:900086102",
         "stop_name": "U Kurt-Schumacher-Platz (Berlin)"
