@@ -3,14 +3,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.StopsCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const AggregateStopsArgs_1 = require("./args/AggregateStopsArgs");
 const CreateOneStopsArgs_1 = require("./args/CreateOneStopsArgs");
 const DeleteManyStopsArgs_1 = require("./args/DeleteManyStopsArgs");
 const DeleteOneStopsArgs_1 = require("./args/DeleteOneStopsArgs");
 const FindFirstStopsArgs_1 = require("./args/FindFirstStopsArgs");
+const FindFirstStopsOrThrowArgs_1 = require("./args/FindFirstStopsOrThrowArgs");
 const FindManyStopsArgs_1 = require("./args/FindManyStopsArgs");
 const FindUniqueStopsArgs_1 = require("./args/FindUniqueStopsArgs");
+const FindUniqueStopsOrThrowArgs_1 = require("./args/FindUniqueStopsOrThrowArgs");
 const GroupByStopsArgs_1 = require("./args/GroupByStopsArgs");
 const UpdateManyStopsArgs_1 = require("./args/UpdateManyStopsArgs");
 const UpdateOneStopsArgs_1 = require("./args/UpdateOneStopsArgs");
@@ -24,74 +25,88 @@ let StopsCrudResolver = class StopsCrudResolver {
     async aggregateStops(ctx, info, args) {
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.aggregate({
             ...args,
-            ...(0, helpers_1.transformFields)((0, graphql_fields_1.default)(info)),
+            ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
         });
     }
     async createOneStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.create({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async deleteManyStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.deleteMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async deleteOneStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.delete({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async findFirstStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.findFirst({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstStopsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
+        return (0, helpers_1.getPrismaFromContext)(ctx).stops.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.findMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async findUniqueStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.findUnique({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findUniqueStopsOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
+        return (0, helpers_1.getPrismaFromContext)(ctx).stops.findUniqueOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async groupByStops(ctx, info, args) {
-        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.groupBy({
             ...args,
             ...Object.fromEntries(Object.entries({ _count, _avg, _sum, _min, _max }).filter(([_, v]) => v != null)),
         });
     }
     async updateManyStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.updateMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async updateOneStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.update({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async upsertOneStops(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).stops.upsert({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
@@ -154,6 +169,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], StopsCrudResolver.prototype, "findFirstStops", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Stops_1.Stops, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstStopsOrThrowArgs_1.FindFirstStopsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StopsCrudResolver.prototype, "findFirstStopsOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Stops_1.Stops], {
         nullable: false
     }),
@@ -175,6 +201,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueStopsArgs_1.FindUniqueStopsArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], StopsCrudResolver.prototype, "findUniqueStops", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Stops_1.Stops, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueStopsOrThrowArgs_1.FindUniqueStopsOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], StopsCrudResolver.prototype, "findUniqueStopsOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [StopsGroupBy_1.StopsGroupBy], {
         nullable: false

@@ -3,14 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GroupByTripsResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const GroupByTripsArgs_1 = require("./args/GroupByTripsArgs");
 const Trips_1 = require("../../../models/Trips");
 const TripsGroupBy_1 = require("../../outputs/TripsGroupBy");
 const helpers_1 = require("../../../helpers");
 let GroupByTripsResolver = class GroupByTripsResolver {
     async groupByTrips(ctx, info, args) {
-        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).trips.groupBy({
             ...args,
             ...Object.fromEntries(Object.entries({ _count, _avg, _sum, _min, _max }).filter(([_, v]) => v != null)),

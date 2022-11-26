@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregateTripsResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const AggregateTripsArgs_1 = require("./args/AggregateTripsArgs");
 const Trips_1 = require("../../../models/Trips");
 const AggregateTrips_1 = require("../../outputs/AggregateTrips");
@@ -12,7 +11,7 @@ let AggregateTripsResolver = class AggregateTripsResolver {
     async aggregateTrips(ctx, info, args) {
         return (0, helpers_1.getPrismaFromContext)(ctx).trips.aggregate({
             ...args,
-            ...(0, helpers_1.transformFields)((0, graphql_fields_1.default)(info)),
+            ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
         });
     }
 };

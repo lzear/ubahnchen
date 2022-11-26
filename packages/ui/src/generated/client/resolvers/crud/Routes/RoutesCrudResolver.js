@@ -3,14 +3,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RoutesCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const AggregateRoutesArgs_1 = require("./args/AggregateRoutesArgs");
 const CreateOneRoutesArgs_1 = require("./args/CreateOneRoutesArgs");
 const DeleteManyRoutesArgs_1 = require("./args/DeleteManyRoutesArgs");
 const DeleteOneRoutesArgs_1 = require("./args/DeleteOneRoutesArgs");
 const FindFirstRoutesArgs_1 = require("./args/FindFirstRoutesArgs");
+const FindFirstRoutesOrThrowArgs_1 = require("./args/FindFirstRoutesOrThrowArgs");
 const FindManyRoutesArgs_1 = require("./args/FindManyRoutesArgs");
 const FindUniqueRoutesArgs_1 = require("./args/FindUniqueRoutesArgs");
+const FindUniqueRoutesOrThrowArgs_1 = require("./args/FindUniqueRoutesOrThrowArgs");
 const GroupByRoutesArgs_1 = require("./args/GroupByRoutesArgs");
 const UpdateManyRoutesArgs_1 = require("./args/UpdateManyRoutesArgs");
 const UpdateOneRoutesArgs_1 = require("./args/UpdateOneRoutesArgs");
@@ -24,74 +25,88 @@ let RoutesCrudResolver = class RoutesCrudResolver {
     async aggregateRoutes(ctx, info, args) {
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.aggregate({
             ...args,
-            ...(0, helpers_1.transformFields)((0, graphql_fields_1.default)(info)),
+            ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
         });
     }
     async createOneRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.create({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async deleteManyRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.deleteMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async deleteOneRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.delete({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async findFirstRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.findFirst({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstRoutesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
+        return (0, helpers_1.getPrismaFromContext)(ctx).routes.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.findMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async findUniqueRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.findUnique({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findUniqueRoutesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
+        return (0, helpers_1.getPrismaFromContext)(ctx).routes.findUniqueOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async groupByRoutes(ctx, info, args) {
-        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.groupBy({
             ...args,
             ...Object.fromEntries(Object.entries({ _count, _avg, _sum, _min, _max }).filter(([_, v]) => v != null)),
         });
     }
     async updateManyRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.updateMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async updateOneRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.update({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async upsertOneRoutes(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).routes.upsert({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
@@ -154,6 +169,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], RoutesCrudResolver.prototype, "findFirstRoutes", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Routes_1.Routes, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstRoutesOrThrowArgs_1.FindFirstRoutesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], RoutesCrudResolver.prototype, "findFirstRoutesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Routes_1.Routes], {
         nullable: false
     }),
@@ -175,6 +201,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueRoutesArgs_1.FindUniqueRoutesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], RoutesCrudResolver.prototype, "findUniqueRoutes", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Routes_1.Routes, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueRoutesOrThrowArgs_1.FindUniqueRoutesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], RoutesCrudResolver.prototype, "findUniqueRoutesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [RoutesGroupBy_1.RoutesGroupBy], {
         nullable: false

@@ -3,14 +3,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.GroupByCalendar_datesResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const GroupByCalendar_datesArgs_1 = require("./args/GroupByCalendar_datesArgs");
 const Calendar_dates_1 = require("../../../models/Calendar_dates");
 const Calendar_datesGroupBy_1 = require("../../outputs/Calendar_datesGroupBy");
 const helpers_1 = require("../../../helpers");
 let GroupByCalendar_datesResolver = class GroupByCalendar_datesResolver {
     async groupByCalendar_dates(ctx, info, args) {
-        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.groupBy({
             ...args,
             ...Object.fromEntries(Object.entries({ _count, _avg, _sum, _min, _max }).filter(([_, v]) => v != null)),

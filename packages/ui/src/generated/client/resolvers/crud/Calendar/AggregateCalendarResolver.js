@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AggregateCalendarResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const AggregateCalendarArgs_1 = require("./args/AggregateCalendarArgs");
 const Calendar_1 = require("../../../models/Calendar");
 const AggregateCalendar_1 = require("../../outputs/AggregateCalendar");
@@ -12,7 +11,7 @@ let AggregateCalendarResolver = class AggregateCalendarResolver {
     async aggregateCalendar(ctx, info, args) {
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar.aggregate({
             ...args,
-            ...(0, helpers_1.transformFields)((0, graphql_fields_1.default)(info)),
+            ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
         });
     }
 };

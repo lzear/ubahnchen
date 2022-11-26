@@ -3,14 +3,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Calendar_datesCrudResolver = void 0;
 const tslib_1 = require("tslib");
 const TypeGraphQL = tslib_1.__importStar(require("type-graphql"));
-const graphql_fields_1 = tslib_1.__importDefault(require("graphql-fields"));
 const AggregateCalendar_datesArgs_1 = require("./args/AggregateCalendar_datesArgs");
 const CreateOneCalendar_datesArgs_1 = require("./args/CreateOneCalendar_datesArgs");
 const DeleteManyCalendar_datesArgs_1 = require("./args/DeleteManyCalendar_datesArgs");
 const DeleteOneCalendar_datesArgs_1 = require("./args/DeleteOneCalendar_datesArgs");
 const FindFirstCalendar_datesArgs_1 = require("./args/FindFirstCalendar_datesArgs");
+const FindFirstCalendar_datesOrThrowArgs_1 = require("./args/FindFirstCalendar_datesOrThrowArgs");
 const FindManyCalendar_datesArgs_1 = require("./args/FindManyCalendar_datesArgs");
 const FindUniqueCalendar_datesArgs_1 = require("./args/FindUniqueCalendar_datesArgs");
+const FindUniqueCalendar_datesOrThrowArgs_1 = require("./args/FindUniqueCalendar_datesOrThrowArgs");
 const GroupByCalendar_datesArgs_1 = require("./args/GroupByCalendar_datesArgs");
 const UpdateManyCalendar_datesArgs_1 = require("./args/UpdateManyCalendar_datesArgs");
 const UpdateOneCalendar_datesArgs_1 = require("./args/UpdateOneCalendar_datesArgs");
@@ -24,74 +25,88 @@ let Calendar_datesCrudResolver = class Calendar_datesCrudResolver {
     async aggregateCalendar_dates(ctx, info, args) {
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.aggregate({
             ...args,
-            ...(0, helpers_1.transformFields)((0, graphql_fields_1.default)(info)),
+            ...(0, helpers_1.transformInfoIntoPrismaArgs)(info),
         });
     }
     async createOneCalendar_dates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.create({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async deleteManyCalendar_dates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.deleteMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async deleteOneCalendar_dates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.delete({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async findFirstCalendar_dates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.findFirst({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findFirstCalendar_datesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
+        return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.findFirstOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async findManyCalendar_dates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.findMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async findUniqueCalendar_dates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.findUnique({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
+    async findUniqueCalendar_datesOrThrow(ctx, info, args) {
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
+        return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.findUniqueOrThrow({
+            ...args,
+            ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
+        });
+    }
     async groupByCalendar_dates(ctx, info, args) {
-        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count, _avg, _sum, _min, _max } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.groupBy({
             ...args,
             ...Object.fromEntries(Object.entries({ _count, _avg, _sum, _min, _max }).filter(([_, v]) => v != null)),
         });
     }
     async updateManyCalendar_dates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.updateMany({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async updateOneCalendar_dates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.update({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
         });
     }
     async upsertOneCalendar_dates(ctx, info, args) {
-        const { _count } = (0, helpers_1.transformFields)((0, graphql_fields_1.default)(info));
+        const { _count } = (0, helpers_1.transformInfoIntoPrismaArgs)(info);
         return (0, helpers_1.getPrismaFromContext)(ctx).calendar_dates.upsert({
             ...args,
             ...(_count && (0, helpers_1.transformCountFieldIntoSelectRelationsCount)(_count)),
@@ -154,6 +169,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:returntype", Promise)
 ], Calendar_datesCrudResolver.prototype, "findFirstCalendar_dates", null);
 tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Calendar_dates_1.Calendar_dates, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindFirstCalendar_datesOrThrowArgs_1.FindFirstCalendar_datesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], Calendar_datesCrudResolver.prototype, "findFirstCalendar_datesOrThrow", null);
+tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Calendar_dates_1.Calendar_dates], {
         nullable: false
     }),
@@ -175,6 +201,17 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCalendar_datesArgs_1.FindUniqueCalendar_datesArgs]),
     tslib_1.__metadata("design:returntype", Promise)
 ], Calendar_datesCrudResolver.prototype, "findUniqueCalendar_dates", null);
+tslib_1.__decorate([
+    TypeGraphQL.Query(_returns => Calendar_dates_1.Calendar_dates, {
+        nullable: true
+    }),
+    tslib_1.__param(0, TypeGraphQL.Ctx()),
+    tslib_1.__param(1, TypeGraphQL.Info()),
+    tslib_1.__param(2, TypeGraphQL.Args()),
+    tslib_1.__metadata("design:type", Function),
+    tslib_1.__metadata("design:paramtypes", [Object, Object, FindUniqueCalendar_datesOrThrowArgs_1.FindUniqueCalendar_datesOrThrowArgs]),
+    tslib_1.__metadata("design:returntype", Promise)
+], Calendar_datesCrudResolver.prototype, "findUniqueCalendar_datesOrThrow", null);
 tslib_1.__decorate([
     TypeGraphQL.Query(_returns => [Calendar_datesGroupBy_1.Calendar_datesGroupBy], {
         nullable: false
