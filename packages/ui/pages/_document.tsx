@@ -36,6 +36,7 @@ export default class Document extends NextDocument {
           <meta name="twitter:title" content="Ubähnchen" />
           <meta name="twitter:description" content={description} />
           <meta name="twitter:image" content={image} />
+          <link rel="me" href="https://functional.cafe/@lzear" />
         </Head>
         <body>
           {typeof locale === 'string' && loadWindowProperty(locale)}
