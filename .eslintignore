@@ -3,4 +3,5 @@
 **/coverage
 **/dist
 **/node_modules
+**/migrations-folder
 hafas-client
