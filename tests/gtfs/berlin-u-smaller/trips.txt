@@ -1,0 +1,23 @@
+route_id,service_id,trip_id,trip_headsign,trip_short_name,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed
+17526_400,749,195935940,S+U Rathaus Steglitz (Berlin),,0,,13848,1,1
+17526_400,704,195935722,U Osloer Str. (Berlin),,1,,13851,1,1
+17525_400,313,195935552,S+U Hermannstr. (Berlin),,0,,13834,1,1
+17525_400,313,195935188,S+U Wittenau (Berlin),,1,,13838,1,1
+17523_400,2107,195934769,U Rudow (Berlin),,0,,13794,1,1
+17523_400,749,195934494,S+U Rathaus Spandau (Berlin),,1,,13805,1,1
+17521_400,704,195932942,U Alt-Mariendorf (Berlin),,0,,13777,1,1
+17521_400,1693,195932534,U Kurt-Schumacher-Platz (Berlin),,1,,13786,1,1
+17518_400,2293,206296611,S+U Berlin Hauptbahnhof,,0,,13743,1,1
+17518_400,2305,195931526,U Biesdorf-Süd (Berlin),,1,,13759,1,1
+17518_400,2295,206295157,U Hönow (Berlin),,1,,13768,1,1
+17516_400,704,195931397,S+U Innsbrucker Platz (Berlin),,0,,13735,1,1
+17515_400,2321,195930776,U Krumme Lanke (Berlin),,0,,13712,1,1
+17515_400,2323,206293388,S+U Warschauer Str. (Berlin),,1,,13628,1,1
+17515_400,2324,206293407,U Gleisdreieck (Berlin),,1,,13734,1,1
+17514_400,2109,195930394,U Ruhleben (Berlin),,0,,13630,1,1
+17514_400,2110,206293155,U Senefelderplatz (Berlin),,0,,13666,1,1
+17514_400,2110,206292749,U Theodor-Heuss-Platz (Berlin),,0,,13670,1,1
+17514_400,2352,195929641,S+U Pankow (Berlin),,1,,13655,1,1
+17514_400,2106,206292091,U Klosterstr. (Berlin),,1,,13685,1,1
+17514_400,2104,206291561,U Spittelmarkt (Berlin),,1,,13698,1,1
+17512_400,2325,206291113,S+U Warschauer Str. (Berlin),,1,,13620,1,1

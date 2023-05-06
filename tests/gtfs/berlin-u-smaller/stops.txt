@@ -1,0 +1,513 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,location_type,parent_station,wheelchair_boarding,platform_code,zone_id,level_id
+de:11000:900002201,,U Birkenstr. (Berlin),,52.532269000000,13.341418000000,1,,0,,5555 U Birkenstr. (Berlin),
+de:11000:900003101,,U Hansaplatz (Berlin),,52.518111000000,13.342165000000,1,,0,,5555 U Hansaplatz (Berlin),
+de:11000:900003104,,U Turmstr. (Berlin),,52.525938000000,13.341417000000,1,,0,,5555 U Turmstr. (Berlin),
+de:11000:900003201,,S+U Berlin Hauptbahnhof,,52.525605000000,13.369075000000,1,,0,,5555 S+U Berlin Hauptbahnhof,
+de:11000:900005201,,U Kurfürstenstr. (Berlin),,52.499778000000,13.362857000000,1,,0,,5555 U Kurfürstenstr. (Berlin),
+de:11000:900005252,,U Mendelssohn-Bartholdy-Park (Berlin),,52.503185000000,13.374679000000,1,,0,,5555 U Mendelssohn-Bartholdy-Park (Berlin),
+de:11000:900007102,,S+U Gesundbrunnen Bhf (Berlin),,52.548637000000,13.388372000000,1,,0,,5555 S+U Gesundbrunnen Bhf (Berlin),
+de:11000:900007103,,U Voltastr. (Berlin),,52.541930000000,13.393157000000,1,,0,,5555 U Voltastr. (Berlin),
+de:11000:900007110,,U Bernauer Str. (Berlin),,52.537994000000,13.396231000000,1,,0,,5555 U Bernauer Str. (Berlin),
+de:11000:900008102,,U Reinickendorfer Str. (Berlin),,52.539887000000,13.370382000000,1,,0,,5555 U Reinickendorfer Str. (Berlin),
+de:11000:900009101,,U Amrumer Str. (Berlin),,52.542202000000,13.349534000000,1,,0,,5656 U Amrumer Str. (Berlin),
+de:11000:900009102,,U Leopoldplatz (Berlin),,52.546493000000,13.359395000000,1,,0,,5656 U Leopoldplatz (Berlin),
+de:11000:900009103,,U Seestr. (Berlin),,52.550470000000,13.351969000000,1,,0,,5656 U Seestr. (Berlin),
+de:11000:900009104,,S+U Wedding (Berlin),,52.542732000000,13.366060000000,1,,0,,5555 S+U Wedding (Berlin),
+de:11000:900009201,,U Nauener Platz (Berlin),,52.551524000000,13.367365000000,1,,0,,5656 U Nauener Platz (Berlin),
+de:11000:900009202,,U Osloer Str. (Berlin),,52.557107000000,13.373279000000,1,,0,,5656 U Osloer Str. (Berlin),
+de:11000:900009203,,U Pankstr. (Berlin),,52.552280000000,13.381437000000,1,,0,,5656 U Pankstr. (Berlin),
+de:11000:900011101,,U Rehberge (Berlin),,52.556670000000,13.341013000000,1,,0,,5656 U Rehberge (Berlin),
+de:11000:900011102,,U Afrikanische Str. (Berlin),,52.560862000000,13.333502000000,1,,0,,5656 U Afrikanische Str. (Berlin),
+de:11000:900012102,,U Kochstr./Checkpoint Charlie (Berlin),,52.506673000000,13.390863000000,1,,0,,5555 U Kochstr./Checkpoint Charlie (Berlin),
+de:11000:900012103,,U Hallesches Tor (Berlin),,52.497774000000,13.391760000000,1,,0,,5555 U Hallesches Tor (Berlin),
+de:11000:900013101,,U Moritzplatz (Berlin),,52.503739000000,13.410947000000,1,,0,,5555 U Moritzplatz (Berlin),
+de:11000:900013102,,U Kottbusser Tor (Berlin),,52.499047000000,13.417748000000,1,,0,,5555 U Kottbusser Tor (Berlin),
+de:11000:900013103,,U Prinzenstr. (Berlin),,52.498327000000,13.406551000000,1,,0,,5555 U Prinzenstr. (Berlin),
+de:11000:900014101,,U Görlitzer Bahnhof (Berlin),,52.499145000000,13.427145000000,1,,0,,5555 U Görlitzer Bahnhof (Berlin),
+de:11000:900014102,,U Schlesisches Tor (Berlin),,52.501147000000,13.441791000000,1,,0,,5555 U Schlesisches Tor (Berlin),
+de:11000:900016101,,U Gneisenaustr. (Berlin),,52.491252000000,13.395382000000,1,,0,,5555 U Gneisenaustr. (Berlin),
+de:11000:900016201,,U Schönleinstr. (Berlin),,52.493341000000,13.421912000000,1,,0,,5555 U Schönleinstr. (Berlin),
+de:11000:900016202,,U Südstern (Berlin),,52.489219000000,13.407685000000,1,,0,,5555 U Südstern (Berlin),
+de:11000:900017101,,U Mehringdamm (Berlin),,52.493567000000,13.388140000000,1,,0,,5555 U Mehringdamm (Berlin),
+de:11000:900017102,,U Platz der Luftbrücke (Berlin),,52.484870000000,13.385927000000,1,,0,,5555 U Platz der Luftbrücke (Berlin),
+de:11000:900017103,,U Gleisdreieck (Berlin),,52.499587000000,13.374293000000,1,,0,,5555 U Gleisdreieck (Berlin),
+de:11000:900017104,,U Möckernbrücke (Berlin),,52.498944000000,13.383256000000,1,,0,,5555 U Möckernbrücke (Berlin),
+de:11000:900018101,,U Jakob-Kaiser-Platz (Berlin),,52.536985000000,13.293661000000,1,,0,,5656 U Jakob-Kaiser-Platz (Berlin),
+de:11000:900018102,,U Halemweg (Berlin),,52.536703000000,13.286578000000,1,,0,,5656 U Halemweg (Berlin),
+de:11000:900019204,,U Mierendorffplatz (Berlin),,52.525978000000,13.305715000000,1,,0,,5555 U Mierendorffplatz (Berlin),
+de:11000:900020201,,S+U Jungfernheide Bhf (Berlin),,52.530452000000,13.300124000000,1,,0,,5555 S+U Jungfernheide Bhf (Berlin),
+de:11000:900022101,,U Sophie-Charlotte-Platz (Berlin),,52.510970000000,13.297463000000,1,,0,,5555 U Sophie-Charlotte-Platz (Berlin),
+de:11000:900022201,,U Deutsche Oper (Berlin),,52.511827000000,13.309420000000,1,,0,,5555 U Deutsche Oper (Berlin),
+de:11000:900022202,,U Richard-Wagner-Platz (Berlin),,52.517154000000,13.307221000000,1,,0,,5555 U Richard-Wagner-Platz (Berlin),
+de:11000:900023101,,U Ernst-Reuter-Platz (Berlin),,52.511582000000,13.322581000000,1,,0,,5555 U Ernst-Reuter-Platz (Berlin),
+de:11000:900023201,,S+U Zoologischer Garten Bhf (Berlin),,52.506921000000,13.332707000000,1,,0,,5555 S+U Zoologischer Garten Bhf (Berlin),
+de:11000:900023202,,U Augsburger Str. (Berlin),,52.500442000000,13.336461000000,1,,0,,5555 U Augsburger Str. (Berlin),
+de:11000:900023203,,U Kurfürstendamm (Berlin),,52.503763000000,13.331419000000,1,,0,,5555 U Kurfürstendamm (Berlin),
+de:11000:900023301,,U Uhlandstr. (Berlin),,52.502742000000,13.326233000000,1,,0,,5555 U Uhlandstr. (Berlin),
+de:11000:900023302,,U Adenauerplatz (Berlin),,52.500086000000,13.307348000000,1,,0,,5555 U Adenauerplatz (Berlin),
+de:11000:900024201,,U Bismarckstr. (Berlin),,52.511543000000,13.305335000000,1,,0,,5555 U Bismarckstr. (Berlin),
+de:11000:900024202,,U Wilmersdorfer Str. (Berlin),,52.506415000000,13.306774000000,1,,0,,5555 U Wilmersdorfer Str. (Berlin),
+de:11000:900025202,,U Ruhleben (Berlin),,52.525587000000,13.241902000000,1,,0,,5656 U Ruhleben (Berlin),
+de:11000:900025203,,U Olympia-Stadion (Berlin),,52.517048000000,13.250500000000,1,,0,,5656 U Olympia-Stadion (Berlin),
+de:11000:900026101,,U Neu-Westend (Berlin),,52.516409000000,13.259910000000,1,,0,,5656 U Neu-Westend (Berlin),
+de:11000:900026201,,U Theodor-Heuss-Platz (Berlin),,52.509798000000,13.272977000000,1,,0,,5656 U Theodor-Heuss-Platz (Berlin),
+de:11000:900026202,,U Kaiserdamm (Berlin),,52.509985000000,13.281695000000,1,,0,,5555 U Kaiserdamm (Berlin),
+de:11000:900029301,,U Altstadt Spandau (Berlin),,52.539161000000,13.206763000000,1,,0,,5656 U Altstadt Spandau (Berlin),
+de:11000:900029302,,S+U Rathaus Spandau (Berlin),,52.535641000000,13.199837000000,1,,0,,5656 S+U Rathaus Spandau (Berlin),
+de:11000:900033101,,U Zitadelle (Berlin),,52.537522000000,13.217625000000,1,,0,,5656 U Zitadelle (Berlin),
+de:11000:900034101,,U Paulsternstr. (Berlin),,52.538127000000,13.248065000000,1,,0,,5656 U Paulsternstr. (Berlin),
+de:11000:900034102,,U Haselhorst (Berlin),,52.538687000000,13.231946000000,1,,0,,5656 U Haselhorst (Berlin),
+de:11000:900035101,,U Siemensdamm (Berlin),,52.537026000000,13.273323000000,1,,0,,5656 U Siemensdamm (Berlin),
+de:11000:900036101,,U Rohrdamm (Berlin),,52.536904000000,13.262870000000,1,,0,,5656 U Rohrdamm (Berlin),
+de:11000:900041101,,U Fehrbelliner Platz (Berlin),,52.490193000000,13.314508000000,1,,0,,5555 U Fehrbelliner Platz (Berlin),
+de:11000:900041102,,U Blissestr. (Berlin),,52.486478000000,13.320545000000,1,,0,,5555 U Blissestr. (Berlin),
+de:11000:900041201,,U Konstanzer Str. (Berlin),,52.493567000000,13.310084000000,1,,0,,5555 U Konstanzer Str. (Berlin),
+de:11000:900042101,,U Spichernstr. (Berlin),,52.496582000000,13.330613000000,1,,0,,5555 U Spichernstr. (Berlin),
+de:11000:900043101,,U Hohenzollernplatz (Berlin),,52.493833000000,13.324051000000,1,,0,,5555 U Hohenzollernplatz (Berlin),
+de:11000:900043201,,U Güntzelstr. (Berlin),,52.491992000000,13.331210000000,1,,0,,5555 U Güntzelstr. (Berlin),
+de:11000:900044201,,U Berliner Str. (Berlin),,52.487047000000,13.331355000000,1,,0,,5555 U Berliner Str. (Berlin),
+de:11000:900044202,,S+U Bundesplatz (Berlin),,52.477667000000,13.328626000000,1,,0,,5555 S+U Bundesplatz (Berlin),
+de:11000:900045101,,U Rüdesheimer Platz (Berlin),,52.472462000000,13.314387000000,1,,0,,5656 U Rüdesheimer Platz (Berlin),
+de:11000:900045102,,S+U Heidelberger Platz (Berlin),,52.480124000000,13.312290000000,1,,0,,5555 S+U Heidelberger Platz (Berlin),
+de:11000:900050282,,U Onkel Toms Hütte (Berlin),,52.450146000000,13.254016000000,1,,0,,5656 U Onkel Toms Hütte (Berlin),
+de:11000:900051201,,U Freie Universität (Thielplatz) (Berlin),,52.451000000000,13.281651000000,1,,0,,5656 U Freie Universität (Thielplatz) (Berlin),
+de:11000:900051202,,U Breitenbachplatz (Berlin),,52.467342000000,13.309276000000,1,,0,,5656 U Breitenbachplatz (Berlin),
+de:11000:900051301,,U Oskar-Helene-Heim (Berlin),,52.450419000000,13.268910000000,1,,0,,5656 U Oskar-Helene-Heim (Berlin),
+de:11000:900051302,,U Podbielskiallee (Berlin),,52.464172000000,13.295203000000,1,,0,,5656 U Podbielskiallee (Berlin),
+de:11000:900051303,,U Dahlem-Dorf (Berlin),,52.457695000000,13.290011000000,1,,0,,5656 U Dahlem-Dorf (Berlin),
+de:11000:900054101,,U Rathaus Schöneberg (Berlin),,52.483332000000,13.341989000000,1,,0,,5555 U Rathaus Schöneberg (Berlin),
+de:11000:900054102,,U Kleistpark (Berlin),,52.490686000000,13.360543000000,1,,0,,5555 U Kleistpark (Berlin),
+de:11000:900054103,,U Eisenacher Str. (Berlin),,52.489477000000,13.350284000000,1,,0,,5555 U Eisenacher Str. (Berlin),
+de:11000:900054105,,S+U Innsbrucker Platz (Berlin),,52.478100000000,13.342875000000,1,,0,,5555 S+U Innsbrucker Platz (Berlin),
+de:11000:900055101,,U Viktoria-Luise-Platz (Berlin),,52.496169000000,13.343264000000,1,,0,,5555 U Viktoria-Luise-Platz (Berlin),
+de:11000:900055102,,U Bayerischer Platz (Berlin),,52.488654000000,13.340237000000,1,,0,,5555 U Bayerischer Platz (Berlin),
+de:11000:900056101,,U Wittenbergplatz (Berlin),,52.502109000000,13.342561000000,1,,0,,5555 U Wittenbergplatz (Berlin),
+de:11000:900056102,,U Nollendorfplatz (Berlin),,52.499644000000,13.353825000000,1,,0,,5555 U Nollendorfplatz (Berlin),
+de:11000:900056104,,U Bülowstr. (Berlin),,52.497627000000,13.362456000000,1,,0,,5555 U Bülowstr. (Berlin),
+de:11000:900058103,,S+U Yorckstr. (Berlin),,52.492358000000,13.372212000000,1,,0,,5555 S+U Yorckstr. (Berlin),
+de:11000:900061101,,U Walther-Schreiber-Platz (Berlin),,52.464998000000,13.328409000000,1,,0,,5656 U Walther-Schreiber-Platz (Berlin),
+de:11000:900061102,,U Friedrich-Wilhelm-Platz (Berlin),,52.471439000000,13.328676000000,1,,0,,5656 U Friedrich-Wilhelm-Platz (Berlin),
+de:11000:900062202,,S+U Rathaus Steglitz (Berlin),,52.455066000000,13.322152000000,1,,0,,5656 S+U Rathaus Steglitz (Berlin),
+de:11000:900062203,,U Schloßstr. (Berlin),,52.461183000000,13.324836000000,1,,0,,5656 U Schloßstr. (Berlin),
+de:11000:900068101,,U Paradestr. (Berlin),,52.478142000000,13.386725000000,1,,0,,5555 U Paradestr. (Berlin),
+de:11000:900068201,,S+U Tempelhof (Berlin),,52.470574000000,13.385900000000,1,,0,,5555 S+U Tempelhof (Berlin),
+de:11000:900068202,,U Alt-Tempelhof (Berlin),,52.465930000000,13.385796000000,1,,0,,5656 U Alt-Tempelhof (Berlin),
+de:11000:900068302,,U Kaiserin-Augusta-Str. (Berlin),,52.460512000000,13.384905000000,1,,0,,5656 U Kaiserin-Augusta-Str. (Berlin),
+de:11000:900069271,,U Ullsteinstr. (Berlin),,52.453450000000,13.384771000000,1,,0,,5656 U Ullsteinstr. (Berlin),
+de:11000:900070101,,U Westphalweg (Berlin),,52.445646000000,13.385744000000,1,,0,,5656 U Westphalweg (Berlin),
+de:11000:900070301,,U Alt-Mariendorf (Berlin),,52.438609000000,13.387920000000,1,,0,,5656 U Alt-Mariendorf (Berlin),
+de:11000:900078101,,U Hermannplatz (Berlin),,52.486957000000,13.424720000000,1,,0,,5555 U Hermannplatz (Berlin),
+de:11000:900078102,,U Rathaus Neukölln (Berlin),,52.481146000000,13.434807000000,1,,0,,5555 U Rathaus Neukölln (Berlin),
+de:11000:900078103,,U Karl-Marx-Str. (Berlin),,52.476429000000,13.439805000000,1,,0,,5555 U Karl-Marx-Str. (Berlin),
+de:11000:900078201,,S+U Neukölln (Berlin),,52.469282000000,13.443692000000,1,,0,,5555 S+U Neukölln (Berlin),
+de:11000:900079201,,U Leinestr. (Berlin),,52.472874000000,13.428400000000,1,,0,,5555 U Leinestr. (Berlin),
+de:11000:900079202,,U Boddinstr. (Berlin),,52.479745000000,13.425782000000,1,,0,,5555 U Boddinstr. (Berlin),
+de:11000:900079221,,S+U Hermannstr. (Berlin),,52.467181000000,13.431704000000,1,,0,,5555 S+U Hermannstr. (Berlin),
+de:11000:900080201,,U Blaschkoallee (Berlin),,52.452743000000,13.448976000000,1,,0,,5656 U Blaschkoallee (Berlin),
+de:11000:900080202,,U Grenzallee (Berlin),,52.463516000000,13.444828000000,1,,0,,5656 U Grenzallee (Berlin),
+de:11000:900080401,,U Parchimer Allee (Berlin),,52.445299000000,13.449967000000,1,,0,,5656 U Parchimer Allee (Berlin),
+de:11000:900080402,,U Britz-Süd (Berlin),,52.437076000000,13.447668000000,1,,0,,5656 U Britz-Süd (Berlin),
+de:11000:900082201,,U Lipschitzallee (Berlin),,52.424645000000,13.463109000000,1,,0,,5656 U Lipschitzallee (Berlin),
+de:11000:900082202,,U Johannisthaler Chaussee (Berlin),,52.429253000000,13.453851000000,1,,0,,5656 U Johannisthaler Chaussee (Berlin),
+de:11000:900083101,,U Zwickauer Damm (Berlin),,52.423032000000,13.484371000000,1,,0,,5656 U Zwickauer Damm (Berlin),
+de:11000:900083102,,U Wutzkyallee (Berlin),,52.423152000000,13.474820000000,1,,0,,5656 U Wutzkyallee (Berlin),
+de:11000:900083201,,U Rudow (Berlin),,52.415714000000,13.496527000000,1,,0,,5656 U Rudow (Berlin),
+de:11000:900085104,,U Paracelsus-Bad (Berlin),,52.574432000000,13.347301000000,1,,0,,5656 U Paracelsus-Bad (Berlin),
+de:11000:900085202,,U Franz-Neumann-Platz (Berlin),,52.563854000000,13.364283000000,1,,0,,5656 U Franz-Neumann-Platz (Berlin),
+de:11000:900085203,,U Residenzstr. (Berlin),,52.570843000000,13.360635000000,1,,0,,5656 U Residenzstr. (Berlin),
+de:11000:900086102,,U Kurt-Schumacher-Platz (Berlin),,52.563483000000,13.327328000000,1,,0,,5656 U Kurt-Schumacher-Platz (Berlin),
+de:11000:900086160,,U Lindauer Allee (Berlin),,52.575386000000,13.339036000000,1,,0,,5656 U Lindauer Allee (Berlin),
+de:11000:900096101,,S+U Wittenau (Berlin),,52.596392000000,13.335481000000,1,,0,,5656 S+U Wittenau (Berlin),
+de:11000:900096410,,U Rathaus Reinickendorf (Berlin),,52.588218000000,13.325568000000,1,,0,,5656 U Rathaus Reinickendorf (Berlin),
+de:11000:900096458,,S+U Karl-Bonhoeffer-Nervenklinik (Berlin),,52.578169000000,13.332921000000,1,,0,,5656 S+U Karl-Bonhoeffer-Nervenklinik (Berlin),
+de:11000:900100001,,S+U Friedrichstr. Bhf (Berlin),,52.520521000000,13.386450000000,1,,0,,5555 S+U Friedrichstr. Bhf (Berlin),
+de:11000:900100003,,S+U Alexanderplatz Bhf (Berlin),,52.521512000000,13.411267000000,1,,0,,5555 S+U Alexanderplatz Bhf (Berlin),
+de:11000:900100004,,S+U Jannowitzbrücke (Berlin),,52.515500000000,13.418027000000,1,,0,,5555 S+U Jannowitzbrücke (Berlin),
+de:11000:900100008,,U Heinrich-Heine-Str. (Berlin),,52.510558000000,13.416124000000,1,,0,,5555 U Heinrich-Heine-Str. (Berlin),
+de:11000:900100009,,U Naturkundemuseum (Berlin),,52.531254000000,13.382415000000,1,,0,,5555 U Naturkundemuseum (Berlin),
+de:11000:900100010,,U Mohrenstr. (Berlin),,52.511519000000,13.383798000000,1,,0,,5555 U Mohrenstr. (Berlin),
+de:11000:900100011,,U Stadtmitte (Berlin),,52.511495000000,13.389719000000,1,,0,,5555 U Stadtmitte (Berlin),
+de:11000:900100012,,U Hausvogteiplatz (Berlin),,52.513361000000,13.395346000000,1,,0,,5555 U Hausvogteiplatz (Berlin),
+de:11000:900100013,,U Spittelmarkt (Berlin),,52.511411000000,13.402031000000,1,,0,,5555 U Spittelmarkt (Berlin),
+de:11000:900100014,,U Märkisches Museum (Berlin),,52.512007000000,13.408767000000,1,,0,,5555 U Märkisches Museum (Berlin),
+de:11000:900100015,,U Klosterstr. (Berlin),,52.517229000000,13.412455000000,1,,0,,5555 U Klosterstr. (Berlin),
+de:11000:900100016,,U Rosa-Luxemburg-Platz (Berlin),,52.528191000000,13.410405000000,1,,0,,5555 U Rosa-Luxemburg-Platz (Berlin),
+de:11000:900100017,,U Schillingstr. (Berlin),,52.520316000000,13.421895000000,1,,0,,5555 U Schillingstr. (Berlin),
+de:11000:900100019,,U Oranienburger Tor (Berlin),,52.525163000000,13.387587000000,1,,0,,5555 U Oranienburger Tor (Berlin),
+de:11000:900100020,,S+U Potsdamer Platz Bhf (Berlin),,52.509358000000,13.376547000000,1,,0,,5555 S+U Potsdamer Platz Bhf (Berlin),
+de:11000:900100023,,U Rosenthaler Platz (Berlin),,52.529781000000,13.401393000000,1,,0,,5555 U Rosenthaler Platz (Berlin),
+de:11000:900100025,,S+U Brandenburger Tor (Berlin),,52.516511000000,13.381937000000,1,,0,,5555 S+U Brandenburger Tor (Berlin),
+de:11000:900100045,,U Rotes Rathaus (Berlin),,52.518462000000,13.407061000000,1,,0,,5555 U Rotes Rathaus (Berlin),
+de:11000:900100051,,U Weinmeisterstr. (Berlin),,52.525376000000,13.405305000000,1,,0,,5555 U Weinmeisterstr. (Berlin),
+de:11000:900100501,,U Schwartzkopffstr. (Berlin),,52.535397000000,13.377033000000,1,,0,,5555 U Schwartzkopffstr. (Berlin),
+de:11000:900100513,,U Unter den Linden (Berlin),,52.516996000000,13.388876000000,1,,0,,5555 U Unter den Linden (Berlin),
+de:11000:900100537,,U Museumsinsel (Berlin),,52.518086000000,13.400394000000,1,,0,,5555 U Museumsinsel (Berlin),
+de:11000:900110001,,S+U Schönhauser Allee (Berlin),,52.549336000000,13.415138000000,1,,0,,5555 S+U Schönhauser Allee (Berlin),
+de:11000:900110005,,U Senefelderplatz (Berlin),,52.532622000000,13.412625000000,1,,0,,5555 U Senefelderplatz (Berlin),
+de:11000:900110006,,U Eberswalder Str. (Berlin),,52.541085000000,13.412160000000,1,,0,,5555 U Eberswalder Str. (Berlin),
+de:11000:900120001,,S+U Frankfurter Allee (Berlin),,52.513580000000,13.475848000000,1,,0,,5555 S+U Frankfurter Allee (Berlin),
+de:11000:900120004,,S+U Warschauer Str. (Berlin),,52.505765000000,13.449159000000,1,,0,,5555 S+U Warschauer Str. (Berlin),
+de:11000:900120006,,U Strausberger Platz (Berlin),,52.518025000000,13.432208000000,1,,0,,5555 U Strausberger Platz (Berlin),
+de:11000:900120008,,U Frankfurter Tor (Berlin),,52.515772000000,13.454085000000,1,,0,,5555 U Frankfurter Tor (Berlin),
+de:11000:900120009,,U Samariterstr. (Berlin),,52.514662000000,13.465347000000,1,,0,,5555 U Samariterstr. (Berlin),
+de:11000:900120025,,U Weberwiese (Berlin),,52.516848000000,13.443278000000,1,,0,,5555 U Weberwiese (Berlin),
+de:11000:900130002,,S+U Pankow (Berlin),,52.567281000000,13.412279000000,1,,0,,5656 S+U Pankow (Berlin),
+de:11000:900130011,,U Vinetastr. (Berlin),,52.559517000000,13.413770000000,1,,0,,5656 U Vinetastr. (Berlin),
+de:11000:900160005,,U Magdalenenstr. (Berlin),,52.512457000000,13.487492000000,1,,0,,5656 U Magdalenenstr. (Berlin),
+de:11000:900161002,,U Tierpark (Berlin),,52.497236000000,13.523626000000,1,,0,,5656 U Tierpark (Berlin),
+de:11000:900161512,,U Friedrichsfelde (Berlin),,52.505464000000,13.513544000000,1,,0,,5656 U Friedrichsfelde (Berlin),
+de:11000:900171005,,U Biesdorf-Süd (Berlin),,52.499517000000,13.547326000000,1,,0,,5656 U Biesdorf-Süd (Berlin),
+de:11000:900171006,,U Elsterwerdaer Platz (Berlin),,52.505133000000,13.560646000000,1,,0,,5656 U Elsterwerdaer Platz (Berlin),
+de:11000:900175001,,S+U Wuhletal (Berlin),,52.512724000000,13.574536000000,1,,0,,5656 S+U Wuhletal (Berlin),
+de:11000:900175004,,U Kaulsdorf-Nord (Berlin),,52.521436000000,13.588763000000,1,,0,,5656 U Kaulsdorf-Nord (Berlin),
+de:11000:900175006,,U Cottbusser Platz (Berlin),,52.533963000000,13.596894000000,1,,0,,5656 U Cottbusser Platz (Berlin),
+de:11000:900175007,,U Hellersdorf (Berlin),,52.536328000000,13.605323000000,1,,0,,5656 U Hellersdorf (Berlin),
+de:11000:900175010,,U Hönow (Berlin),,52.538105000000,13.634541000000,1,,0,,5656 U Hönow (Berlin),
+de:11000:900175015,,U Louis-Lewin-Str. (Berlin),,52.539135000000,13.619707000000,1,,0,,5656 U Louis-Lewin-Str. (Berlin),
+de:11000:900050201,,U Krumme Lanke (Berlin),,52.442615000000,13.240360000000,1,,0,,5656 U Krumme Lanke (Berlin),
+de:11000:900001201,,S+U Westhafen (Berlin),,52.536183000000,13.343837000000,1,,0,,5555 S+U Westhafen (Berlin),
+de:11000:900160004,,S+U Lichtenberg Bhf (Berlin),,52.510672000000,13.498359000000,1,,0,,5656 S+U Lichtenberg Bhf (Berlin),
+de:11000:900003254,,U Bundestag (Berlin),,52.520110000000,13.372952000000,1,,0,,5555 U Bundestag (Berlin),
+de:11000:900120004::1,,S+U Warschauer Str. (Berlin),Bahnsteig Gleis 1,52.504862000000,13.448802000000,0,de:11000:900120004,0,,5555 S+U Warschauer Str. (Berlin),5
+de:11000:900014102::1,,U Schlesisches Tor (Berlin),Bahnsteig Richtung Uhlandstraße/Krumme Lanke,52.500747000000,13.441051000000,0,de:11000:900014102,0,,5555 U Schlesisches Tor (Berlin),58
+de:11000:900014102::2,,U Schlesisches Tor (Berlin),Bahnsteig Richtung Warschauer Straße,52.500720000000,13.441059000000,0,de:11000:900014102,0,,5555 U Schlesisches Tor (Berlin),58
+de:11000:900014101::1,,U Görlitzer Bahnhof (Berlin),U Bahnsteig Gleis 1,52.499292000000,13.428277000000,0,de:11000:900014101,0,,5555 U Görlitzer Bahnhof (Berlin),1
+de:11000:900014101::2,,U Görlitzer Bahnhof (Berlin),U Bahnsteig Gleis 2,52.499270000000,13.428283000000,0,de:11000:900014101,0,,5555 U Görlitzer Bahnhof (Berlin),1
+de:11000:900013102::1,,U Kottbusser Tor (Berlin),U Bahnsteig U1 U3 Gleis 1,52.499051000000,13.418395000000,0,de:11000:900013102,0,,5555 U Kottbusser Tor (Berlin),69
+de:11000:900013102::2,,U Kottbusser Tor (Berlin),U Bahnsteig U1 U3 Gleis 2,52.498933000000,13.418417000000,0,de:11000:900013102,0,,5555 U Kottbusser Tor (Berlin),69
+de:11000:900013103::1,,U Prinzenstr. (Berlin),U Bahnsteig Gleis 1,52.498406000000,13.405401000000,0,de:11000:900013103,0,,5555 U Prinzenstr. (Berlin),1
+de:11000:900013103::2,,U Prinzenstr. (Berlin),U Bahnsteig Gleis 2,52.498379000000,13.405403000000,0,de:11000:900013103,0,,5555 U Prinzenstr. (Berlin),1
+de:11000:900012103::1,,U Hallesches Tor (Berlin),Bahnsteig U1/U3 Gleis 2,52.497812000000,13.390351000000,0,de:11000:900012103,0,,5555 U Hallesches Tor (Berlin),24
+de:11000:900012103::2,,U Hallesches Tor (Berlin),Bahnsteig U1/U3 Gleis 2,52.497767000000,13.390336000000,0,de:11000:900012103,0,,5555 U Hallesches Tor (Berlin),24
+de:11000:900017104::1,,U Möckernbrücke (Berlin),U Bahnsteig Gleis 1 (oben),52.499129000000,13.382661000000,0,de:11000:900017104,0,,5555 U Möckernbrücke (Berlin),46
+de:11000:900017104::2,,U Möckernbrücke (Berlin),U Bahnsteig Gleis 2 (oben),52.499087000000,13.382665000000,0,de:11000:900017104,0,,5555 U Möckernbrücke (Berlin),46
+de:11000:900017103::1,,U Gleisdreieck (Berlin),U Bahnsteig Gleis 1 (oben),52.499567000000,13.374084000000,0,de:11000:900017103,0,,5555 U Gleisdreieck (Berlin),1
+de:11000:900017103::2,,U Gleisdreieck (Berlin),U Bahnsteig Gleis 2 (oben),52.499430000000,13.374057000000,0,de:11000:900017103,0,,5555 U Gleisdreieck (Berlin),1
+de:11000:900005201::1,,U Kurfürstenstr. (Berlin),U Bahnsteig Gleis 1,52.500152000000,13.361504000000,0,de:11000:900005201,0,,5555 U Kurfürstenstr. (Berlin),2
+de:11000:900005201::2,,U Kurfürstenstr. (Berlin),U Bahnsteig Gleis 2,52.500068000000,13.361436000000,0,de:11000:900005201,0,,5555 U Kurfürstenstr. (Berlin),2
+de:11000:900056102::1,,U Nollendorfplatz (Berlin),U Bahnsteig Gleis 1 (unten),52.499966000000,13.354616000000,0,de:11000:900056102,0,,5555 U Nollendorfplatz (Berlin),3
+de:11000:900056102::2,,U Nollendorfplatz (Berlin),U Bahnsteig Gleis 2 (mitte),52.499938000000,13.354544000000,0,de:11000:900056102,0,,5555 U Nollendorfplatz (Berlin),2
+de:11000:900056101::1,,U Wittenbergplatz (Berlin),U Bahnsteig Gleis 1 (U1+3),52.501927000000,13.343056000000,0,de:11000:900056101,0,,5555 U Wittenbergplatz (Berlin),3
+de:11000:900056101::5,,U Wittenbergplatz (Berlin),U Bahnsteig Gleis 6 (U1),52.501606000000,13.342871000000,0,de:11000:900056101,0,,5555 U Wittenbergplatz (Berlin),3
+de:11000:900023203::2,,U Kurfürstendamm (Berlin),U Bahnsteig Gleis 2 (oben),52.504021000000,13.332605000000,0,de:11000:900023203,0,,5555 U Kurfürstendamm (Berlin),2
+000300106001,,U Uhlandstr. (Berlin),Bahnsteig U1,52.502832000000,13.326930000000,0,de:11000:900023301,0,,5555 U Uhlandstr. (Berlin),2
+de:11000:900130002::1,,S+U Pankow (Berlin),U-Bahnsteig Gleis 1,52.566740000000,13.411657000000,0,de:11000:900130002,0,,5656 S+U Pankow (Berlin),7
+de:11000:900130002::2,,S+U Pankow (Berlin),U-Bahnsteig Gleis 2,52.566775000000,13.411811000000,0,de:11000:900130002,0,,5656 S+U Pankow (Berlin),7
+de:11000:900130011::1,,U Vinetastr. (Berlin),U Bahnsteig Gleis 1,52.559182000000,13.413159000000,0,de:11000:900130011,0,,5656 U Vinetastr. (Berlin),3
+de:11000:900130011::2,,U Vinetastr. (Berlin),U Bahnsteig Gleis 2,52.559185000000,13.413343000000,0,de:11000:900130011,0,,5656 U Vinetastr. (Berlin),3
+de:11000:900110001::1,,S+U Schönhauser Allee (Berlin),Bahnsteig U-Bahn Gleis 1,52.549226000000,13.413598000000,0,de:11000:900110001,0,,5555 S+U Schönhauser Allee (Berlin),5
+de:11000:900110001::2,,S+U Schönhauser Allee (Berlin),Bahnsteig U-Bahn Gleis 2,52.549218000000,13.413741000000,0,de:11000:900110001,0,,5555 S+U Schönhauser Allee (Berlin),5
+de:11000:900110006::1,,U Eberswalder Str. (Berlin),U Bahnsteig Gleis 1,52.541988000000,13.412139000000,0,de:11000:900110006,0,,5555 U Eberswalder Str. (Berlin),1
+de:11000:900110006::2,,U Eberswalder Str. (Berlin),U Bahnsteig Gleis 2,52.541982000000,13.412280000000,0,de:11000:900110006,0,,5555 U Eberswalder Str. (Berlin),1
+de:11000:900110005::1,,U Senefelderplatz (Berlin),U Bahnsteig Gleis 1,52.532443000000,13.412596000000,0,de:11000:900110005,0,,5555 U Senefelderplatz (Berlin),2
+de:11000:900110005::2,,U Senefelderplatz (Berlin),U Bahnsteig Gleis 2,52.532427000000,13.412787000000,0,de:11000:900110005,0,,5555 U Senefelderplatz (Berlin),2
+de:11000:900100016::1,,U Rosa-Luxemburg-Platz (Berlin),U Bahnsteig Gleis 1,52.527701000000,13.410374000000,0,de:11000:900100016,0,,5555 U Rosa-Luxemburg-Platz (Berlin),2
+de:11000:900100016::2,,U Rosa-Luxemburg-Platz (Berlin),U Bahnsteig Gleis 2,52.527725000000,13.410522000000,0,de:11000:900100016,0,,5555 U Rosa-Luxemburg-Platz (Berlin),2
+de:11000:900100003::1,,S+U Alexanderplatz Bhf (Berlin),U-Bahn Gleis 1 (U2),52.521633000000,13.414011000000,0,de:11000:900100003,0,,5555 S+U Alexanderplatz Bhf (Berlin),12
+de:11000:900100003::2,,S+U Alexanderplatz Bhf (Berlin),U-Bahn Gleis 2 (U2),52.521754000000,13.414250000000,0,de:11000:900100003,0,,5555 S+U Alexanderplatz Bhf (Berlin),12
+de:11000:900100015::1,,U Klosterstr. (Berlin),U Bahnsteig Gleis 1,52.517186000000,13.412317000000,0,de:11000:900100015,0,,5555 U Klosterstr. (Berlin),3
+de:11000:900100015::2,,U Klosterstr. (Berlin),U Bahnsteig Gleis 2,52.517208000000,13.412525000000,0,de:11000:900100015,0,,5555 U Klosterstr. (Berlin),3
+de:11000:900100014::1,,U Märkisches Museum (Berlin),U Bahnsteig Gleis 1,52.512387000000,13.410151000000,0,de:11000:900100014,0,,5555 U Märkisches Museum (Berlin),3
+de:11000:900100014::2,,U Märkisches Museum (Berlin),U Bahnsteig Gleis 2,52.512309000000,13.410213000000,0,de:11000:900100014,0,,5555 U Märkisches Museum (Berlin),3
+de:11000:900100013::1,,U Spittelmarkt (Berlin),Bahnsteig U2 Gleis 1,52.511348000000,13.403697000000,0,de:11000:900100013,0,,5555 U Spittelmarkt (Berlin),2
+de:11000:900100013::2,,U Spittelmarkt (Berlin),Bahnsteig U2 Gleis 2,52.511264000000,13.403695000000,0,de:11000:900100013,0,,5555 U Spittelmarkt (Berlin),2
+de:11000:900100012::1,,U Hausvogteiplatz (Berlin),Bahnsteig U2 Gleis 1,52.513393000000,13.395562000000,0,de:11000:900100012,0,,5555 U Hausvogteiplatz (Berlin),2
+de:11000:900100012::2,,U Hausvogteiplatz (Berlin),Bahnsteig U2 Gleis 2,52.513311000000,13.395536000000,0,de:11000:900100012,0,,5555 U Hausvogteiplatz (Berlin),2
+de:11000:900100701::1,,U Stadtmitte (Berlin),U Bahnsteig Gleis 1,52.512199000000,13.390543000000,0,de:11000:900100011,0,,5555 U Stadtmitte (Berlin),2
+de:11000:900100701::2,,U Stadtmitte (Berlin),U Bahnsteig Gleis 2,52.512114000000,13.390557000000,0,de:11000:900100011,0,,5555 U Stadtmitte (Berlin),2
+de:11000:900100010::1,,U Mohrenstr. (Berlin),U Bahnsteig Gleis 1,52.511816000000,13.385110000000,0,de:11000:900100010,0,,5555 U Mohrenstr. (Berlin),2
+de:11000:900100010::2,,U Mohrenstr. (Berlin),U Bahnsteig Gleis 2,52.511723000000,13.385135000000,0,de:11000:900100010,0,,5555 U Mohrenstr. (Berlin),2
+000300004160,,S+U Potsdamer Platz Bhf (Berlin),Bahnsteig U2 Gleis 1,52.509072000000,13.377905000000,0,de:11000:900100020,0,,5555 S+U Potsdamer Platz Bhf (Berlin),18
+000300004001,,S+U Potsdamer Platz Bhf (Berlin),Bahnsteig U2 Gleis 2,52.508998000000,13.378047000000,0,de:11000:900100020,0,,5555 S+U Potsdamer Platz Bhf (Berlin),18
+de:11000:900005252::1,,U Mendelssohn-Bartholdy-Park (Berlin),U Bahnsteig Gleis 1,52.503806000000,13.374862000000,0,de:11000:900005252,0,,5555 U Mendelssohn-Bartholdy-Park (Berlin),25
+de:11000:900005252::2,,U Mendelssohn-Bartholdy-Park (Berlin),Bahnsteig U2 Gleis 2,52.503800000000,13.374904000000,0,de:11000:900005252,0,,5555 U Mendelssohn-Bartholdy-Park (Berlin),25
+de:11000:900017103::3,,U Gleisdreieck (Berlin),U Bahnsteig Gleis 1,52.499504000000,13.374061000000,0,de:11000:900017103,0,,5555 U Gleisdreieck (Berlin),5
+de:11000:900017103::4,,U Gleisdreieck (Berlin),U Bahnsteig Gleis 2,52.499494000000,13.374295000000,0,de:11000:900017103,0,,5555 U Gleisdreieck (Berlin),5
+de:11000:900056104::1,,U Bülowstr. (Berlin),U Bahnsteig Gleis 1,52.497620000000,13.363170000000,0,de:11000:900056104,0,,5555 U Bülowstr. (Berlin),5
+de:11000:900056104::2,,U Bülowstr. (Berlin),U Bahnsteig Gleis 2,52.497575000000,13.363156000000,0,de:11000:900056104,0,,5555 U Bülowstr. (Berlin),5
+de:11000:900056102::3,,U Nollendorfplatz (Berlin),U Bahnsteig Gleis 1,52.499388000000,13.354560000000,0,de:11000:900056102,0,,5555 U Nollendorfplatz (Berlin),1
+de:11000:900056102::4,,U Nollendorfplatz (Berlin),U Bahnsteig Gleis 2,52.499369000000,13.354548000000,0,de:11000:900056102,0,,5555 U Nollendorfplatz (Berlin),1
+de:11000:900056101::2,,U Wittenbergplatz (Berlin),U Bahnsteig Gleis 2 (U2),52.501792000000,13.342967000000,0,de:11000:900056101,0,,5555 U Wittenbergplatz (Berlin),3
+de:11000:900056101::3,,U Wittenbergplatz (Berlin),U Bahnsteig Gleis 3 (U2),52.501850000000,13.343003000000,0,de:11000:900056101,0,,5555 U Wittenbergplatz (Berlin),3
+de:11000:900023201::1,,S+U Zoologischer Garten Bhf (Berlin),U Bahnsteig Gleis 1 (U2),52.505941000000,13.333055000000,0,de:11000:900023201,0,,5555 S+U Zoologischer Garten Bhf (Berlin),7
+de:11000:900023201::2,,S+U Zoologischer Garten Bhf (Berlin),U Bahnsteig Gleis 2 (U2),52.505905000000,13.333009000000,0,de:11000:900023201,0,,5555 S+U Zoologischer Garten Bhf (Berlin),7
+de:11000:900023101::1,,U Ernst-Reuter-Platz (Berlin),Bahnsteig U2 Gleis 1,52.511784000000,13.322175000000,0,de:11000:900023101,0,,5555 U Ernst-Reuter-Platz (Berlin),2
+de:11000:900023101::2,,U Ernst-Reuter-Platz (Berlin),Bahnsteig U2 Gleis 2,52.511744000000,13.322077000000,0,de:11000:900023101,0,,5555 U Ernst-Reuter-Platz (Berlin),2
+de:11000:900022201::1,,U Deutsche Oper (Berlin),U2 Bahnsteig 1 Gleis 1,52.511944000000,13.310510000000,0,de:11000:900022201,0,,5555 U Deutsche Oper (Berlin),22
+de:11000:900022201::2,,U Deutsche Oper (Berlin),U2 Bahnsteig 2 Gleis 2,52.511753000000,13.310546000000,0,de:11000:900022201,0,,5555 U Deutsche Oper (Berlin),22
+de:11000:900024201::1,,U Bismarckstr. (Berlin),U Bahnsteig U2 Gleis 1,52.511540000000,13.305122000000,0,de:11000:900024201,0,,5555 U Bismarckstr. (Berlin),2
+de:11000:900024201::2,,U Bismarckstr. (Berlin),U Bahnsteig U2 Gleis 2,52.511478000000,13.305142000000,0,de:11000:900024201,0,,5555 U Bismarckstr. (Berlin),2
+de:11000:900022101::1,,U Sophie-Charlotte-Platz (Berlin),U Bahnsteig Gleis 1,52.510895000000,13.295820000000,0,de:11000:900022101,0,,5555 U Sophie-Charlotte-Platz (Berlin),2
+de:11000:900022101::2,,U Sophie-Charlotte-Platz (Berlin),U Bahnsteig Gleis 2,52.510851000000,13.295832000000,0,de:11000:900022101,0,,5555 U Sophie-Charlotte-Platz (Berlin),2
+de:11000:900026202::1,,U Kaiserdamm (Berlin),U Bahnsteig Gleis 1,52.510113000000,13.283103000000,0,de:11000:900026202,0,,5555 U Kaiserdamm (Berlin),22
+de:11000:900026202::2,,U Kaiserdamm (Berlin),U Bahnsteig Gleis 2,52.510059000000,13.283103000000,0,de:11000:900026202,0,,5555 U Kaiserdamm (Berlin),22
+de:11000:900026201::1,,U Theodor-Heuss-Platz (Berlin),U Bahnsteig Gleis 1,52.509920000000,13.272617000000,0,de:11000:900026201,0,,5656 U Theodor-Heuss-Platz (Berlin),2
+de:11000:900026201::2,,U Theodor-Heuss-Platz (Berlin),U Bahnsteig Gleis 2,52.509866000000,13.272588000000,0,de:11000:900026201,0,,5656 U Theodor-Heuss-Platz (Berlin),2
+de:11000:900026101::1,,U Neu-Westend (Berlin),U-Bahnsteig Gleis 1,52.516281000000,13.259258000000,0,de:11000:900026101,0,,5656 U Neu-Westend (Berlin),2
+de:11000:900026101::2,,U Neu-Westend (Berlin),U-Bahnsteig Gleis 2,52.516200000000,13.259241000000,0,de:11000:900026101,0,,5656 U Neu-Westend (Berlin),2
+de:11000:900025203::1,,U Olympia-Stadion (Berlin),U Bahnsteig U2 Gleis 1,52.516890000000,13.250817000000,0,de:11000:900025203,0,,5656 U Olympia-Stadion (Berlin),2
+de:11000:900025203::2,,U Olympia-Stadion (Berlin),U Bahnsteig U2 Gleis 2,52.516786000000,13.250441000000,0,de:11000:900025203,0,,5656 U Olympia-Stadion (Berlin),2
+de:11000:900025202::2,,U Ruhleben (Berlin),U Bahnsteig Gleis 2,52.525594000000,13.241270000000,0,de:11000:900025202,0,,5656 U Ruhleben (Berlin),24
+de:11000:900056101::4,,U Wittenbergplatz (Berlin),U Bahnsteig Gleis 4 (U3),52.501711000000,13.342926000000,0,de:11000:900056101,0,,5555 U Wittenbergplatz (Berlin),3
+de:11000:900023202::1,,U Augsburger Str. (Berlin),U Bahnsteig Gleis 1,52.500386000000,13.336350000000,0,de:11000:900023202,0,,5555 U Augsburger Str. (Berlin),2
+de:11000:900023202::2,,U Augsburger Str. (Berlin),U Bahnsteig Gleis 2,52.500362000000,13.336425000000,0,de:11000:900023202,0,,5555 U Augsburger Str. (Berlin),2
+de:11000:900042101::1,,U Spichernstr. (Berlin),U Bahnsteig Gleis 1 (oben),52.496901000000,13.331995000000,0,de:11000:900042101,0,,5555 U Spichernstr. (Berlin),2
+de:11000:900042101::2,,U Spichernstr. (Berlin),U Bahnsteig Gleis 2 (oben),52.496860000000,13.332072000000,0,de:11000:900042101,0,,5555 U Spichernstr. (Berlin),2
+de:11000:900043101::1,,U Hohenzollernplatz (Berlin),U Bahnsteig Gleis 1,52.494188000000,13.324858000000,0,de:11000:900043101,0,,5555 U Hohenzollernplatz (Berlin),2
+de:11000:900043101::2,,U Hohenzollernplatz (Berlin),U Bahnsteig Gleis 2,52.494095000000,13.324950000000,0,de:11000:900043101,0,,5555 U Hohenzollernplatz (Berlin),2
+de:11000:900041101::1,,U Fehrbelliner Platz (Berlin),U Bahnsteig Gleis 1 (oben),52.490681000000,13.315228000000,0,de:11000:900041101,0,,5555 U Fehrbelliner Platz (Berlin),3
+de:11000:900041101::2,,U Fehrbelliner Platz (Berlin),U Bahnsteig Gleis 2 (oben),52.490597000000,13.315394000000,0,de:11000:900041101,0,,5555 U Fehrbelliner Platz (Berlin),3
+de:11000:900045102::1,,S+U Heidelberger Platz (Berlin),Bahnsteig 1,52.480250000000,13.313117000000,0,de:11000:900045102,0,,5555 S+U Heidelberger Platz (Berlin),78
+de:11000:900045102::2,,S+U Heidelberger Platz (Berlin),Bahnsteig 2,52.480227000000,13.313224000000,0,de:11000:900045102,0,,5555 S+U Heidelberger Platz (Berlin),78
+de:11000:900045101::1,,U Rüdesheimer Platz (Berlin),U Bahnsteig Gleis 1,52.473373000000,13.314366000000,0,de:11000:900045101,0,,5656 U Rüdesheimer Platz (Berlin),2
+de:11000:900045101::2,,U Rüdesheimer Platz (Berlin),U Bahnsteig Gleis 2,52.473372000000,13.314500000000,0,de:11000:900045101,0,,5656 U Rüdesheimer Platz (Berlin),2
+de:11000:900051202::1,,U Breitenbachplatz (Berlin),U Bahnsteig Gleis 1,52.467012000000,13.308733000000,0,de:11000:900051202,0,,5656 U Breitenbachplatz (Berlin),2
+de:11000:900051202::2,,U Breitenbachplatz (Berlin),U Bahnsteig Gleis 2,52.466946000000,13.308834000000,0,de:11000:900051202,0,,5656 U Breitenbachplatz (Berlin),2
+de:11000:900051302::1,,U Podbielskiallee (Berlin),Bahnsteig U3 Gleis 1,52.464067000000,13.295480000000,0,de:11000:900051302,0,,5656 U Podbielskiallee (Berlin),2
+de:11000:900051302::2,,U Podbielskiallee (Berlin),Bahnsteig U3 Gleis 2,52.463981000000,13.295567000000,0,de:11000:900051302,0,,5656 U Podbielskiallee (Berlin),2
+de:11000:900051303::1,,U Dahlem-Dorf (Berlin),Bahnsteig U3 Gleis 1,52.457164000000,13.289407000000,0,de:11000:900051303,0,,5656 U Dahlem-Dorf (Berlin),2
+de:11000:900051303::2,,U Dahlem-Dorf (Berlin),Bahnsteig U3 Gleis 2,52.457115000000,13.289535000000,0,de:11000:900051303,0,,5656 U Dahlem-Dorf (Berlin),2
+de:11000:900051201::1,,U Freie Universität (Thielplatz) (Berlin),Bahnsteig U3 Gleis 1,52.451041000000,13.281602000000,0,de:11000:900051201,0,,5656 U Freie Universität (Thielplatz) (Berlin),2
+de:11000:900051201::2,,U Freie Universität (Thielplatz) (Berlin),Bahnsteig U3 Gleis 2,52.450960000000,13.281692000000,0,de:11000:900051201,0,,5656 U Freie Universität (Thielplatz) (Berlin),2
+de:11000:900051301::1,,U Oskar-Helene-Heim (Berlin),U Bahnsteig Gleis 1,52.450412000000,13.268979000000,0,de:11000:900051301,0,,5656 U Oskar-Helene-Heim (Berlin),2
+de:11000:900051301::2,,U Oskar-Helene-Heim (Berlin),U Bahnsteig Gleis 2,52.450312000000,13.268954000000,0,de:11000:900051301,0,,5656 U Oskar-Helene-Heim (Berlin),2
+de:11000:900050282::1,,U Onkel Toms Hütte (Berlin),Bahnsteig U3 Gleis 1,52.449928000000,13.253036000000,0,de:11000:900050282,0,,5656 U Onkel Toms Hütte (Berlin),2
+de:11000:900050282::2,,U Onkel Toms Hütte (Berlin),Bahnsteig U3 Gleis 2,52.449820000000,13.253110000000,0,de:11000:900050282,0,,5656 U Onkel Toms Hütte (Berlin),2
+de:11000:900050201::2,,U Krumme Lanke (Berlin),Bahnsteig U3 Gleis 2,52.443519000000,13.241613000000,0,de:11000:900050201,0,,5656 U Krumme Lanke (Berlin),2
+de:11000:900056102::6,,U Nollendorfplatz (Berlin),U Bahnsteig Gleis 4 (mitte),52.499837000000,13.354616000000,0,de:11000:900056102,0,,5555 U Nollendorfplatz (Berlin),2
+de:11000:900055101::1,,U Viktoria-Luise-Platz (Berlin),U Bahnsteig Gleis 1,52.496288000000,13.343380000000,0,de:11000:900055101,0,,5555 U Viktoria-Luise-Platz (Berlin),2
+de:11000:900055102::1,,U Bayerischer Platz (Berlin),U Bahnsteig Gleis 1,52.489145000000,13.340214000000,0,de:11000:900055102,0,,5555 U Bayerischer Platz (Berlin),3
+de:11000:900054101::1,,U Rathaus Schöneberg (Berlin),U Bahnsteig Gleis 1,52.483032000000,13.341946000000,0,de:11000:900054101,0,,5555 U Rathaus Schöneberg (Berlin),2
+de:11000:900054105::1,,S+U Innsbrucker Platz (Berlin),U Bahnsteig Gleis 2,52.479262000000,13.343623000000,0,de:11000:900054105,0,,5555 S+U Innsbrucker Platz (Berlin),76
+de:11000:900175010::1,,U Hönow (Berlin),U Bahnsteig Gleis 1,52.538482000000,13.633161000000,0,de:11000:900175010,0,,5656 U Hönow (Berlin),50
+de:11000:900175015::1,,U Louis-Lewin-Str. (Berlin),U Bahnsteig Gleis 1,52.539037000000,13.618307000000,0,de:11000:900175015,0,,5656 U Louis-Lewin-Str. (Berlin),49
+de:11000:900175007::1,,U Hellersdorf (Berlin),U Bahnsteig Gleis 1,52.536737000000,13.606564000000,0,de:11000:900175007,0,,5656 U Hellersdorf (Berlin),3
+de:11000:900175006::1,,U Cottbusser Platz (Berlin),U Bahnsteig Gleis 1,52.533918000000,13.596460000000,0,de:11000:900175006,0,,5656 U Cottbusser Platz (Berlin),5
+de:11000:900175004::1,,U Kaulsdorf-Nord (Berlin),U Bahnsteig Gleis 1,52.520904000000,13.588849000000,0,de:11000:900175004,0,,5656 U Kaulsdorf-Nord (Berlin),55
+de:11000:900175001::1,,S+U Wuhletal (Berlin),U Bahnsteig Gleis 1,52.512626000000,13.575194000000,0,de:11000:900175001,0,,5656 S+U Wuhletal (Berlin),25
+de:11000:900171006::1,,U Elsterwerdaer Platz (Berlin),U-Bahnsteig Gleis 1,52.504979000000,13.560296000000,0,de:11000:900171006,0,,5656 U Elsterwerdaer Platz (Berlin),58
+de:11000:900171005::1,,U Biesdorf-Süd (Berlin),U Bahnsteig Gleis 1,52.499662000000,13.546365000000,0,de:11000:900171005,0,,5656 U Biesdorf-Süd (Berlin),62
+de:11000:900171005::3,,U Biesdorf-Süd (Berlin),U Bahnsteig Gleis 3,52.499625000000,13.546389000000,0,de:11000:900171005,0,,5656 U Biesdorf-Süd (Berlin),62
+de:11000:900161002::3,,U Tierpark (Berlin),U Bahnsteig Gleis 1,52.497760000000,13.523072000000,0,de:11000:900161002,0,,5656 U Tierpark (Berlin),3
+de:11000:900161002::4,,U Tierpark (Berlin),U Bahnsteig Gleis 2,52.497708000000,13.522847000000,0,de:11000:900161002,0,,5656 U Tierpark (Berlin),3
+de:11000:900161512::1,,U Friedrichsfelde (Berlin),U Bahnsteig Gleis 1,52.506252000000,13.512845000000,0,de:11000:900161512,0,,5656 U Friedrichsfelde (Berlin),2
+de:11000:900161512::2,,U Friedrichsfelde (Berlin),U Bahnsteig Gleis 2,52.506188000000,13.512693000000,0,de:11000:900161512,0,,5656 U Friedrichsfelde (Berlin),2
+de:11000:900160004::7,,S+U Lichtenberg Bhf (Berlin),U-Bahnsteig Gleis 1,52.511218000000,13.498342000000,0,de:11000:900160004,0,,5656 S+U Lichtenberg Bhf (Berlin),99
+de:11000:900160004::8,,S+U Lichtenberg Bhf (Berlin),U-Bahnsteig Gleis 2,52.511115000000,13.498291000000,0,de:11000:900160004,0,,5656 S+U Lichtenberg Bhf (Berlin),99
+de:11000:900160005::1,,U Magdalenenstr. (Berlin),U Bahnsteig Gleis 1,52.512532000000,13.486997000000,0,de:11000:900160005,0,,5656 U Magdalenenstr. (Berlin),3
+de:11000:900160005::2,,U Magdalenenstr. (Berlin),U Bahnsteig Gleis 2,52.512410000000,13.486975000000,0,de:11000:900160005,0,,5656 U Magdalenenstr. (Berlin),3
+de:11000:900120001::1,,S+U Frankfurter Allee (Berlin),U Bahnsteig Gleis 1,52.513761000000,13.475215000000,0,de:11000:900120001,0,,5555 S+U Frankfurter Allee (Berlin),97
+de:11000:900120001::2,,S+U Frankfurter Allee (Berlin),U Bahnsteig Gleis 2,52.513604000000,13.475178000000,0,de:11000:900120001,0,,5555 S+U Frankfurter Allee (Berlin),97
+de:11000:900120009::1,,U Samariterstr. (Berlin),U Bahnsteig Gleis 1,52.514787000000,13.464537000000,0,de:11000:900120009,0,,5555 U Samariterstr. (Berlin),3
+de:11000:900120009::2,,U Samariterstr. (Berlin),U Bahnsteig Gleis 2,52.514675000000,13.464507000000,0,de:11000:900120009,0,,5555 U Samariterstr. (Berlin),3
+de:11000:900120008::1,,U Frankfurter Tor (Berlin),U Bahnsteig Gleis 1,52.515872000000,13.453903000000,0,de:11000:900120008,0,,5555 U Frankfurter Tor (Berlin),22
+de:11000:900120008::2,,U Frankfurter Tor (Berlin),U Bahnsteig Gleis 2,52.515755000000,13.453871000000,0,de:11000:900120008,0,,5555 U Frankfurter Tor (Berlin),22
+de:11000:900120025::1,,U Weberwiese (Berlin),U Bahnsteig Gleis 1,52.516804000000,13.444683000000,0,de:11000:900120025,0,,5555 U Weberwiese (Berlin),3
+de:11000:900120025::2,,U Weberwiese (Berlin),U Bahnsteig Gleis 2,52.516688000000,13.444657000000,0,de:11000:900120025,0,,5555 U Weberwiese (Berlin),3
+de:11000:900120006::1,,U Strausberger Platz (Berlin),U Bahnsteig Gleis 1,52.518144000000,13.431554000000,0,de:11000:900120006,0,,5555 U Strausberger Platz (Berlin),22
+de:11000:900120006::2,,U Strausberger Platz (Berlin),U Bahnsteig Gleis 2,52.518055000000,13.431530000000,0,de:11000:900120006,0,,5555 U Strausberger Platz (Berlin),22
+de:11000:900100017::1,,U Schillingstr. (Berlin),U Bahnsteig Gleis 1,52.520931000000,13.420841000000,0,de:11000:900100017,0,,5555 U Schillingstr. (Berlin),22
+de:11000:900100017::2,,U Schillingstr. (Berlin),U Bahnsteig Gleis 2,52.520847000000,13.420768000000,0,de:11000:900100017,0,,5555 U Schillingstr. (Berlin),22
+de:11000:900100003::3,,S+U Alexanderplatz Bhf (Berlin),U-Bahn Gleis 1 (U5),52.521488000000,13.413583000000,0,de:11000:900100003,0,,5555 S+U Alexanderplatz Bhf (Berlin),14
+de:11000:900100003::4,,S+U Alexanderplatz Bhf (Berlin),U-Bahn Gleis 2 (U5),52.521448000000,13.413646000000,0,de:11000:900100003,0,,5555 S+U Alexanderplatz Bhf (Berlin),14
+de:11000:900100025::1,,S+U Brandenburger Tor (Berlin),U Bahnsteig Gleis 1,52.516644000000,13.380981000000,0,de:11000:900100025,0,,5555 S+U Brandenburger Tor (Berlin),130
+de:11000:900003254::1,,U Bundestag (Berlin),U Bahnsteig Gleis 1,52.520156000000,13.373086000000,0,de:11000:900003254,0,,5555 U Bundestag (Berlin),124
+de:11000:900086102::1,,U Kurt-Schumacher-Platz (Berlin),U Bahnsteig Gleis 1,52.563206000000,13.327032000000,0,de:11000:900086102,0,,5656 U Kurt-Schumacher-Platz (Berlin),3
+de:11000:900086102::2,,U Kurt-Schumacher-Platz (Berlin),U Bahnsteig Gleis 2,52.563292000000,13.327087000000,0,de:11000:900086102,0,,5656 U Kurt-Schumacher-Platz (Berlin),3
+de:11000:900011102::1,,U Afrikanische Str. (Berlin),U Bahnsteig Gleis 1,52.560199000000,13.334557000000,0,de:11000:900011102,0,,5656 U Afrikanische Str. (Berlin),3
+de:11000:900011102::2,,U Afrikanische Str. (Berlin),U Bahnsteig Gleis 2,52.560271000000,13.334667000000,0,de:11000:900011102,0,,5656 U Afrikanische Str. (Berlin),3
+de:11000:900011101::1,,U Rehberge (Berlin),U Bahnsteig Gleis 1,52.556593000000,13.340990000000,0,de:11000:900011101,0,,5656 U Rehberge (Berlin),3
+de:11000:900011101::2,,U Rehberge (Berlin),U Bahnsteig Gleis 2,52.556638000000,13.341060000000,0,de:11000:900011101,0,,5656 U Rehberge (Berlin),3
+de:11000:900009103::1,,U Seestr. (Berlin),U Bahnsteig Gleis 1,52.549731000000,13.353007000000,0,de:11000:900009103,0,,5656 U Seestr. (Berlin),2
+de:11000:900009103::2,,U Seestr. (Berlin),U Bahnsteig Gleis 2,52.549813000000,13.353142000000,0,de:11000:900009103,0,,5656 U Seestr. (Berlin),2
+de:11000:900009102::1,,U Leopoldplatz (Berlin),U Bahnsteig Gleis 1 (oben),52.546389000000,13.359121000000,0,de:11000:900009102,0,,5656 U Leopoldplatz (Berlin),3
+de:11000:900009102::2,,U Leopoldplatz (Berlin),U Bahnsteig Gleis 2 (oben),52.546419000000,13.359163000000,0,de:11000:900009102,0,,5656 U Leopoldplatz (Berlin),3
+de:11000:900009104::1,,S+U Wedding (Berlin),U Bahnsteig Gleis 1,52.543028000000,13.364987000000,0,de:11000:900009104,0,,5555 S+U Wedding (Berlin),2
+de:11000:900009104::2,,S+U Wedding (Berlin),U Bahnsteig Gleis 2,52.543092000000,13.365090000000,0,de:11000:900009104,0,,5555 S+U Wedding (Berlin),2
+de:11000:900008102::1,,U Reinickendorfer Str. (Berlin),U Bahnsteig Gleis 1,52.540046000000,13.370176000000,0,de:11000:900008102,0,,5555 U Reinickendorfer Str. (Berlin),3
+de:11000:900008102::2,,U Reinickendorfer Str. (Berlin),U Bahnsteig Gleis 2,52.540096000000,13.370265000000,0,de:11000:900008102,0,,5555 U Reinickendorfer Str. (Berlin),3
+de:11000:900100501::1,,U Schwartzkopffstr. (Berlin),U Bahnsteig Gleis 1,52.535449000000,13.376863000000,0,de:11000:900100501,0,,5555 U Schwartzkopffstr. (Berlin),2
+de:11000:900100501::2,,U Schwartzkopffstr. (Berlin),U Bahnsteig Gleis 2,52.535500000000,13.376986000000,0,de:11000:900100501,0,,5555 U Schwartzkopffstr. (Berlin),2
+de:11000:900100009::1,,U Naturkundemuseum (Berlin),U Bahnsteig Gleis 1,52.531269000000,13.382101000000,0,de:11000:900100009,0,,5555 U Naturkundemuseum (Berlin),2
+de:11000:900100009::2,,U Naturkundemuseum (Berlin),U Bahnsteig Gleis 2,52.531322000000,13.382214000000,0,de:11000:900100009,0,,5555 U Naturkundemuseum (Berlin),2
+de:11000:900100019::1,,U Oranienburger Tor (Berlin),Bahnsteig U6 Gleis 1 ,52.525545000000,13.387314000000,0,de:11000:900100019,0,,5555 U Oranienburger Tor (Berlin),2
+de:11000:900100019::2,,U Oranienburger Tor (Berlin),U Bahnsteig Gleis 2,52.525551000000,13.387428000000,0,de:11000:900100019,0,,5555 U Oranienburger Tor (Berlin),2
+de:11000:900100001::1,,S+U Friedrichstr. Bhf (Berlin),U-Bahnsteig Gleis 1,52.520265000000,13.388196000000,0,de:11000:900100001,0,,5555 S+U Friedrichstr. Bhf (Berlin),22
+de:11000:900100001::2,,S+U Friedrichstr. Bhf (Berlin),U-Bahnsteig Gleis 2,52.520269000000,13.388335000000,0,de:11000:900100001,0,,5555 S+U Friedrichstr. Bhf (Berlin),22
+de:11000:900100011::1,,U Stadtmitte (Berlin),U Bahnsteig Gleis 1,52.510236000000,13.389841000000,0,de:11000:900100011,0,,5555 U Stadtmitte (Berlin),3
+de:11000:900100011::2,,U Stadtmitte (Berlin),U Bahnsteig Gleis 2,52.510246000000,13.389981000000,0,de:11000:900100011,0,,5555 U Stadtmitte (Berlin),3
+de:11000:900012102::1,,U Kochstr./Checkpoint Charlie (Berlin),U Bahnsteig Gleis 1,52.506032000000,13.390528000000,0,de:11000:900012102,0,,5555 U Kochstr./Checkpoint Charlie (Berlin),2
+de:11000:900012102::2,,U Kochstr./Checkpoint Charlie (Berlin),U Bahnsteig Gleis 2,52.506044000000,13.390689000000,0,de:11000:900012102,0,,5555 U Kochstr./Checkpoint Charlie (Berlin),2
+de:11000:900012103::3,,U Hallesches Tor (Berlin),Bahnsteig U6 Gleis 1,52.498999000000,13.391628000000,0,de:11000:900012103,0,,5555 U Hallesches Tor (Berlin),22
+de:11000:900012103::4,,U Hallesches Tor (Berlin),Bahnsteig U6 Gleis 2,52.499006000000,13.391805000000,0,de:11000:900012103,0,,5555 U Hallesches Tor (Berlin),22
+de:11000:900017101::1,,U Mehringdamm (Berlin),U Bahnsteig Gleis 1,52.494625000000,13.388864000000,0,de:11000:900017101,0,,5555 U Mehringdamm (Berlin),3
+de:11000:900017101::2,,U Mehringdamm (Berlin),U Bahnsteig Gleis 2,52.494542000000,13.389109000000,0,de:11000:900017101,0,,5555 U Mehringdamm (Berlin),3
+de:11000:900017102::1,,U Platz der Luftbrücke (Berlin),U Bahnsteig Gleis 1,52.485948000000,13.385808000000,0,de:11000:900017102,0,,5555 U Platz der Luftbrücke (Berlin),3
+de:11000:900017102::2,,U Platz der Luftbrücke (Berlin),U Bahnsteig Gleis 2,52.485946000000,13.385970000000,0,de:11000:900017102,0,,5555 U Platz der Luftbrücke (Berlin),3
+de:11000:900068101::1,,U Paradestr. (Berlin),U Bahnsteig Gleis 1,52.478191000000,13.386172000000,0,de:11000:900068101,0,,5555 U Paradestr. (Berlin),3
+de:11000:900068101::2,,U Paradestr. (Berlin),U Bahnsteig Gleis 2,52.478191000000,13.386375000000,0,de:11000:900068101,0,,5555 U Paradestr. (Berlin),3
+de:11000:900068201::1,,S+U Tempelhof (Berlin),U Bahnsteig Gleis 1,52.469814000000,13.385515000000,0,de:11000:900068201,0,,5555 S+U Tempelhof (Berlin),75
+de:11000:900068201::2,,S+U Tempelhof (Berlin),U Bahnsteig Gleis 2,52.469819000000,13.385692000000,0,de:11000:900068201,0,,5555 S+U Tempelhof (Berlin),75
+de:11000:900068202::1,,U Alt-Tempelhof (Berlin),U Bahnsteig Gleis 1,52.465382000000,13.385580000000,0,de:11000:900068202,0,,5656 U Alt-Tempelhof (Berlin),3
+de:11000:900068202::2,,U Alt-Tempelhof (Berlin),U Bahnsteig Gleis 2,52.465382000000,13.385719000000,0,de:11000:900068202,0,,5656 U Alt-Tempelhof (Berlin),3
+de:11000:900068302::1,,U Kaiserin-Augusta-Str. (Berlin),U Bahnsteig Gleis 1,52.459982000000,13.384567000000,0,de:11000:900068302,0,,5656 U Kaiserin-Augusta-Str. (Berlin),3
+de:11000:900068302::2,,U Kaiserin-Augusta-Str. (Berlin),U Bahnsteig Gleis 2,52.459971000000,13.384701000000,0,de:11000:900068302,0,,5656 U Kaiserin-Augusta-Str. (Berlin),3
+de:11000:900069271::1,,U Ullsteinstr. (Berlin),U Bahnsteig Gleis 1,52.453741000000,13.384397000000,0,de:11000:900069271,0,,5656 U Ullsteinstr. (Berlin),3
+de:11000:900069271::2,,U Ullsteinstr. (Berlin),U Bahnsteig Gleis 2,52.453757000000,13.384546000000,0,de:11000:900069271,0,,5656 U Ullsteinstr. (Berlin),3
+de:11000:900070101::1,,U Westphalweg (Berlin),U Bahnsteig Gleis 1,52.446268000000,13.385619000000,0,de:11000:900070101,0,,5656 U Westphalweg (Berlin),75
+de:11000:900070101::2,,U Westphalweg (Berlin),U Bahnsteig Gleis 2,52.446275000000,13.385757000000,0,de:11000:900070101,0,,5656 U Westphalweg (Berlin),75
+de:11000:900070301::2,,U Alt-Mariendorf (Berlin),U Bahnsteig Gleis 2,52.439884000000,13.387543000000,0,de:11000:900070301,0,,5656 U Alt-Mariendorf (Berlin),3
+de:11000:900029302::1,,S+U Rathaus Spandau (Berlin),U-Bahnsteig Gleis 1,52.535176000000,13.199857000000,0,de:11000:900029302,0,,5656 S+U Rathaus Spandau (Berlin),3
+de:11000:900029302::2,,S+U Rathaus Spandau (Berlin),U-Bahnsteig Gleis 2,52.535188000000,13.199712000000,0,de:11000:900029302,0,,5656 S+U Rathaus Spandau (Berlin),3
+de:11000:900029301::1,,U Altstadt Spandau (Berlin),U Bahnsteig Gleis 1,52.538755000000,13.206326000000,0,de:11000:900029301,0,,5656 U Altstadt Spandau (Berlin),22
+de:11000:900029301::2,,U Altstadt Spandau (Berlin),U Bahnsteig Gleis 2,52.538890000000,13.206436000000,0,de:11000:900029301,0,,5656 U Altstadt Spandau (Berlin),22
+de:11000:900033101::1,,U Zitadelle (Berlin),U Bahnsteig Gleis 1,52.537627000000,13.217515000000,0,de:11000:900033101,0,,5656 U Zitadelle (Berlin),3
+de:11000:900033101::2,,U Zitadelle (Berlin),U Bahnsteig Gleis 2,52.537676000000,13.217555000000,0,de:11000:900033101,0,,5656 U Zitadelle (Berlin),3
+de:11000:900034102::1,,U Haselhorst (Berlin),U Bahnsteig Gleis 1,52.538635000000,13.233127000000,0,de:11000:900034102,0,,5656 U Haselhorst (Berlin),3
+de:11000:900034102::2,,U Haselhorst (Berlin),U Bahnsteig Gleis 2,52.538793000000,13.233056000000,0,de:11000:900034102,0,,5656 U Haselhorst (Berlin),3
+de:11000:900034101::1,,U Paulsternstr. (Berlin),U Bahnsteig Gleis 1,52.537931000000,13.247534000000,0,de:11000:900034101,0,,5656 U Paulsternstr. (Berlin),3
+de:11000:900034101::2,,U Paulsternstr. (Berlin),U Bahnsteig Gleis 2,52.538058000000,13.247559000000,0,de:11000:900034101,0,,5656 U Paulsternstr. (Berlin),3
+de:11000:900036101::1,,U Rohrdamm (Berlin),U Bahnsteig Gleis 1,52.536926000000,13.262347000000,0,de:11000:900036101,0,,5656 U Rohrdamm (Berlin),3
+de:11000:900036101::2,,U Rohrdamm (Berlin),U Bahnsteig Gleis 2,52.537050000000,13.262367000000,0,de:11000:900036101,0,,5656 U Rohrdamm (Berlin),3
+de:11000:900035101::1,,U Siemensdamm (Berlin),U Bahnsteig Gleis 1,52.536699000000,13.272710000000,0,de:11000:900035101,0,,5656 U Siemensdamm (Berlin),3
+de:11000:900035101::2,,U Siemensdamm (Berlin),U Bahnsteig Gleis 2,52.536811000000,13.272694000000,0,de:11000:900035101,0,,5656 U Siemensdamm (Berlin),3
+de:11000:900018102::1,,U Halemweg (Berlin),U Bahnsteig Gleis 1,52.536571000000,13.286271000000,0,de:11000:900018102,0,,5656 U Halemweg (Berlin),2
+de:11000:900018102::2,,U Halemweg (Berlin),U Bahnsteig Gleis 2,52.536684000000,13.286264000000,0,de:11000:900018102,0,,5656 U Halemweg (Berlin),2
+de:11000:900018101::1,,U Jakob-Kaiser-Platz (Berlin),U Bahnsteig Gleis 1,52.536186000000,13.293646000000,0,de:11000:900018101,0,,5656 U Jakob-Kaiser-Platz (Berlin),22
+de:11000:900018101::2,,U Jakob-Kaiser-Platz (Berlin),U Bahnsteig Gleis 2,52.536296000000,13.293668000000,0,de:11000:900018101,0,,5656 U Jakob-Kaiser-Platz (Berlin),22
+de:11000:900020201::1,,S+U Jungfernheide Bhf (Berlin),U-Bahnsteig Gleis 1 (oben),52.530790000000,13.300631000000,0,de:11000:900020201,0,,5555 S+U Jungfernheide Bhf (Berlin),82
+de:11000:900020201::2,,S+U Jungfernheide Bhf (Berlin),U-Bahnsteig Gleis 2 (unten),52.530749000000,13.300635000000,0,de:11000:900020201,0,,5555 S+U Jungfernheide Bhf (Berlin),83
+de:11000:900019204::1,,U Mierendorffplatz (Berlin),U Bahnsteig Gleis 1,52.526226000000,13.304790000000,0,de:11000:900019204,0,,5555 U Mierendorffplatz (Berlin),22
+de:11000:900019204::2,,U Mierendorffplatz (Berlin),U Bahnsteig Gleis 2,52.526297000000,13.304975000000,0,de:11000:900019204,0,,5555 U Mierendorffplatz (Berlin),22
+de:11000:900022202::1,,U Richard-Wagner-Platz (Berlin),U Bahnsteig Gleis 1,52.516645000000,13.306512000000,0,de:11000:900022202,0,,5555 U Richard-Wagner-Platz (Berlin),3
+de:11000:900022202::2,,U Richard-Wagner-Platz (Berlin),U Bahnsteig Gleis 2,52.516650000000,13.306699000000,0,de:11000:900022202,0,,5555 U Richard-Wagner-Platz (Berlin),3
+de:11000:900024201::3,,U Bismarckstr. (Berlin),U Bahnsteig U7 Gleis 1,52.511500000000,13.305095000000,0,de:11000:900024201,0,,5555 U Bismarckstr. (Berlin),3
+de:11000:900024201::4,,U Bismarckstr. (Berlin),U Bahnsteig U7 Gleis 2,52.511515000000,13.305258000000,0,de:11000:900024201,0,,5555 U Bismarckstr. (Berlin),3
+de:11000:900024202::1,,U Wilmersdorfer Str. (Berlin),U Bahnsteig Gleis 1,52.506353000000,13.306655000000,0,de:11000:900024202,0,,5555 U Wilmersdorfer Str. (Berlin),49
+de:11000:900024202::2,,U Wilmersdorfer Str. (Berlin),U Bahnsteig Gleis 2,52.506367000000,13.306833000000,0,de:11000:900024202,0,,5555 U Wilmersdorfer Str. (Berlin),49
+de:11000:900023302::1,,U Adenauerplatz (Berlin),U Bahnsteig Gleis 1,52.499998000000,13.307175000000,0,de:11000:900023302,0,,5555 U Adenauerplatz (Berlin),3
+de:11000:900023302::2,,U Adenauerplatz (Berlin),U Bahnsteig Gleis 2,52.499990000000,13.307401000000,0,de:11000:900023302,0,,5555 U Adenauerplatz (Berlin),3
+de:11000:900041201::1,,U Konstanzer Str. (Berlin),U Bahnsteig Gleis 1,52.494524000000,13.309008000000,0,de:11000:900041201,0,,5555 U Konstanzer Str. (Berlin),3
+de:11000:900041201::2,,U Konstanzer Str. (Berlin),U Bahnsteig Gleis 2,52.494580000000,13.309153000000,0,de:11000:900041201,0,,5555 U Konstanzer Str. (Berlin),3
+de:11000:900041101::3,,U Fehrbelliner Platz (Berlin),U Bahnsteig Gleis 1,52.490391000000,13.314185000000,0,de:11000:900041101,0,,5555 U Fehrbelliner Platz (Berlin),31
+de:11000:900041101::4,,U Fehrbelliner Platz (Berlin),U Bahnsteig Gleis 2,52.490489000000,13.314375000000,0,de:11000:900041101,0,,5555 U Fehrbelliner Platz (Berlin),31
+de:11000:900041102::1,,U Blissestr. (Berlin),U Bahnsteig Gleis 1,52.486328000000,13.321920000000,0,de:11000:900041102,0,,5555 U Blissestr. (Berlin),22
+de:11000:900041102::2,,U Blissestr. (Berlin),U Bahnsteig Gleis 2,52.486454000000,13.321942000000,0,de:11000:900041102,0,,5555 U Blissestr. (Berlin),22
+de:11000:900044201::1,,U Berliner Str. (Berlin),U Bahnsteig Gleis 1 (unten),52.487265000000,13.330998000000,0,de:11000:900044201,0,,5555 U Berliner Str. (Berlin),27
+de:11000:900044201::2,,U Berliner Str. (Berlin),U Bahnsteig Gleis 2 (unten),52.487349000000,13.330967000000,0,de:11000:900044201,0,,5555 U Berliner Str. (Berlin),27
+de:11000:900055102::3,,U Bayerischer Platz (Berlin),U Bahnsteig Gleis 1,52.488621000000,13.341516000000,0,de:11000:900055102,0,,5555 U Bayerischer Platz (Berlin),22
+de:11000:900055102::4,,U Bayerischer Platz (Berlin),U Bahnsteig Gleis 2,52.488738000000,13.341488000000,0,de:11000:900055102,0,,5555 U Bayerischer Platz (Berlin),22
+de:11000:900054103::1,,U Eisenacher Str. (Berlin),U Bahnsteig Gleis 1,52.489521000000,13.350362000000,0,de:11000:900054103,1,,5555 U Eisenacher Str. (Berlin),3
+de:11000:900054103::2,,U Eisenacher Str. (Berlin),U Bahnsteig Gleis 2,52.489620000000,13.350333000000,0,de:11000:900054103,1,,5555 U Eisenacher Str. (Berlin),3
+de:11000:900054102::1,,U Kleistpark (Berlin),U Bahnsteig Gleis 1,52.490297000000,13.360266000000,0,de:11000:900054102,0,,5555 U Kleistpark (Berlin),3
+de:11000:900054102::2,,U Kleistpark (Berlin),U Bahnsteig Gleis 2,52.490431000000,13.360284000000,0,de:11000:900054102,0,,5555 U Kleistpark (Berlin),3
+de:11000:900057103::1,,S+U Yorckstr. (Berlin),U Bahnsteig Gleis 1,52.492922000000,13.370841000000,0,de:11000:900058103,0,,5555 S+U Yorckstr. (Berlin),3
+de:11000:900057103::2,,S+U Yorckstr. (Berlin),U Bahnsteig Gleis 2,52.493057000000,13.370822000000,0,de:11000:900058103,0,,5555 S+U Yorckstr. (Berlin),3
+de:11000:900017104::3,,U Möckernbrücke (Berlin),U Bahnsteig Gleis 1,52.498643000000,13.383020000000,0,de:11000:900017104,0,,5555 U Möckernbrücke (Berlin),34
+de:11000:900017104::4,,U Möckernbrücke (Berlin),U Bahnsteig Gleis 2,52.498769000000,13.383015000000,0,de:11000:900017104,0,,5555 U Möckernbrücke (Berlin),34
+de:11000:900017101::3,,U Mehringdamm (Berlin),U Bahnsteig Gleis 3,52.494594000000,13.388959000000,0,de:11000:900017101,0,,5555 U Mehringdamm (Berlin),3
+de:11000:900017101::4,,U Mehringdamm (Berlin),U Bahnsteig Gleis 4,52.494575000000,13.389014000000,0,de:11000:900017101,0,,5555 U Mehringdamm (Berlin),3
+de:11000:900016101::1,,U Gneisenaustr. (Berlin),U Bahnsteig Gleis 1,52.491268000000,13.395700000000,0,de:11000:900016101,0,,5555 U Gneisenaustr. (Berlin),2
+de:11000:900016101::2,,U Gneisenaustr. (Berlin),U Bahnsteig Gleis 2,52.491355000000,13.395745000000,0,de:11000:900016101,0,,5555 U Gneisenaustr. (Berlin),2
+de:11000:900016202::1,,U Südstern (Berlin),U Bahnsteig Gleis 1,52.489216000000,13.407672000000,0,de:11000:900016202,0,,5555 U Südstern (Berlin),2
+de:11000:900016202::2,,U Südstern (Berlin),U Bahnsteig Gleis 2,52.489298000000,13.407737000000,0,de:11000:900016202,0,,5555 U Südstern (Berlin),2
+de:11000:900078101::1,,U Hermannplatz (Berlin),U-Bahnsteig Gleis 1,52.486364000000,13.424162000000,0,de:11000:900078101,0,,5555 U Hermannplatz (Berlin),34
+de:11000:900078101::2,,U Hermannplatz (Berlin),U-Bahnsteig Gleis 2,52.486446000000,13.424239000000,0,de:11000:900078101,0,,5555 U Hermannplatz (Berlin),34
+de:11000:900078102::1,,U Rathaus Neukölln (Berlin),U Bahnsteig Gleis 1,52.481765000000,13.433958000000,0,de:11000:900078102,0,,5555 U Rathaus Neukölln (Berlin),2
+de:11000:900078102::2,,U Rathaus Neukölln (Berlin),U Bahnsteig Gleis 2,52.481805000000,13.434038000000,0,de:11000:900078102,0,,5555 U Rathaus Neukölln (Berlin),2
+de:11000:900078103::1,,U Karl-Marx-Str. (Berlin),U Bahnsteig Gleis 1,52.476514000000,13.439167000000,0,de:11000:900078103,0,,5555 U Karl-Marx-Str. (Berlin),2
+de:11000:900078103::2,,U Karl-Marx-Str. (Berlin),U Bahnsteig Gleis 2,52.476530000000,13.439269000000,0,de:11000:900078103,0,,5555 U Karl-Marx-Str. (Berlin),2
+de:11000:900078201::1,,S+U Neukölln (Berlin),U-Bahnsteig Gleis 1,52.468614000000,13.441670000000,0,de:11000:900078201,0,,5555 S+U Neukölln (Berlin),37
+de:11000:900078201::2,,S+U Neukölln (Berlin),U-Bahnsteig Gleis 2,52.468637000000,13.441938000000,0,de:11000:900078201,0,,5555 S+U Neukölln (Berlin),37
+de:11000:900080202::1,,U Grenzallee (Berlin),U Bahnsteig Gleis 1,52.462871000000,13.444733000000,0,de:11000:900080202,0,,5656 U Grenzallee (Berlin),3
+de:11000:900080202::2,,U Grenzallee (Berlin),U Bahnsteig Gleis 2,52.462894000000,13.444839000000,0,de:11000:900080202,0,,5656 U Grenzallee (Berlin),3
+de:11000:900080201::1,,U Blaschkoallee (Berlin),Bahnsteig U7 Gleis 1,52.452075000000,13.449140000000,0,de:11000:900080201,0,,5656 U Blaschkoallee (Berlin),2
+de:11000:900080201::2,,U Blaschkoallee (Berlin),Bahnsteig U7 Gleis 2,52.452086000000,13.449251000000,0,de:11000:900080201,0,,5656 U Blaschkoallee (Berlin),2
+de:11000:900080401::1,,U Parchimer Allee (Berlin),U Bahnsteig Gleis 1,52.444778000000,13.449536000000,0,de:11000:900080401,0,,5656 U Parchimer Allee (Berlin),2
+de:11000:900080401::2,,U Parchimer Allee (Berlin),U Bahnsteig Gleis 2,52.444758000000,13.449646000000,0,de:11000:900080401,0,,5656 U Parchimer Allee (Berlin),2
+de:11000:900080402::1,,U Britz-Süd (Berlin),U Bahnsteig Gleis 1,52.437777000000,13.448097000000,0,de:11000:900080402,0,,5656 U Britz-Süd (Berlin),2
+de:11000:900080402::2,,U Britz-Süd (Berlin),U Bahnsteig Gleis 2,52.437805000000,13.448281000000,0,de:11000:900080402,0,,5656 U Britz-Süd (Berlin),2
+de:11000:900082202::1,,U Johannisthaler Chaussee (Berlin),U Bahnsteig Gleis 1,52.429280000000,13.453239000000,0,de:11000:900082202,0,,5656 U Johannisthaler Chaussee (Berlin),2
+de:11000:900082202::2,,U Johannisthaler Chaussee (Berlin),U Bahnsteig Gleis 2,52.429378000000,13.453482000000,0,de:11000:900082202,0,,5656 U Johannisthaler Chaussee (Berlin),2
+de:11000:900082201::1,,U Lipschitzallee (Berlin),U Bahnsteig Gleis 1,52.424611000000,13.462666000000,0,de:11000:900082201,0,,5656 U Lipschitzallee (Berlin),2
+de:11000:900082201::2,,U Lipschitzallee (Berlin),U Bahnsteig Gleis 2,52.424671000000,13.462725000000,0,de:11000:900082201,0,,5656 U Lipschitzallee (Berlin),2
+de:11000:900083102::1,,U Wutzkyallee (Berlin),U Bahnsteig Gleis 1,52.423277000000,13.474655000000,0,de:11000:900083102,0,,5656 U Wutzkyallee (Berlin),2
+de:11000:900083102::2,,U Wutzkyallee (Berlin),U Bahnsteig Gleis 2,52.423383000000,13.474655000000,0,de:11000:900083102,0,,5656 U Wutzkyallee (Berlin),2
+de:11000:900083101::1,,U Zwickauer Damm (Berlin),U Bahnsteig Gleis 1,52.423252000000,13.483727000000,0,de:11000:900083101,0,,5656 U Zwickauer Damm (Berlin),2
+de:11000:900083101::2,,U Zwickauer Damm (Berlin),U Bahnsteig Gleis 2,52.423333000000,13.483774000000,0,de:11000:900083101,0,,5656 U Zwickauer Damm (Berlin),2
+de:11000:900083201::1,,U Rudow (Berlin),U Bahnsteig Gleis 1,52.416279000000,13.495085000000,0,de:11000:900083201,0,,5656 U Rudow (Berlin),3
+de:11000:900083201::2,,U Rudow (Berlin),U Bahnsteig Gleis 2,52.416332000000,13.495157000000,0,de:11000:900083201,0,,5656 U Rudow (Berlin),3
+de:11000:900096101::2,,S+U Wittenau (Berlin),U-Bahnsteig Gleis 2,52.595540000000,13.334374000000,0,de:11000:900096101,0,,5656 S+U Wittenau (Berlin),3
+de:11000:900096410::2,,U Rathaus Reinickendorf (Berlin),U Bahnsteig Gleis 2,52.588417000000,13.325862000000,0,de:11000:900096410,0,,5656 U Rathaus Reinickendorf (Berlin),74
+de:11000:900096458::2,,S+U Karl-Bonhoeffer-Nervenklinik (Berlin),U Bahnsteig Gleis 2,52.578907000000,13.333493000000,0,de:11000:900096458,0,,5656 S+U Karl-Bonhoeffer-Nervenklinik (Berlin),22
+de:11000:900086160::2,,U Lindauer Allee (Berlin),U Bahnsteig Gleis 2,52.575384000000,13.339115000000,0,de:11000:900086160,0,,5656 U Lindauer Allee (Berlin),3
+de:11000:900085104::2,,U Paracelsus-Bad (Berlin),U Bahnsteig Gleis 2,52.574198000000,13.349052000000,0,de:11000:900085104,0,,5656 U Paracelsus-Bad (Berlin),3
+de:11000:900085203::2,,U Residenzstr. (Berlin),U Bahnsteig Gleis 2,52.571139000000,13.360599000000,0,de:11000:900085203,0,,5656 U Residenzstr. (Berlin),3
+de:11000:900085202::2,,U Franz-Neumann-Platz (Berlin),U Bahnsteig Gleis 2,52.564629000000,13.363965000000,0,de:11000:900085202,0,,5656 U Franz-Neumann-Platz (Berlin),3
+de:11000:900009202::2,,U Osloer Str. (Berlin),U Bahnsteig Gleis 2 (unten),52.557175000000,13.373355000000,0,de:11000:900009202,0,,5656 U Osloer Str. (Berlin),41
+de:11000:900009203::2,,U Pankstr. (Berlin),U Bahnsteig Gleis 2,52.552294000000,13.381482000000,0,de:11000:900009203,0,,5656 U Pankstr. (Berlin),3
+de:11000:900007102::2,,S+U Gesundbrunnen Bhf (Berlin),U-Bahnsteig Gleis 2,52.548802000000,13.388396000000,0,de:11000:900007102,0,,5555 S+U Gesundbrunnen Bhf (Berlin),31
+de:11000:900007103::2,,U Voltastr. (Berlin),U Bahnsteig Gleis 2,52.542150000000,13.393114000000,0,de:11000:900007103,0,,5555 U Voltastr. (Berlin),2
+de:11000:900007110::2,,U Bernauer Str. (Berlin),U Bahnsteig Gleis 2,52.537319000000,13.396828000000,0,de:11000:900007110,0,,5555 U Bernauer Str. (Berlin),2
+de:11000:900100023::2,,U Rosenthaler Platz (Berlin),U Bahnsteig Gleis 2,52.530428000000,13.400769000000,0,de:11000:900100023,0,,5555 U Rosenthaler Platz (Berlin),22
+de:11000:900100051::2,,U Weinmeisterstr. (Berlin),U Bahnsteig Gleis 2,52.525501000000,13.405070000000,0,de:11000:900100051,0,,5555 U Weinmeisterstr. (Berlin),3
+de:11000:900100003::6,,S+U Alexanderplatz Bhf (Berlin),U-Bahn Gleis 2 (U8),52.521048000000,13.412764000000,0,de:11000:900100003,0,,5555 S+U Alexanderplatz Bhf (Berlin),13
+de:11000:900100004::2,,S+U Jannowitzbrücke (Berlin),U Bahnsteig Gleis 2,52.515577000000,13.418239000000,0,de:11000:900100004,0,,5555 S+U Jannowitzbrücke (Berlin),80
+de:11000:900100008::2,,U Heinrich-Heine-Str. (Berlin),U Bahnsteig Gleis 2,52.510077000000,13.415832000000,0,de:11000:900100008,0,,5555 U Heinrich-Heine-Str. (Berlin),22
+de:11000:900013101::2,,U Moritzplatz (Berlin),U Bahnsteig Gleis 2,52.503618000000,13.410788000000,0,de:11000:900013101,0,,5555 U Moritzplatz (Berlin),49
+de:11000:900013102::4,,U Kottbusser Tor (Berlin),U Bahnsteig U8 Gleis 2,52.498959000000,13.418101000000,0,de:11000:900013102,0,,5555 U Kottbusser Tor (Berlin),70
+de:11000:900016201::2,,U Schönleinstr. (Berlin),U Bahnsteig Gleis 2,52.493480000000,13.421844000000,0,de:11000:900016201,0,,5555 U Schönleinstr. (Berlin),3
+de:11000:900078101::3,,U Hermannplatz (Berlin),U-Bahnsteig oben Gleis 1 ,52.486466000000,13.424303000000,0,de:11000:900078101,0,,5555 U Hermannplatz (Berlin),35
+de:11000:900078101::4,,U Hermannplatz (Berlin),U-Bahnsteig oben Gleis 2,52.486413000000,13.424599000000,0,de:11000:900078101,0,,5555 U Hermannplatz (Berlin),35
+de:11000:900079202::1,,U Boddinstr. (Berlin),U Bahnsteig Gleis 1,52.480162000000,13.425207000000,0,de:11000:900079202,0,,5555 U Boddinstr. (Berlin),2
+de:11000:900079202::2,,U Boddinstr. (Berlin),U Bahnsteig Gleis 2,52.480178000000,13.425341000000,0,de:11000:900079202,0,,5555 U Boddinstr. (Berlin),2
+de:11000:900079201::1,,U Leinestr. (Berlin),U Bahnsteig Gleis 1,52.473426000000,13.428058000000,0,de:11000:900079201,0,,5555 U Leinestr. (Berlin),3
+de:11000:900079201::2,,U Leinestr. (Berlin),U Bahnsteig Gleis 2,52.473448000000,13.428184000000,0,de:11000:900079201,0,,5555 U Leinestr. (Berlin),3
+de:11000:900079221::2,,S+U Hermannstr. (Berlin),U Bahnsteig Gleis 2,52.467647000000,13.431289000000,0,de:11000:900079221,0,,5555 S+U Hermannstr. (Berlin),80
+de:11000:900009202::3,,U Osloer Str. (Berlin),U Bahnsteig Gleis 1 (oben),52.557207000000,13.373128000000,0,de:11000:900009202,0,,5656 U Osloer Str. (Berlin),42
+de:11000:900009202::4,,U Osloer Str. (Berlin),U Bahnsteig Gleis 2 (oben),52.557148000000,13.373341000000,0,de:11000:900009202,0,,5656 U Osloer Str. (Berlin),42
+de:11000:900009201::1,,U Nauener Platz (Berlin),U Bahnsteig Gleis 1,52.551666000000,13.367384000000,0,de:11000:900009201,0,,5656 U Nauener Platz (Berlin),3
+de:11000:900009201::2,,U Nauener Platz (Berlin),U Bahnsteig Gleis 2,52.551585000000,13.367543000000,0,de:11000:900009201,0,,5656 U Nauener Platz (Berlin),3
+de:11000:900009102::3,,U Leopoldplatz (Berlin),U Bahnsteig Gleis 1 (U9),52.546448000000,13.359059000000,0,de:11000:900009102,0,,5656 U Leopoldplatz (Berlin),22
+de:11000:900009102::4,,U Leopoldplatz (Berlin),U Bahnsteig Gleis 2 (U9),52.546349000000,13.359230000000,0,de:11000:900009102,0,,5656 U Leopoldplatz (Berlin),22
+de:11000:900009101::1,,U Amrumer Str. (Berlin),U Bahnsteig Gleis 1,52.542370000000,13.350099000000,0,de:11000:900009101,0,,5656 U Amrumer Str. (Berlin),3
+de:11000:900009101::2,,U Amrumer Str. (Berlin),U Bahnsteig Gleis 2,52.542294000000,13.350191000000,0,de:11000:900009101,0,,5656 U Amrumer Str. (Berlin),3
+de:11000:900001201::1,,S+U Westhafen (Berlin),Bahnsteig 1 U9,52.536766000000,13.342507000000,0,de:11000:900001201,0,,5555 S+U Westhafen (Berlin),86
+de:11000:900001201::2,,S+U Westhafen (Berlin),Bahnsteig 2 U9,52.536744000000,13.342635000000,0,de:11000:900001201,0,,5555 S+U Westhafen (Berlin),86
+de:11000:900002201::1,,U Birkenstr. (Berlin),U Bahnsteig Gleis 1,52.532192000000,13.341235000000,0,de:11000:900002201,0,,5555 U Birkenstr. (Berlin),3
+de:11000:900002201::2,,U Birkenstr. (Berlin),U Bahnsteig Gleis 2,52.532191000000,13.341410000000,0,de:11000:900002201,0,,5555 U Birkenstr. (Berlin),3
+de:11000:900003104::1,,U Turmstr. (Berlin),U Bahnsteig Gleis 1,52.526136000000,13.341178000000,0,de:11000:900003104,0,,5555 U Turmstr. (Berlin),22
+de:11000:900003104::2,,U Turmstr. (Berlin),U Bahnsteig Gleis 2,52.526128000000,13.341406000000,0,de:11000:900003104,0,,5555 U Turmstr. (Berlin),22
+de:11000:900003101::1,,U Hansaplatz (Berlin),U Bahnsteig Gleis 1,52.517873000000,13.341988000000,0,de:11000:900003101,0,,5555 U Hansaplatz (Berlin),2
+de:11000:900003101::2,,U Hansaplatz (Berlin),U Bahnsteig Gleis 2,52.517882000000,13.342161000000,0,de:11000:900003101,0,,5555 U Hansaplatz (Berlin),2
+de:11000:900023201::3,,S+U Zoologischer Garten Bhf (Berlin),U Bahnsteig Gleis 1 (U9),52.506825000000,13.332797000000,0,de:11000:900023201,0,,5555 S+U Zoologischer Garten Bhf (Berlin),6
+de:11000:900023201::4,,S+U Zoologischer Garten Bhf (Berlin),U Bahnsteig Gleis 2 (U9),52.506776000000,13.332991000000,0,de:11000:900023201,0,,5555 S+U Zoologischer Garten Bhf (Berlin),6
+de:11000:900023203::3,,U Kurfürstendamm (Berlin),U Bahnsteig Gleis 1,52.503123000000,13.331243000000,0,de:11000:900023203,0,,5555 U Kurfürstendamm (Berlin),22
+de:11000:900023203::4,,U Kurfürstendamm (Berlin),U Bahnsteig Gleis 2,52.503114000000,13.331398000000,0,de:11000:900023203,0,,5555 U Kurfürstendamm (Berlin),22
+de:11000:900042101::3,,U Spichernstr. (Berlin),U Bahnsteig Gleis 1 (unten),52.497354000000,13.330719000000,0,de:11000:900042101,0,,5555 U Spichernstr. (Berlin),3
+de:11000:900042101::4,,U Spichernstr. (Berlin),U Bahnsteig Gleis 2 (unten),52.497354000000,13.330868000000,0,de:11000:900042101,0,,5555 U Spichernstr. (Berlin),3
+de:11000:900043201::1,,U Güntzelstr. (Berlin),U Bahnsteig Gleis 1,52.492049000000,13.330903000000,0,de:11000:900043201,0,,5555 U Güntzelstr. (Berlin),3
+de:11000:900043201::2,,U Güntzelstr. (Berlin),U Bahnsteig Gleis 2,52.492048000000,13.331101000000,0,de:11000:900043201,0,,5555 U Güntzelstr. (Berlin),3
+de:11000:900044201::3,,U Berliner Str. (Berlin),U Bahnsteig Gleis 1 (oben),52.487295000000,13.330798000000,0,de:11000:900044201,0,,5555 U Berliner Str. (Berlin),28
+de:11000:900044201::4,,U Berliner Str. (Berlin),U Bahnsteig Gleis 2 (oben),52.487326000000,13.331167000000,0,de:11000:900044201,0,,5555 U Berliner Str. (Berlin),28
+de:11000:900044202::1,,S+U Bundesplatz (Berlin),U-Bahnsteig Gleis 1,52.477904000000,13.328481000000,0,de:11000:900044202,0,,5555 S+U Bundesplatz (Berlin),32
+de:11000:900044202::2,,S+U Bundesplatz (Berlin),U-Bahnsteig Gleis 2,52.477908000000,13.328613000000,0,de:11000:900044202,0,,5555 S+U Bundesplatz (Berlin),32
+de:11000:900061102::1,,U Friedrich-Wilhelm-Platz (Berlin),U Bahnsteig Gleis 1,52.472131000000,13.328639000000,0,de:11000:900061102,0,,5656 U Friedrich-Wilhelm-Platz (Berlin),3
+de:11000:900061102::2,,U Friedrich-Wilhelm-Platz (Berlin),U Bahnsteig Gleis 2,52.472114000000,13.328848000000,0,de:11000:900061102,0,,5656 U Friedrich-Wilhelm-Platz (Berlin),3
+de:11000:900061101::1,,U Walther-Schreiber-Platz (Berlin),U Bahnsteig Gleis 1,52.466103000000,13.328178000000,0,de:11000:900061101,0,,5656 U Walther-Schreiber-Platz (Berlin),3
+de:11000:900061101::2,,U Walther-Schreiber-Platz (Berlin),U Bahnsteig Gleis 2,52.466100000000,13.328345000000,0,de:11000:900061101,0,,5656 U Walther-Schreiber-Platz (Berlin),3
+de:11000:900062203::1,,U Schloßstr. (Berlin),U Bahnsteig Gleis 3,52.460629000000,13.324477000000,0,de:11000:900062203,0,,5656 U Schloßstr. (Berlin),22
+de:11000:900062203::2,,U Schloßstr. (Berlin),U Bahnsteig Gleis 4,52.460605000000,13.324455000000,0,de:11000:900062203,0,,5656 U Schloßstr. (Berlin),3
+de:11000:900062202::1,,S+U Rathaus Steglitz (Berlin),U-Bahnsteig Gleis 1,52.456166000000,13.320478000000,0,de:11000:900062202,0,,5656 S+U Rathaus Steglitz (Berlin),22
+de:11000:900062202::2,,S+U Rathaus Steglitz (Berlin),U-Bahnsteig Gleis 2,52.456129000000,13.320686000000,0,de:11000:900062202,0,,5656 S+U Rathaus Steglitz (Berlin),22
+de:11000:900100045::6,,U Rotes Rathaus (Berlin),U Bahnsteig Gleis 1,52.518802000000,13.407888000000,0,de:11000:900100045,0,,5555 U Rotes Rathaus (Berlin),97
+de:11000:900100045::7,,U Rotes Rathaus (Berlin),U Bahnsteig Gleis 2,52.518762000000,13.407935000000,0,de:11000:900100045,0,,5555 U Rotes Rathaus (Berlin),97
+de:11000:900100537::3,,U Museumsinsel (Berlin),U Bahnsteig Gleis 1,52.517402000000,13.398250000000,0,de:11000:900100537,0,,5555 U Museumsinsel (Berlin),55
+de:11000:900100537::4,,U Museumsinsel (Berlin),U Bahnsteig Gleis 2,52.517267000000,13.398218000000,0,de:11000:900100537,0,,5555 U Museumsinsel (Berlin),55
+de:11000:900100513::5,,U Unter den Linden (Berlin),U Bahnsteig U5 Gleis 1,52.517040000000,13.389059000000,0,de:11000:900100513,0,,5555 U Unter den Linden (Berlin),55
+de:11000:900100513::6,,U Unter den Linden (Berlin),U Bahnsteig U5 Gleis 2,52.516920000000,13.389081000000,0,de:11000:900100513,0,,5555 U Unter den Linden (Berlin),55
+de:11000:900100025::5,,S+U Brandenburger Tor (Berlin),U Bahnsteig Gleis 2,52.516529000000,13.381004000000,0,de:11000:900100025,0,,5555 S+U Brandenburger Tor (Berlin),130
+de:11000:900003254::5,,U Bundestag (Berlin),U Bahnsteig Gleis 2,52.520109000000,13.372842000000,0,de:11000:900003254,0,,5555 U Bundestag (Berlin),124
+de:11000:900003201::10,,S+U Berlin Hauptbahnhof,U Bahnsteig Gleis 2,52.525225000000,13.370030000000,0,de:11000:900003201,0,,5555 S+U Berlin Hauptbahnhof,3
+de:11000:900100513::7,,U Unter den Linden (Berlin),U Bahnsteig U6 Gleis 1,52.516662000000,13.388825000000,0,de:11000:900100513,0,,5555 U Unter den Linden (Berlin),196
+de:11000:900100513::8,,U Unter den Linden (Berlin),U Bahnsteig U6 Gleis 2,52.516665000000,13.388887000000,0,de:11000:900100513,0,,5555 U Unter den Linden (Berlin),196
