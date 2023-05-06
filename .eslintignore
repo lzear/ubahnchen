@@ -1,0 +1,6 @@
+**/graphql.schema.json
+**/generated
+**/coverage
+**/dist
+**/node_modules
+hafas-client

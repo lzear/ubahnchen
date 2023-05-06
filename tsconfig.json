@@ -1,0 +1,5 @@
+{
+  "extends": "@ubahnchen/tsconfig/base.json",
+  "compilerOptions": {},
+  "include": ["src", "test"]
+}
