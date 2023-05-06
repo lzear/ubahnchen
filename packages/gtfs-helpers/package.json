@@ -1,0 +1,23 @@
+{
+  "name": "@ubahnchen/gtfs-helpers",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@ubahnchen/csv-helpers": "*",
+    "@ubahnchen/utils": "*",
+    "gtfs-types": "^2.2.0",
+    "tsup": "^6.7.0"
+  },
+  "devDependencies": {
+    "@ubahnchen/tsconfig": "*",
+    "eslint-config-ubahnchen": "*"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
