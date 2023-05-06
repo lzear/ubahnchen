@@ -36,8 +36,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-packages/ui/node_modules
-packages/ui/.next
+v1/packages/ui/node_modules
+v1/packages/ui/.next
 hafas-client/dist
 .idea
 

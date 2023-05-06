@@ -2,7 +2,13 @@
   "compilerOptions": {
     //    "target": "es5",
     "target": "es2019",
-    "lib": ["dom", "dom.iterable", "esnext", "es2019", "esnext.asynciterable"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext",
+      "es2019",
+      "esnext.asynciterable"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     //    "strict": false,
@@ -37,6 +43,12 @@
     "noEmitOnError": true,
     "useDefineForClassFields": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

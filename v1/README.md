@@ -5,7 +5,7 @@
 An animated live map of the Berlin U-Bahn.
 
 <p align="center">
-<img alt="preview of Ubähnchen, in U-Bahn mode" src="./preview.svg" width="500"><img alt="preview of Ubähnchen, in S-and-U -Bahn mode, with controls showing" src="./preview.png" width="300">
+<img alt="preview of Ubähnchen, in U-Bahn mode" src="preview.svg" width="500"><img alt="preview of Ubähnchen, in S-and-U -Bahn mode, with controls showing" src="preview.png" width="300">
 </p> 
 
 ## How it works
