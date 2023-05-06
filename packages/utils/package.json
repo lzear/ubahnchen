@@ -1,0 +1,24 @@
+{
+  "name": "@ubahnchen/utils",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
+  },
+  "dependencies": {
+    "humanize-duration": "^3.28.0",
+    "tmp": "^0.2.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/tmp": "^0.2.3",
+    "@ubahnchen/tsconfig": "*",
+    "eslint-config-ubahnchen": "*"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
