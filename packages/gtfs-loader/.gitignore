@@ -1,6 +1,4 @@
 dist/*
-!dist/db
-!dist/db/*
 temp/berlin/gtfs
 src/generated
 .idea
