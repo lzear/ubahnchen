@@ -1,0 +1,6 @@
+{
+  "extends": "@ubahnchen/tsconfig/base.json",
+  "compilerOptions": {
+    "module": "esnext"
+  }
+}
