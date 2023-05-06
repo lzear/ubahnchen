@@ -1,0 +1,7 @@
+{
+  "extends": "@ubahnchen/tsconfig/base.json",
+  "compilerOptions": {
+    "module": "esnext"
+  },
+  "exclude": ["node_modules", "dist"]
+}

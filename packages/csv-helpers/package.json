@@ -1,0 +1,27 @@
+{
+  "name": "@ubahnchen/csv-helpers",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "@ubahnchen/utils": "*",
+    "fast-csv": "^4.3.6",
+    "humanize-duration": "^3.28.0",
+    "ora": "^6.3.0",
+    "papaparse": "^5.4.1"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0",
+    "@types/humanize-duration": "^3.27.1",
+    "@types/papaparse": "^5.3.7",
+    "eslint-config-ubahnchen": "*",
+    "tsup": "^6.7.0"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
