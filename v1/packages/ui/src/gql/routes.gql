@@ -1,7 +1,0 @@
-query FindManyRoutes {
-    findManyRoutes(orderBy: [{route_name: asc}, {route_id: asc}]) {
-        route_name
-        route_id
-        _count { trips }
-    }
-}

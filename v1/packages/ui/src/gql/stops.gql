@@ -1,7 +1,0 @@
-query FindManyStops {
-    findManyStops {
-        stop_idx
-        stop_id
-        stop_name
-    }
-}
