@@ -13,5 +13,5 @@ export const defaultConfig = (
     '.node': 'file',
   },
   format: ['cjs', 'esm'] as Format[],
-  external: ['fsevents'],
+  // external: ['fsevents'],
 })
