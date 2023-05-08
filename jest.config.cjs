@@ -1,8 +1,8 @@
 // import path from 'node:path'
 // import url from 'node:url'
 
-const url = require('url')
-const path = require('path')
+const path = require('node:path')
+
 // import { pathsToModuleNameMapper } from 'ts-jest'
 // import pkg from './tsconfig.json' assert { type: 'json' }
 
@@ -76,8 +76,6 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': ['babel-jest', { rootMode: 'upward' }],
   },
-  collectCoverageFrom: [
-    '<rootDir>/**/src/**/*.{ts,tsx}',
-  ]
+  collectCoverageFrom: ['<rootDir>/**/src/**/*.{ts,tsx}'],
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 }

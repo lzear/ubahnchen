@@ -18,7 +18,7 @@ export type CsvStopTime = Record<keyof StopTime, string>
 export type CsvStop = Record<keyof Stop, string>
 export type CsvTrip = Record<keyof Trip, string>
 
-export type GtfsCsvTypes = {
+export interface GtfsCsvTypes extends Record<string, Record<string, string>> {
   agency: CsvAgency
   calendar: CsvCalendar
   calendar_dates: CsvCalendarDates

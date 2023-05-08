@@ -1,5 +1,10 @@
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    es2021: true,
+    commonjs: true,
+  },
   extends: ['ubahnchen'],
   rules: {
     '@typescript-eslint/ban-ts-comment': 0,
@@ -17,7 +22,6 @@ module.exports = {
     'jsx-quotes': 2,
     'object-shorthand': 2,
     'prettier/prettier': 2,
-    'react/jsx-curly-brace-presence': [2, 'never'],
     'unicorn/prevent-abbreviations': [
       'error',
       {

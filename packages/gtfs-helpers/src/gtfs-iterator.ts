@@ -13,6 +13,7 @@ export type GtfsIteratorOptions = {
   gtfsDirectory: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type FixIndexSignature<T> = { [k: string]: any } & T
 
 export type GtfsKeys = keyof GtfsTypes
@@ -65,8 +66,12 @@ export class GtfsIterator {
   }
 }
 
-export const getValue = (object: GtfsCsvTypes[GtfsKeys], key: string) => {
-  if (!(key in object)) return
-  const o2 = object as any as Record<string, string>
-  return o2[key]
+export const getValue = (
+  object: Record<string, string>,
+  key: string,
+): string => {
+  // const o2 = object as any as Record<string, string>
+  const v: string = object[key]
+  if (!v) throw new Error('Key not found')
+  return v
 }

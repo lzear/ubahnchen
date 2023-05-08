@@ -10,7 +10,9 @@
     "gtfs-sqlite": "src/bin/gtfs-sqlite.ts"
   },
   "scripts": {
-    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
+    "build": "tsup",
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
+    "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
   },
   "dependencies": {
     "@types/better-sqlite3": "^7.6.4",

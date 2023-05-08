@@ -6,17 +6,23 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsup",
-    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
+    "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
   },
   "dependencies": {
-    "humanize-duration": "^3.28.0",
-    "tmp": "^0.2.1"
+    "humanize-duration": "^3.28.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
     "@types/tmp": "^0.2.3",
     "@ubahnchen/tsconfig": "*",
-    "eslint-config-ubahnchen": "*"
+    "eslint-config-ubahnchen": "*",
+    "ora": "^6.3.0",
+    "tmp": "^0.2.1"
+  },
+  "peerDependencies": {
+    "ora": "^6.3.0",
+    "tmp": "^0.2.1"
   },
   "volta": {
     "extends": "../../package.json"

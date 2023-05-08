@@ -1,4 +1,4 @@
-export default {
+const config = {
   displayName: 'gtfs-to-sqlite',
   preset: '../../jest.preset.cjs',
   transform: {
@@ -12,3 +12,5 @@ export default {
   moduleFileExtensions: ['ts', 'js', 'html'],
   // coverageDirectory: '../../coverage/libs/gtfs-to-sqlite',
 }
+
+export default config

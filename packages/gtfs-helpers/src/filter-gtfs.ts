@@ -28,7 +28,7 @@ export const gtfsFilter: TT = <K extends GtfsKeys>(
   filter: (value: GtfsCsvTypes[K], index: number) => boolean,
 ) => [key, filter]
 
-const gtfsIndexes = {
+export const gtfsIndexes = {
   agency: 'agency_id',
   routes: 'route_id',
   trips: 'trip_id',
@@ -38,7 +38,7 @@ const gtfsIndexes = {
 } as const
 
 type IndexNames = keyof typeof gtfsIndexes
-type IndexFields = (typeof gtfsIndexes)[IndexNames]
+export type IndexFields = (typeof gtfsIndexes)[IndexNames]
 
 type FinalSetsG = Record<IndexNames, Set<string> | undefined>
 const indexes: {
@@ -123,7 +123,7 @@ const filterOneFile = async <K extends GtfsKeys>({
   await gtfsCopy.getFilter(key)((v, _index) => {
     for (const name of consume) {
       const field: IndexFields = gtfsIndexes[name]
-      const vvv: string | undefined = getValue(v, field)
+      const vvv = getValue(v, field)
       const thisSet = finalSets[name]
       if (!thisSet) continue
       if (!vvv || !thisSet.has(vvv)) return false
@@ -135,7 +135,7 @@ const filterOneFile = async <K extends GtfsKeys>({
 
     for (const name of produce) {
       const field = gtfsIndexes[name]
-      const vvv: string | undefined = getValue(v, field)
+      const vvv = getValue(v, field)
       if (vvv) finalSets[name]?.add(vvv)
     }
 
