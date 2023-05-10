@@ -5,6 +5,8 @@ export const humanizeTime = (ms: number, options?: Options) =>
   humanizeDuration.humanizer({
     maxDecimalPoints: 1,
     language: 'shortEn',
+    delimiter: ' ',
+    spacer: '',
     units: ['y', 'mo', 'w', 'd', 'h', 'm', 's', ms < 1000 && 'ms'].filter(
       Boolean,
     ) as Options['units'],
