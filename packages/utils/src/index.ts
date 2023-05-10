@@ -1,4 +1,5 @@
 export { catFile, countLines } from './count-lines'
+export { downloadFile, downloadOnce, downloadOnceOra } from './download-once'
 export { initializeFile } from './files'
 export { endReadableStream, endWritableStream } from './handle-stream-end'
 export { humanizeTime } from './humanize-time'
