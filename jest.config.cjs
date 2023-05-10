@@ -74,7 +74,7 @@ module.exports = {
   // },
 
   transform: {
-    '^.+\\.tsx?$': 'babel-jest',
+    '^.+\\.tsx?$': ['babel-jest', { rootMode: 'upward' }],
   },
   collectCoverageFrom: [
     '<rootDir>/**/src/**/*.{ts,tsx}',
