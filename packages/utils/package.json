@@ -17,7 +17,7 @@
     "@types/tmp": "^0.2.3",
     "@ubahnchen/tsconfig": "*",
     "eslint-config-ubahnchen": "*",
-    "ora": "^6.3.0",
+    "ora": "^6.3.1",
     "tmp": "^0.2.1"
   },
   "peerDependencies": {

@@ -20,6 +20,7 @@ const eslintConfig = {
   ],
   rules: {
     '@next/next/no-html-link-for-pages': 0,
+    'no-html-link-for-pages': 0,
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/consistent-type-imports': 2,
     '@typescript-eslint/no-floating-promises': 2,
