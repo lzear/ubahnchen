@@ -36,4 +36,11 @@ module.exports = {
     ],
     'unicorn/no-null': 0,
   },
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json', './*/*/tsconfig.json'],
+    extraFileExtensions: ['.json', '.md'],
+  },
+  plugins: ['@typescript-eslint'],
 }

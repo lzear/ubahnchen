@@ -30,6 +30,7 @@ describe(withPerfOra, () => {
     )
     expect(callback).toHaveBeenNthCalledWith(1, { a: '1', b: '2' })
     expect(callback).toHaveBeenNthCalledWith(2, { a: 'text', b: 'true' })
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     expect(r).toStrictEqual({ lineCount: 3, perf: expect.any(Perf) })
   })
 
@@ -46,11 +47,10 @@ describe(withPerfOra, () => {
     expect(callback).toHaveBeenNthCalledWith(2, { a: 'text', b: 'true' })
   })
 
-  it('fails if no filePath no stream', async () => {
-    return expect(() =>
+  it('fails if no filePath no stream', () =>
+    expect(() =>
       streamCsvPerfOra({ parserOptions: { headers: true } }, () => null),
-    ).toThrow(`Need filePath`)
-  })
+    ).toThrow(`Need filePath`))
 
   it('fails if no onData throws', async () => {
     return expect(() =>

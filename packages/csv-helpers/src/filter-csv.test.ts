@@ -26,6 +26,7 @@ describe(filterCsv, () => {
 
     expect(c).toStrictEqual({
       lineCount: 3,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       perf: expect.any(Perf),
     })
 
@@ -46,6 +47,7 @@ describe(filterCsv, () => {
 
     expect(c).toStrictEqual({
       lineCount: 3,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       perf: expect.any(Perf),
     })
 

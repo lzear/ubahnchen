@@ -35,7 +35,7 @@ export const seedStopTimes = async ({
             )`,
     run: async (pusher) => {
       await gtfsIterator.iterate('stop_times')(
-        async ({ row }) => {
+        ({ row }) => {
           // const stop = parentStopById.get(row.stop_id)
           // if (!stop) throw new Error(`stop not found: ${row.stop_id}`)
           const arrival_time = gtfsTimeToSeconds(row.arrival_time)

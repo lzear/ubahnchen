@@ -46,7 +46,7 @@ export const streamCsvFactoryFC = <T extends Row>(
       return new Promise<Record<string, unknown>>((resolve, reject) =>
         stream
           .pipe(csv.parse(options.parserOptions))
-          .on('data', (row) => onData({ row, index: index++, stream }))
+          .on('data', (row: T) => onData({ row, index: index++, stream }))
           .on('end', resolve)
           .on('error', (error) => reject(error)),
       )

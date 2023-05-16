@@ -16,11 +16,11 @@ export const updateTrips = async ({
            end_time   = @end_time
        WHERE trip_id = @trip_id
   `,
-    run: async (pusher) => {
+    run: (pusher) => {
       for (const trip_id of Object.keys(tripStartEnd)) {
         const startEnd = tripStartEnd.get(trip_id)
         if (!startEnd) throw new Error(`startEnd not found: ${trip_id}`)
-        await pusher({
+        pusher({
           trip_id,
           start_time: startEnd.start,
           end_time: startEnd.end,

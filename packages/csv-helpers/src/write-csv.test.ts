@@ -6,7 +6,7 @@ import { writeCsv } from './write-csv'
 
 describe(writeCsv, () => {
   let temporary: Temporary
-  beforeAll(async () => (temporary = new Temporary()))
+  beforeAll(() => (temporary = new Temporary()))
   afterAll(() => temporary.cleanup())
 
   it('writes a csv file', async () => {

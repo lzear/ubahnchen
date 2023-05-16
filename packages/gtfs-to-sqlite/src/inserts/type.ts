@@ -4,7 +4,7 @@ export type Pusher<T extends Record<string, any>> = (row: T) => void
 export type InsertOptions<R, T extends Record<string, any>> = {
   databasePath: string
   prepare: string
-  run: (pusher: Pusher<T>) => Promise<R>
+  run: (pusher: Pusher<T>) => Promise<R> | R
   perfId?: string
   foreignKeys?: boolean
 }

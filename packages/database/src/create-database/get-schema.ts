@@ -6,7 +6,8 @@ export const getSchema = (database: BetterSqlite3.Database) => {
     .prepare(
       "SELECT type, name, sql FROM sqlite_master WHERE type IN ('table', 'index')",
     )
-    .all()
+    .all() as { type: string; name: string; sql: string }[]
+
   for (const row of rows)
     schema += [`-- ${row.type.toUpperCase()} ${row.name}`, row.sql, ''].join(
       '\n',

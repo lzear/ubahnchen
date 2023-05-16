@@ -24,7 +24,7 @@ const defaultOptions: DefaultOptions = {
   inserter,
 }
 
-await seedStopPairsBasicInner(
+seedStopPairsBasicInner(
   defaultOptions,
   (message) => parentPort?.postMessage(Log(message)),
   () => null,

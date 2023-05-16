@@ -26,7 +26,7 @@ class Peon {
       for (const r of records) statement.run(r)
     })
 
-    parentPort?.on('message', async (message: End1Action | InsertAction) => {
+    parentPort?.on('message', (message: End1Action | InsertAction) => {
       if (message.type === Messages.INSERT) {
         this.count += message.records.length
         this.insertMany(message.records)

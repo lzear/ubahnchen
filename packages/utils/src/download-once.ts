@@ -93,7 +93,9 @@ export const downloadFile = async (
       const total = Number(response.headers['content-length'])
       let current = 0
       response
-        .on('data', (chunk) => {
+        .on('data', (chunk: { length?: number }) => {
+          if (typeof chunk.length !== 'number')
+            throw new Error('chunk.length is not a number')
           current += chunk.length
           onChunk?.(current, total)
         })

@@ -4,12 +4,12 @@ import { Worker } from 'node:worker_threads'
 
 import type { InsertOptions } from '../type'
 
-import type { WorkerData } from './02-worker-types'
+import type { End2Action, WorkerData } from './02-worker-types'
 import { End1, Insert, Messages } from './02-worker-types'
 
 const endWorker = (worker: Worker, count: number) =>
   new Promise<void>((resolve, reject) => {
-    worker.on('message', (data) => {
+    worker.on('message', (data: End2Action) => {
       if (data.type === Messages.END2) resolve()
       else reject(data)
     })

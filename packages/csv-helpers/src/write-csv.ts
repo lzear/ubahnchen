@@ -47,7 +47,7 @@ export const withCsvWrite: <I extends URecord, O extends URecord>(
 ) => WritingFunction<I, O> =
   (filePath, formatterOptions) => async (callback) => {
     const { write, finish } = await writeCsv(filePath, formatterOptions)
-    const r = await callback(write)
+    const r = callback(write)
     await finish()
     return r
   }

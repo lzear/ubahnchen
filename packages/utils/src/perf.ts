@@ -104,7 +104,7 @@ export class Perf extends PerfSimple {
     return [
       this.timeLeft && `~${humanizeTime(this.timeLeft)} left`,
       d && humanizeTime(d),
-      `${a?.toFixed(0)}/s`,
+      a && `${a.toFixed(0)}/s`,
       [
         this.count,
         this.totalCount && `/${this.totalCount} (${percent(this.progress)})`,
@@ -116,9 +116,10 @@ export class Perf extends PerfSimple {
 
   displayFinal() {
     const d = this.duration()
+    const a = this.averagePerS()
     return [
       d && humanizeTime(d).padStart(9),
-      `${this.averagePerS()?.toFixed(0).padStart(6)}/s`,
+      a && `${a.toFixed(0).padStart(6)}/s`,
       this.totalCount && `${this.totalCount} rows`, // eslint-disable-next-line unicorn/no-array-callback-reference
     ].filter(truthy)
   }

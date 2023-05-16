@@ -12,6 +12,6 @@ export const createWithSql = async ({
 }: CreateWithSqlOptions): Promise<{ database: BetterSqlite3.Database }> => {
   await initializeFile(filePath)
   const database = new BetterSqlite3(filePath)
-  await database.exec(schema)
+  database.exec(schema)
   return { database }
 }

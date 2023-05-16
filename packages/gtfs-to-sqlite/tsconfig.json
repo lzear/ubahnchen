@@ -1,6 +1,8 @@
 {
-  "extends": "@ubahnchen/tsconfig/base.json",
   "compilerOptions": {
-    "module": "esnext"
-  }
+    "allowJs": true
+  },
+  "exclude": ["dist"],
+  "extends": ["@ubahnchen/tsconfig/base.json"],
+  "include": ["*.json", ".*.cjs"]
 }

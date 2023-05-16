@@ -41,7 +41,7 @@ describe(streamCsvFactory, () => {
     expect(callback).toHaveBeenNthCalledWith(2, { a: 'text', b: 'true' })
   })
 
-  it('fails if no filePath no stream', async () => {
+  it('fails if no filePath no stream', () => {
     expect(() =>
       streamCsvFactory({
         parserOptions: { headers: true },

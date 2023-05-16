@@ -10,7 +10,7 @@
     "eslint": "^8.40.0",
     "eslint-config-next": "13.4.1",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-config-turbo": "^1.9.3",
+    "eslint-config-turbo": "^1.9.6",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-jsonc": "^2.8.0",
     "eslint-plugin-markdown": "^3.0.0",

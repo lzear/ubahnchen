@@ -116,7 +116,7 @@ const countStopTimesDate = (
   }
   return map
 }
-export const seedStopPairsBasicInner = async (
+export const seedStopPairsBasicInner = (
   options: DefaultOptions,
   logger?: (message: string) => void,
   debug?: (message: string) => void,
@@ -160,7 +160,7 @@ export const seedStopPairsBasicInner = async (
   }
 }
 
-export const seedStopPairsBasic = async (options: DefaultOptions) => {
+export const seedStopPairsBasic = (options: DefaultOptions) => {
   const perf = new Perf()
   perf.go()
   return seedStopPairsBasicInner(

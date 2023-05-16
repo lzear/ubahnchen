@@ -1,32 +1,28 @@
 const eslintConfig = {
-  plugins: ['jsonc', 'prettier', 'simple-import-sort'],
+  plugins: ['jsonc', 'simple-import-sort'],
 
   // parser: "@babel/eslint-parser",
   extends: [
-    'plugin:jsonc/recommended-with-jsonc',
-    // 'turbo',
-    'plugin:markdown/recommended',
     'eslint:recommended',
-    'plugin:import/recommended',
-    'plugin:import/errors',
-    'plugin:import/typescript',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:unicorn/recommended',
-    'plugin:jsonc/recommended-with-jsonc',
-    // 'plugin:package-json/recommended',
-
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'next/core-web-vitals',
-    'next',
-    'prettier',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
+    'plugin:jsonc/recommended-with-jsonc',
+    // 'plugin:jsx-a11y/recommended',
+    'plugin:markdown/recommended',
+    'plugin:unicorn/recommended',
+    'plugin:prettier/recommended',
+    // 'plugin:package-json/recommended',
+    // 'turbo',
   ],
   rules: {
+    '@next/next/no-html-link-for-pages': 0,
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/consistent-type-imports': 2,
-    // '@typescript-eslint/no-floating-promises': 2,
+    '@typescript-eslint/no-floating-promises': 2,
     '@typescript-eslint/no-unused-vars': [
       2,
       {
@@ -52,7 +48,6 @@ const eslintConfig = {
     ],
     'import/order': 0,
     'jsx-quotes': 2,
-    'object-shorthand': 2,
     'jsonc/sort-keys': [
       2,
       // For example, a definition for package.json
@@ -75,7 +70,8 @@ const eslintConfig = {
       },
       // ...
     ],
-    'prettier/prettier': 2,
+    'object-shorthand': 2,
+    'react/jsx-closing-tag-location': 2,
     'react/jsx-curly-brace-presence': [2, 'never'],
     'simple-import-sort/imports': [
       2,
@@ -105,6 +101,7 @@ const eslintConfig = {
       },
     ],
     'simple-import-sort/exports': 2,
+    'unicorn/no-null': 0,
     'unicorn/prevent-abbreviations': [
       2,
       {
@@ -117,38 +114,11 @@ const eslintConfig = {
         },
       },
     ],
-    'unicorn/no-null': 0,
   },
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
-      rules: {
-        'react/react-in-jsx-scope': 0,
-        'react/no-unknown-property': [
-          2,
-          {
-            ignore: ['jsx'],
-          },
-        ],
-      },
-    },
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {},
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        // "tsconfigRootDir": __dirname,
-        // project: ['./tsconfig.json'], // Specify it only for TypeScript files
-      },
-    },
-    {
       files: ['*.json', '*.json5', '*.jsonc'],
       parser: 'jsonc-eslint-parser',
-
-      parserOptions: {
-        jsonSyntax: 'JSON5',
-      },
     },
   ],
 
@@ -174,9 +144,19 @@ const eslintConfig = {
       version: 'detect',
     },
   },
+  // parserOptions: {
+  //   // Required for certain syntax usages
+  //   ecmaVersion: 2020,
+  // },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    // Required for certain syntax usages
-    ecmaVersion: 2020,
+    // tsconfigRootDir: __dirname,
+    project: [
+      './tsconfig.json',
+      './*/*/tsconfig.json',
+      './packages/*/tsconfig.json',
+    ],
+    extraFileExtensions: ['.json', '.md'],
   },
 }
 

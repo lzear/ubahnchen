@@ -22,5 +22,6 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "lib": ["esnext", "dom", "DOM.Iterable", "ScriptHost"]
-  }
+  },
+  "include": ["*.json", ".*.cjs"]
 }

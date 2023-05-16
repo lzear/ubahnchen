@@ -1,6 +1,7 @@
 // import path from 'node:path'
 // import url from 'node:url'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('node:path')
 
 // import { pathsToModuleNameMapper } from 'ts-jest'
