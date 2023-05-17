@@ -1,4 +1,4 @@
-import type BetterSqlite3 from 'better-sqlite3'
+import type * as BetterSqlite3 from 'better-sqlite3'
 
 export const getSchema = (database: BetterSqlite3.Database) => {
   let schema = ''

@@ -17,7 +17,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2019",
+    "target": "ESNext",
     "allowSyntheticDefaultImports": true,
     "outDir": "./dist",
     "baseUrl": ".",

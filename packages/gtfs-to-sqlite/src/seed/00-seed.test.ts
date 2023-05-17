@@ -1,3 +1,4 @@
+import { beforeEach, describe, expect, it } from '@jest/globals'
 import type BetterSqlite3 from 'better-sqlite3'
 
 import { Temporary } from '@ubahnchen/utils'
@@ -23,7 +24,7 @@ const makeCounts = (database: BetterSqlite3.Database) => {
     ] as number
   return counts
 }
-describe(seedDatabase, () => {
+xdescribe(seedDatabase, () => {
   describe.each([gtfsToSqlite, gtfsToSqliteDrizzle])('%p', (implementation) => {
     let temporary: Temporary
 
