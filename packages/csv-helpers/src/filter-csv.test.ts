@@ -22,6 +22,7 @@ describe(filterCsv, () => {
       sourcePath: temporary.file(),
       targetPath,
       lineFilter: () => true,
+      parserOptions: { headers: true },
     })
 
     expect(c).toStrictEqual({

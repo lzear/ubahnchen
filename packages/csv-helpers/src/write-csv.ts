@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 
+import { format } from '@fast-csv/format'
 import type { CsvFormatterStream, FormatterOptionsArgs } from 'fast-csv'
-import { format } from 'fast-csv'
 
 import { initializeFile } from '@ubahnchen/utils'
 
@@ -13,6 +13,7 @@ export const writeCsv = async <I extends URecord, O extends URecord>(
   formatterOptions?: FormatterOptionsArgs<I, O>,
 ) => {
   await initializeFile(filePath)
+
   const writeStream = fs.createWriteStream(filePath)
   const csvFormatterStream = format(formatterOptions)
   csvFormatterStream.pipe(writeStream)
@@ -38,7 +39,7 @@ export const writeCsv = async <I extends URecord, O extends URecord>(
 }
 
 export type WritingFunction<I extends URecord, O extends URecord> = <R>(
-  callback: (write: CsvFormatterStream<I, O>['write']) => R,
+  callback: (write: CsvFormatterStream<I, O>['write']) => Promise<R>,
 ) => Promise<R>
 
 export const withCsvWrite: <I extends URecord, O extends URecord>(
@@ -47,7 +48,7 @@ export const withCsvWrite: <I extends URecord, O extends URecord>(
 ) => WritingFunction<I, O> =
   (filePath, formatterOptions) => async (callback) => {
     const { write, finish } = await writeCsv(filePath, formatterOptions)
-    const r = callback(write)
+    const r = await callback(write)
     await finish()
     return r
   }

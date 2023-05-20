@@ -1,8 +1,5 @@
 {
   "extends": "@ubahnchen/tsconfig/base.json",
   "exclude": ["node_modules", "dist"],
-  "compilerOptions": {
-    "allowJs": true
-  },
   "include": ["**/*", "**/.*.cjs", "**/*.json"]
 }

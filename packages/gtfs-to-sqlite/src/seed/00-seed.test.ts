@@ -24,7 +24,7 @@ const makeCounts = (database: BetterSqlite3.Database) => {
     ] as number
   return counts
 }
-xdescribe(seedDatabase, () => {
+describe(seedDatabase, () => {
   describe.each([gtfsToSqlite, gtfsToSqliteDrizzle])('%p', (implementation) => {
     let temporary: Temporary
 
