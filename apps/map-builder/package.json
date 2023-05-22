@@ -1,5 +1,5 @@
 {
-  "name": "map-builder",
+  "name": "@ubahnchen/map-builder",
   "types": "module",
   "version": "0.0.0",
   "scripts": {
@@ -9,16 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.1.0",
+    "@chakra-ui/react": "^2.6.1",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@types/node": "20.1.5",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "@ubahnchen/database": "*",
     "@ubahnchen/paths": "*",
     "@ubahnchen/tsconfig": "*",
     "eslint": "8.40.0",
-    "eslint-config-next": "13.4.1",
-    "next": "13.4.1",
+    "eslint-config-next": "13.4.2",
+    "framer-motion": "^10.12.12",
+    "leaflet": "^1.9.3",
+    "lodash": "^4.17.21",
+    "framer-motion": "^10.12.10",
+    "leaflet": "^1.9.3",
+    "lodash": "^4.17.21",
+    "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-leaflet": "^4.2.1",
     "server-only": "^0.0.1",
     "typescript": "5.0.4"
   },

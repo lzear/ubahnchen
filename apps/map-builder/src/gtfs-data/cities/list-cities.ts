@@ -25,7 +25,7 @@ export const listCities = async () => {
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name)
 
-  console.log('🦺 antoinelog lll', lll);
+  console.log('🦺 antoinelog lll', lll)
 
   return lll
 }
