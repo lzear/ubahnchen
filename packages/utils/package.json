@@ -16,7 +16,7 @@
     "@jest/globals": "^29.5.0",
     "@types/tmp": "^0.2.3",
     "@ubahnchen/tsconfig": "*",
-    "eslint-config-ubahnchen": "*",
+    "@ubahnchen/eslint-config": "*",
     "ora": "^6.3.1",
     "tmp": "^0.2.1"
   },

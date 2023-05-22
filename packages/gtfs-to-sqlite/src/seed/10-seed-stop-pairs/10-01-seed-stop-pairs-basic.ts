@@ -20,7 +20,7 @@
 import { eq } from 'drizzle-orm'
 import type { BetterSQLite3Database } from 'drizzle-orm/better-sqlite3'
 
-import { drizzleTables } from '@ubahnchen/db'
+import { drizzleTables } from '@ubahnchen/database'
 import { Perf } from '@ubahnchen/utils'
 
 import type { DefaultOptions } from '../00-seed'

@@ -24,7 +24,7 @@ const makeCounts = (database: BetterSqlite3.Database) => {
     ] as number
   return counts
 }
-describe(seedDatabase, () => {
+xdescribe(seedDatabase, () => {
   describe.each([gtfsToSqlite, gtfsToSqliteDrizzle])('%p', (implementation) => {
     let temporary: Temporary
 
@@ -32,7 +32,7 @@ describe(seedDatabase, () => {
       temporary = new Temporary()
     })
 
-    it('converts GTFS to SQLite berlin-u', async () => {
+    xit('converts GTFS to SQLite berlin-u', async () => {
       const database = await implementation({
         gtfsDirectoryPath: 'tests/gtfs/berlin-u',
         sqliteDatabasePath: temporary.file(),

@@ -11,14 +11,14 @@ import type {
   StreamCsvOptions,
 } from './stream-csv'
 
-type TextPerf = (p: DataCsv<Row>) => string
+export type TextPerf = (p: DataCsv<Row>) => string
 
 export type OraProperty = PromiseOptions<Record<string, unknown>> & {
   textPerf?: TextPerf
   sample?: number
 }
 
-type OraTxt = {
+export type OraTxt = {
   ora: OraProperty | undefined
   perf?: Perf
 }

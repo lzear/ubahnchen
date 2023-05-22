@@ -2,7 +2,7 @@ import { parentPort, workerData } from 'node:worker_threads'
 
 import type BetterSqlite3 from 'better-sqlite3'
 
-import { getDatabase } from '@ubahnchen/db'
+import { getDatabase } from '@ubahnchen/database'
 
 import type { End1Action, InsertAction, WorkerData } from './02-worker-types'
 import { Messages } from './02-worker-types'

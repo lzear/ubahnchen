@@ -1,5 +1,5 @@
-import type { DBSingleton } from '@ubahnchen/db'
-import { getDatabase } from '@ubahnchen/db'
+import type { DBSingleton } from '@ubahnchen/database'
+import { getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
 import { inserter } from '../inserts'

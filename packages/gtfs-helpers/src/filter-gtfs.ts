@@ -5,7 +5,7 @@ import type { GtfsCsvTypes } from './gtfs-csv-types'
 import type { GtfsKeys } from './gtfs-iterator'
 import { getValue } from './gtfs-iterator'
 
-type FilterGtfsProps = {
+export type FilterGtfsProps = {
   sourceDir: string
   targetDir: string
   filters: [
@@ -13,11 +13,6 @@ type FilterGtfsProps = {
     filter: (value: GtfsCsvTypes[GtfsKeys], index: number) => boolean,
   ][]
 }
-
-// export type GtfsFilter<K extends GtfsKeys> = [
-//   K,
-//   (value: GtfsCsvTypes[K], index: number) => boolean,
-// ]
 
 type TT = <K extends GtfsKeys>(
   key: K,
@@ -40,7 +35,8 @@ export const gtfsIndexes = {
 type IndexNames = keyof typeof gtfsIndexes
 export type IndexFields = (typeof gtfsIndexes)[IndexNames]
 
-type FinalSetsG = Record<IndexNames, Set<string> | undefined>
+type FinalSets = Record<IndexNames, Set<string> | undefined>
+
 const indexes: {
   [K in GtfsKeys]: IndexNames[]
 } = {
@@ -71,7 +67,7 @@ const addStopsParents = async ({
   filter,
 }: {
   filter: (value: GtfsCsvTypes['stops'], index: number) => boolean
-  finalSets: FinalSetsG
+  finalSets: FinalSets
   gtfsCopy: GtfsCopy
 }) => {
   let index = 0
@@ -99,7 +95,7 @@ const filterOneFile = async <K extends GtfsKeys>({
 }: {
   key: K
   filter: (value: GtfsCsvTypes[K], index: number) => boolean
-  finalSets: FinalSetsG
+  finalSets: FinalSets
   gtfsCopy: GtfsCopy
 }) => {
   const finalSets = { ..._finalSets }
@@ -153,7 +149,7 @@ export const filterGtfs = async (props: FilterGtfsProps) => {
     targetDirectory: targetDir,
   })
 
-  let finalSets: FinalSetsG = {
+  let finalSets: FinalSets = {
     agency: undefined,
     routes: undefined,
     services: undefined,

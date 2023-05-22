@@ -1,6 +1,6 @@
 import type BetterSqlite3 from 'better-sqlite3'
 
-import { createWithSql } from '@ubahnchen/db'
+import { createWithSql } from '@ubahnchen/database'
 
 import { seedDatabase } from './seed/00-seed'
 

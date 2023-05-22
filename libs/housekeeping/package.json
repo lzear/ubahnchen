@@ -1,0 +1,34 @@
+{
+  "name": "@ubahnchen/housekeeping",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "main": "src/index.ts",
+  "bin": {
+    "merge-readme": "src/bin/merge-readme.ts"
+  },
+  "scripts": {
+    "merge-readme": "./src/bin/merge-readme.ts",
+    "typedoc": "typedoc",
+    "typedoc-watch": "chokidar \"../../packages/**/*\" -c \"yarn typedoc\"",
+    "lint": "eslint  --ext js,ts,jsx,tsx,cjs,json,md",
+    "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
+  },
+  "dependencies": {
+    "@ubahnchen/paths": "*",
+    "@ubahnchen/utils": "*",
+    "chokidar-cli": "^3.0.0",
+    "typedoc": "^0.24.7",
+    "typedoc-plugin-coverage": "^2.1.0",
+    "typedoc-plugin-keywords": "^1.4.1",
+    "typedoc-plugin-markdown": "^3.15.3",
+    "typedoc-theme-hierarchy": "^3.2.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.5.0"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

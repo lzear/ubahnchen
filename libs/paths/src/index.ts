@@ -1,5 +1,5 @@
 import { readdir } from 'node:fs/promises'
-import path from 'node:path'
+import * as path from 'node:path'
 import * as url from 'node:url'
 
 export const projectRoot = path.join(

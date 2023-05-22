@@ -1,7 +1,7 @@
 import type BetterSqlite3 from 'better-sqlite3'
 import { type BetterSQLite3Database } from 'drizzle-orm/better-sqlite3'
 
-import { createWithDrizzle } from '@ubahnchen/db'
+import { createWithDrizzle } from '@ubahnchen/database'
 
 import { seedDatabase } from './seed/00-seed'
 import type { GtfsToSqliteOptions } from './gtfs-to-sqlite'

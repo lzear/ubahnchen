@@ -7,7 +7,7 @@ import { oraPromise } from 'ora'
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { defaultTextPerf, successText } from '@ubahnchen/csv-helpers'
-import { drizzleTables } from '@ubahnchen/db'
+import { drizzleTables } from '@ubahnchen/database'
 import { isNever, Perf } from '@ubahnchen/utils'
 
 import type { DefaultOptions } from '../00-seed'

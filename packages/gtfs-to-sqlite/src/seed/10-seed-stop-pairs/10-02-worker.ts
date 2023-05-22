@@ -1,6 +1,6 @@
 import { parentPort, workerData as _wd } from 'node:worker_threads'
 
-import { getDatabase } from '@ubahnchen/db'
+import { getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
 import { inserter } from '../../inserts'

@@ -5,7 +5,7 @@ module.exports = {
     es2021: true,
     commonjs: true,
   },
-  extends: ['ubahnchen'],
+  extends: ['@ubahnchen/eslint-config'],
   rules: {
     '@typescript-eslint/ban-ts-comment': 0,
     // '@typescript-eslint/no-floating-promises': 2,

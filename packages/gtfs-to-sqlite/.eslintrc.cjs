@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['ubahnchen'],
+  extends: ['@ubahnchen/eslint-config'],
   parser: '@typescript-eslint/parser',
   // parserOptions: {
   //   //   // tsconfigRootDir: __dirname,

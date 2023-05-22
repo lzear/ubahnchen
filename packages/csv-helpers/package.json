@@ -21,7 +21,7 @@
     "@jest/globals": "^29.5.0",
     "@types/humanize-duration": "^3.27.1",
     "@types/papaparse": "^5.3.7",
-    "eslint-config-ubahnchen": "*",
+    "@ubahnchen/eslint-config": "*",
     "tsup": "^6.7.0"
   },
   "volta": {

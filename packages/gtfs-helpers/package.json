@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@ubahnchen/tsconfig": "*",
-    "eslint-config-ubahnchen": "*"
+    "@ubahnchen/eslint-config": "*"
   },
   "volta": {
     "extends": "../../package.json"

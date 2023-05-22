@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['ubahnchen'],
+  extends: ['@ubahnchen/eslint-config'],
 }

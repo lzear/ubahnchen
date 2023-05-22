@@ -24,7 +24,8 @@ export type BasicStreamCsv<T> = {
   stream: ReadStream
 }
 
-export const streamCsvFactoryFC = <T extends Row>(
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const streamCsvFactoryFC = <T extends Row>(
   options: StreamCsvOptions,
 ): BasicStreamCsv<T> => {
   const filePath = options.filePath
@@ -53,7 +54,7 @@ export const streamCsvFactoryFC = <T extends Row>(
     },
   }
 }
-export const streamCsvPapaFactory = <T extends Row>(
+const streamCsvPapaFactory = <T extends Row>(
   options: StreamCsvOptions,
 ): BasicStreamCsv<T> => {
   const filePath = options.filePath

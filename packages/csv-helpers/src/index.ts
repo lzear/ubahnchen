@@ -1,4 +1,4 @@
-export { filterCsv } from './filter-csv'
+export { filterCsv, type FilterCsvOptions } from './filter-csv'
 export type {
   BasicStreamCsv,
   DataCsv,
@@ -7,7 +7,16 @@ export type {
   StreamCsvOptions,
 } from './stream-csv'
 export { streamCsv, streamCsvFactory } from './stream-csv'
-export { defaultTextPerf, successText, withOra } from './stream-csv-ora'
+export {
+  type CustomOraOptions,
+  defaultTextPerf,
+  type OraProperty,
+  type OraTxt,
+  type StreamCsvOraOptions,
+  successText,
+  type TextPerf,
+  withOra,
+} from './stream-csv-ora'
 export type {
   DataPerf,
   OnDataPerf,
@@ -16,5 +25,14 @@ export type {
   StreamCsvPerfReturn,
 } from './stream-csv-perf'
 export { withPerf } from './stream-csv-perf'
-export { streamCsvPerfOra } from './stream-csv-perf-ora'
-export { writeCsv } from './write-csv'
+export {
+  streamCsvPerfOra,
+  type StreamCsvPerfOraOptions,
+  withPerfOra,
+} from './stream-csv-perf-ora'
+export {
+  type AnyRow,
+  withCsvWrite,
+  writeCsv,
+  type WritingFunction,
+} from './write-csv'

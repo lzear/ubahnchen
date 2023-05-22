@@ -5,7 +5,7 @@ import { withOra } from './stream-csv-ora'
 import type { OnDataPerf, StreamCsvPerfOptions } from './stream-csv-perf'
 import { withPerf } from './stream-csv-perf'
 
-type StreamCsvPerfOraOptions = StreamCsvOraOptions & StreamCsvPerfOptions
+export type StreamCsvPerfOraOptions = StreamCsvOraOptions & StreamCsvPerfOptions
 
 export const withPerfOra =
   <T extends Row>() =>

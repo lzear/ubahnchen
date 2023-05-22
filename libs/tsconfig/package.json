@@ -2,7 +2,7 @@
   "name": "@ubahnchen/tsconfig",
   "version": "0.0.0",
   "devDependencies": {
-    "eslint-config-ubahnchen": "*"
+    "@ubahnchen/eslint-config": "*"
   },
   "private": true,
   "license": "MIT",

@@ -1,4 +1,4 @@
-import { getDatabase } from '@ubahnchen/db'
+import { getDatabase } from '@ubahnchen/database'
 
 import type { InsertOptions } from '../type'
 

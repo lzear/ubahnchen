@@ -1,3 +1,4 @@
 {
-  "extends": "@ubahnchen/tsconfig/base.json"
+  "extends": "@ubahnchen/tsconfig/base.json",
+  "include": ["*.json", ".*.cjs", "**/*"]
 }

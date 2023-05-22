@@ -1,5 +1,5 @@
 {
-  "name": "@ubahnchen/db",
+  "name": "@ubahnchen/database",
   "version": "0.0.1",
   "type": "module",
   "exports": "./src/index.ts",
@@ -12,8 +12,8 @@
     "@types/node-fetch": "^2.6.4",
     "@ubahnchen/utils": "*",
     "better-sqlite3": "^7.6.2",
-    "csv-parse": "^5.3.10",
-    "drizzle-orm": "^0.25.4",
+    "csv-parse": "^5.4.0",
+    "drizzle-orm": "^0.26.5",
     "extract-zip": "^2.0.1",
     "fast-csv": "^4.3.6",
     "gtfs-types": "^2.2.0",
@@ -23,8 +23,8 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
-    "drizzle-kit": "^0.17.6",
-    "eslint-config-ubahnchen": "*",
+    "drizzle-kit": "^0.18.1",
+    "@ubahnchen/eslint-config": "*",
     "tsup": "^6.7.0"
   },
   "volta": {

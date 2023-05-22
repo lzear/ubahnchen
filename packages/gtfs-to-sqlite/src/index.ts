@@ -1,3 +1,10 @@
 export { drizzleMigrate } from './drizzle/migrate'
-export { gtfsToSqlite } from './gtfs-to-sqlite'
-export { gtfsToSqliteDrizzle } from './gtfs-to-sqlite-drizzle'
+export {
+  gtfsToSqlite,
+  type GtfsToSqliteOptions,
+  type GtfsToSqliteReturn,
+} from './gtfs-to-sqlite'
+export {
+  gtfsToSqliteDrizzle,
+  type GtfsToSqliteDrizzleReturn,
+} from './gtfs-to-sqlite-drizzle'
