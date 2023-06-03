@@ -13,7 +13,7 @@
   },
   {
     "route_name": "S26",
-    "paths": ["S25_süd", "S25_nord", "S2-6"]
+    "paths": ["S25_süd", "S25_nord", "S2-6", "S2_nord"]
   },
   {
     "route_name": "S3",
@@ -25,7 +25,7 @@
   },
   {
     "route_name": "S42",
-    "paths": ["S42", "S9-1"]
+    "paths": ["S42", "S9-1", "S8-1"]
   },
   {
     "route_name": "S45",
@@ -73,7 +73,8 @@
       "S45_sudring_2_",
       "s_bbi__x28_ready..._x29_",
       "S7_x2F_75",
-      "S8-1"
+      "S8-1",
+      "S42"
     ],
     "hardcode": [
       {
