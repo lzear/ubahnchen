@@ -1,11 +1,11 @@
 // import { Inter } from 'next/font/google'
 
-// import './globals.css'
-
 // const inter = Inter({ subsets: ['latin'] })
-
 import { ChakraProviders } from './chakra'
 import StyledJsxRegistry from './styled-jsx'
+
+import './globals.css'
+import 'tailwindcss/tailwind.css'
 
 export const metadata = {
   title: 'Create Next App',
