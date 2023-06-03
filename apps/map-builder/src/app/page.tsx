@@ -12,13 +12,13 @@ export default async function Home() {
       sf
       {c.map((city) => (
         <p key={city}>
-          <Link href={`/build/${city}`}>{city}</Link>
+          <Link href={`/${city}`}>{city}</Link>
         </p>
       ))}
       <div className={styles.description}>
         {citie2s.map((city) => (
           <p key={city}>
-            <Link href={`/build/${city}`}>{city}</Link>
+            <Link href={`/${city}`}>{city}</Link>
           </p>
         ))}
         <p>

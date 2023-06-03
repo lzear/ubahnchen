@@ -2,9 +2,9 @@ import _ from 'lodash'
 
 import 'server-only'
 
-import { MapCity } from '../../../map/leaftlet'
-import { getRoutes } from '../../../server/get-routes'
-import { SelectRouteType } from '../../../server/select-routes'
+import { MapCity } from '../../map/leaftlet'
+import { getRoutes } from '../../server/get-routes'
+import { SelectRouteType } from '../../server/select-routes'
 
 import 'leaflet/dist/leaflet.css'
 
@@ -17,10 +17,10 @@ const City = (props: { params: { city: string } }) => {
   console.log('🦺 antoinelog routes', routes)
 
   return (
-    <div>
+    <main>
       <MapCity></MapCity>
       <SelectRouteType options={routeTypes} value={undefined} />
-    </div>
+    </main>
   )
 }
 
