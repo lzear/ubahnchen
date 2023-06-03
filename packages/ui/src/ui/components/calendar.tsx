@@ -1,5 +1,11 @@
 import React from 'react'
-import { addDays, isFirstDayOfMonth, isLastDayOfMonth, parse } from 'date-fns'
+import {
+  addDays,
+  isFirstDayOfMonth,
+  isLastDayOfMonth,
+  parse,
+  startOfWeek,
+} from 'date-fns'
 import { formatInTimeZone, toDate } from 'date-fns-tz'
 import shallow from 'zustand/shallow'
 import { useColorMode } from '@chakra-ui/react'
@@ -60,7 +66,10 @@ const Rect = ({
 const monthBorders = (startDate: Date, dayCount: number): JSX.Element[] => {
   const startDay = (startDate.getDay() + 6) % 7
   const borders: JSX.Element[] = []
-  const firstMonth = formatTzInLocale(startDate, "MMM ''yy")
+  const firstMonth = formatTzInLocale(
+    startOfWeek(startDate, { weekStartsOn: 1 }),
+    "MMM ''yy",
+  )
   const monthX: { month: string; start: number; end: number }[] = [
     { month: firstMonth, start: 0, end: 0 },
   ]
