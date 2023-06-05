@@ -1,8 +1,6 @@
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
-import { ChakraProviders } from './chakra'
-import StyledJsxRegistry from './styled-jsx'
 
 import './globals.css'
 import 'tailwindcss/tailwind.css'
@@ -19,11 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <ChakraProviders>
-          <StyledJsxRegistry>{children}</StyledJsxRegistry>
-        </ChakraProviders>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
