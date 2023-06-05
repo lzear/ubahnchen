@@ -85,7 +85,7 @@ const countStopTimesDate = (
     if (!datum.routes?.route_id) throw new Error('route_id is undefined')
     if (!datum.stop_times?.stop_id) throw new Error('stop_times is undefined')
 
-    if (previousStop && previousStop?.trips?.trip_id === datum.trips.trip_id)
+    if (previousStop && previousStop?.trips?.trip_id !== datum.trips.trip_id)
       previousStop = undefined
 
     if (previousStop) {

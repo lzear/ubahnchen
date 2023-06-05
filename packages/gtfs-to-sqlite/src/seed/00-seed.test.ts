@@ -3,6 +3,7 @@ import type BetterSqlite3 from 'better-sqlite3'
 
 import { Temporary } from '@ubahnchen/utils'
 
+import { stopPairs } from '../drizzle'
 import { gtfsToSqlite } from '../gtfs-to-sqlite'
 import { gtfsToSqliteDrizzle } from '../gtfs-to-sqlite-drizzle'
 
@@ -18,13 +19,14 @@ const makeCounts = (database: BetterSqlite3.Database) => {
     'calendar',
     'calendar_dates',
     'shapes',
+    'stop_pairs',
   ]) // @ts-expect-error - TS doesn't know about the COUNT(*) aggregate function
     counts[table] = database.prepare(`SELECT COUNT(*) FROM ${table}`).get()[
       'COUNT(*)'
     ] as number
   return counts
 }
-xdescribe(seedDatabase, () => {
+describe(seedDatabase, () => {
   describe.each([gtfsToSqlite, gtfsToSqliteDrizzle])('%p', (implementation) => {
     let temporary: Temporary
 
@@ -47,21 +49,58 @@ xdescribe(seedDatabase, () => {
         trips: 10_696,
       })
     }, 1_000_000)
-
-    it('converts GTFS to SQLite berlin-u-smaller', async () => {
-      const database = await gtfsToSqlite({
-        gtfsDirectoryPath: 'tests/gtfs/berlin-u-smaller',
-        sqliteDatabasePath: temporary.file('tmp.sqlite'),
-      })
-      expect(makeCounts(database.database)).toStrictEqual({
-        calendar: 17,
-        calendar_dates: 325,
-        routes: 9,
-        shapes: 22,
-        stop_times: 413,
-        stops: 512,
-        trips: 22,
-      })
-    }, 100_000)
   })
+})
+
+describe(gtfsToSqliteDrizzle, () => {
+  let temporary: Temporary
+
+  beforeEach(() => {
+    temporary = new Temporary()
+  })
+
+  it('converts GTFS to SQLite berlin-u-smaller', async () => {
+    const { database, drizzleDatabase } = await gtfsToSqliteDrizzle({
+      gtfsDirectoryPath: 'tests/gtfs/berlin-u-smaller',
+      sqliteDatabasePath: temporary.file('tmp.sqlite'),
+    })
+    expect(makeCounts(database)).toStrictEqual({
+      calendar: 17,
+      calendar_dates: 325,
+      routes: 9,
+      shapes: 22,
+      stop_times: 413,
+      stops: 512,
+      trips: 22,
+      stop_pairs: 346,
+    })
+
+    const pairs = drizzleDatabase.select().from(stopPairs).limit(3).all()
+    expect(pairs).toStrictEqual([
+      {
+        count: 1,
+        idx: 1,
+        is_one_way: 1,
+        route_id: '17526_400',
+        stop_id_1: 'de:11000:900062202::2',
+        stop_id_2: 'de:11000:900062203::2',
+      },
+      {
+        count: 1,
+        idx: 2,
+        is_one_way: 1,
+        route_id: '17526_400',
+        stop_id_1: 'de:11000:900062203::2',
+        stop_id_2: 'de:11000:900061101::2',
+      },
+      {
+        count: 1,
+        idx: 3,
+        is_one_way: 1,
+        route_id: '17526_400',
+        stop_id_1: 'de:11000:900061101::2',
+        stop_id_2: 'de:11000:900061102::2',
+      },
+    ])
+  }, 100_000)
 })
