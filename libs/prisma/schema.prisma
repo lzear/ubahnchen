@@ -1,0 +1,133 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:../../cities/berlin/dist/gtfs/gtfs.sqlite"
+}
+
+model calendar {
+  service_id String @id
+  monday     Int
+  tuesday    Int
+  wednesday  Int
+  thursday   Int
+  friday     Int
+  saturday   Int
+  sunday     Int
+  start_date String
+  end_date   String
+}
+
+model calendar_dates {
+  idx         Int    @id @default(autoincrement())
+  service_id  Int
+  date        String
+  is_removing Int
+}
+
+model routes {
+  route_id   String       @id
+  route_name String
+  route_type Int
+  stop_pairs stop_pairs[]
+  trips      trips[]
+
+  @@index([route_name], map: "idx_routes_route_name")
+  @@index([route_id], map: "idx_routes_route_id")
+  @@index([route_name], map: "idx_route_name")
+}
+
+model shapes {
+  shape_id  String  @id
+  shape_pts String
+  lat_min   Float
+  lat_max   Float
+  lon_min   Float
+  lon_max   Float
+  trips     trips[]
+}
+
+model shapes_mini {
+  idx        Int    @id @default(autoincrement())
+  shape_pts  String
+  route_name String
+}
+
+model shapes_temp {
+  shape_id          String
+  shape_pt_lat      Float
+  shape_pt_lon      Float
+  shape_pt_sequence Int
+
+  @@id([shape_id, shape_pt_sequence])
+}
+
+model stop_pairs {
+  idx                               Int                    @id @unique(map: "sqlite_autoindex_stop_pairs_1") @default(autoincrement())
+  stop_id_1                         String
+  stop_id_2                         String
+  route_id                          String
+  count                             Int
+  is_one_way                        Boolean?
+  stops_stop_pairs_stop_id_2Tostops stops                  @relation("stop_pairs_stop_id_2Tostops", fields: [stop_id_2], references: [stop_id], onDelete: NoAction, onUpdate: NoAction)
+  stops_stop_pairs_stop_id_1Tostops stops                  @relation("stop_pairs_stop_id_1Tostops", fields: [stop_id_1], references: [stop_id], onDelete: NoAction, onUpdate: NoAction)
+  routes                            routes                 @relation(fields: [route_id], references: [route_id], onDelete: NoAction, onUpdate: NoAction)
+  stop_pairs_validation             stop_pairs_validation?
+
+  @@unique([route_id, stop_id_1, stop_id_2], map: "sqlite_autoindex_stop_pairs_2")
+}
+
+model stop_pairs_validation {
+  stop_pair_idx   Int        @id @unique(map: "sqlite_autoindex_stop_pairs_validation_1") @default(autoincrement())
+  stop_id_between String?
+  stops           stops?     @relation(fields: [stop_id_between], references: [stop_id], onDelete: NoAction, onUpdate: NoAction)
+  stop_pairs      stop_pairs @relation(fields: [stop_pair_idx], references: [idx], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model stop_times {
+  idx            Int    @id @unique(map: "sqlite_autoindex_stop_times_1") @default(autoincrement())
+  trip_id        String
+  arrival_time   Int
+  departure_time Int
+  stop_id        String
+  stop_sequence  Int
+  stops          stops  @relation(fields: [stop_id], references: [stop_id], onDelete: NoAction, onUpdate: NoAction)
+  trips          trips  @relation(fields: [trip_id], references: [trip_id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([departure_time], map: "idx_departure_time")
+  @@index([arrival_time], map: "idx_arrival_time")
+  @@index([trip_id], map: "idx_trip_id")
+  @@index([trip_id], map: "idx_stop_times_trip_id")
+}
+
+model stops {
+  stop_id                                String                  @id
+  stop_name                              String
+  stop_lat                               Float
+  stop_lon                               Float
+  parent_station                         String?
+  stop_pairs_stop_pairs_stop_id_2Tostops stop_pairs[]            @relation("stop_pairs_stop_id_2Tostops")
+  stop_pairs_stop_pairs_stop_id_1Tostops stop_pairs[]            @relation("stop_pairs_stop_id_1Tostops")
+  stop_pairs_validation                  stop_pairs_validation[]
+  stop_times                             stop_times[]
+  stops                                  stops?                  @relation("stopsTostops", fields: [parent_station], references: [stop_id], onDelete: NoAction, onUpdate: NoAction)
+  other_stops                            stops[]                 @relation("stopsTostops")
+}
+
+model trips {
+  route_id      String
+  shape_id      String?
+  service_id    String
+  trip_id       String       @id
+  trip_headsign String
+  start_time    Int?
+  end_time      Int?
+  stop_times    stop_times[]
+  shapes        shapes?      @relation(fields: [shape_id], references: [shape_id], onDelete: NoAction, onUpdate: NoAction)
+  routes        routes       @relation(fields: [route_id], references: [route_id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@index([route_id], map: "idx_trips_route_id")
+  @@index([trip_id], map: "idx_trips_trip_id")
+}
