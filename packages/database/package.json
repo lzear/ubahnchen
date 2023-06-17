@@ -25,7 +25,7 @@
     "@jest/globals": "^29.5.0",
     "drizzle-kit": "^0.18.1",
     "@ubahnchen/eslint-config": "*",
-    "tsup": "^6.7.0"
+    "tsup": "^7.0.0"
   },
   "volta": {
     "extends": "../../package.json"

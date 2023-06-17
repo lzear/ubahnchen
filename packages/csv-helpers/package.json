@@ -22,7 +22,7 @@
     "@types/humanize-duration": "^3.27.1",
     "@types/papaparse": "^5.3.7",
     "@ubahnchen/eslint-config": "*",
-    "tsup": "^6.7.0"
+    "tsup": "^7.0.0"
   },
   "volta": {
     "extends": "../../package.json"

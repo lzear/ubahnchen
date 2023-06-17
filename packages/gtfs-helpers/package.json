@@ -13,7 +13,7 @@
     "@ubahnchen/csv-helpers": "*",
     "@ubahnchen/utils": "*",
     "gtfs-types": "^2.2.0",
-    "tsup": "^6.7.0"
+    "tsup": "^7.0.0"
   },
   "devDependencies": {
     "@ubahnchen/tsconfig": "*",

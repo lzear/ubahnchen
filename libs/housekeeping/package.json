@@ -18,11 +18,11 @@
     "@ubahnchen/paths": "*",
     "@ubahnchen/utils": "*",
     "chokidar-cli": "^3.0.0",
-    "typedoc": "^0.24.7",
+    "typedoc": "^0.24.8",
     "typedoc-plugin-coverage": "^2.1.0",
     "typedoc-plugin-keywords": "^1.4.1",
     "typedoc-plugin-markdown": "^3.15.3",
-    "typedoc-theme-hierarchy": "^3.2.0",
+    "typedoc-theme-hierarchy": "^4.0.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {

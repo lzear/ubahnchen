@@ -102,5 +102,5 @@ describe(gtfsToSqliteDrizzle, () => {
         stop_id_2: 'de:11000:900061102::2',
       },
     ])
-  }, 100_000)
+  }, 20_000)
 })
