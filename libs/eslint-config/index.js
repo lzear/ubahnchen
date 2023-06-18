@@ -121,6 +121,9 @@ const eslintConfig = {
     {
       files: ['*.json', '*.json5', '*.jsonc'],
       parser: 'jsonc-eslint-parser',
+      rules: {
+        'unicorn/numeric-separators-style': 0,
+      },
     },
   ],
 
