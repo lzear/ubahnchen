@@ -1,4 +1,6 @@
-[submodule "hafas-client"]
-	path = hafas-client
+[submodule "submodules/hafas-client"]
+	path = submodules/hafas-client
 	url = https://github.com/lzear/hafas-client.git
-	branch = master
+[submodule "submodules/react-leaflet"]
+	path = submodules/react-leaflet
+	url = https://github.com/lzear/react-leaflet.git

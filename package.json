@@ -53,6 +53,7 @@
       "cities/*",
       "libs/*",
       "packages/*",
+      "submodules/*",
       "tests/*"
     ]
   },
