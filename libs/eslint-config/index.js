@@ -75,6 +75,7 @@ const eslintConfig = {
     'object-shorthand': 2,
     'react/jsx-closing-tag-location': 2,
     'react/jsx-curly-brace-presence': [2, 'never'],
+    'react/self-closing-comp': 2,
     'simple-import-sort/imports': [
       2,
       {
