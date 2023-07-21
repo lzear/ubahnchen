@@ -1,6 +1,11 @@
 import { jest } from '@jest/globals'
 
-import { defaultSerializer, Singletons, SingletonUnique } from './singletons'
+import {
+  defaultSerializer,
+  singletonize,
+  Singletons,
+  SingletonUnique,
+} from './singletons'
 
 describe(SingletonUnique, () => {
   it('calls the function once', () => {
@@ -38,5 +43,16 @@ describe(SingletonUnique, () => {
     singleton.delete(1, 2)
     expect(singleton.run(1, 2)).toBe(3)
     expect(mock).toHaveBeenCalledTimes(3)
+  })
+})
+
+describe(singletonize, () => {
+  it('required custom serializer if params arent serializable', () => {
+    singletonize(() => null)
+    singletonize(() => null, { serializer: defaultSerializer })
+
+    // @ts-expect-error ✅ as expected
+    singletonize((a: () => null) => a)
+    singletonize((a: () => null) => a, { serializer: () => '' })
   })
 })

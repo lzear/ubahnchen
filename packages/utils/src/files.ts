@@ -6,3 +6,7 @@ export const initializeFile = async (filePath: string) => {
   if (!fs.existsSync(d)) await fs.promises.mkdir(d, { recursive: true })
   if (fs.existsSync(filePath)) await fs.promises.unlink(filePath)
 }
+
+export const initializeFileIfNotExists = async (filePath: string) => {
+  if (!fs.existsSync(filePath)) await initializeFile(filePath)
+}
