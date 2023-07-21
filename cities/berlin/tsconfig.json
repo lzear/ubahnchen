@@ -1,8 +1,0 @@
-{
-  "extends": "@ubahnchen/tsconfig/base.json",
-  "compilerOptions": {
-    "lib": ["dom", "ES2015"]
-  },
-  "include": ["./"],
-  "exclude": ["dist", "build", "node_modules"]
-}
