@@ -1,5 +1,9 @@
 'use client'
 
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+
+import { zBoolean } from '../app/[city]/search-parameters'
+
 type Props = {
   checked: boolean
   onChange: (newValue: boolean) => void
@@ -19,3 +23,41 @@ export const ToggleCheckbox = ({ checked, onChange, label }: Props) => (
     </label>
   </div>
 )
+
+type DD = {
+  defaultValue: boolean
+  label: string
+  urlParameter: string
+}
+
+export const useBooleanUrlParameter = (
+  urlParameter: string,
+  defaultValue?: boolean,
+) => {
+  const searchParameters = useSearchParams()
+  return (
+    zBoolean.parse(searchParameters.get(urlParameter)) ?? defaultValue ?? false
+  )
+}
+
+export const ToggleUrlParameter = ({
+  label,
+  defaultValue,
+  urlParameter,
+}: DD) => {
+  const router = useRouter()
+  const searchParameters = useSearchParams()
+  const value = useBooleanUrlParameter(urlParameter, defaultValue)
+  const pathname = usePathname()
+  return (
+    <ToggleCheckbox
+      onChange={(newValue) => {
+        const parameters = new URLSearchParams(searchParameters.toString())
+        parameters.set(urlParameter, String(newValue))
+        router.replace(`${pathname}?${parameters.toString()}`)
+      }}
+      checked={value}
+      label={label}
+    />
+  )
+}

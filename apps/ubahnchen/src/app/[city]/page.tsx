@@ -95,8 +95,8 @@ const CityComp = async (props: {
             <Opacity />
           </>
         )}
-        <ToggleMergeStops checked={parameters.MergeStops} />
-        <ToggleStraightLines checked={parameters.StraightLines} />
+        <ToggleMergeStops checked={parameters.MergeStops || false} />
+        <ToggleStraightLines checked={parameters.StraightLines || false} />
         <SelectRouteType
           options={serverProps.allRouteTypes}
           value={serverProps.selectedRouteTypes}

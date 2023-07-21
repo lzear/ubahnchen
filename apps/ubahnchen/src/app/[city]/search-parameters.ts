@@ -7,10 +7,14 @@ export const UrlParameter = {
   Map: 'map',
 }
 
-const zBoolean = z.preprocess(
-  (v) => (v === 'false' ? false : Boolean(v)),
-  z.boolean(),
-)
+export const zBoolean = z
+  .string()
+  .nullish()
+  .transform((v) => {
+    if (v === 'true') return true
+    if (v === 'false') return false
+    return
+  })
 
 const userInput = (u: Record<string, string | undefined>) => {
   const r: Record<string, string | undefined> = {}
