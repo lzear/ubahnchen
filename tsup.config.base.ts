@@ -12,6 +12,6 @@ export const defaultConfig = (
   loader: {
     '.node': 'file',
   },
-  format: ['cjs', 'esm'] as Format[],
+  format: ['esm'] as Format[],
   // external: ['fsevents'],
 })
