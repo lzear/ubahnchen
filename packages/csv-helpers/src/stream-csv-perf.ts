@@ -1,4 +1,5 @@
-import { countLines, Perf } from '@ubahnchen/utils'
+import { countLines } from '@ubahnchen/node-utils'
+import { Perf } from '@ubahnchen/utils'
 
 import type {
   BasicStreamCsv,

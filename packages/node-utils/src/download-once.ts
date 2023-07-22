@@ -5,7 +5,7 @@ import path from 'node:path'
 import type { Ora } from 'ora'
 import { oraPromise } from 'ora'
 
-import { percent } from './percent'
+import { percent } from '@ubahnchen/utils'
 
 type Headers = { etag: string; 'last-modified': string }
 type HeadersMap = Record<string, Headers>

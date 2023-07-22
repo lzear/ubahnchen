@@ -1,5 +1,5 @@
 {
-  "name": "@ubahnchen/utils",
+  "name": "@ubahnchen/node-utils",
   "version": "0.0.0",
   "type": "module",
   "exports": "./src/index.ts",
@@ -10,13 +10,15 @@
     "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
   },
   "dependencies": {
-    "humanize-duration": "^3.28.0",
-    "lodash": "^4.17.21"
+    "@ubahnchen/utils": "*",
+    "ora": "^6.3.1",
+    "tmp": "^0.2.1"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0",
+    "@jest/globals": "^29.6.1",
     "@ubahnchen/tsconfig": "*",
-    "@ubahnchen/eslint-config": "*"
+    "@ubahnchen/eslint-config": "*",
+    "@types/tmp": "^0.2.3"
   },
   "volta": {
     "extends": "../../package.json"

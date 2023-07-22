@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 
-import { Temporary } from '@ubahnchen/utils'
+import { Temporary } from '@ubahnchen/node-utils'
 
 import { writeCsv } from './write-csv'
 

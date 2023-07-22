@@ -10,6 +10,7 @@
   "dependencies": {
     "@types/better-sqlite3": "^7.6.4",
     "@types/node-fetch": "^2.6.4",
+    "@ubahnchen/node-utils": "*",
     "@ubahnchen/utils": "*",
     "better-sqlite3": "^7.6.2",
     "csv-parse": "^5.4.0",

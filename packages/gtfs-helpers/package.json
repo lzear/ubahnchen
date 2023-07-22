@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@ubahnchen/csv-helpers": "*",
-    "@ubahnchen/utils": "*",
+    "@ubahnchen/node-utils": "*",
     "gtfs-types": "^2.2.0",
     "tsup": "^7.0.0"
   },

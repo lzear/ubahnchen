@@ -1,6 +1,6 @@
 import BetterSqlite3 from 'better-sqlite3'
 
-import { initializeFile } from '@ubahnchen/utils'
+import { initializeFile } from '@ubahnchen/node-utils'
 
 import { schema } from './schema'
 

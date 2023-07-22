@@ -5,7 +5,8 @@ import * as fs from 'node:fs'
 import { revalidatePath } from 'next/cache'
 
 import type { City } from '@ubahnchen/cities'
-import { initializeFileIfNotExists } from '@ubahnchen/utils'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { initializeFileIfNotExists } from '@ubahnchen/node-utils'
 
 export const getDataFilePath = (city: City, map: string) => {
   return `./data/${city}/${map}.json`
