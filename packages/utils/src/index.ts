@@ -14,4 +14,5 @@ export {
 } from './singletons'
 export { Temporary } from './temporary'
 export { type Truthy, truthy } from './truthy'
+export { toTuples, type Tuple } from './tuple'
 export { wait } from './wait'
