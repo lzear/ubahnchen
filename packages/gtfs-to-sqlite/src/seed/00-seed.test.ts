@@ -5,7 +5,6 @@ import { Temporary } from '@ubahnchen/node-utils'
 
 import { stopPairs } from '../drizzle'
 import { gtfsToSqlite } from '../gtfs-to-sqlite'
-import { gtfsToSqliteDrizzle } from '../gtfs-to-sqlite-drizzle'
 
 import { seedDatabase } from './00-seed'
 
@@ -27,7 +26,7 @@ const makeCounts = (database: BetterSqlite3.Database) => {
   return counts
 }
 describe(seedDatabase, () => {
-  describe.each([gtfsToSqlite, gtfsToSqliteDrizzle])('%p', (implementation) => {
+  describe.each([false, true])('%p', (useDrizzle) => {
     let temporary: Temporary
 
     beforeEach(() => {
@@ -35,10 +34,13 @@ describe(seedDatabase, () => {
     })
 
     xit('converts GTFS to SQLite berlin-u', async () => {
-      const database = await implementation({
-        gtfsDirectoryPath: 'tests/gtfs/berlin-u',
-        sqliteDatabasePath: temporary.file(),
-      })
+      const database = await gtfsToSqlite(
+        {
+          gtfsDirectoryPath: 'tests/gtfs/berlin-u',
+          sqliteDatabasePath: temporary.file(),
+        },
+        useDrizzle,
+      )
       expect(makeCounts(database.database)).toStrictEqual({
         calendar: 198,
         calendar_dates: 4808,
@@ -52,7 +54,7 @@ describe(seedDatabase, () => {
   })
 })
 
-describe(gtfsToSqliteDrizzle, () => {
+describe('With drizzle', () => {
   let temporary: Temporary
 
   beforeEach(() => {
@@ -60,10 +62,13 @@ describe(gtfsToSqliteDrizzle, () => {
   })
 
   it('converts GTFS to SQLite berlin-u-smaller', async () => {
-    const { database, drizzleDatabase } = await gtfsToSqliteDrizzle({
-      gtfsDirectoryPath: 'tests/gtfs/berlin-u-smaller',
-      sqliteDatabasePath: temporary.file('tmp.sqlite'),
-    })
+    const { database, drizzleDatabase } = await gtfsToSqlite(
+      {
+        gtfsDirectoryPath: 'tests/gtfs/berlin-u-smaller',
+        sqliteDatabasePath: temporary.file('tmp.sqlite'),
+      },
+      true,
+    )
     expect(makeCounts(database)).toStrictEqual({
       calendar: 17,
       calendar_dates: 325,

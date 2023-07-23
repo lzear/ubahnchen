@@ -5,11 +5,14 @@ import url from 'node:url'
 
 import { gtfsToSqlite } from '../gtfs-to-sqlite'
 
-await gtfsToSqlite({
-  gtfsDirectoryPath: path.resolve(
-    url.fileURLToPath(import.meta.url),
-    '../../../../../tests/gtfs/berlin-su',
-    // '../../../../../tests/gtfs/berlin-u-smaller',
-  ),
-  sqliteDatabasePath: 'tmptmp.sqlite',
-})
+await gtfsToSqlite(
+  {
+    gtfsDirectoryPath: path.resolve(
+      url.fileURLToPath(import.meta.url),
+      '../../../../../tests/gtfs/berlin-su',
+      // '../../../../../tests/gtfs/berlin-u-smaller',
+    ),
+    sqliteDatabasePath: 'tmptmp.sqlite',
+  },
+  false,
+)
