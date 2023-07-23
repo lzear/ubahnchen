@@ -105,18 +105,7 @@ const eslintConfig = {
     ],
     'simple-import-sort/exports': 2,
     'unicorn/no-null': 0,
-    'unicorn/prevent-abbreviations': [
-      2,
-      {
-        allowList: {
-          dev: true,
-          dist: true,
-          env: true,
-          props: true,
-          Props: true,
-        },
-      },
-    ],
+    'unicorn/prevent-abbreviations': 0, // annoying
   },
   overrides: [
     {
