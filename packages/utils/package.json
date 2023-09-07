@@ -10,11 +10,13 @@
     "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
   },
   "dependencies": {
+    "color": "^4.2.3",
     "humanize-duration": "^3.28.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
+    "@types/color": "^3.0.4",
     "@ubahnchen/tsconfig": "*",
     "@ubahnchen/eslint-config": "*"
   },
