@@ -1,8 +1,6 @@
 import type { DefaultOptions } from './00-seed'
 
 export const makeIndexes = ({ database }: DefaultOptions) => {
-  console.log('🦺 antoinelog Build DB indexes')
-
   database.exec(
     `CREATE INDEX idx_trip_id
     ON stop_times (trip_id);`,

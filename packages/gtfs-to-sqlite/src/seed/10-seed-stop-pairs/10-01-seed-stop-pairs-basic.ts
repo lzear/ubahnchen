@@ -59,11 +59,6 @@ const getStopTimesForRoute = (
     .leftJoin(trips, eq(routes.route_id, trips.route_id))
     .leftJoin(stopTimes, eq(stopTimes.trip_id, trips.trip_id))
     .orderBy(trips.trip_id, stopTimes.stop_sequence)
-  // console.log('🦺 antoinelog q.', q.toSQL())
-
-  // const results0: StopTimesDatum[] = q.all()
-
-  // console.log('🦺 antoinelog results0.length', results0.length)
 
   const results: StopTimesDatum[] = q2.all()
 

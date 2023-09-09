@@ -13,13 +13,7 @@ export const endReadableStream = (stream: Duplex) => {
   return new Promise<void>((resolve) => {
     stream.end(resolve)
     // stream.on('finish', () => resolve())
-    // stream.on('finish', () => {
-    //   console.log('🦺 antoinelog 234234', 234_234)
-    //
-    // })
     // stream.on('error', () => {
-    //   console.log('🦺 antoinelog error', 234_234)
-    //
     //   resolve()
     //   reject()
     // })
