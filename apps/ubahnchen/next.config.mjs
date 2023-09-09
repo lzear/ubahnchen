@@ -1,5 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-return */
 
+import nextMdx from '@next/mdx'
+
+const withMDX = nextMdx()
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -25,7 +29,16 @@ const nextConfig = {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
         resourceQuery: { not: /url/ }, // exclude if *.svg?url
-        use: ['@svgr/webpack'],
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                plugins: [{ name: 'cleanupIds', params: { remove: false } }],
+              },
+            },
+          },
+        ],
       },
     )
 
@@ -36,4 +49,4 @@ const nextConfig = {
   },
 }
 
-export default nextConfig
+export default withMDX(nextConfig)
