@@ -16,8 +16,8 @@
     "tsup": "^7.0.0"
   },
   "devDependencies": {
-    "@ubahnchen/tsconfig": "*",
-    "@ubahnchen/eslint-config": "*"
+    "@ubahnchen/eslint-config": "*",
+    "@ubahnchen/tsconfig": "*"
   },
   "volta": {
     "extends": "../../package.json"

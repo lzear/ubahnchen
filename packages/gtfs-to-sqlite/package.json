@@ -28,12 +28,14 @@
     "fast-csv": "^4.3.6",
     "gtfs": "^4.4.0",
     "gtfs-types": "^2.2.0",
+    "lodash": "^4.17.21",
     "node-fetch": "^3.3.1",
     "ora": "^6.3.1",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
+    "@types/lodash": "^4.14.197",
     "@ubahnchen/eslint-config": "*",
     "tsup": "^7.0.0"
   },

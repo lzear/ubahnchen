@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
-    "drizzle-kit": "^0.18.1",
     "@ubahnchen/eslint-config": "*",
+    "drizzle-kit": "^0.18.1",
     "tsup": "^7.0.0"
   },
   "volta": {

@@ -17,8 +17,8 @@
   "devDependencies": {
     "@jest/globals": "^29.5.0",
     "@types/color": "^3.0.4",
-    "@ubahnchen/tsconfig": "*",
-    "@ubahnchen/eslint-config": "*"
+    "@ubahnchen/eslint-config": "*",
+    "@ubahnchen/tsconfig": "*"
   },
   "volta": {
     "extends": "../../package.json"

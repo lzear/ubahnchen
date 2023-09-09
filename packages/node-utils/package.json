@@ -16,9 +16,9 @@
   },
   "devDependencies": {
     "@jest/globals": "^29.6.1",
-    "@ubahnchen/tsconfig": "*",
+    "@types/tmp": "^0.2.3",
     "@ubahnchen/eslint-config": "*",
-    "@types/tmp": "^0.2.3"
+    "@ubahnchen/tsconfig": "*"
   },
   "volta": {
     "extends": "../../package.json"

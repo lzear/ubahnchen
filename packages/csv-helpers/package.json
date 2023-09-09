@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@fast-csv/format": "^4.3.5",
-    "@ubahnchen/utils": "*",
     "@ubahnchen/node-utils": "*",
+    "@ubahnchen/utils": "*",
     "fast-csv": "^4.3.6",
     "humanize-duration": "^3.28.0",
     "ora": "^6.3.1",
