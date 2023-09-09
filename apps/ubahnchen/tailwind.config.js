@@ -1,3 +1,4 @@
+import tailwindTypography from '@tailwindcss/typography'
 import daisyui from 'daisyui'
 
 /** @type {import('tailwindcss').Config} */
@@ -6,7 +7,8 @@ const tailwindConfig = {
   theme: {
     extend: {},
   },
-  plugins: [daisyui],
+  plugins: [tailwindTypography, daisyui],
+  daisyui: { logs: false },
 }
 
 export default tailwindConfig
