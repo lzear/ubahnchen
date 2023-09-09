@@ -23,6 +23,9 @@ export const cityZipPath = (city: string) =>
 export const citySqlitePath = (city: string) =>
   path.join(cityDistPath(city), 'gtfs/gtfs.sqlite')
 
+export const citySqliteFilteredPath = (city: string) =>
+  path.join(cityDistPath(city), 'gtfs/gtfs-filtered.sqlite')
+
 export const projectPath = (city: string, ...rest: string[]) => {
   return path.resolve(process.cwd(), ...rest)
 }
