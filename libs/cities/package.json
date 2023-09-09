@@ -8,18 +8,28 @@
     "./*": "./src/*"
   },
   "bin": {
+    "filter-sqlite": "./src/bin/filter-sqlite.ts",
     "to-sqlite": "./src/bin/to-sqlite.ts"
   },
   "scripts": {
-    "to-sqlite": "./src/bin/to-sqlite.ts"
+    "codegen": "./src/bin/codegen.ts",
+    "to-sqlite": "./src/bin/to-sqlite.ts",
+    "filter-sqlite": "./src/bin/filter-sqlite.ts"
   },
   "dependencies": {
     "@ubahnchen/gtfs-to-sqlite": "*",
     "@ubahnchen/paths": "*",
+    "jsdom": "^22.1.0",
+    "svgpath": "^2.6.0",
     "yargs": "^17.7.2",
+    "svgo": "*",
     "zod": "^3.21.4"
   },
   "volta": {
     "extends": "../../package.json"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.44.2",
+    "eslint": "^8.48.0"
   }
 }

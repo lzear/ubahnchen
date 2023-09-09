@@ -4,13 +4,10 @@ export type MapConfig = {
   source: string
   here: string
   routeTypes: number[]
+  stopsFilter?: (stop: { stop_lat: number; stop_lon: number }) => boolean
 }
 
 export type GtfsConfig = {
   url: string
-}
-
-export type CityConfig = {
-  gtfs: GtfsConfig
-  maps: Record<string, MapConfig>
+  lineColors: Record<string, string>
 }
