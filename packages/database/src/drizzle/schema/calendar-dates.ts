@@ -14,7 +14,7 @@ import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core'
 
 export const calendarDates = sqliteTable('calendar_dates', {
   idx: integer('idx').notNull().primaryKey(),
-  service_id: integer('service_id').notNull(),
+  service_id: text('service_id').notNull(),
   date: text('date').notNull(),
   is_removing: integer('is_removing').notNull(),
 })
