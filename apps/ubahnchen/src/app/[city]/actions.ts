@@ -39,11 +39,10 @@ export const getMapData = async (city: City, map: string) => {
   try {
     const data = await file.readFile('utf8')
     await file.close()
-    console.log('🦺 antoinelog data', data)
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     json = JSON.parse(data)
   } catch (error) {
-    console.log('🦺 antoinelog e', error)
+    console.error(error)
     json = { stops: {}, stopPairs: {} }
   }
   return json

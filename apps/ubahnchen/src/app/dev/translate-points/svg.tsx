@@ -5,30 +5,19 @@ import { animated, useSprings } from '@react-spring/web'
 import type { FullGestureState } from '@use-gesture/react'
 import { useDrag } from '@use-gesture/react'
 
-import { useBooleanUrlParameter } from '../../../server/toggle-checkbox'
+import { translate1 } from '../../../components/client/springs/translate'
+import { useBooleanUrlParameter } from '../../../components/server/toggle-checkbox'
+import { makeRandomPoints } from '../../_components/geometry/random-points-grid/02-sort'
+import { affineWithDelaunay } from '../../_components/geometry/translate-points/01-affine-with-delaunay'
+import { makeRegularPoints } from '../../_components/geometry/utils'
 
-import { gravityTranslate } from './implementations/02-gravity'
-import { makeRandomPoints } from './random-points-grid/02-sort'
-import { makeRegularPoints } from './utils'
+// import { gravityTranslate } from './implementations/02-gravity'
 
 type Point = [number, number]
 type Vector = [Point, Point]
 
 const WIDTH = 650
 const HEIGHT = 650
-
-const translate1 =
-  ({ index, pos }: { index: number; pos: Point }) =>
-  (bbbb: number) => {
-    if (bbbb === index) {
-      return {
-        x: pos[0],
-        y: pos[1],
-        color: 'blue',
-        immediate: true,
-      }
-    }
-  }
 
 const isReleased = (g: FullGestureState<'drag'>) =>
   !g.down || g.type === 'lostpointercapture'
@@ -69,9 +58,9 @@ export const TranslatePointsSvg = ({ count }: Props) => {
   )
   const tran = useCallback(
     (points: Point[]) => {
-      const newPointFunction = gravityTranslate(vectorsReference.current)
-      api.start((bbbb) => {
-        const point = points[bbbb]
+      const newPointFunction = affineWithDelaunay(vectorsReference.current)
+      api.start((index) => {
+        const point = points[index]
         const newPoint = newPointFunction(point)
         return {
           x: newPoint[0],
@@ -137,13 +126,7 @@ export const TranslatePointsSvg = ({ count }: Props) => {
       ]
 
       tran(pointsReference.current)
-    } else
-      api.start(
-        translate1({
-          index,
-          pos,
-        }),
-      )
+    } else api.start(translate1({ index, pos }))
   })
 
   return (

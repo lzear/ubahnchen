@@ -1,7 +1,7 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-import { ToggleUrlParameter } from '../../../server/toggle-checkbox'
+import { ToggleUrlParameter } from '../../../components/server/toggle-checkbox'
 
 // import { TranslatePointsSvg } from './svg'
 

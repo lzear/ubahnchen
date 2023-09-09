@@ -4,11 +4,11 @@ import React, { useState } from 'react'
 import { Circle, Polyline, useMap, useMapEvents } from 'react-leaflet'
 import dynamic from 'next/dynamic'
 
+import type { Shape } from '../app/_server/gtfs/types'
 import type { Edge, Node } from '../app/[city]/save.action'
 import { save } from '../app/[city]/save.action'
 // import { drizzleTables } from '@ubahnchen/database'
 import { TileLayer } from '../lll'
-import type { Shape } from '../types/gtfs'
 
 const MapContainer = dynamic(() => import('./map-container'), {
   loading: () => <p className="absolute">loading...</p>,

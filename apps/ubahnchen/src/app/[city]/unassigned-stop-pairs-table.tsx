@@ -1,6 +1,4 @@
-import type { Stop } from '../../server/get-stops'
-
-import type { StopPair } from './used-stops'
+import type { Stop, StopPair } from '../_server/gtfs/types'
 
 type Props = {
   unassignedStopPairs?: StopPair[]
@@ -11,7 +9,7 @@ type Props = {
 export const UnassignedStopPairsTable = (props: Props) => {
   const { unassignedStopPairs, pairToClick, stopById } = props
   return (
-    <div className="absolute right-0 z-40 max-h-[50%] max-w-[50%] overflow-scroll border-4 border-gray-400">
+    <div className="absolute right-0 z-40 max-h-[20%] max-w-[50%] overflow-scroll border-4 border-gray-400">
       <table className="table table-xs">
         <thead>
           <tr>

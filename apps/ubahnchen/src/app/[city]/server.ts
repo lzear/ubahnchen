@@ -4,14 +4,11 @@ import type { City } from '@ubahnchen/cities'
 
 import 'server-only'
 
-import { getRouteShapes } from '../../server/get-route-shapes'
-import type { Route } from '../../server/get-routes'
-import { getRoutes } from '../../server/get-routes'
-import type { SP } from '../../server/get-stop-pairs'
-import { getStopPairs } from '../../server/get-stop-pairs'
-import type { Stop } from '../../server/get-stops'
-import { getStops } from '../../server/get-stops'
-import type { Shape } from '../../types/gtfs'
+import { getRouteShapes } from '../../components/server/get-route-shapes'
+import { getRoutes } from '../_server/gtfs/get-routes'
+import { getStopPairs } from '../_server/gtfs/get-stop-pairs'
+import { getStops } from '../_server/gtfs/get-stops'
+import type { Route, Shape, Stop, StopPair } from '../_server/gtfs/types'
 
 import type { parseUrlParameters } from './search-parameters'
 
@@ -20,7 +17,7 @@ type R = {
   allRouteTypes: number[]
   routes: Route[]
   shapes?: Shape[]
-  stopPairs: SP[]
+  stopPairs: StopPair[]
   stops: Stop[]
   stopById: Record<string, Stop>
 }
@@ -38,9 +35,9 @@ export const server = async (
   const selectedRouteTypes =
     parameters.RouteType ?? [allRouteTypes[0]].filter(Boolean)
 
-  const stops = await getStops(city, true)
+  const stops = await getStops({ city, onlyParents: false })
   const stopPairsGroups = await Promise.all(
-    selectedRouteTypes.map((routeType) => getStopPairs(city, routeType)),
+    selectedRouteTypes.map((routeType) => getStopPairs(city, [routeType])),
   )
   const stopPairs = stopPairsGroups.flat()
   const stopById = _.keyBy(stops, 'stop_id')

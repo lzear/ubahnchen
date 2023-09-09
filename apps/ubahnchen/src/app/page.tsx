@@ -1,17 +1,10 @@
-import Link from 'next/link'
+import DevLinks from './dev-links'
 
-import { citiesList } from '@ubahnchen/cities'
-
+const env = process.env.NODE_ENV
 export default function Home() {
   return (
     <main className="center flex h-screen content-center items-center justify-center gap-2 align-middle">
-      {citiesList.map((city) => (
-        <Link key={city} href={`/${city}`}>
-          <button key={city} className="btn">
-            {city}
-          </button>
-        </Link>
-      ))}
+      {env === 'development' && <DevLinks />}
     </main>
   )
 }

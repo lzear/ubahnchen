@@ -22,24 +22,22 @@ const userInput = (u: Record<string, string | undefined>) => {
   return r
 }
 
-export const parseUrlParameters = (u: Record<string, string | undefined>) =>
+export const parseUrlParameters = (
+  u: Record<string, string | undefined> = {},
+) =>
   z
     .object({
-      // RouteType:
-      //   defaultRouteType === undefined
-      //     ? z.optional(z.coerce.number())
-      //     : z.optional(z.coerce.number()).default(defaultRouteType),
       RouteType: z.optional(z.string()).transform((v) => {
-        const vs = v
-          ?.split('-')
-          .map(Number)
-          .filter((n) => !Number.isNaN(n))
-        if (vs) return vs
-        return []
+        return (
+          v
+            ?.split('-')
+            .map(Number)
+            .filter((n) => !Number.isNaN(n)) || []
+        )
       }),
       StraightLines: zBoolean,
       MergeStops: zBoolean,
-      Map: z.optional(z.string()),
+      Map: z.string().optional(),
     })
     .parse(userInput(u))
 

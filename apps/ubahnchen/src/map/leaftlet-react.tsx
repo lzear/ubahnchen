@@ -4,11 +4,10 @@ import React, { useState } from 'react'
 import { Circle, Polyline, useMap, useMapEvents } from 'react-leaflet'
 import dynamic from 'next/dynamic'
 
+import type { Shape } from '../app/_server/gtfs/types'
 import type { Edge, Node } from '../app/[city]/save.action'
 import { save } from '../app/[city]/save.action'
-// import { drizzleTables } from '@ubahnchen/database'
 import { TileLayer } from '../lll'
-import type { Shape } from '../types/gtfs'
 
 const MapContainer = dynamic(() => import('./map-container'), {
   loading: () => <p>loading...</p>,
@@ -96,11 +95,8 @@ export const MapCity = (props: Props) => {
         ]),
       }))
   // const radius = 2000 / Math.pow(1.3, zoom)
-  console.log('🦺 antoinelog zoom', zoom)
 
   const radius = 20_000 / Math.pow(1.5, zoom)
-
-  console.log('🦺 antoinelog radius', radius)
 
   return (
     <>
