@@ -1,7 +1,4 @@
 {
   "extends": "./base.json",
-  "compilerOptions": {
-    "module": "esnext"
-  },
   "exclude": ["dist"]
 }
