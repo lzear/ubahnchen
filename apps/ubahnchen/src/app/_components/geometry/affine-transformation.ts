@@ -1,7 +1,7 @@
 import type { Matrix } from 'mathjs'
 import * as mathjs from 'mathjs'
 
-import type { Point, Triangle } from './utils'
+import type { Point, Triangle } from './utils.js'
 
 // somehow the types are wrong without this
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion

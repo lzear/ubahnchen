@@ -10,10 +10,10 @@ import { defaultTextPerf, successText } from '@ubahnchen/csv-helpers'
 import { drizzleTables } from '@ubahnchen/database'
 import { isNever, Perf } from '@ubahnchen/utils'
 
-import type { DefaultOptions } from '../00-seed'
+import type { DefaultOptions } from '../00-seed.js'
 
-import type { MessagesTypes, WorkerData } from './10-02-messages'
-import { Messages } from './10-02-messages'
+import type { MessagesTypes, WorkerData } from './10-02-messages.js'
+import { Messages } from './10-02-messages.js'
 
 const endWorker = (worker: Worker, perf: Perf, spinner: Ora) =>
   new Promise<void>((resolve, reject) => {

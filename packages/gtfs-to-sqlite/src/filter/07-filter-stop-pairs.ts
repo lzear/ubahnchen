@@ -3,7 +3,7 @@ import _ from 'lodash'
 
 import { drizzleTables } from '@ubahnchen/database'
 
-import type { SourceTarget } from './types'
+import type { SourceTarget } from './types.js'
 
 export const filterStopPairs = ({ source, target }: SourceTarget) => {
   const { routes, stopPairs } = drizzleTables

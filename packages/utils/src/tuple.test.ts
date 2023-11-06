@@ -1,4 +1,4 @@
-import { toTuples } from './tuple'
+import { toTuples } from './tuple.js'
 
 describe(toTuples, () => {
   it('tuples', () => {

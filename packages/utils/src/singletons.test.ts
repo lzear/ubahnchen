@@ -5,7 +5,7 @@ import {
   singletonize,
   Singletons,
   SingletonUnique,
-} from './singletons'
+} from './singletons.js'
 
 describe(SingletonUnique, () => {
   it('calls the function once', () => {

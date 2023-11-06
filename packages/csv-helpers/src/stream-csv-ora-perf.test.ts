@@ -2,8 +2,8 @@ import { jest } from '@jest/globals'
 
 import { Perf, Temporary } from '@ubahnchen/utils'
 
-import { streamCsvPerfOra, withPerfOra } from './stream-csv-perf-ora'
-import { writeCsv } from './write-csv'
+import { streamCsvPerfOra, withPerfOra } from './stream-csv-perf-ora.js'
+import { writeCsv } from './write-csv.js'
 
 describe(withPerfOra, () => {
   let temporary: Temporary

@@ -1,7 +1,7 @@
-import { Temporary } from '../../../../../utils'
-import { getSchema } from '../../get-schema'
+import { Temporary } from '../../../../../utils.js'
+import { getSchema } from '../../get-schema.js'
 
-import { createWithSql } from './create-with-sql'
+import { createWithSql } from './create-with-sql.js'
 
 describe(createWithSql, () => {
   const temporary = new Temporary()

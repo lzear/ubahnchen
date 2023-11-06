@@ -1,9 +1,9 @@
-import type { BasicStreamCsv, Row } from './stream-csv'
-import { streamCsvFactory } from './stream-csv'
-import type { StreamCsvOraOptions } from './stream-csv-ora'
-import { withOra } from './stream-csv-ora'
-import type { OnDataPerf, StreamCsvPerfOptions } from './stream-csv-perf'
-import { withPerf } from './stream-csv-perf'
+import type { BasicStreamCsv, Row } from './stream-csv.js'
+import { streamCsvFactory } from './stream-csv.js'
+import type { StreamCsvOraOptions } from './stream-csv-ora.js'
+import { withOra } from './stream-csv-ora.js'
+import type { OnDataPerf, StreamCsvPerfOptions } from './stream-csv-perf.js'
+import { withPerf } from './stream-csv-perf.js'
 
 export type StreamCsvPerfOraOptions = StreamCsvOraOptions & StreamCsvPerfOptions
 

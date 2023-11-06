@@ -2,7 +2,7 @@
 
 import type { City } from '@ubahnchen/cities'
 
-import { ActionCityMapIO } from '../../../../_server/actions'
+import { ActionCityMapIO } from '../../../../_server/actions.js'
 
 export type Vertex = {
   stop_id_1: string

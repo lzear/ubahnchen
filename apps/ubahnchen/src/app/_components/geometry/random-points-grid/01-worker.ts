@@ -1,9 +1,9 @@
 // import { parentPort, workerData } from 'node:worker_threads'
 
-import type { Point } from '../utils'
-import { makeRegularPoints, randomPoint } from '../utils'
+import type { Point } from '../utils.js'
+import { makeRegularPoints, randomPoint } from '../utils.js'
 
-import { makePairs } from './01-munkres'
+import { makePairs } from './01-munkres.js'
 
 type WorkerData = {
   count: number

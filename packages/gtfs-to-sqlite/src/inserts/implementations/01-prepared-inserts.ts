@@ -1,6 +1,6 @@
 import { getDatabase } from '@ubahnchen/database'
 
-import type { InsertOptions } from '../type'
+import type { InsertOptions } from '../type.js'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const preparedInserts = <R, T extends Record<string, any>>({

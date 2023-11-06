@@ -3,12 +3,12 @@ import _ from 'lodash'
 
 import { toTuples } from '@ubahnchen/utils'
 
-import { affineTransformationFromTriangles } from '../affine-transformation'
-import { isInPolygon } from '../is-in-polygon'
-import type { Point, Triangle, Vector } from '../utils'
-import { distance } from '../utils'
+import { affineTransformationFromTriangles } from '../affine-transformation.js'
+import { isInPolygon } from '../is-in-polygon.js'
+import type { Point, Triangle, Vector } from '../utils.js'
+import { distance } from '../utils.js'
 
-import { gravityTranslate } from './02-gravity'
+import { gravityTranslate } from './02-gravity.js'
 
 const trislate = (vectors: [Vector, Vector, Vector]) => (point: Point) => {
   const t1: Triangle = [vectors[0][0], vectors[1][0], vectors[2][0]]

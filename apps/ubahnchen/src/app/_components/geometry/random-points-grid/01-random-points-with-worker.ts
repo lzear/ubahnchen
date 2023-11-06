@@ -1,4 +1,4 @@
-import type { Point } from '../utils'
+import type { Point } from '../utils.js'
 
 type WorkerData = {
   count: number

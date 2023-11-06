@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 
-import type { DefaultOptions } from './00-seed'
+import type { DefaultOptions } from './00-seed.js'
 
 export const seedShapes = async ({
   gtfsIterator,

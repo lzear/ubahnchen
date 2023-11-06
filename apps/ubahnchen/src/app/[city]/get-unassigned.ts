@@ -2,10 +2,10 @@
 
 import type { City } from '@ubahnchen/cities'
 
-import type { Stop, StopPair } from '../_server/gtfs/types'
+import type { Stop, StopPair } from '../_server/gtfs/types.js'
 
-import { getMapData } from './actions'
-import { usedStops } from './used-stops'
+import { getMapData } from './actions.js'
+import { usedStops } from './used-stops.js'
 
 export const getUnassignedStopsFilePath = async (
   city: City,

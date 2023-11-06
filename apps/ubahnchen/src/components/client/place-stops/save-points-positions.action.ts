@@ -2,7 +2,7 @@
 
 import type { City } from '@ubahnchen/cities'
 
-import { ActionCityMapIO } from '../../../app/_server/actions'
+import { ActionCityMapIO } from '../../../app/_server/actions.js'
 
 export type StopsPositions = {
   [stopId: string]: {

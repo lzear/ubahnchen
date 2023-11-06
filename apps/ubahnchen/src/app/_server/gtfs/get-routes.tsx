@@ -4,9 +4,9 @@ import { drizzleTables } from '@ubahnchen/database'
 
 import 'server-only'
 
-import { getDatabaseForCity } from '../../../components/server/get-database-for-city'
+import { getDatabaseForCity } from '../../../components/server/get-database-for-city.js'
 
-import type { Route } from './types'
+import type { Route } from './types.js'
 
 // eslint-disable-next-line @typescript-eslint/require-await
 const query = async (city: string): Promise<Route[]> => {

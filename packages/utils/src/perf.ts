@@ -1,6 +1,6 @@
-import { humanizeTime } from './humanize-time'
-import { percent } from './percent'
-import { truthy } from './truthy'
+import { humanizeTime } from './humanize-time.js'
+import { percent } from './percent.js'
+import { truthy } from './truthy.js'
 
 export class PerfSimple {
   protected start: number | undefined

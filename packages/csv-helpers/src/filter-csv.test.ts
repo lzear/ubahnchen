@@ -1,8 +1,8 @@
 import { catFile, Temporary } from '@ubahnchen/node-utils'
 import { Perf } from '@ubahnchen/utils'
 
-import { filterCsv } from './filter-csv'
-import { writeCsv } from './write-csv'
+import { filterCsv } from './filter-csv.js'
+import { writeCsv } from './write-csv.js'
 
 describe(filterCsv, () => {
   let temporary: Temporary

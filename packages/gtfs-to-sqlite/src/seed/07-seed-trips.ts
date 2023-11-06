@@ -1,4 +1,4 @@
-import type { DefaultOptions } from './00-seed'
+import type { DefaultOptions } from './00-seed.js'
 
 export type SeedTripsOptions = DefaultOptions & { hasShapes: boolean }
 

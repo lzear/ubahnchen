@@ -1,4 +1,4 @@
-import type { MapConfig } from '../../types'
+import type { MapConfig } from '../../types.js'
 
 export const config = {
   name: 'Berlin U-Bahn',

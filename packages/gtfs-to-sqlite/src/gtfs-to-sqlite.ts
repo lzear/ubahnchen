@@ -3,7 +3,7 @@ import { type BetterSQLite3Database } from 'drizzle-orm/better-sqlite3'
 
 import { createWithDrizzle, createWithSql } from '@ubahnchen/database'
 
-import { seedDatabase } from './seed/00-seed'
+import { seedDatabase } from './seed/00-seed.js'
 
 export type GtfsToSqliteOptions = {
   gtfsDirectoryPath: string

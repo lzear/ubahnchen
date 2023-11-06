@@ -2,10 +2,10 @@ import path from 'node:path'
 import url from 'node:url'
 import { Worker } from 'node:worker_threads'
 
-import type { InsertOptions } from '../type'
+import type { InsertOptions } from '../type.js'
 
-import type { End1Action, End2Action, WorkerData } from './02-worker-types'
-import { End1, Insert, Messages } from './02-worker-types'
+import type { End1Action, End2Action, WorkerData } from './02-worker-types.js'
+import { End1, Insert, Messages } from './02-worker-types.js'
 
 const CHUNK_SIZE = 10_000
 

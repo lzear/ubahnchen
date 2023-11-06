@@ -1,4 +1,4 @@
-import { UrlParamType, useUrlParams } from './url-params'
+import { UrlParamType, useUrlParams } from './url-params.js'
 
 export const useCandidatesMagnet = () =>
   useUrlParams({

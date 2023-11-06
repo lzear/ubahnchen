@@ -2,7 +2,7 @@ import fs from 'node:fs'
 
 import { Temporary } from '@ubahnchen/node-utils'
 
-import { writeCsv } from './write-csv'
+import { writeCsv } from './write-csv.js'
 
 describe(writeCsv, () => {
   let temporary: Temporary

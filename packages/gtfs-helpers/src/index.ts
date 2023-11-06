@@ -1,5 +1,5 @@
-export { filterGtfs } from './filter-gtfs'
-export { GtfsCopy } from './gtfs-copy'
+export { filterGtfs } from './filter-gtfs.js'
+export { GtfsCopy } from './gtfs-copy.js'
 export type {
   CsvAgency,
   CsvCalendar,
@@ -11,11 +11,11 @@ export type {
   CsvTrip,
   GtfsCsvTypes,
   GtfsTypes,
-} from './gtfs-csv-types'
+} from './gtfs-csv-types.js'
 export type {
   FixIndexSignature,
   GtfsIteratorOptions,
   GtfsKeys,
-} from './gtfs-iterator'
-export { GtfsIterator } from './gtfs-iterator'
-export { gtfsTimeToSeconds } from './gtfs-time-to-seconds'
+} from './gtfs-iterator.js'
+export { GtfsIterator } from './gtfs-iterator.js'
+export { gtfsTimeToSeconds } from './gtfs-time-to-seconds.js'

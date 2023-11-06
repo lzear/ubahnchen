@@ -2,7 +2,7 @@ import { describe, it, jest } from '@jest/globals'
 
 import { projectRoot } from '@ubahnchen/paths'
 
-import { listDirectories } from './packages'
+import { listDirectories } from './packages.js'
 
 const getPackageJson = async (workspace: string, directory: string) => {
   const { default: package_ } = (await import(

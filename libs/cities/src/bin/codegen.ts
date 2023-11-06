@@ -4,7 +4,7 @@ import * as fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
 
-import { writeCode } from '../eslint-fix'
+import { writeCode } from '../eslint-fix.js'
 
 const srcPath = path.resolve(
   path.dirname(url.fileURLToPath(import.meta.url)),
@@ -28,9 +28,9 @@ const makeCity = async (city: string) => {
   })
   const maps = files.filter((f) => f.isDirectory()).map((f) => f.name)
   const importMaps = maps.map(
-    (m) => `import { config as ${m} } from '../../../data/${city}/${m}'`,
+    (m) => `import { config as ${m} } from '../../../data/${city}/${m}.js'`,
   )
-  const importGtfs = `import { gtfs } from '../../../data/${city}/gtfs'`
+  const importGtfs = `import { gtfs } from '../../../data/${city}/gtfs.js'`
   const exportConfig = `export const config = {
     name: '${city}',
     gtfs,
@@ -46,10 +46,10 @@ const makeIndex = async (
   cities: string[],
   _cityMaps: Record<string, string[]>,
 ) => {
-  const citiesListImport = `import { citiesList } from './cities-list'`
+  const citiesListImport = `import { citiesList } from './cities-list.js'`
   const citiesListExport = `export { citiesList }`
   const citiesImport = cities.map(
-    (city) => `import { config as ${city} } from './cities/${city}'`,
+    (city) => `import { config as ${city} } from './cities/${city}.js'`,
   )
   const citiesExport = `export const cities = { ${cities.join(',')} }`
 

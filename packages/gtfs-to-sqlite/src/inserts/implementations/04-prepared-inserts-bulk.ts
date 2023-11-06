@@ -1,6 +1,6 @@
 import { getDatabase } from '@ubahnchen/database'
 
-import type { InsertOptions } from '../type'
+import type { InsertOptions } from '../type.js'
 
 const CHUNK_SIZE = 2000
 

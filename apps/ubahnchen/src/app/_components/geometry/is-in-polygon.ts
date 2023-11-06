@@ -1,4 +1,4 @@
-import type { Point } from './utils'
+import type { Point } from './utils.js'
 
 export const isInPolygon = (point: Point, polygon: Point[]) => {
   const x = point[0]

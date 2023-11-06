@@ -1,10 +1,10 @@
 import 'server-only'
 
-import { ToggleUrlParameter } from '../../../../../components/server/toggle-checkbox'
-import type { UrlParameterValue } from '../../../../[city]/search-parameters'
-import type { CityMapParam } from '../params'
+import { ToggleUrlParameter } from '../../../../../components/server/toggle-checkbox.js'
+import type { UrlParameterValue } from '../../../../[city]/search-parameters.js'
+import type { CityMapParam } from '../params.js'
 
-import { PlaceStopsServer } from './place-stops.server'
+import { PlaceStopsServer } from './place-stops.server.js'
 
 import 'leaflet/dist/leaflet.css'
 

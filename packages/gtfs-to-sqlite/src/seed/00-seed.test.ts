@@ -3,10 +3,10 @@ import type BetterSqlite3 from 'better-sqlite3'
 
 import { Temporary } from '@ubahnchen/node-utils'
 
-import { stopPairs } from '../drizzle'
-import { gtfsToSqlite } from '../gtfs-to-sqlite'
+import { stopPairs } from '../drizzle/index.js'
+import { gtfsToSqlite } from '../gtfs-to-sqlite.js'
 
-import { seedDatabase } from './00-seed'
+import { seedDatabase } from './00-seed.js'
 
 const makeCounts = (database: BetterSqlite3.Database) => {
   const counts: Record<string, number> = {}

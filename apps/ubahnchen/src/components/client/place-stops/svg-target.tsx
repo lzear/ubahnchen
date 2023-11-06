@@ -7,19 +7,19 @@ import _ from 'lodash'
 
 import type { City } from '@ubahnchen/cities'
 
-import { affineWithDelaunay } from '../../../app/_components/geometry/translate-points/01-affine-with-delaunay'
-import { gravityTranslate } from '../../../app/_components/geometry/translate-points/02-gravity'
-import type { Point, Vector } from '../../../app/_components/geometry/utils'
-import { distance } from '../../../app/_components/geometry/utils'
-import { Loading } from '../../../app/_components/loading'
-import { pinchScaleRef } from '../../../app/_components/pinch'
-import type { Stop, StopPair } from '../../../app/_server/gtfs/types'
-import { UrlParamType, useUrlParams } from '../../url-params/url-params'
-import { translate1 } from '../springs/translate'
+import { affineWithDelaunay } from '../../../app/_components/geometry/translate-points/01-affine-with-delaunay.js'
+import { gravityTranslate } from '../../../app/_components/geometry/translate-points/02-gravity.js'
+import type { Point, Vector } from '../../../app/_components/geometry/utils.js'
+import { distance } from '../../../app/_components/geometry/utils.js'
+import { Loading } from '../../../app/_components/loading.js'
+import { pinchScaleRef } from '../../../app/_components/pinch.js'
+import type { Stop, StopPair } from '../../../app/_server/gtfs/types.js'
+import { UrlParamType, useUrlParams } from '../../url-params/url-params.js'
+import { translate1 } from '../springs/translate.js'
 
-import type { StopsPositions } from './save-points-positions.action'
-import { recordStopPosition } from './save-points-positions.action'
-import type { Size } from './types'
+import type { StopsPositions } from './save-points-positions.action.js'
+import { recordStopPosition } from './save-points-positions.action.js'
+import type { Size } from './types.js'
 import {findClosestIdx} from "../../../app/dev/[city]/[map]/01-place-stops/place-stops.client";
 
 type Props = {

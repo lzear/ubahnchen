@@ -6,12 +6,12 @@ import _ from 'lodash'
 import { truthy } from '@ubahnchen/utils'
 
 import Svg from '../../../../../../public/berlin/u/50-paths.svg'
-import type { StopsPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
-import { Pinch } from '../../../../_components/pinch'
-import type { StopPair } from '../../../../_server/gtfs/types'
-import type { CityMapParam } from '../params'
+import type { StopsPositions } from '../../../../../components/client/place-stops/save-points-positions.action.js'
+import { Pinch } from '../../../../_components/pinch.js'
+import type { StopPair } from '../../../../_server/gtfs/types.js'
+import type { CityMapParam } from '../params.js'
 
-import { saveVertices } from './stop-pairs.action'
+import { saveVertices } from './stop-pairs.action.js'
 
 const RADIUS = 14
 

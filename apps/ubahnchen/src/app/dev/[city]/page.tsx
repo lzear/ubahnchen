@@ -1,7 +1,7 @@
 import type { City } from '@ubahnchen/cities'
 import { cities } from '@ubahnchen/cities'
 
-import { DevCity } from './dev-city'
+import { DevCity } from './dev-city.js'
 
 const Dev = (props: { params: { city: City } }) => {
   const { city } = props.params

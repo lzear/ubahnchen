@@ -4,7 +4,7 @@ import type { ComponentProps } from 'react'
 
 import type { City } from '@ubahnchen/cities'
 
-import { useImportSvg } from '../../../app/_components/svg/import-map'
+import { useImportSvg } from '../../../app/_components/svg/import-map.js'
 
 export const SvgSource = ({
   city,

@@ -2,7 +2,7 @@ import extract from 'extract-zip'
 
 import { downloadOnceOra, Temporary } from '@ubahnchen/node-utils'
 
-import { gtfsToSqlite } from './gtfs-to-sqlite'
+import { gtfsToSqlite } from './gtfs-to-sqlite.js'
 
 type Options = {
   force?: boolean

@@ -1,5 +1,5 @@
-import { filterGtfs } from './filter-gtfs'
-import type { CsvRoute } from './gtfs-csv-types'
+import { filterGtfs } from './filter-gtfs.js'
+import type { CsvRoute } from './gtfs-csv-types.js'
 
 describe(filterGtfs, () => {
   it('filters gtfs', async () => {
@@ -85,7 +85,7 @@ describe(filterGtfs, () => {
 /*
 example:
 
-import { filterGtfs } from './filter-gtfs'
+import { filterGtfs } from './filter-gtfs.js'
 
 await filterGtfs({
   sourceDir: 'cities/berlin/dist/csv',

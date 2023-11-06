@@ -23,8 +23,8 @@ import {
   uniqueIndex,
 } from 'drizzle-orm/sqlite-core'
 
-import { routes } from './routes'
-import { stops } from './stops'
+import { routes } from './routes.js'
+import { stops } from './stops.js'
 
 export const stopPairs = sqliteTable(
   'stop_pairs',

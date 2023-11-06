@@ -3,8 +3,8 @@
 //
 import munkres from 'hungarian-on3'
 
-import type { Point } from '../utils'
-import { distance } from '../utils'
+import type { Point } from '../utils.js'
+import { distance } from '../utils.js'
 
 const munkresTs = (matrix: number[][]) => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call

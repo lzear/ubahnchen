@@ -1,6 +1,6 @@
 import { defineConfig } from 'tsup'
 
-import { defaultConfig } from '../../tsup.config.base'
+import { defaultConfig } from '../../tsup.config.base.js'
 
 export default defineConfig((options) => {
   return defaultConfig(

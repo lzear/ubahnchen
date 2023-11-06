@@ -2,8 +2,8 @@ import { jest } from '@jest/globals'
 
 import { Temporary } from '@ubahnchen/node-utils'
 
-import { streamCsvFactory } from './stream-csv'
-import { writeCsv } from './write-csv'
+import { streamCsvFactory } from './stream-csv.js'
+import { writeCsv } from './write-csv.js'
 
 describe(streamCsvFactory, () => {
   let temporary: Temporary

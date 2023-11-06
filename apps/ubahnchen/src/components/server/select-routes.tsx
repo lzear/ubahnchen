@@ -2,8 +2,8 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { UrlParameter } from '../../app/[city]/search-parameters'
-import { gtfsTypes } from '../../gtfs-data/gtfs-types'
+import { UrlParameter } from '../../app/[city]/search-parameters.js'
+import { gtfsTypes } from '../../gtfs-data/gtfs-types.js'
 
 export const SelectRouteType = ({
   options,

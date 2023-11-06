@@ -1,6 +1,6 @@
 import { foreignKey, integer, sqliteTable, text } from 'drizzle-orm/sqlite-core'
 
-import { routes } from './routes'
+import { routes } from './routes.js'
 
 export const trips = sqliteTable(
   'trips',

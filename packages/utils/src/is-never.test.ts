@@ -1,4 +1,4 @@
-import { isNever } from './is-never'
+import { isNever } from './is-never.js'
 
 describe(isNever, () => {
   it('throws', () => {

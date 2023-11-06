@@ -45,6 +45,11 @@ const nextConfig = {
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i
 
+    // 💥 Still needed for dynamic import
+    /** @type {Exclude<typeof config.resolve, undefined>} */
+    config.resolve.extensionAlias = {
+      '.js': ['.ts', '.tsx', '.js', '.jsx'],
+    }
     return config
   },
 }

@@ -1,5 +1,5 @@
-import type { DefaultOptions } from './00-seed'
-// import { groupStops } from './01-group-stops'
+import type { DefaultOptions } from './00-seed.js'
+// import { groupStops } from './01-group-stops.js'
 
 export const seedStops = async ({
   databasePath,
