@@ -15,29 +15,29 @@
     "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
   },
   "dependencies": {
-    "@types/better-sqlite3": "^7.6.4",
-    "@types/node-fetch": "^2.6.4",
+    "@types/better-sqlite3": "^7.6.7",
+    "@types/node-fetch": "^2.6.9",
     "@ubahnchen/database": "*",
     "@ubahnchen/gtfs-helpers": "*",
     "@ubahnchen/node-utils": "*",
     "@ubahnchen/utils": "*",
-    "better-sqlite3": "^7.6.2",
-    "csv-parse": "^5.4.0",
-    "drizzle-orm": "^0.26.5",
+    "better-sqlite3": "^9.0.0",
+    "csv-parse": "^5.5.2",
+    "drizzle-orm": "^0.28.6",
     "extract-zip": "^2.0.1",
     "fast-csv": "^4.3.6",
-    "gtfs": "^4.4.0",
-    "gtfs-types": "^2.2.0",
+    "gtfs": "^4.5.0",
+    "gtfs-types": "^3.0.0",
     "lodash": "^4.17.21",
-    "node-fetch": "^3.3.1",
-    "ora": "^6.3.1",
+    "node-fetch": "^3.3.2",
+    "ora": "^7.0.1",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0",
-    "@types/lodash": "^4.14.197",
+    "@jest/globals": "^29.7.0",
+    "@types/lodash": "^4.14.201",
     "@ubahnchen/eslint-config": "*",
-    "tsup": "^7.0.0"
+    "tsup": "^7.2.0"
   },
   "volta": {
     "extends": "../../package.json"

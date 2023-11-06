@@ -14,16 +14,16 @@
     "@ubahnchen/node-utils": "*",
     "@ubahnchen/utils": "*",
     "fast-csv": "^4.3.6",
-    "humanize-duration": "^3.28.0",
-    "ora": "^6.3.1",
+    "humanize-duration": "^3.30.0",
+    "ora": "^7.0.1",
     "papaparse": "^5.4.1"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0",
-    "@types/humanize-duration": "^3.27.1",
-    "@types/papaparse": "^5.3.7",
+    "@jest/globals": "^29.7.0",
+    "@types/humanize-duration": "^3.27.3",
+    "@types/papaparse": "^5.3.11",
     "@ubahnchen/eslint-config": "*",
-    "tsup": "^7.0.0"
+    "tsup": "^7.2.0"
   },
   "volta": {
     "extends": "../../package.json"

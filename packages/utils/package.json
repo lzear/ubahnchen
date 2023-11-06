@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "color": "^4.2.3",
-    "humanize-duration": "^3.28.0",
+    "humanize-duration": "^3.30.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@jest/globals": "^29.5.0",
-    "@types/color": "^3.0.4",
+    "@jest/globals": "^29.7.0",
+    "@types/color": "^3.0.6",
     "@ubahnchen/eslint-config": "*",
     "@ubahnchen/tsconfig": "*"
   },
