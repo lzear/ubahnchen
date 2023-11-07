@@ -4,6 +4,7 @@
   "scripts": {
     "build": "turbo run build",
     "clean": "turbo run clean && del-cli \"**/.turbo\" -d",
+    "purge": "yarn clean && del-cli \"**/node_modules\" node_modules -d",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint --",
