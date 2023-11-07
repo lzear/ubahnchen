@@ -51,10 +51,8 @@
   "workspaces": {
     "packages": [
       "apps/*",
-      "cities/*",
       "libs/*",
       "packages/*",
-      "submodules/*",
       "tests/*"
     ]
   },
