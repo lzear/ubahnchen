@@ -9,19 +9,27 @@
     "forceConsistentCasingInFileNames": true,
     "inlineSources": false,
     "isolatedModules": true,
-    "module": "node16",
+    //    "module": "node16",
     "moduleResolution": "node16",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
-    "resolveJsonModule": true,
+    //    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
     "allowSyntheticDefaultImports": true,
     "outDir": "./dist",
     "baseUrl": ".",
-    "lib": ["esnext", "dom", "DOM.Iterable", "ScriptHost"]
+    "lib": ["esnext", "dom", "DOM.Iterable", "ScriptHost"],
+
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "removeComments": true,
+    //    "outDir": "../dist",
+    "sourceMap": false,
+    "types": ["node", "jest"]
+    //    "esModuleInterop": true
   },
   "include": ["*.json", ".*.cjs"]
 }

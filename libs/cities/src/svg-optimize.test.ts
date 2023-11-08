@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
 
-import { optimize } from '@ubahnchen/svgo'
+import { optimize } from 'svgo'
 
 const map = 'berlin/su'
 

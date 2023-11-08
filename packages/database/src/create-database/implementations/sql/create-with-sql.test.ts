@@ -1,4 +1,5 @@
-import { Temporary } from '../../../../../utils.js'
+import { Temporary } from '@ubahnchen/node-utils'
+
 import { getSchema } from '../../get-schema.js'
 
 import { createWithSql } from './create-with-sql.js'

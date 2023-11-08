@@ -5,7 +5,6 @@ describe(isNever, () => {
     // @ts-expect-error isNever should never be called
     expect(() => isNever('foo')).toThrow('Unexpected value: foo')
 
-    // @ts-expect-error isNever should never be called
     expect(() => isNever()).toThrow('Unexpected value: undefined')
 
     expect(() => isNever('' as never)).toThrow('Unexpected value: ')

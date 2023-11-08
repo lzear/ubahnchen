@@ -60,23 +60,28 @@ module.exports = {
   // },
   // testMatch: ['**/*.test.(ts|js)'],
   // rootDirectory: path.resolve(path.dirname(url.fileURLToPath(import.meta.url))),
-  rootDir: path.resolve(__dirname),
+  // rootDir: path.resolve(__dirname),
   verbose: true,
   // preset: 'ts-jest/presets/default-esm',
-  preset: 'ts-jest/presets/js-with-ts-esm',
+  // preset: 'ts-jest/presets/js-with-ts-esm',
 
   // moduleNameMapper: pathsToModuleNameMapper(pkg.compilerOptions.paths, {
   //   prefix: '<rootDir>/',
   // }),
-  testEnvironment: 'node',
+  // testEnvironment: 'node',
   testMatch: ['<rootDir>/**/*.test.ts'],
   // transform: {
   //   '^.+\\.(t|j)sx?$': ['ts-jest', { useESM: true }],
   // },
 
-  transform: {
-    '^.+\\.tsx?$': ['babel-jest', { rootMode: 'upward' }],
-  },
+  // transform: {},
   collectCoverageFrom: ['<rootDir>/**/src/**/*.{ts,tsx}'],
+  // extensionsToTreatAsEsm: ['.ts'],
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+
+  moduleNameMapper: { '^(\\.{1,2}/.*)\\.js$': '$1' },
+  extensionsToTreatAsEsm: ['.ts'],
+  transform: {
+    '^.+\\.(mt|t|cj|j)s$': ['ts-jest', { useESM: true }],
+  },
 }
