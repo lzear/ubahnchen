@@ -45,8 +45,8 @@ export const seedStopTimes = async ({
           if (!arrival_time) {
             // pass
           } else if (startEnd) {
-            if (startEnd.start > arrival_time) startEnd.start = arrival_time
-            if (startEnd.end < arrival_time) startEnd.end = arrival_time
+            if (arrival_time < startEnd.start) startEnd.start = arrival_time
+            if (arrival_time > startEnd.end) startEnd.end = arrival_time
           } else {
             tripStartEnd.set(row.trip_id, {
               start: arrival_time,

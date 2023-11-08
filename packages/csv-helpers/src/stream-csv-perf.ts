@@ -1,4 +1,4 @@
-import { countLines } from '@ubahnchen/node-utils'
+import { countLines } from '@ubahnchen/node'
 import { Perf } from '@ubahnchen/utils'
 
 import type {

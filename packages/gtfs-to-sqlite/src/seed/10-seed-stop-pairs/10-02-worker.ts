@@ -3,7 +3,7 @@ import { parentPort, workerData as _wd } from 'node:worker_threads'
 import { getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
-import { inserter } from '../../inserts.js'
+import { inserter } from '../../inserts/index.js'
 import type { DefaultOptions } from '../00-seed.js'
 
 import { seedStopPairsBasicInner } from './10-01-seed-stop-pairs-basic.js'

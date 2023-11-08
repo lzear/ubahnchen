@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import { revalidatePath } from 'next/cache'
 
 import type { City } from '@ubahnchen/cities'
-import { initializeFileIfNotExists } from '@ubahnchen/node-utils'
+import { initializeFileIfNotExists } from '@ubahnchen/node'
 
 class ActionIO<T> {
   constructor(private filePath: string) {}

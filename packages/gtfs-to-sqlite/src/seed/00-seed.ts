@@ -26,6 +26,7 @@ export type DefaultOptions = SeedDatabaseOptions &
     gtfsIterator: GtfsIterator
     inserter: Inserter
   }
+
 export const seedDatabase = async (
   options: SeedDatabaseOptions,
 ): Promise<DBSingleton> => {

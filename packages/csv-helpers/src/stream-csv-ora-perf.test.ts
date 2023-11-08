@@ -1,6 +1,6 @@
 import { jest } from '@jest/globals'
 
-import { Temporary } from '@ubahnchen/node-utils'
+import { Temporary } from '@ubahnchen/node'
 import { Perf } from '@ubahnchen/utils'
 
 import { streamCsvPerfOra, withPerfOra } from './stream-csv-perf-ora.js'

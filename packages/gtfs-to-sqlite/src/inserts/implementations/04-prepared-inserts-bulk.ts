@@ -9,6 +9,7 @@ export const preparedInsertsBulk = async <R, T extends Record<string, any>>({
   databasePath,
   prepare,
   run,
+  chunkSize = CHUNK_SIZE,
 }: InsertOptions<R, T>) => {
   const { database } = getDatabase(databasePath)
   const statement = database.prepare(prepare)
@@ -21,7 +22,7 @@ export const preparedInsertsBulk = async <R, T extends Record<string, any>>({
 
   const pusher = (row: T) => {
     chunk.push(row)
-    if (chunk.length === CHUNK_SIZE) {
+    if (chunk.length === chunkSize) {
       insertMany(chunk)
       chunk = []
     }

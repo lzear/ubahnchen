@@ -17,8 +17,7 @@ export const updateTrips = async ({
        WHERE trip_id = @trip_id
   `,
     run: (pusher) => {
-      for (const trip_id of Object.keys(tripStartEnd)) {
-        const startEnd = tripStartEnd.get(trip_id)
+      for (const [trip_id, startEnd] of tripStartEnd) {
         if (!startEnd) throw new Error(`startEnd not found: ${trip_id}`)
         pusher({
           trip_id,

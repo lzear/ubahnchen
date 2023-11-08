@@ -1,4 +1,4 @@
-import { catFile, Temporary } from '@ubahnchen/node-utils'
+import { catFile, Temporary } from '@ubahnchen/node'
 import { Perf } from '@ubahnchen/utils'
 
 import { filterCsv } from './filter-csv.js'

@@ -7,3 +7,4 @@ export {
   type GtfsToSqliteReturn,
 } from './gtfs-to-sqlite.js'
 export { gtfsUrlToSqlite } from './gtfs-url-to-sqlite.js'
+export { minify } from './seed/minify/index.js'

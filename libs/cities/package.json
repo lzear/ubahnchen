@@ -5,11 +5,11 @@
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./*": "./src/*"
-  },
-  "bin": {
-    "filter-sqlite": "./src/bin/filter-sqlite.ts",
-    "to-sqlite": "./src/bin/to-sqlite.ts"
+    "./node": {
+      "import": "./src/node.ts",
+      "require": "./src/node.ts",
+      "types": "./src/node.ts"
+    }
   },
   "scripts": {
     "codegen": "./src/bin/codegen.ts",
@@ -18,18 +18,16 @@
   },
   "dependencies": {
     "@ubahnchen/gtfs-to-sqlite": "*",
-    "@ubahnchen/paths": "*",
-    "jsdom": "^22.1.0",
     "svgpath": "^2.6.0",
     "yargs": "^17.7.2",
     "svgo": "*",
     "zod": "^3.22.4"
   },
-  "volta": {
-    "extends": "../../package.json"
-  },
   "devDependencies": {
     "@types/eslint": "^8.44.7",
     "eslint": "^8.53.0"
+  },
+  "volta": {
+    "extends": "../../package.json"
   }
 }

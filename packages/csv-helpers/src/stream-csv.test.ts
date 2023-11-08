@@ -1,6 +1,6 @@
 import { jest } from '@jest/globals'
 
-import { Temporary } from '@ubahnchen/node-utils'
+import { Temporary } from '@ubahnchen/node'
 
 import { streamCsvFactory } from './stream-csv.js'
 import { writeCsv } from './write-csv.js'

@@ -1,6 +1,6 @@
 import { describe, expect, it } from '@jest/globals'
 
-import { Temporary } from '@ubahnchen/node-utils'
+import { Temporary } from '@ubahnchen/node'
 
 import { getSchema } from '../../get-schema.js'
 

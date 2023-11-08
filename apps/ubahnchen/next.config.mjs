@@ -10,6 +10,7 @@ const nextConfig = {
     appDir: true,
     externalDir: true,
     serverActions: true,
+    esmExternals: true,
   },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
@@ -44,7 +45,14 @@ const nextConfig = {
 
     // Modify the file loader rule to ignore *.svg, since we have it handled now.
     fileLoaderRule.exclude = /\.svg$/i
-
+    config.experiments = {
+      ...config.experiments,
+      topLevelAwait: true,
+    }
+    config.externals.push({
+      sharp: 'commonjs sharp',
+      canvas: 'commonjs canvas',
+    })
     // 💥 Still needed for dynamic import
     /** @type {Exclude<typeof config.resolve, undefined>} */
     config.resolve.extensionAlias = {

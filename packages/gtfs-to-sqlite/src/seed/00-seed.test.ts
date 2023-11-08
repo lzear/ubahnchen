@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from '@jest/globals'
 import type BetterSqlite3 from 'better-sqlite3'
 
-import { Temporary } from '@ubahnchen/node-utils'
+import { Temporary } from '@ubahnchen/node'
 
 import { stopPairs } from '../drizzle/index.js'
 import { gtfsToSqlite } from '../gtfs-to-sqlite.js'

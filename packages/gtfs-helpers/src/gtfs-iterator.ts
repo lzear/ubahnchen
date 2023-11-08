@@ -5,7 +5,7 @@ import type { ParserOptionsArgs } from 'fast-csv'
 
 import type { DataCsv } from '@ubahnchen/csv-helpers'
 import { streamCsvPerfOra } from '@ubahnchen/csv-helpers'
-import { countLines } from '@ubahnchen/node-utils'
+import { countLines } from '@ubahnchen/node'
 
 import type { GtfsCsvTypes, GtfsTypes } from './gtfs-csv-types.js'
 

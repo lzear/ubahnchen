@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import { format } from '@fast-csv/format'
 import type { CsvFormatterStream, FormatterOptionsArgs } from 'fast-csv'
 
-import { initializeFile } from '@ubahnchen/node-utils'
+import { initializeFile } from '@ubahnchen/node'
 
 /** @hidden */
 export type AnyRow = Record<string, unknown>

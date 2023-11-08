@@ -3,7 +3,7 @@ import * as generated from './generated/index.js'
 
 export type City = (typeof generated.citiesList)[number]
 
-export const isCity = (city: string): city is City =>
+export const isCity = (city: unknown): city is City =>
   citiesList.includes(city as City)
 
 export const citiesList = generated.citiesList

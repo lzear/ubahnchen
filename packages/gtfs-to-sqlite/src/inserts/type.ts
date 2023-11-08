@@ -7,6 +7,7 @@ export type InsertOptions<R, T extends Record<string, any>> = {
   run: (pusher: Pusher<T>) => Promise<R> | R
   perfId?: string
   foreignKeys?: boolean
+  chunkSize?: number
 }
 
 export type Inserter = <R, T extends Record<string, any>>(

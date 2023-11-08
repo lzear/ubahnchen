@@ -28,7 +28,7 @@
     "@types/react-dom": "18.2.15",
     "@ubahnchen/cities": "*",
     "@ubahnchen/database": "*",
-    "@ubahnchen/node-utils": "*",
+    "@ubahnchen/node": "*",
     "@ubahnchen/paths": "*",
     "@ubahnchen/tsconfig": "*",
     "@ubahnchen/utils": "*",

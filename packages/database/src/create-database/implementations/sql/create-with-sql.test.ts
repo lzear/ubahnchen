@@ -1,4 +1,4 @@
-import { Temporary } from '@ubahnchen/node-utils'
+import { Temporary } from '@ubahnchen/node'
 
 import { getSchema } from '../../get-schema.js'
 
