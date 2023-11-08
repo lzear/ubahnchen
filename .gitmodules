@@ -1,9 +1,0 @@
-[submodule "submodules/hafas-client"]
-	path = submodules/hafas-client
-	url = https://github.com/lzear/hafas-client.git
-[submodule "submodules/svgo"]
-	path = submodules/svgo
-	url = git@github.com:lzear/svgo.git
-[submodule "submodules/svgomg"]
-	path = submodules/svgomg
-	url = git@github.com:lzear/svgomg.git
