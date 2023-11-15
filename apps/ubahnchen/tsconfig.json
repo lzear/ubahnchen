@@ -1,11 +1,18 @@
 {
   "extends": "@ubahnchen/tsconfig/base.json",
   "compilerOptions": {
+    "moduleResolution": "bundler",
+    "module": "ESNext",
     "allowJs": true,
     "incremental": true,
     "jsx": "preserve",
     "noEmit": true,
-    "plugins": [{ "name": "next" }]
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
@@ -16,5 +23,7 @@
     ".*.cjs",
     "**/*"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

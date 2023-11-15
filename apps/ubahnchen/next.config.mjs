@@ -1,17 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-return */
 
-import nextMdx from '@next/mdx'
-
-const withMDX = nextMdx()
+// import nextMdx from '@next/mdx'
+//
+// const withMDX = nextMdx()
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
-    externalDir: true,
-    serverActions: true,
     esmExternals: true,
   },
+  transpilePackages: ['@ubahnchen/cities'],
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
@@ -62,4 +60,4 @@ const nextConfig = {
   },
 }
 
-export default withMDX(nextConfig)
+export default nextConfig

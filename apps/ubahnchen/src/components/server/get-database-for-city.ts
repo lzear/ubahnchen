@@ -1,5 +1,9 @@
+import type { City } from '@ubahnchen/cities'
+import { paths } from '@ubahnchen/cities/node'
 import { getDatabase } from '@ubahnchen/database'
-import { citySqlitePath } from '@ubahnchen/paths'
 
-export const getDatabaseForCity = (city: string) =>
-  getDatabase(citySqlitePath(city))
+export const getDatabaseForCity = (city: City) =>
+  getDatabase(paths(city).SQLITE_BIG)
+
+export const getSmallDatabaseForCity = (city: City) =>
+  getDatabase(paths(city).SQLITE_SMALL)
