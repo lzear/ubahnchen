@@ -8,7 +8,6 @@ import { oraPromise } from 'ora'
 import { percent } from '@ubahnchen/utils'
 
 type Headers = { etag: string; 'last-modified': string }
-type HeadersMap = Record<string, Headers>
 
 const getHeaders = async (url: string): Promise<Headers> => {
   const { headers } = await fetch(url, { method: 'HEAD' })
@@ -18,17 +17,32 @@ const getHeaders = async (url: string): Promise<Headers> => {
   }
 }
 
-const getHeadersMap = (destinationPath: string): HeadersMap => {
-  const dirname = path.dirname(destinationPath)
-  const headersPath = path.join(dirname, '.headers.json')
-  let oldHeadersMap: HeadersMap | null = null
-  try {
-    const buffer = fs.readFileSync(headersPath)
-    oldHeadersMap = JSON.parse(buffer.toString()) as HeadersMap
-  } catch {
-    // pass
+class CacheKeys {
+  constructor(private filePath: string) {}
+
+  public get() {
+    const directory = path.dirname(this.filePath)
+    // read json in .headers.json in same dir
+    const headersPath = path.join(directory, '.headers.json')
+    try {
+      const buffer = fs.readFileSync(headersPath)
+      return JSON.parse(buffer.toString()) as Headers
+    } catch {
+      // pass
+    }
+    return null
   }
-  return oldHeadersMap || {}
+
+  public async set(h: Headers) {
+    const dirname = path.dirname(this.filePath)
+    const headersPath = path.join(dirname, '.headers.json')
+    await fs.promises.writeFile(headersPath, JSON.stringify(h))
+  }
+
+  public isEquals(h: Headers) {
+    const oldHeaders = this.get()
+    return JSON.stringify(oldHeaders) === JSON.stringify(h)
+  }
 }
 
 export const downloadOnceOra = async (
@@ -51,33 +65,42 @@ export const downloadOnceOra = async (
     return post?.(spin)
   }, `Downloaded ${city} gtfs`)
 
+export const isAlreadyUpToDate = async (
+  url: string,
+  destinationPath: string,
+) => {
+  const cache = new CacheKeys(destinationPath)
+  const newHeaders = await getHeaders(url)
+  const isUpToDate = cache.isEquals(newHeaders)
+  return [isUpToDate, { oldHeaders: cache.get(), newHeaders }] as const
+}
+
 export const downloadOnce = async (
   url: string,
   destinationPath: string,
   onChunk?: (current: number, total: number) => void,
-  logger: {
-    info: (message: string) => void
-  } = console,
+  logger: { info: (message: string) => void } = console,
   force?: boolean,
 ) => {
-  const basename = path.basename(destinationPath)
-  const oldHeaders = getHeadersMap(destinationPath)[basename]
-  const newHeaders = await getHeaders(url)
+  // get the folder path
 
-  if (!force && JSON.stringify(oldHeaders) === JSON.stringify(newHeaders)) {
+  // const basename = path.basename(destinationPath)
+
+  const headers = new CacheKeys(destinationPath)
+
+  const [isUpToDate, { oldHeaders, newHeaders }] = await isAlreadyUpToDate(
+    url,
+    destinationPath,
+  )
+
+  if (!force && isUpToDate) {
     logger.info(`No update from remote since ${oldHeaders?.['last-modified']}`)
     return
   }
 
   await downloadFile(url, destinationPath, onChunk)
 
-  const oldHeadersMap = getHeadersMap(destinationPath)
-  const dirname = path.dirname(destinationPath)
-  const headersPath = path.join(dirname, '.headers.json')
-  await fs.promises.writeFile(
-    headersPath,
-    JSON.stringify({ ...oldHeadersMap, [basename]: newHeaders }),
-  )
+  await headers.set(newHeaders)
 }
 
 export const downloadFile = async (
