@@ -13,9 +13,12 @@ export const filterStops = ({ source, target }: SourceTarget) => {
     .from(stopTimes)
     .all()
 
+  const count = validTripsCount[0]?.count
+  if (!count) throw new Error('no count?' + JSON.stringify(validTripsCount))
+
   const take = 1000
   const validStopIds = new Set<string>()
-  for (let i = 0; i < validTripsCount[0].count; i += take) {
+  for (let i = 0; i < count; i += take) {
     const stopTimesChunk = target.drizzled
       .select()
       .from(stopTimes)

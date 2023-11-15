@@ -167,12 +167,12 @@ export const filterGtfs = async (props: FilterGtfsProps) => {
   }
 
   while (remainingFiles.length > 0) {
-    const canBeFiltered = remainingFiles.filter((f) =>
+    const canBeFiltered = remainingFiles.find((f) =>
       indexes[f].every((index) => index in finalSets),
     )
-    if (canBeFiltered.length === 0) throw new Error('Cannot filter GTFS')
+    const filtering = canBeFiltered
+    if (!filtering) throw new Error('Cannot filter GTFS')
 
-    const filtering = canBeFiltered[0]
     finalSets = await filterOneFile({
       key: filtering,
       filter: () => true,

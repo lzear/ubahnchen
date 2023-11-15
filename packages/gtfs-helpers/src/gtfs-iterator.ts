@@ -71,7 +71,7 @@ export const getValue = (
   key: string,
 ): string => {
   // const o2 = object as any as Record<string, string>
-  const v: string = object[key]
+  const v: string | undefined = object[key]
   if (!v) throw new Error('Key not found')
   return v
 }

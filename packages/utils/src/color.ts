@@ -10,6 +10,17 @@ export function colorDistance(
   const [r1, g1, b1] = color1.rgb().array()
   const [r2, g2, b2] = color2.rgb().array()
 
+  if (
+    r1 === undefined ||
+    g1 === undefined ||
+    b1 === undefined ||
+    r2 === undefined ||
+    g2 === undefined ||
+    b2 === undefined
+  ) {
+    throw new Error('Could not get rgb values')
+  }
+
   const rDiff = r1 - r2
   const gDiff = g1 - g2
   const bDiff = b1 - b2
