@@ -26,12 +26,12 @@ export type OraTxt = {
 export const defaultTextPerf = ({ perf, ora }: OraTxt) =>
   [ora?.text, ...(perf ? perf.displayProgress() : [])] // eslint-disable-next-line unicorn/no-array-callback-reference
     .filter(truthy)
-    .join(' ∙ ')
+    .join('  ∙  ')
 
 export const successText = ({ perf, ora }: OraTxt) =>
   [ora?.successText || ora?.text, ...(perf ? perf.displayFinal() : [])]
     .filter(Boolean)
-    .join(' ∙ ')
+    .join('  ∙  ')
 
 export type StreamCsvOraOptions = StreamCsvOptions & {
   ora?: CustomOraOptions
