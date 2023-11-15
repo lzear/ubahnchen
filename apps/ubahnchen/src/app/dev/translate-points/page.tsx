@@ -5,7 +5,8 @@ import { ToggleUrlParameter } from '../../../components/server/toggle-checkbox'
 
 // import { TranslatePointsSvg } from './svg'
 
-const TranslatePointsSvg = dynamic(() => import('./svg'), {
+// @ts-ignore
+const TranslatePointsSvg = dynamic(() => import('./svg.jsx'), {
   loading: () => <p className="absolute">loading...</p>,
   ssr: false,
 })

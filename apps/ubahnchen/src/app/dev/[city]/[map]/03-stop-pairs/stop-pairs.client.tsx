@@ -5,15 +5,15 @@ import _ from 'lodash'
 
 import { truthy } from '@ubahnchen/utils'
 
-import Svg from '../../../../../../public/berlin/u/50-paths.svg'
 import type { StopsPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
 import { Pinch } from '../../../../_components/pinch'
 import type { StopPair } from '../../../../_server/gtfs/types'
+import { svgs } from '../../../svgs'
 import type { CityMapParam } from '../params'
 
 import { saveVertices } from './stop-pairs.action'
 
-const RADIUS = 14
+const RADIUS = 24
 
 const getVertex = (
   stopPair: StopPair,
@@ -22,8 +22,8 @@ const getVertex = (
 ) => {
   const maxRange = 50
 
-  const path = paths.find((path) =>
-    path.getAttribute('id')!.includes(stopPair.routes.route_name),
+  const path = paths.find(
+    (path) => path.getAttribute('id')?.includes(stopPair.routes.route_name),
   )
 
   if (!path) throw new Error('No path for ' + stopPair.routes.route_name)
@@ -61,49 +61,67 @@ export const StopPairsClient = ({
   stopPairs,
   lineColors,
   cityMap,
+  routeName,
 }: {
   stopPositions: StopsPositions
   stopPairs: StopPair[]
   lineColors: Record<string, string>
   cityMap: CityMapParam
+  routeName?: string
 }) => {
+  console.log('🦺 antoinelog stopPairs', stopPairs);
+
+  // return <div>sfd</div>
   const { city, map } = cityMap
   const [isPending, startTransition] = useTransition()
   const [svgElement, setSvgElement] = useState<HTMLElement | null>(null)
   const [rangeValue, setRangeValue] = useState(50)
 
+  const stopPairsFiltered = useMemo(
+    () =>
+      stopPairs.filter(
+        (stopPair) => !routeName || stopPair.routes.route_name === routeName,
+      ),
+    [routeName, stopPairs],
+  )
   useEffect(() => {
     setSvgElement(document.querySelector<HTMLElement>('#sssvvvggg'))
   }, [])
 
-  const vertices = useMemo(() => {
-    if (!svgElement) return null
-    const paths = [...svgElement.querySelectorAll('path')]
-    return (
-      stopPairs
-        .map((stopPair) => {
-          const vertex = getVertex(stopPair, paths, stopPositions)
-          if (!vertex) return null
-          return { ...stopPair, ...vertex }
-        })
-        // eslint-disable-next-line unicorn/no-array-callback-reference
-        .filter(truthy)
-        .sort((a, b) => b.score - a.score)
-      // .slice(0, 10)
-    )
-  }, [stopPairs, stopPositions, svgElement])
+  const paths = [...svgElement?.querySelectorAll('path')]
+  console.log('🦺 antoinelog paths', paths);
 
-  const verticesDao = vertices?.map((vertex) => ({
-    stop_id_1: vertex.stop_pairs.stop_id_1,
-    stop_id_2: vertex.stop_pairs.stop_id_2,
-    route_name: vertex.routes.route_name,
-    vertices: [
-      {
-        path: vertex.pathId,
-        lengths: [vertex.p2.length, vertex.p1.length] as [number, number],
-      },
-    ],
-  }))
+  const vertices = []
+  // const vertices = useMemo(() => {
+  //   if (!svgElement) return null
+  //   const paths = [...svgElement.querySelectorAll('path')]
+  //   return (
+  //     stopPairs
+  //       .map((stopPair) => {
+  //         const vertex = getVertex(stopPair, paths, stopPositions)
+  //         if (!vertex) return null
+  //         return { ...stopPair, ...vertex }
+  //       })
+  //       // eslint-disable-next-line unicorn/no-array-callback-reference
+  //       .filter(truthy)
+  //       .sort((a, b) => b.score - a.score)
+  //     // .slice(0, 10)
+  //   )
+  // }, [stopPairs, stopPositions, svgElement])
+  //
+  // const verticesDao = vertices?.map((vertex) => ({
+  //   stop_id_1: vertex.stop_pairs.stop_id_1,
+  //   stop_id_2: vertex.stop_pairs.stop_id_2,
+  //   route_name: vertex.routes.route_name,
+  //   vertices: [
+  //     {
+  //       path: vertex.pathId,
+  //       lengths: [vertex.p2.length, vertex.p1.length] as [number, number],
+  //     },
+  //   ],
+  // }))
+  //
+  //
   const cirlces = useMemo(
     () =>
       vertices?.flatMap((vertex, idx) => {
@@ -136,7 +154,7 @@ export const StopPairsClient = ({
             x2={vertex.p1.point[0]}
             y2={vertex.p1.point[1]}
             strokeWidth={9}
-            stroke="green"
+            stroke="red"
           />,
           <line
             key={idx + 'l22'}
@@ -145,7 +163,7 @@ export const StopPairsClient = ({
             x2={vertex.p2.point[0]}
             y2={vertex.p2.point[1]}
             strokeWidth={9}
-            stroke="green"
+            stroke="pink"
           />,
         ]
       }),
@@ -171,7 +189,7 @@ export const StopPairsClient = ({
   )
   const ls = useMemo(
     () =>
-      stopPairs.map((stopPair, idx) => {
+      stopPairsFiltered.map((stopPair, idx) => {
         const stop1 = stopPositions[stopPair.stop_pairs.stop_id_1]
         const stop2 = stopPositions[stopPair.stop_pairs.stop_id_2]
         const lineColor = lineColors[stopPair.routes.route_name]
@@ -191,13 +209,14 @@ export const StopPairsClient = ({
           />
         )
       }),
-    [lineColors, stopPairs, stopPositions],
+    [lineColors, stopPairsFiltered, stopPositions],
   )
 
+  const ImportedSvg = svgs[city][map].stopPairs
   return (
     <div>
       <Pinch>
-        <Svg id="sssvvvggg" />
+        <ImportedSvg id="sssvvvggg" className="opacity-20" />
         {svgElement && (
           <svg
             className="absolute top-0"
