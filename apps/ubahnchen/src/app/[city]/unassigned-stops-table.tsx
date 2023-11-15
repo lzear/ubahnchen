@@ -1,4 +1,4 @@
-import type { Stop } from '../_server/gtfs/types.js'
+import type { Stop } from '../_server/gtfs/types'
 
 type Props = {
   unassignedStops?: Stop[]

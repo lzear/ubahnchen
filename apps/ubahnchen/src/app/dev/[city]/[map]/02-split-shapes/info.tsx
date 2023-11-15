@@ -1,6 +1,6 @@
 import type { City } from '@ubahnchen/cities'
 
-import { getShapes } from './split-shapes.action.js'
+import { getShapes } from './split-shapes.action'
 
 type Props = {
   city: City

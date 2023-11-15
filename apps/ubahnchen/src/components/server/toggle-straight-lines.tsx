@@ -2,9 +2,9 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { UrlParameter } from '../../app/[city]/search-parameters.js'
+import { UrlParameter } from '../../app/[city]/search-parameters'
 
-import { ToggleCheckbox } from './toggle-checkbox.js'
+import { ToggleCheckbox } from './toggle-checkbox'
 
 type Props = { checked: boolean }
 

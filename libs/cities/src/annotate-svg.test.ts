@@ -1,7 +1,7 @@
 import path from 'node:path'
 import url from 'node:url'
 
-import { annotateSvg } from './annotate-svg.js'
+import { annotateSvg } from './annotate-svg'
 
 const map = 'berlin/u'
 

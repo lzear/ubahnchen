@@ -1,4 +1,4 @@
-import { percent } from './percent.js'
+import { percent } from './percent'
 
 describe(percent, () => {
   it('should return a percentage', () => {

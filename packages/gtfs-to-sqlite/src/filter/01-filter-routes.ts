@@ -2,7 +2,7 @@ import { inArray } from 'drizzle-orm'
 
 import { drizzleTables } from '@ubahnchen/database'
 
-import type { SourceTarget } from './types.js'
+import type { SourceTarget } from './types'
 
 export type Options = {
   sourceDatabasePath: string

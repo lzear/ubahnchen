@@ -6,11 +6,11 @@ import { cities } from '@ubahnchen/cities'
 
 import 'server-only'
 
-import { getStopPositions } from '../../../../../components/client/place-stops/save-points-positions.action.js'
-import { getUsedStops } from '../../../../_server/gtfs/get-used-stops.js'
+import { getStopPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
+import { getUsedStops } from '../../../../_server/gtfs/get-used-stops'
 
-import { PlaceStopsInfo } from './info.js'
-import { PlaceStopsClient } from './place-stops.client.js'
+import { PlaceStopsInfo } from './info'
+import { PlaceStopsClient } from './place-stops.client'
 
 type Props = { city: City; map: string }
 

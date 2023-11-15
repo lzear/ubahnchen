@@ -1,4 +1,4 @@
-import type { DefaultOptions } from './00-seed.js'
+import type { DefaultOptions } from './00-seed'
 
 export type UpdateTripsOptions = DefaultOptions & {
   tripStartEnd: Map<string, { start: number; end: number }>

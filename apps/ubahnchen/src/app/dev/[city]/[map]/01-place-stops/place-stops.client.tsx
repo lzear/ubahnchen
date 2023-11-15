@@ -4,13 +4,13 @@ import React, { useState } from 'react'
 
 import type { City } from '@ubahnchen/cities'
 
-import type { StopsPositions } from '../../../../../components/client/place-stops/save-points-positions.action.js'
-import { SvgSource } from '../../../../../components/client/place-stops/svg-source.js'
-import { SvgTarget } from '../../../../../components/client/place-stops/svg-target.js'
-import type { Size } from '../../../../../components/client/place-stops/types.js'
-import type { Point } from '../../../../_components/geometry/utils.js'
-import { Pinch } from '../../../../_components/pinch.js'
-import type { Stop, StopPair } from '../../../../_server/gtfs/types.js'
+import type { StopsPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
+import { SvgSource } from '../../../../../components/client/place-stops/svg-source'
+import { SvgTarget } from '../../../../../components/client/place-stops/svg-target'
+import type { Size } from '../../../../../components/client/place-stops/types'
+import type { Point } from '../../../../_components/geometry/utils'
+import { Pinch } from '../../../../_components/pinch'
+import type { Stop, StopPair } from '../../../../_server/gtfs/types'
 
 type Props = {
   city: City

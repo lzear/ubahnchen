@@ -2,7 +2,7 @@ import BetterSqlite3 from 'better-sqlite3'
 
 import { initializeFile } from '@ubahnchen/node'
 
-import { schema } from './schema.js'
+import { schema } from './schema'
 
 type CreateWithSqlOptions = {
   filePath: string

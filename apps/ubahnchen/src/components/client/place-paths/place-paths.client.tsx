@@ -4,12 +4,12 @@ import { useState } from 'react'
 
 import type { City } from '@ubahnchen/cities'
 
-import { pointsExtent } from '../../../app/_components/geometry/utils.js'
-import { Pinch } from '../../../app/_components/pinch.js'
-import type { StopPair } from '../../../app/_server/gtfs/types.js'
-import type { StopsPositions } from '../place-stops/save-points-positions.action.js'
+import { pointsExtent } from '../../../app/_components/geometry/utils'
+import { Pinch } from '../../../app/_components/pinch'
+import type { StopPair } from '../../../app/_server/gtfs/types'
+import type { StopsPositions } from '../place-stops/save-points-positions.action'
 
-import { SvgSource } from './svg-source.js'
+import { SvgSource } from './svg-source'
 
 type Props = {
   city: City

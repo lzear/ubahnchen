@@ -3,12 +3,12 @@ import { parentPort, workerData as _wd } from 'node:worker_threads'
 import { getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
-import { inserter } from '../../inserts/index.js'
-import type { DefaultOptions } from '../00-seed.js'
+import { inserter } from '../../inserts/index'
+import type { DefaultOptions } from '../00-seed'
 
-import { seedStopPairsBasicInner } from './10-01-seed-stop-pairs-basic.js'
-import type { WorkerData } from './10-02-messages.js'
-import { End1, Log } from './10-02-messages.js'
+import { seedStopPairsBasicInner } from './10-01-seed-stop-pairs-basic'
+import type { WorkerData } from './10-02-messages'
+import { End1, Log } from './10-02-messages'
 
 const workerData = _wd as WorkerData
 

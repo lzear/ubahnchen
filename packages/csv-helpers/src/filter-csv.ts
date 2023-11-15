@@ -1,10 +1,10 @@
 import type { ParserOptionsArgs } from 'fast-csv'
 
-import type { Row } from './stream-csv.js'
-import type { CustomOraOptions } from './stream-csv-ora.js'
-import type { DataPerf } from './stream-csv-perf.js'
-import { streamCsvPerfOra } from './stream-csv-perf-ora.js'
-import { withCsvWrite } from './write-csv.js'
+import type { Row } from './stream-csv'
+import type { CustomOraOptions } from './stream-csv-ora'
+import type { DataPerf } from './stream-csv-perf'
+import { streamCsvPerfOra } from './stream-csv-perf-ora'
+import { withCsvWrite } from './write-csv'
 
 export type FilterCsvOptions<T> = {
   sourcePath: string

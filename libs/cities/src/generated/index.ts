@@ -1,5 +1,5 @@
-import { config as berlin } from './cities/berlin/index.js'
+import { config as berlin } from './cities/berlin/index'
 
 export const cities = { berlin }
 
-export { citiesList } from './cities-list.js'
+export { citiesList } from './cities-list'

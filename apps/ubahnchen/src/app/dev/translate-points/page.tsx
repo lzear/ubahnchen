@@ -1,12 +1,11 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
 
-import { ToggleUrlParameter } from '../../../components/server/toggle-checkbox.js'
+import { ToggleUrlParameter } from '../../../components/server/toggle-checkbox'
 
-// import { TranslatePointsSvg } from './svg.js'
+// import { TranslatePointsSvg } from './svg'
 
-// @ts-ignore
-const TranslatePointsSvg = dynamic(() => import('./svg.jsx'), {
+const TranslatePointsSvg = dynamic(() => import('./svg'), {
   loading: () => <p className="absolute">loading...</p>,
   ssr: false,
 })

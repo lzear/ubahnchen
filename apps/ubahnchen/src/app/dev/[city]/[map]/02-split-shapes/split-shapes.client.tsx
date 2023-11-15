@@ -4,11 +4,11 @@ import type { MouseEvent } from 'react'
 import { useMemo, useRef, useState, useTransition } from 'react'
 import _ from 'lodash'
 
-import { Pinch } from '../../../../_components/pinch.js'
-import { svgs } from '../../../svgs.js'
-import type { CityMapParam } from '../params.js'
+import { Pinch } from '../../../../_components/pinch'
+import { svgs } from '../../../svgs'
+import type { CityMapParam } from '../params'
 
-import { saveShapes } from './split-shapes.action.js'
+import { saveShapes } from './split-shapes.action'
 
 const SplitShapesClient = (props: {
   cityMap: CityMapParam

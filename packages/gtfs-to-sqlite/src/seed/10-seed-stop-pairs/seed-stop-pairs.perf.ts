@@ -4,9 +4,9 @@ import { paths } from '@ubahnchen/cities'
 import { drizzleTables, getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
-import { preparedInsertsBulk } from '../../inserts/index.js'
+import { preparedInsertsBulk } from '../../inserts/index'
 
-import { seedStopPairs } from './index.js'
+import { seedStopPairs } from './index'
 
 const city = 'berlin'
 

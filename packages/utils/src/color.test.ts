@@ -1,4 +1,4 @@
-import { findSimilarColor } from './color.js'
+import { findSimilarColor } from './color'
 
 describe(findSimilarColor, () => {
   it('finds similar when same', () => {

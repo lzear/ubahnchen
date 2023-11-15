@@ -4,10 +4,10 @@ import { drizzleTables } from '@ubahnchen/database'
 
 import 'server-only'
 
-import type { Shape } from '../../app/_server/gtfs/types.js'
+import type { Shape } from '../../app/_server/gtfs/types'
 
-import { getDatabaseForCity } from './get-database-for-city.js'
-import { lru } from './singletons.js'
+import { getDatabaseForCity } from './get-database-for-city'
+import { lru } from './singletons'
 
 const query = (city: string, route_type: number): Shape[] => {
   const { shapes, trips, routes } = drizzleTables

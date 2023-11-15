@@ -3,11 +3,11 @@ import React, { useEffect, useRef } from 'react'
 
 import type { City } from '@ubahnchen/cities'
 
-import type { Point } from '../../../app/_components/geometry/utils.js'
-import type { Stop } from '../../../app/_server/gtfs/types.js'
-import { getCenter } from '../../../app/[city]/svg-center.js'
-import { findClosestIdx } from '../../../app/dev/[city]/[map]/01-place-stops/place-stops.client.js'
-import { svgs } from '../../../app/dev/svgs.js'
+import type { Point } from '../../../app/_components/geometry/utils'
+import type { Stop } from '../../../app/_server/gtfs/types'
+import { getCenter } from '../../../app/[city]/svg-center'
+import { findClosestIdx } from '../../../app/dev/[city]/[map]/01-place-stops/place-stops.client'
+import { svgs } from '../../../app/dev/svgs'
 
 type Props = {
   city: City

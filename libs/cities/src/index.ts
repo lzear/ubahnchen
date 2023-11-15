@@ -1,5 +1,5 @@
-import type { GtfsConfig, MapConfig } from './data/types.js'
-import * as generated from './generated/index.js'
+import type { GtfsConfig, MapConfig } from './data/types'
+import * as generated from './generated'
 
 export type City = (typeof generated.citiesList)[number]
 
@@ -16,4 +16,4 @@ export type CityConfig = {
 
 export const cities: Record<City, CityConfig> = generated.cities
 
-export { type GtfsConfig, type MapConfig } from './data/types.js'
+export { type GtfsConfig, type MapConfig } from './data/types'

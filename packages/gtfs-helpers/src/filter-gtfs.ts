@@ -1,9 +1,9 @@
 import fs from 'node:fs'
 
-import { GtfsCopy } from './gtfs-copy.js'
-import type { GtfsCsvTypes } from './gtfs-csv-types.js'
-import type { GtfsKeys } from './gtfs-iterator.js'
-import { getValue } from './gtfs-iterator.js'
+import { GtfsCopy } from './gtfs-copy'
+import type { GtfsCsvTypes } from './gtfs-csv-types'
+import type { GtfsKeys } from './gtfs-iterator'
+import { getValue } from './gtfs-iterator'
 
 export type FilterGtfsProps = {
   sourceDir: string

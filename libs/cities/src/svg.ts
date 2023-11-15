@@ -1,7 +1,7 @@
 import * as path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import type { MapConfig } from './data/types.js'
+import type { MapConfig } from './data/types'
 
 export const getSvg = (mapConfig: MapConfig): string => {
   const here: string = mapConfig.here

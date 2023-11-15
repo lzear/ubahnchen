@@ -4,7 +4,7 @@ import * as fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
 
-import { writeCode } from '../eslint-fix.js'
+import { writeCode } from '../eslint-fix'
 
 const srcPath = path.resolve(
   path.dirname(url.fileURLToPath(import.meta.url)),
@@ -46,10 +46,10 @@ const makeIndex = async (
   cities: string[],
   _cityMaps: Record<string, string[]>,
 ) => {
-  const citiesListImport = `import { citiesList } from './cities-list.js'`
+  const citiesListImport = `import { citiesList } from './cities-list'`
   const citiesListExport = `export { citiesList }`
   const citiesImport = cities.map(
-    (city) => `import { config as ${city} } from './cities/${city}.js'`,
+    (city) => `import { config as ${city} } from './cities/${city}'`,
   )
   const citiesExport = `export const cities = { ${cities.join(',')} }`
 

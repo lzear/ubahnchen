@@ -9,7 +9,7 @@ import { hideBin } from 'yargs/helpers'
 import { projectRoot } from '@ubahnchen/paths'
 import { truthy } from '@ubahnchen/utils'
 
-import { listDirectories } from '../packages.js'
+import { listDirectories } from '../packages'
 
 await yargs(hideBin(process.argv))
   .command(

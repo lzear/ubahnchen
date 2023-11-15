@@ -2,10 +2,10 @@ import dynamic from 'next/dynamic'
 
 import 'server-only'
 
-import type { UrlParameterValue } from '../../../../[city]/search-parameters.js'
-import type { CityMapParam } from '../params.js'
+import type { UrlParameterValue } from '../../../../[city]/search-parameters'
+import type { CityMapParam } from '../params'
 
-import { getShapes } from './split-shapes.action.js'
+import { getShapes } from './split-shapes.action'
 
 import 'leaflet/dist/leaflet.css'
 

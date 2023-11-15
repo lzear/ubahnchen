@@ -4,9 +4,9 @@ import type { City } from '@ubahnchen/cities'
 import type { MapConfig } from '@ubahnchen/cities/src/data/types'
 import { truthy } from '@ubahnchen/utils'
 
-import { getStopPairs } from './get-stop-pairs.js'
-import { getStops } from './get-stops.js'
-import type { Stop, StopPair } from './types.js'
+import { getStopPairs } from './get-stop-pairs'
+import { getStops } from './get-stops'
+import type { Stop, StopPair } from './types'
 
 export const getUsedStops = async ({
   city,

@@ -23,7 +23,7 @@ import type { BetterSQLite3Database } from 'drizzle-orm/better-sqlite3'
 import { drizzleTables } from '@ubahnchen/database'
 import { Perf } from '@ubahnchen/utils'
 
-import type { DefaultOptions } from '../00-seed.js'
+import type { DefaultOptions } from '../00-seed'
 
 type StopTimesDatum = {
   stop_times: { stop_id: string } | null

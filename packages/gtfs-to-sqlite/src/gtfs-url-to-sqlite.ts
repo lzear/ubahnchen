@@ -4,7 +4,7 @@ import type { City } from '@ubahnchen/cities'
 import { paths } from '@ubahnchen/cities/node'
 import { downloadOnceOra, Temporary } from '@ubahnchen/node'
 
-import { gtfsToSqlite } from './gtfs-to-sqlite.js'
+import { gtfsToSqlite } from './gtfs-to-sqlite'
 
 type Options = {
   force?: boolean

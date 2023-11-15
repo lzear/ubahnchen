@@ -5,7 +5,7 @@
 const path = require('node:path')
 
 // import { pathsToModuleNameMapper } from 'ts-jest'
-// import pkg from './tsconfig.json' assert { type: 'json.js' }
+// import pkg from './tsconfig.json' assert { type: 'json' }
 
 /** @type {import('jest').Config} */
 // export default {

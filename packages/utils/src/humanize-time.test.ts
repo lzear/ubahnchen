@@ -1,6 +1,6 @@
 import { expect } from '@jest/globals'
 
-import { humanizeTime } from './humanize-time.js'
+import { humanizeTime } from './humanize-time'
 
 describe(humanizeTime, () => {
   it('humanizes time', () => {

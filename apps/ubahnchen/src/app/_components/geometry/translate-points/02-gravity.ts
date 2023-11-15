@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-import type { Point, Vector } from '../utils.js'
+import type { Point, Vector } from '../utils'
 
 export const gravityTranslate = (vectors: Vector[]) => {
   return ([x, y]: Point): Point => {

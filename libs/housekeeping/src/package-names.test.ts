@@ -2,7 +2,7 @@ import { describe, it } from '@jest/globals'
 
 import { projectRoot } from '@ubahnchen/paths'
 
-// import { listDirectories } from './packages.js'
+// import { listDirectories } from './packages'
 //
 // console.log('🦺 antoinelog 111', 111)
 //

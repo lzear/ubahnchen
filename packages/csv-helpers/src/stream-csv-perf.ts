@@ -6,7 +6,7 @@ import type {
   DataCsv,
   Row,
   StreamCsvOptions,
-} from './stream-csv.js'
+} from './stream-csv'
 
 export type DataPerf<T> = DataCsv<T> & {
   perf: Perf

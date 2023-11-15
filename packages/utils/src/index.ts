@@ -1,15 +1,15 @@
-export { colorDistance, findSimilarColor } from './color.js'
-export { endReadableStream, endWritableStream } from './handle-stream-end.js'
-export { humanizeTime } from './humanize-time.js'
-export { isNever } from './is-never.js'
-export { percent } from './percent.js'
-export { Perf, PerfSimple } from './perf.js'
+export { colorDistance, findSimilarColor } from './color'
+export { endReadableStream, endWritableStream } from './handle-stream-end'
+export { humanizeTime } from './humanize-time'
+export { isNever } from './is-never'
+export { percent } from './percent'
+export { Perf, PerfSimple } from './perf'
 export {
   clearableSingletons,
   singletonize,
   Singletons,
   SingletonUnique,
-} from './singletons.js'
-export { type Truthy, truthy } from './truthy.js'
-export { toTuples, type Tuple } from './tuple.js'
-export { wait } from './wait.js'
+} from './singletons'
+export { type Truthy, truthy } from './truthy'
+export { toTuples, type Tuple } from './tuple'
+export { wait } from './wait'

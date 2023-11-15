@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 import type { City, CityConfig } from '@ubahnchen/cities'
 
-import { PlaceStopsInfo } from './[map]/01-place-stops/info.js'
-import { SplitShapesInfo } from './[map]/02-split-shapes/info.js'
+import { PlaceStopsInfo } from './[map]/01-place-stops/info'
+import { SplitShapesInfo } from './[map]/02-split-shapes/info'
 
 type Props = {
   city: City

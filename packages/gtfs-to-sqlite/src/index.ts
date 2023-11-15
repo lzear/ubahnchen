@@ -1,10 +1,10 @@
-export { drizzleMigrate } from './drizzle/migrate.js'
-export { filterGtfsSqlite } from './filter/00-filter-gtfs-sqlite.js'
+export { drizzleMigrate } from './drizzle/migrate'
+export { filterGtfsSqlite } from './filter/00-filter-gtfs-sqlite'
 export {
   gtfsToSqlite,
   type GtfsToSqliteDrizzleReturn,
   type GtfsToSqliteOptions,
   type GtfsToSqliteReturn,
-} from './gtfs-to-sqlite.js'
-export { gtfsUrlToSqlite } from './gtfs-url-to-sqlite.js'
-export { minify } from './seed/minify/index.js'
+} from './gtfs-to-sqlite'
+export { gtfsUrlToSqlite } from './gtfs-url-to-sqlite'
+export { minify } from './seed/minify/index'

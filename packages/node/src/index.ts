@@ -1,4 +1,4 @@
-export { catFile, countLines } from './count-lines.js'
-export { downloadFile, downloadOnce, downloadOnceOra } from './download-once.js'
-export { initializeFile, initializeFileIfNotExists } from './files.js'
-export { Temporary } from './temporary.js'
+export { catFile, countLines } from './count-lines'
+export { downloadFile, downloadOnce, downloadOnceOra } from './download-once'
+export { initializeFile, initializeFileIfNotExists } from './files'
+export { Temporary } from './temporary'

@@ -9,7 +9,7 @@ import type {
   OnData,
   Row,
   StreamCsvOptions,
-} from './stream-csv.js'
+} from './stream-csv'
 
 export type TextPerf = (p: DataCsv<Row>) => string
 

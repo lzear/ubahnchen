@@ -5,8 +5,8 @@ import type { City } from '@ubahnchen/cities'
 import { paths } from '@ubahnchen/cities/node'
 import { createWithDrizzle, createWithSql } from '@ubahnchen/database'
 
-import { seedDatabase } from './seed/00-seed.js'
-import { minify } from './seed/minify/index.js'
+import { seedDatabase } from './seed/00-seed'
+import { minify } from './seed/minify/index'
 
 export type GtfsToSqliteOptions = {
   city: City

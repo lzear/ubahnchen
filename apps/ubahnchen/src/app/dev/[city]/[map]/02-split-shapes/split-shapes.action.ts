@@ -2,7 +2,7 @@
 
 import type { City } from '@ubahnchen/cities'
 
-import { ActionCityMapIO } from '../../../../_server/actions.js'
+import { ActionCityMapIO } from '../../../../_server/actions'
 
 const actionIO = (city: City, map: string) =>
   new ActionCityMapIO<string[]>(city, map, 'split-shapes')

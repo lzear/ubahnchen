@@ -2,9 +2,9 @@ import { describe, expect, it } from '@jest/globals'
 
 import { Temporary } from '@ubahnchen/node'
 
-import { getSchema } from '../../get-schema.js'
+import { getSchema } from '../../get-schema'
 
-import { createWithDrizzle } from './create-with-drizzle.js'
+import { createWithDrizzle } from './create-with-drizzle'
 
 xdescribe(createWithDrizzle, () => {
   const temporary = new Temporary()

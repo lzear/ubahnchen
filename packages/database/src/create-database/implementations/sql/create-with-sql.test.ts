@@ -1,8 +1,8 @@
 import { Temporary } from '@ubahnchen/node'
 
-import { getSchema } from '../../get-schema.js'
+import { getSchema } from '../../get-schema'
 
-import { createWithSql } from './create-with-sql.js'
+import { createWithSql } from './create-with-sql'
 
 describe(createWithSql, () => {
   const temporary = new Temporary()

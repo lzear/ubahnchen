@@ -2,10 +2,10 @@ import type { City } from '@ubahnchen/cities'
 
 import 'server-only'
 
-import { MapPicker } from '../../../../components/client/map-picker.js'
-import { PlacePathsServer } from '../../../../components/client/place-paths/place-paths.server.js'
-import { UrlParameter, zUrlParameters } from '../../../../components/url-params.js'
-import type { UrlParameterValue } from '../../../[city]/search-parameters.js'
+import { MapPicker } from '../../../../components/client/map-picker'
+import { PlacePathsServer } from '../../../../components/client/place-paths/place-paths.server'
+import { UrlParameter, zUrlParameters } from '../../../../components/url-params'
+import type { UrlParameterValue } from '../../../[city]/search-parameters'
 
 import 'leaflet/dist/leaflet.css'
 

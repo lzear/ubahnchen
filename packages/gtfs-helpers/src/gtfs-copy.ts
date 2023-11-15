@@ -1,12 +1,12 @@
 import { filterCsv } from '@ubahnchen/csv-helpers'
 
-import type { GtfsCsvTypes } from './gtfs-csv-types.js'
+import type { GtfsCsvTypes } from './gtfs-csv-types'
 import type {
   FixIndexSignature,
   GtfsIteratorOptions,
   GtfsKeys,
-} from './gtfs-iterator.js'
-import { GtfsIterator } from './gtfs-iterator.js'
+} from './gtfs-iterator'
+import { GtfsIterator } from './gtfs-iterator'
 
 export class GtfsCopy extends GtfsIterator {
   private readonly targetDirectory: string

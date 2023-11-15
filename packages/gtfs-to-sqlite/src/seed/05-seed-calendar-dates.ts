@@ -1,4 +1,4 @@
-import type { DefaultOptions } from './00-seed.js'
+import type { DefaultOptions } from './00-seed'
 
 export const seedCalendarDates = async ({
   databasePath,

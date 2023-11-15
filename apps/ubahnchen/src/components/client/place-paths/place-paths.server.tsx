@@ -3,12 +3,12 @@ import _ from 'lodash'
 import type { City } from '@ubahnchen/cities'
 import { cities } from '@ubahnchen/cities'
 
-import { SelectUrlParam } from '../../../app/_components/url-params/select.js'
-import { getUsedStops } from '../../../app/_server/gtfs/get-used-stops.js'
-import type { StopPair } from '../../../app/_server/gtfs/types.js'
-import { getStopPositions } from '../place-stops/save-points-positions.action.js'
+import { SelectUrlParam } from '../../../app/_components/url-params/select'
+import { getUsedStops } from '../../../app/_server/gtfs/get-used-stops'
+import type { StopPair } from '../../../app/_server/gtfs/types'
+import { getStopPositions } from '../place-stops/save-points-positions.action'
 
-import { PlacePathsClient } from './place-paths.client.js'
+import { PlacePathsClient } from './place-paths.client'
 
 type Props = { city: City; map: string; routeName?: string }
 

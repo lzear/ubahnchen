@@ -1,8 +1,8 @@
 import * as path from 'node:path'
 import * as url from 'node:url'
 
-import type { City } from './index.js'
-import { isCity } from './index.js'
+import type { City } from './index'
+import { isCity } from './index'
 
 export const projectRoot = path.join(
   path.dirname(url.fileURLToPath(import.meta.url)),

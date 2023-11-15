@@ -4,8 +4,8 @@ import type BetterSqlite3 from 'better-sqlite3'
 
 import { getDatabase } from '@ubahnchen/database'
 
-import type { End1Action, InsertAction, WorkerData } from './02-worker-types.js'
-import { Messages } from './02-worker-types.js'
+import type { End1Action, InsertAction, WorkerData } from './02-worker-types'
+import { Messages } from './02-worker-types'
 
 class Peon {
   private count = 0

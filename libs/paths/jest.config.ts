@@ -1,6 +1,6 @@
 const config = {
   displayName: 'gtfs-to-sqlite',
-  preset: '../../jest.preset.cjs',
+  preset: '../../jest.preset.',
   transform: {
     '^.+\\.[tj]s$': [
       'ts-jest',

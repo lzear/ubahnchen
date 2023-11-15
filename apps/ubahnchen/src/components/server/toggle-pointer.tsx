@@ -2,7 +2,7 @@
 
 import { atom, useAtom } from 'jotai'
 
-import { ToggleCheckbox } from './toggle-checkbox.js'
+import { ToggleCheckbox } from './toggle-checkbox'
 
 export const ignorePointer = atom(false)
 export const TogglePointer = () => {

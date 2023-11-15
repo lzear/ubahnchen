@@ -5,9 +5,9 @@ import { drizzleTables } from '@ubahnchen/database'
 
 import 'server-only'
 
-import { getDatabaseForCity } from '../../../components/server/get-database-for-city.js'
+import { getDatabaseForCity } from '../../../components/server/get-database-for-city'
 
-import type { StopPair } from './types.js'
+import type { StopPair } from './types'
 
 const query = async (
   city: string,

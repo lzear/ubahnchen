@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-import type { Point, Vector } from '../utils.js'
+import type { Point, Vector } from '../utils'
 
 export const linearish = (vectors: Vector[]) => {
   return ([x, y]: Point): Point => {

@@ -4,13 +4,13 @@ import type { City } from '@ubahnchen/cities'
 
 import 'server-only'
 
-import { getRouteShapes } from '../../components/server/get-route-shapes.js'
-import { getRoutes } from '../_server/gtfs/get-routes.js'
-import { getStopPairs } from '../_server/gtfs/get-stop-pairs.js'
-import { getStops } from '../_server/gtfs/get-stops.js'
-import type { Route, Shape, Stop, StopPair } from '../_server/gtfs/types.js'
+import { getRouteShapes } from '../../components/server/get-route-shapes'
+import { getRoutes } from '../_server/gtfs/get-routes'
+import { getStopPairs } from '../_server/gtfs/get-stop-pairs'
+import { getStops } from '../_server/gtfs/get-stops'
+import type { Route, Shape, Stop, StopPair } from '../_server/gtfs/types'
 
-import type { parseUrlParameters } from './search-parameters.js'
+import type { parseUrlParameters } from './search-parameters'
 
 type R = {
   selectedRouteTypes: number[]

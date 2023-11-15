@@ -5,7 +5,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import type { City } from '@ubahnchen/cities'
 import { cities } from '@ubahnchen/cities'
 
-import { UrlParameter } from '../../app/[city]/search-parameters.js'
+import { UrlParameter } from '../../app/[city]/search-parameters'
 
 export const MapPicker = ({ city }: { city: City }) => {
   const { maps } = cities[city]
