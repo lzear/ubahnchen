@@ -1,32 +1,27 @@
 import extract from 'extract-zip'
 
 import type { City } from '@ubahnchen/cities'
-import { paths } from '@ubahnchen/cities/node'
-import { downloadOnceOra, Temporary } from '@ubahnchen/node'
+import { gtfsConfig, paths } from '@ubahnchen/cities/node'
+import { downloadOnceOra } from '@ubahnchen/node'
 
 import { gtfsToSqlite } from './gtfs-to-sqlite'
 
 type Options = {
   force?: boolean
-  gtfsUrl: string
-  useDrizzle?: boolean
-  zipPath?: string
   city: City
 }
 
-export const gtfsUrlToSqlite = async ({
-  force,
-  gtfsUrl,
-  useDrizzle,
-  zipPath,
-  city,
-}: Options) => {
-  const zipFile = zipPath || `${new Temporary().directory()}/${city}.zip`
+const useDrizzle = false
 
+export const downloadCity = async ({ force, city }: Options) => {
   const p = paths(city)
-  await downloadOnceOra(city, gtfsUrl, zipFile, force, () =>
-    extract(zipFile, { dir: p.GTFS_CSV_DIR }),
+  const config = await gtfsConfig(city)
+  await downloadOnceOra(city, config.gtfs.url, p.GTFS_ZIP, force, () =>
+    extract(p.GTFS_ZIP, { dir: p.GTFS_CSV_DIR }),
   )
+}
 
-  await gtfsToSqlite({ city }, !!useDrizzle)
+export const gtfsUrlToSqlite = async ({ force, city }: Options) => {
+  await downloadCity({ force, city })
+  await gtfsToSqlite({ city }, useDrizzle)
 }

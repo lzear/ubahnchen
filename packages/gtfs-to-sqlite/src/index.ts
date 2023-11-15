@@ -6,5 +6,5 @@ export {
   type GtfsToSqliteOptions,
   type GtfsToSqliteReturn,
 } from './gtfs-to-sqlite'
-export { gtfsUrlToSqlite } from './gtfs-url-to-sqlite'
+export { downloadCity, gtfsUrlToSqlite } from './gtfs-url-to-sqlite'
 export { minify } from './seed/minify/index'

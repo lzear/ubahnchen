@@ -49,7 +49,7 @@ const makeIndex = async (
   const citiesListImport = `import { citiesList } from './cities-list'`
   const citiesListExport = `export { citiesList }`
   const citiesImport = cities.map(
-    (city) => `import { config as ${city} } from './cities/${city}'`,
+    (city) => `import { config as ${city} } from './cities/${city}.js'`,
   )
   const citiesExport = `export const cities = { ${cities.join(',')} }`
 

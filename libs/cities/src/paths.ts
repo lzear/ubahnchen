@@ -24,7 +24,7 @@ export const cityCsvPath = (city: string) =>
 
 const buildPaths = {
   GTFS_CSV_DIR: 'gtfs/csv',
-  GTFS_ZIP: 'gtfs/gtfs.zip',
+  GTFS_ZIP: 'gtfs/zip/gtfs.zip',
   SQLITE_BIG: 'gtfs/gtfs.big.sqlite',
   SQLITE_SMALL: 'gtfs/gtfs.small.sqlite',
 } as const

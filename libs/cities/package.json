@@ -14,17 +14,24 @@
   "scripts": {
     "codegen": "./src/bin/codegen.ts",
     "to-sqlite": "./src/bin/to-sqlite.ts",
+    "minify": "./src/bin/minify.ts",
     "filter-sqlite": "./src/bin/filter-sqlite.ts"
   },
   "dependencies": {
+    "@ubahnchen/database": "*",
     "@ubahnchen/gtfs-to-sqlite": "*",
+    "@ubahnchen/node": "*",
+    "@ubahnchen/utils": "*",
+    "chalk": "^5.3.0",
+    "pretty-bytes": "^6.1.1",
+    "svgo": "*",
     "svgpath": "^2.6.0",
     "yargs": "^17.7.2",
-    "svgo": "*",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.7",
+    "@types/lodash": "^4.14.201",
     "eslint": "^8.53.0"
   },
   "volta": {

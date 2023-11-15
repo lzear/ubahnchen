@@ -5,9 +5,9 @@ import { hideBin } from 'yargs/helpers'
 
 import { gtfsUrlToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
-import { gtfsConfig } from '../configs.js'
-import { isCity } from '../index.js'
-import { paths } from '../paths.js'
+import { gtfsConfig } from '../configs'
+import { isCity } from '../index'
+import { paths } from '../paths'
 
 const { city } = await yargs(hideBin(process.argv))
   .command(
@@ -24,14 +24,7 @@ const { city } = await yargs(hideBin(process.argv))
 
 if (!isCity(city)) throw new Error('no city?')
 
-const p = paths(city)
-
-const config = await gtfsConfig(city)
-
 await gtfsUrlToSqlite({
   city,
   force: false,
-  zipPath: p.GTFS_ZIP,
-  useDrizzle: false,
-  gtfsUrl: config.gtfs.url,
 })

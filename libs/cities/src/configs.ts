@@ -3,7 +3,7 @@ import url from 'node:url'
 
 import { z } from 'zod'
 
-import type { City } from './index.js'
+import type { City } from './index'
 
 export const CityConfig = z.object({ gtfs: z.object({ url: z.string() }) })
 
