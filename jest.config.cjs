@@ -84,4 +84,6 @@ module.exports = {
   transform: {
     '^.+\\.(mt|t|cj|j)s$': ['ts-jest', { useESM: true }],
   },
+
+  prettierPath: require.resolve('prettier-2'),
 }
