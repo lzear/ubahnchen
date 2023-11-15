@@ -1,4 +1,5 @@
 import { humanizeTime } from './humanize-time'
+import { prettyNumber } from './log'
 import { percent } from './percent'
 import { truthy } from './truthy'
 
@@ -104,10 +105,13 @@ export class Perf extends PerfSimple {
     return [
       this.timeLeft && `~${humanizeTime(this.timeLeft)} left`,
       d && humanizeTime(d),
-      a && `${a.toFixed(0)}/s`,
+      a && `${prettyNumber(a, { integer: true })}/s`,
       [
-        this.count,
-        this.totalCount && `/${this.totalCount} (${percent(this.progress)})`,
+        prettyNumber(this.count, { integer: true }),
+        this.totalCount &&
+          `/${prettyNumber(this.totalCount, { integer: true })} (${percent(
+            this.progress,
+          )})`,
       ] // eslint-disable-next-line unicorn/no-array-callback-reference
         .filter(truthy)
         .join(''), // eslint-disable-next-line unicorn/no-array-callback-reference
@@ -119,8 +123,9 @@ export class Perf extends PerfSimple {
     const a = this.averagePerS()
     return [
       d && humanizeTime(d).padStart(9),
-      a && `${a.toFixed(0).padStart(6)}/s`,
-      this.totalCount && `${this.totalCount} rows`, // eslint-disable-next-line unicorn/no-array-callback-reference
+      a && `${prettyNumber(a, { integer: true }).padStart(6)}/s`,
+      this.totalCount &&
+        `${prettyNumber(this.totalCount, { integer: true }).padStart(10)} rows`, // eslint-disable-next-line unicorn/no-array-callback-reference
     ].filter(truthy)
   }
 }
