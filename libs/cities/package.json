@@ -18,11 +18,13 @@
     "filter-sqlite": "./src/bin/filter-sqlite.ts"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.201",
     "@ubahnchen/database": "*",
     "@ubahnchen/gtfs-to-sqlite": "*",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
     "chalk": "^5.3.0",
+    "lodash": "^4.17.21",
     "pretty-bytes": "^6.1.1",
     "svgo": "*",
     "svgpath": "^2.6.0",
@@ -31,7 +33,6 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.44.7",
-    "@types/lodash": "^4.14.201",
     "eslint": "^8.53.0"
   },
   "volta": {

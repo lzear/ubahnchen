@@ -1,10 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
+import type BetterSqlite3 from 'better-sqlite3'
 import chalk from 'chalk'
 import _ from 'lodash'
 
-import type { DBSingleton } from '@ubahnchen/database'
 import { getDatabase } from '@ubahnchen/database'
 import { countLines, fileSize, isAlreadyUpToDate } from '@ubahnchen/node'
 import { log2DArray, logStrings, prettyNumber } from '@ubahnchen/utils'
@@ -48,14 +48,21 @@ const csvStats = async (city: City) => {
   return { lines, files }
 }
 
-const dbStats = async (city: City) => {
+const cityDbStats = async (city: City) => {
   const p = paths(city)
-  const db = getDatabase(p.SQLITE_BIG)
-  const tables = listTables(city).map((table) => ({
+  const [big, small] = await Promise.all([
+    dbStats(p.SQLITE_BIG),
+    dbStats(p.SQLITE_SMALL),
+  ])
+  return { big, small }
+}
+const dbStats = async (dbPath: string) => {
+  const db = getDatabase(dbPath, true).database
+  const tables = listTables(db).map((table) => ({
     table,
     count: countRows(table, db),
   }))
-  const { prettySize } = await fileSize(p.SQLITE_BIG)
+  const { prettySize } = await fileSize(dbPath)
   return { prettySize, tables }
 }
 
@@ -63,7 +70,7 @@ export const cityStats = async (city: City) => {
   const [zip, csv, db] = await Promise.all([
     zipStats(city),
     csvStats(city),
-    dbStats(city),
+    cityDbStats(city),
   ] as const)
   return { city, zip, csv, db }
 }
@@ -99,11 +106,20 @@ export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
     ),
     '\t',
   )
-  console.log(chalk.green.bold(`🗄️DB`))
-  console.log(`\tsize: ${s.db.prettySize}`)
+  console.log(chalk.green.bold(`🗄️DB big`))
+  console.log(`\tsize: ${s.db.big.prettySize}`)
   logStrings(
     log2DArray(
-      s.db.tables.map(({ table, count }) => [table, prettyNumber(count)]),
+      s.db.big.tables.map(({ table, count }) => [table, prettyNumber(count)]),
+      '  ',
+    ),
+    '\t',
+  )
+  console.log(chalk.green.bold(`🗄️DB small`))
+  console.log(`\tsize: ${s.db.small.prettySize}`)
+  logStrings(
+    log2DArray(
+      s.db.small.tables.map(({ table, count }) => [table, prettyNumber(count)]),
       '  ',
     ),
     '\t',
@@ -112,18 +128,16 @@ export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
   console.log('  ' + Object.keys(cities[s.city].maps).join('  '))
 }
 
-const countRows = (tableName: string, db: DBSingleton) => {
-  const results = db.database
+const countRows = (tableName: string, db: BetterSqlite3.Database) => {
+  const results = db
     .prepare(`SELECT COUNT(*) AS count FROM ${tableName}`)
     .all() as [{ count: number }]
 
   return results[0].count
 }
 
-const listTables = (city: City) => {
-  const p = paths(city)
-  const db = getDatabase(p.SQLITE_BIG)
-  const tables = db.database
+const listTables = (db: BetterSqlite3.Database) => {
+  const tables = db
     .prepare(`SELECT name FROM sqlite_master WHERE type='table'`)
     .all() as { name: string }[]
   return tables.map(({ name }) => name)
