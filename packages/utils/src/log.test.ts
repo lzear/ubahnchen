@@ -27,7 +27,12 @@ describe(log2DArray, () => {
         ['aaaaa', 'b', 'cc'],
         ['d', 'eeeee', 'f'],
       ]),
-    ).toEqual(['aaaaa b     cc', 'd     eeeee f '])
+    ).toMatchInlineSnapshot(`
+      [
+        "aaaaa     b cc",
+        "    d eeeee  f",
+      ]
+    `)
   })
   it('should log the array with separator', () => {
     expect(
@@ -36,8 +41,14 @@ describe(log2DArray, () => {
           ['aaaaa', 'b', 'cc'],
           ['d', 'eeeee', 'f'],
         ],
+
         '  |  ',
       ),
-    ).toEqual(['aaaaa  |  b      |  cc', 'd      |  eeeee  |  f '])
+    ).toMatchInlineSnapshot(`
+      [
+        "aaaaa  |      b  |  cc",
+        "    d  |  eeeee  |   f",
+      ]
+    `)
   })
 })
