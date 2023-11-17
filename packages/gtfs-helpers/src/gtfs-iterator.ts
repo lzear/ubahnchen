@@ -3,8 +3,8 @@ import fs from 'node:fs'
 
 import type { ParserOptionsArgs } from 'fast-csv'
 
-import type { DataCsv } from '@ubahnchen/csv-helpers'
-import { streamCsvPerfOra } from '@ubahnchen/csv-helpers'
+import type { DataCsv } from '@ubahnchen/csv'
+import { streamCsvPerfOra } from '@ubahnchen/csv'
 import { countLines } from '@ubahnchen/node'
 
 import type { GtfsCsvTypes, GtfsTypes } from './gtfs-csv-types'
