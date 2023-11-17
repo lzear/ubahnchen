@@ -1,5 +1,5 @@
 {
-  "name": "@ubahnchen/csv-helpers",
+  "name": "@ubahnchen/csv",
   "version": "0.0.0",
   "type": "module",
   "exports": "./src/index.ts",

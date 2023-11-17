@@ -6,7 +6,7 @@ import type { Ora } from 'ora'
 import { oraPromise } from 'ora'
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { defaultTextPerf, successText } from '@ubahnchen/csv-helpers'
+import { defaultTextPerf, successText } from '@ubahnchen/csv'
 import { drizzleTables } from '@ubahnchen/database'
 import { isNever, Perf } from '@ubahnchen/utils'
 

@@ -1,4 +1,4 @@
-import type { Row } from '@ubahnchen/csv-helpers'
+import type { Row } from '@ubahnchen/csv'
 
 export type WorkerData = {
   databasePath: string

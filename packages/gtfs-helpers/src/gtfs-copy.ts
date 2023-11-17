@@ -1,4 +1,4 @@
-import { filterCsv } from '@ubahnchen/csv-helpers'
+import { filterCsv } from '@ubahnchen/csv'
 
 import type { GtfsCsvTypes } from './gtfs-csv-types'
 import type {

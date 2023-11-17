@@ -10,7 +10,7 @@
     "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
   },
   "dependencies": {
-    "@ubahnchen/csv-helpers": "*",
+    "@ubahnchen/csv": "*",
     "@ubahnchen/node": "*",
     "gtfs-types": "^3.0.0",
     "tsup": "^7.2.0"
