@@ -25,7 +25,7 @@
     "module": "esnext",
     "resolveJsonModule": true,
     "removeComments": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "types": ["node", "jest"]
   },
   "include": ["*.json", ".*.cjs"]

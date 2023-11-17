@@ -14,8 +14,6 @@ import { projectRoot } from '@ubahnchen/paths'
 // }
 
 describe('namings', () => {
-  console.log('🦺 antoinelog 22', 22)
-
   describe.each(['packages', 'libs', 'apps'])('%p', (workspace) => {
     // const directories: string[] = listDirectories(workspace)
 
