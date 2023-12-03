@@ -36,7 +36,7 @@ export const Routes = () => {
   const { activeRoute, setRoute } = useRoute()
   const [isMinimized, toggle] = useState(true)
 
-  if (!data) return <></>
+  if (!data) return <>???</>
   const groupedRoutes = groupRoutes(data)
   if (isMinimized) {
     const thisRoute = groupedRoutes.find((r) => r.route_name === activeRoute)

@@ -334,6 +334,104 @@
     ]
   },
   {
+    "id": "S2-ring-or-something",
+    "route_name": "S2",
+    "stops": [
+      {
+        "stop_id": "de:11000:900074201",
+        "stop_name": "S Lichtenrade (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900074202",
+        "stop_name": "S Schichauweg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900072101",
+        "stop_name": "S Buckower Chaussee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900073101",
+        "stop_name": "S Marienfelde (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900068301",
+        "stop_name": "S Attilastr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900058102",
+        "stop_name": "S Priesterweg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900058101",
+        "stop_name": "S Südkreuz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900058103",
+        "stop_name": "S+U Yorckstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900012101",
+        "stop_name": "S Anhalter Bahnhof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100020",
+        "stop_name": "S+U Potsdamer Platz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100025",
+        "stop_name": "S+U Brandenburger Tor (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100001",
+        "stop_name": "S+U Friedrichstr. Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100007",
+        "stop_name": "S Oranienburger Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900007104",
+        "stop_name": "S Nordbahnhof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900008101",
+        "stop_name": "S Humboldthain (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900007102",
+        "stop_name": "S+U Gesundbrunnen Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110001",
+        "stop_name": "S+U Schönhauser Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110002",
+        "stop_name": "S Prenzlauer Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110003",
+        "stop_name": "S Greifswalder Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110004",
+        "stop_name": "S Landsberger Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900110012",
+        "stop_name": "S Storkower Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900120001",
+        "stop_name": "S+U Frankfurter Allee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900120003",
+        "stop_name": "S Ostkreuz Bhf (Berlin)"
+      }
+    ]
+  },
+  {
     "route_name": "S25",
     "id": "S25-S1",
     "stops": [
@@ -1060,6 +1158,96 @@
     ]
   },
   {
+    "id": "S41-quadris",
+    "route_name": "S41",
+    "stops": [
+      {
+        "stop_id": "de:11000:900186001",
+        "stop_name": "S Grünau (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193002",
+        "stop_name": "S Adlershof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193001",
+        "stop_name": "S Johannisthal (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900192001",
+        "stop_name": "S Schöneweide Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191001",
+        "stop_name": "S Baumschulenweg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900077155",
+        "stop_name": "S Köllnische Heide (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900078201",
+        "stop_name": "S+U Neukölln (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900079221",
+        "stop_name": "S+U Hermannstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900068201",
+        "stop_name": "S+U Tempelhof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900058101",
+        "stop_name": "S Südkreuz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900054104",
+        "stop_name": "S Schöneberg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900054105",
+        "stop_name": "S+U Innsbrucker Platz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900044202",
+        "stop_name": "S+U Bundesplatz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900045102",
+        "stop_name": "S+U Heidelberger Platz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900044101",
+        "stop_name": "S Hohenzollerndamm (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900040101",
+        "stop_name": "S Halensee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900024102",
+        "stop_name": "S Westkreuz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900024106",
+        "stop_name": "S Messe Nord/ICC (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900026207",
+        "stop_name": "S Westend (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900020201",
+        "stop_name": "S+U Jungfernheide Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900020202",
+        "stop_name": "S Beusselstr. (Berlin)"
+      }
+    ]
+  },
+  {
     "id": "S42-bis",
     "route_name": "S42",
     "stops": [
@@ -1350,6 +1538,96 @@
     ]
   },
   {
+    "id": "S42-S47-maybe",
+    "route_name": "S42",
+    "stops": [
+      {
+        "stop_id": "de:11000:900020202",
+        "stop_name": "S Beusselstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900020201",
+        "stop_name": "S+U Jungfernheide Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900026207",
+        "stop_name": "S Westend (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900024106",
+        "stop_name": "S Messe Nord/ICC (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900024102",
+        "stop_name": "S Westkreuz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900040101",
+        "stop_name": "S Halensee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900044101",
+        "stop_name": "S Hohenzollerndamm (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900045102",
+        "stop_name": "S+U Heidelberger Platz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900044202",
+        "stop_name": "S+U Bundesplatz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900054105",
+        "stop_name": "S+U Innsbrucker Platz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900054104",
+        "stop_name": "S Schöneberg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900058101",
+        "stop_name": "S Südkreuz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900068201",
+        "stop_name": "S+U Tempelhof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900079221",
+        "stop_name": "S+U Hermannstr. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900078201",
+        "stop_name": "S+U Neukölln (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900077155",
+        "stop_name": "S Köllnische Heide (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191001",
+        "stop_name": "S Baumschulenweg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900192001",
+        "stop_name": "S Schöneweide Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193001",
+        "stop_name": "S Johannisthal (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193002",
+        "stop_name": "S Adlershof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900186001",
+        "stop_name": "S Grünau (Berlin)"
+      }
+    ]
+  },
+  {
     "id": "S45-bis",
     "route_name": "S45",
     "stops": [
@@ -1526,24 +1804,96 @@
     "id": "S45-but-S5",
     "stops": [
       {
-        "stop_id": "de:11000:900024101",
-        "stop_name": "S Charlottenburg Bhf (Berlin)"
+        "stop_id": "de:12061:900260009",
+        "stop_name": "Flughafen BER - Terminal 1-2"
       },
       {
-        "stop_id": "de:11000:900003103",
-        "stop_name": "S Tiergarten (Berlin)"
+        "stop_id": "de:12061:900260080",
+        "stop_name": "S Waßmannsdorf"
       },
       {
-        "stop_id": "de:11000:900003102",
-        "stop_name": "S Bellevue (Berlin)"
+        "stop_id": "de:12061:900260005",
+        "stop_name": "Flughafen BER - Terminal 5"
+      },
+      {
+        "stop_id": "de:11000:900196001",
+        "stop_name": "S Grünbergallee (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900195510",
+        "stop_name": "S Altglienicke (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193002",
+        "stop_name": "S Adlershof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900193001",
+        "stop_name": "S Johannisthal (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900192001",
+        "stop_name": "S Schöneweide Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191001",
+        "stop_name": "S Baumschulenweg (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900191002",
+        "stop_name": "S Plänterwald (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900190001",
+        "stop_name": "S Treptower Park (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900120004",
+        "stop_name": "S+U Warschauer Str. (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900120005",
+        "stop_name": "S Ostbahnhof (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100004",
+        "stop_name": "S+U Jannowitzbrücke (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100003",
+        "stop_name": "S+U Alexanderplatz Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100002",
+        "stop_name": "S Hackescher Markt (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900100001",
+        "stop_name": "S+U Friedrichstr. Bhf (Berlin)"
       },
       {
         "stop_id": "de:11000:900003201",
         "stop_name": "S+U Berlin Hauptbahnhof"
       },
       {
-        "stop_id": "de:11000:900100001",
-        "stop_name": "S+U Friedrichstr. Bhf (Berlin)"
+        "stop_id": "de:11000:900003102",
+        "stop_name": "S Bellevue (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900003103",
+        "stop_name": "S Tiergarten (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900023201",
+        "stop_name": "S+U Zoologischer Garten Bhf (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900024203",
+        "stop_name": "S Savignyplatz (Berlin)"
+      },
+      {
+        "stop_id": "de:11000:900024101",
+        "stop_name": "S Charlottenburg Bhf (Berlin)"
       }
     ]
   },

@@ -3,6 +3,18 @@
     "route_name": "S1",
     "stops": [
       {
+        "stop_id": "de:12054:900230999",
+        "stop_name": "S Potsdam Hauptbahnhof"
+      },
+      {
+        "stop_id": "de:12054:900230000",
+        "stop_name": "S Babelsberg"
+      },
+      {
+        "stop_id": "de:12054:900230003",
+        "stop_name": "S Griebnitzsee Bhf"
+      },
+      {
         "stop_id": "de:11000:900053301",
         "stop_name": "S Wannsee Bhf (Berlin)"
       },

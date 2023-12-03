@@ -1,7 +1,7 @@
 [
   {
     "route_name": "S1",
-    "paths": ["S1-5", "S8-1"]
+    "paths": ["S1-5", "S8-1", "S7_x2F_75"]
   },
   {
     "route_name": "S2",
@@ -21,11 +21,11 @@
   },
   {
     "route_name": "S41",
-    "paths": ["S41", "S8-1", "S9-1"]
+    "paths": ["S41", "S8-1", "S9-1", "S45_sudring_2_"]
   },
   {
     "route_name": "S42",
-    "paths": ["S42", "S9-1", "S8-1"]
+    "paths": ["S42", "S9-1", "S8-1", "S45_sudring_2_"]
   },
   {
     "route_name": "S45",
