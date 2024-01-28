@@ -1,7 +1,6 @@
+import type { CsvStop } from '@ubahnchen/gtfs-helpers'
+import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 import { Singletons } from '@ubahnchen/utils'
-
-import type { CsvStop } from '../../../gtfs-helpers'
-import { GtfsIterator } from '../../../gtfs-helpers'
 
 const groupStops_ = async (gtfsDirectory: string) => {
   const gtfsIterator = new GtfsIterator(gtfsDirectory)

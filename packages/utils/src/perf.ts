@@ -99,14 +99,14 @@ export class Perf extends PerfSimple {
     return this.count / this.totalCount
   }
 
-  displayProgress() {
+  progressData() {
     const d = this.duration()
     const a = this.averagePerS()
-    return [
-      this.timeLeft && `~${humanizeTime(this.timeLeft)} left`,
-      d && humanizeTime(d),
-      a && `${prettyNumber(a, { integer: true })}/s`,
-      [
+    return {
+      timeLeft: this.timeLeft && `~${humanizeTime(this.timeLeft)} left`,
+      time: d && humanizeTime(d),
+      speed: a && `${prettyNumber(a, { integer: true })}/s`,
+      progress: [
         prettyNumber(this.count, { integer: true }),
         this.totalCount &&
           `/${prettyNumber(this.totalCount, { integer: true })} (${percent(
@@ -114,18 +114,30 @@ export class Perf extends PerfSimple {
           )})`,
       ] // eslint-disable-next-line unicorn/no-array-callback-reference
         .filter(truthy)
-        .join(''), // eslint-disable-next-line unicorn/no-array-callback-reference
-    ].filter(truthy)
+        .join(''),
+    }
+  }
+
+  displayProgress() {
+    const pdata = this.progressData()
+    return [pdata.timeLeft, pdata.time, pdata.speed, pdata.progress].filter(
+      // eslint-disable-next-line unicorn/no-array-callback-reference
+      truthy,
+    )
   }
 
   displayFinal() {
     const d = this.duration()
     const a = this.averagePerS()
     return [
-      d && humanizeTime(d).padStart(9),
-      a && `${prettyNumber(a, { integer: true }).padStart(6)}/s`,
+      d && humanizeTime(d).padStart(7),
+      a && `${prettyNumber(a, { integer: true }).padStart(7)}/s`,
+      this.count &&
+        `${prettyNumber(this.count, { integer: true }).padStart(9)} rows`,
       this.totalCount &&
-        `${prettyNumber(this.totalCount, { integer: true }).padStart(10)} rows`, // eslint-disable-next-line unicorn/no-array-callback-reference
+        this.count !== this.totalCount &&
+        `❌ ${prettyNumber(this.count)} / ${prettyNumber(this.totalCount)}`,
+      // eslint-disable-next-line unicorn/no-array-callback-reference
     ].filter(truthy)
   }
 }

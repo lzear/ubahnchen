@@ -2,7 +2,7 @@ import type { DBSingleton } from '@ubahnchen/database'
 import { getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
-import { inserter } from '../inserts/index'
+import { inserter } from '../inserts'
 import type { Inserter } from '../inserts/type'
 
 import { seedStopPairs } from './10-seed-stop-pairs/index'
