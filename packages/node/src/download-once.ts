@@ -7,13 +7,18 @@ import { oraPromise } from 'ora'
 
 import { percent } from '@ubahnchen/utils'
 
-type Headers = { etag: string; 'last-modified': string }
+type Headers = {
+  etag: string
+  'last-modified': string
+  'content-length': number
+}
 
 const getHeaders = async (url: string): Promise<Headers> => {
   const { headers } = await fetch(url, { method: 'HEAD' })
   return {
     etag: headers.get('etag') as string,
     'last-modified': headers.get('last-modified') as string,
+    'content-length': Number(headers.get('content-length')),
   }
 }
 
