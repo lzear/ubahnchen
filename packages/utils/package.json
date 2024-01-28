@@ -12,7 +12,8 @@
   "dependencies": {
     "color": "^4.2.3",
     "humanize-duration": "^3.30.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "strip-ansi": "^7.1.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",

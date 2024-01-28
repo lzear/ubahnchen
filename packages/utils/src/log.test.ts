@@ -19,7 +19,7 @@ describe(log2DArray, () => {
         ['a', 'b', 'c'],
         ['d', 'e', 'f'],
       ]),
-    ).toEqual(['a b c', 'd e f'])
+    ).toEqual([' a  b  c', ' d  e  f'])
   })
   it('should log the array with equal column width', () => {
     expect(
@@ -29,8 +29,8 @@ describe(log2DArray, () => {
       ]),
     ).toMatchInlineSnapshot(`
       [
-        "aaaaa     b cc",
-        "    d eeeee  f",
+        " aaaaa      b  cc",
+        "     d  eeeee   f",
       ]
     `)
   })
@@ -46,8 +46,8 @@ describe(log2DArray, () => {
       ),
     ).toMatchInlineSnapshot(`
       [
-        "aaaaa  |      b  |  cc",
-        "    d  |  eeeee  |   f",
+        " aaaaa  |       b  |   cc",
+        "     d  |   eeeee  |    f",
       ]
     `)
   })

@@ -1,3 +1,16 @@
+import stripAnsi from 'strip-ansi'
+
+function padStart(
+  inputString: string,
+  targetLength: number,
+  padString: string = ' ',
+) {
+  const stripped = stripAnsi(inputString)
+  return stripped.length >= targetLength
+    ? inputString
+    : padString.repeat(targetLength - stripped.length) + inputString
+}
+
 export const log2DArray = (
   data: (number | string | undefined | null)[][],
   separator = ' ',
@@ -10,19 +23,23 @@ export const log2DArray = (
   for (const row of data) {
     for (const [i, cell] of row.entries()) {
       const cellStr = String(cell)
-      columnWidths[i] = Math.max(columnWidths[i] ?? 1, cellStr.length)
+      const cellStrNoAnsi = stripAnsi(cellStr)
+      columnWidths[i] = Math.max(
+        columnWidths[i] ?? 1,
+        [...cellStrNoAnsi].length + 1,
+      )
     }
   }
 
   return data.map((row) =>
     row
-      .map((cell, i) => String(cell).padStart(columnWidths[i] || 1))
+      .map((cell, i) => padStart(String(cell), columnWidths[i] || 1))
       .join(separator),
   )
 }
 
 export const logStrings = (strings: string[], prefix = '') => {
-  const maxLen = Math.max(...strings.map((s) => s.length))
+  const maxLen = Math.max(...strings.map((s) => [...s].length))
   for (const s of strings) {
     console.log(`${prefix}${s.padEnd(maxLen)}`)
   }
