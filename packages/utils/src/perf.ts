@@ -2,6 +2,7 @@ import { humanizeTime } from './humanize-time'
 import { prettyNumber } from './log'
 import { percent } from './percent'
 import { truthy } from './truthy'
+import { wait } from './wait'
 
 export class PerfSimple {
   protected start: number | undefined
@@ -73,8 +74,13 @@ export class Perf extends PerfSimple {
     this.count = this.count + count
   }
 
-  public tickIndex(index: number) {
-    return this.tick(index - this.count)
+  public async tickAsync(count: number) {
+    this.tick(count)
+    await wait(0)
+  }
+
+  public tickAbsolute(absoluteCount: number) {
+    return this.tick(absoluteCount - this.count)
   }
 
   averagePerS() {

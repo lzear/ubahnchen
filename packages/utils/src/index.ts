@@ -5,6 +5,7 @@ export { isNever } from './is-never'
 export { log2DArray, logStrings, prettyNumber } from './log'
 export { percent } from './percent'
 export { Perf, PerfSimple } from './perf'
+export { PerfFunction } from './perf-function'
 export {
   clearableSingletons,
   singletonize,
