@@ -92,7 +92,7 @@ export class SingletonUnique<A extends any[], R> extends Singletons<A, R> {
   }
 }
 
-class ClearableSingletons extends Set<Singletons<any, any>> {
+export class ClearableSingletons extends Set<Singletons<any, any>> {
   constructor() {
     super()
   }

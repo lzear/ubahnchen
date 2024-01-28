@@ -1,6 +1,8 @@
 import { jest } from '@jest/globals'
 
 import {
+  ClearableSingletons,
+  clearableSingletons,
   defaultSerializer,
   singletonize,
   Singletons,
@@ -54,5 +56,35 @@ describe(singletonize, () => {
     // @ts-expect-error ✅ as expected
     singletonize((a: () => null) => a)
     singletonize((a: () => null) => a, { serializer: () => '' })
+  })
+})
+
+describe(ClearableSingletons, () => {
+  it('creates and clear singletons', () => {
+    clearableSingletons.create(
+      (a: number, b: number) => a + b,
+      (a: number, b: number) => `${a}+${b}`,
+    )
+    clearableSingletons.create(
+      (a: number, b: number) => a + b,
+      (a: number, b: number) => `${a}+${b}`,
+    )
+    expect(clearableSingletons.size).toBe(2)
+    clearableSingletons.clear()
+    expect(clearableSingletons.size).toBe(0)
+  })
+  it('creates and clear singletons 2', () => {
+    const clearableSingletons = new ClearableSingletons()
+    clearableSingletons.create(
+      (a: number, b: number) => a + b,
+      (a: number, b: number) => `${a}+${b}`,
+    )
+    clearableSingletons.create(
+      (a: number, b: number) => a + b,
+      (a: number, b: number) => `${a}+${b}`,
+    )
+    expect(clearableSingletons.size).toBe(2)
+    clearableSingletons.clear()
+    expect(clearableSingletons.size).toBe(0)
   })
 })

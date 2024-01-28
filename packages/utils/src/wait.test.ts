@@ -3,5 +3,5 @@ import { expect } from '@jest/globals'
 import { wait } from './wait'
 
 describe(wait, () => {
-  it('wait', async () => expect(await wait(10)).toBe(undefined))
+  it('waits', async () => expect(await wait(10)).toBe(undefined))
 })
