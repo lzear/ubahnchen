@@ -17,6 +17,10 @@ export class Temporary {
     return path.join(this.directory(), name)
   }
 
+  randomFile(): string {
+    return tmp.tmpNameSync()
+  }
+
   async cleanup(): Promise<void> {
     if (this.temporaryDirectory) {
       return fs.promises.rm(this.temporaryDirectory.name, {
