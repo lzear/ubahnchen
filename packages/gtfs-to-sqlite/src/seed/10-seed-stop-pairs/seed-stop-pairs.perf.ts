@@ -1,12 +1,12 @@
 #!/usr/bin/env -S node --no-warnings --loader ts-node/esm --es-module-specifier-resolution=node
 
-import { paths } from '@ubahnchen/cities'
 import { drizzleTables, getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
-import { preparedInsertsBulk } from '../../inserts/index'
+import { preparedInsertsBulk } from '../../inserts'
 
 import { seedStopPairs } from './index'
+import {paths} from "@ubahnchen/cities/node";
 
 const city = 'berlin'
 
