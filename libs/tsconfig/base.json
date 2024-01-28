@@ -1,6 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
+  "ts-node": {
+    "experimentalSpecifierResolution": "node",
+    "transpileOnly": true,
+    "esm": true,
+  },
   "compilerOptions": {
     "composite": true,
     "declaration": true,
