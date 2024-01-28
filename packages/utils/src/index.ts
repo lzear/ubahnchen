@@ -1,3 +1,4 @@
+export { chunkify } from './chunkify'
 export { colorDistance, findSimilarColor } from './color'
 export { endReadableStream, endWritableStream } from './handle-stream-end'
 export { humanizeTime } from './humanize-time'
