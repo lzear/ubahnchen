@@ -33,8 +33,8 @@ export class GtfsIterator {
     return async (
       onData: (data: DataCsv<FixIndexSignature<GtfsCsvTypes[K]>>) => unknown,
       parserOptions?: ParserOptionsArgs,
-    ) => {
-      const r = await streamCsvPerfOra<FixIndexSignature<GtfsCsvTypes[K]>>(
+    ) =>
+      streamCsvPerfOra<FixIndexSignature<GtfsCsvTypes[K]>>(
         {
           filePath: this.filePath(type),
           parserOptions: parserOptions || { headers: true },
@@ -42,8 +42,6 @@ export class GtfsIterator {
         },
         onData,
       )
-      return r
-    }
   }
 
   public getStream<K extends GtfsKeys>(type: K) {

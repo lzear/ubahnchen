@@ -7,7 +7,5 @@ export const countLines = (filepath: string): number => {
   return Number(r)
 }
 
-export const catFile = (filepath: string): string => {
-  const r = execSync(`cat "${filepath}"`, { encoding: 'utf8' })
-  return r
-}
+export const catFile = (filepath: string): string =>
+  execSync(`cat "${filepath}"`, { encoding: 'utf8' })

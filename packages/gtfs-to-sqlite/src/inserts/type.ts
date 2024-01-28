@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export type Pusher<T extends Record<string, any>> = (row: T) => void
+export type Pusher<T> = (row: T) => void
 
 export type InsertOptions<R, T extends Record<string, any>> = {
   databasePath: string
