@@ -41,7 +41,7 @@ export const withPerf =
 
     const run = async (onData: OnDataPerf<T>) => {
       const runResults = await inputCsvStream.run((data) => {
-        perf.tickIndex(data.index)
+        perf.tickAbsolute(data.index + 1)
         return onData({ ...data, perf, lineCount })
       })
       perf.stop()
