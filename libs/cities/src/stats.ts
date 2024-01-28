@@ -4,14 +4,17 @@ import path from 'node:path'
 import type BetterSqlite3 from 'better-sqlite3'
 import chalk from 'chalk'
 import _ from 'lodash'
+import prettyBytes from 'pretty-bytes'
 
 import { getDatabase } from '@ubahnchen/database'
 import { countLines, fileSize, isAlreadyUpToDate } from '@ubahnchen/node'
 import { log2DArray, logStrings, prettyNumber } from '@ubahnchen/utils'
 
+import { MapQueries } from './maps/map-queries'
 import type { City } from './index'
 import { cities } from './index'
-import { paths } from './paths'
+import { MapAssetName, MapAssets } from './maps-assets'
+import { paths, svgArray, svgFilesDone, svgs } from './paths'
 
 export const isZipUpToDate = async (city: City) => {
   const { gtfs } = cities[city]
@@ -45,7 +48,9 @@ const csvStats = async (city: City) => {
     }),
   )
   const lines = _.sum(files.map(({ lines }) => lines))
-  return { lines, files }
+  const size = _.sum(files.map(({ size }) => size))
+  const prettySize = prettyBytes(size)
+  return { files, total: { lines, size, prettySize } }
 }
 
 const cityDbStats = async (city: City) => {
@@ -56,23 +61,59 @@ const cityDbStats = async (city: City) => {
   ])
   return { big, small }
 }
+
+const mapsStats = (city: City) =>
+  Promise.all(
+    Object.keys(cities[city].maps).map(async (map) => ({
+      city,
+      map,
+      stats: await mapStats(city, map),
+    })),
+  )
+
+const mapStats = async (city: City, map: string) => {
+  const mapStopsPlacements = new MapAssets(city, map, MapAssetName.PLACE_STOPS)
+  const placeStops = await mapStopsPlacements.read({})
+
+  try {
+    const mapQueries = new MapQueries(city)
+    const usedStops = mapQueries.usedStops(map, true)
+
+    return {
+      map,
+      stops: usedStops.stops.length,
+      placedStops: Object.keys(placeStops).length,
+      svgs: svgFilesDone(city, map),
+    }
+  } catch (error) {
+    console.error(error)
+    return null
+  }
+}
+
 const dbStats = async (dbPath: string) => {
-  const db = getDatabase(dbPath, true).database
-  const tables = listTables(db).map((table) => ({
-    table,
-    count: countRows(table, db),
-  }))
-  const { prettySize } = await fileSize(dbPath)
-  return { prettySize, tables }
+  try {
+    const db = getDatabase(dbPath, true).database
+    const tables = listTables(db).map((table) => ({
+      table,
+      count: countRows(table, db),
+    }))
+    const { prettySize } = await fileSize(dbPath)
+    return { prettySize, tables, total: _.sumBy(tables, 'count') }
+  } catch (error) {
+    console.error(error)
+    return null
+  }
 }
 
 export const cityStats = async (city: City) => {
-  const [zip, csv, db] = await Promise.all([
+  const [zip, csv, db, maps] = await Promise.all([
     zipStats(city),
     csvStats(city),
     cityDbStats(city),
+    mapsStats(city),
   ] as const)
-  return { city, zip, csv, db }
+  return { city, zip, csv, db, maps }
 }
 
 export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
@@ -80,52 +121,137 @@ export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
   if (s.zip.isUpToDate)
     console.log(chalk.green.bold(`📦 ZIP up to date (${s.zip.newDate})`))
   else if (s.zip.oldDate)
-    console.log(
-      chalk.yellow.bold(
-        `⚠️ ZIP not up to date (${s.zip.oldDate} vs. ${s.zip.newDate})`,
-      ),
-    )
+    console.log(chalk.yellow.bold(`⚠️ ZIP not up to date`))
   else
     console.log(chalk.red.bold(`⚠️ ZIP missing (available: ${s.zip.newDate})`))
-  if (s.zip.prettySize) console.log(`\tsize: ${s.zip.prettySize}`)
-  console.log(
-    chalk.green.bold(
-      `📜 CSV (${prettyNumber(s.csv.lines)} lines in ${
-        s.csv.files.length
-      } files) `,
-    ),
-  )
   logStrings(
     log2DArray(
-      s.csv.files.map(({ file, lines, prettySize }) => [
-        file,
-        prettyNumber(lines),
-        prettySize,
-      ]),
+      [
+        ['', 'date', 'size (header)', 'size (file)'],
+        [
+          'old',
+          s.zip.oldDate,
+          s.zip.oldHeaders?.['content-length']
+            ? prettyBytes(s.zip.oldHeaders?.['content-length'])
+            : '-',
+          s.zip.prettySize,
+        ],
+        [
+          'new',
+          s.zip.newDate,
+          s.zip.newHeaders?.['content-length']
+            ? prettyBytes(s.zip.newHeaders?.['content-length'])
+            : '-',
+          '-',
+        ],
+      ],
       '  ',
     ),
     '\t',
   )
-  console.log(chalk.green.bold(`🗄️DB big`))
-  console.log(`\tsize: ${s.db.big.prettySize}`)
+  console.log(chalk.green.bold(`📜 CSV (${s.csv.files.length} files) `))
   logStrings(
     log2DArray(
-      s.db.big.tables.map(({ table, count }) => [table, prettyNumber(count)]),
+      [
+        ['file', 'lines', 'size'],
+        ...s.csv.files.map(({ file, lines, prettySize }) => [
+          file,
+          prettyNumber(lines),
+          prettySize,
+        ]),
+        ['total', prettyNumber(s.csv.total.lines), s.csv.total.prettySize],
+      ],
       '  ',
     ),
     '\t',
   )
-  console.log(chalk.green.bold(`🗄️DB small`))
-  console.log(`\tsize: ${s.db.small.prettySize}`)
+  if (s.db.big) {
+    console.log(chalk.green.bold(`🗄️DB big (${s.db.big?.prettySize})`))
+    const expectedLines = (table: string) => {
+      const csv = s.csv.files.find(({ file }) => file === `${table}.txt`)
+      if (!csv || table === 'shapes') return null
+      const value = csv.lines - 1
+      return { value, pretty: prettyNumber(value) }
+    }
+    logStrings(
+      log2DArray(
+        [
+          ['table', 'count', 'expected', 'ok?'],
+          ...s.db.big.tables.map(({ table, count }) => {
+            const expected = expectedLines(table)
+
+            return [
+              table,
+              prettyNumber(count),
+              expected?.pretty ?? '-',
+              expected ? (count === expected?.value ? '✅ ' : '❌ ') : '',
+            ]
+          }),
+          ['total', prettyNumber(s.db.big.total)],
+        ],
+        '  ',
+      ),
+      '\t',
+    )
+  } else console.log(chalk.red.bold(`⚠️ DB big missing`))
+
+  if (s.db.small) {
+    console.log(chalk.green.bold(`🗄️DB small (${s.db.small.prettySize})`))
+    logStrings(
+      log2DArray(
+        [
+          ['table', 'count', '%'],
+          ...s.db.small.tables.map(({ table, count }) => [
+            table,
+            prettyNumber(count),
+            s.db.big
+              ? `${(
+                  (count /
+                    s.db.big?.tables.find((t) => t.table === table)!.count) *
+                  100
+                ).toFixed(2)}%`
+              : '',
+          ]),
+          [
+            'total',
+            prettyNumber(s.db.small.total),
+            s.db.big
+              ? `${((s.db.small.total / s.db.big.total) * 100).toFixed(2)}%`
+              : '',
+          ],
+        ],
+        '  ',
+      ),
+      '\t',
+    )
+  } else console.log(chalk.red.bold(`⚠️ DB small missing`))
+
+  if (s.maps.length > 0) console.log(chalk.green.bold(`🗺️ Maps`))
+  else console.log(chalk.red.bold(`⚠️ Maps missing`))
   logStrings(
     log2DArray(
-      s.db.small.tables.map(({ table, count }) => [table, prettyNumber(count)]),
+      [
+        ['', ...s.maps.map((v) => v.map)],
+        [
+          'placed stops',
+          ...s.maps.map((v) => {
+            if (!v.stats) return chalk.red('❌ ')
+            const { stops, placedStops } = v.stats
+            const color = stops === placedStops ? chalk.green : chalk.red
+            return color(`${placedStops}/${stops}`)
+          }),
+        ],
+        ...svgArray.map((key) => [
+          svgs[key],
+          ...s.maps.map((v) =>
+            v.stats?.svgs[key] ? chalk.green('✅ ') : chalk.red('❌ '),
+          ),
+        ]),
+      ],
       '  ',
     ),
     '\t',
   )
-  console.log(chalk.green.bold(`🗺️ Maps`))
-  console.log('  ' + Object.keys(cities[s.city].maps).join('  '))
 }
 
 const countRows = (tableName: string, db: BetterSqlite3.Database) => {
