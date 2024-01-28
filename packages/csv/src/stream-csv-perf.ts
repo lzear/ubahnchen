@@ -34,7 +34,7 @@ export const withPerf =
     options: StreamCsvPerfOptions,
   ): PerfCsv<T, SC> => {
     const lineCount = options.filePath
-      ? countLines(options.filePath)
+      ? countLines(options.filePath) - 1
       : options.lineCount
 
     const perf = new Perf({ totalCount: lineCount })

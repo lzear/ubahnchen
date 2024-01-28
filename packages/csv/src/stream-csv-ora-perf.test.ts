@@ -32,7 +32,7 @@ describe(withPerfOra, () => {
     expect(callback).toHaveBeenNthCalledWith(1, { a: '1', b: '2' })
     expect(callback).toHaveBeenNthCalledWith(2, { a: 'text', b: 'true' })
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    expect(r).toStrictEqual({ lineCount: 3, perf: expect.any(Perf) })
+    expect(r).toStrictEqual({ lineCount: 2, perf: expect.any(Perf) })
   })
 
   it('streams csv file with headers', async () => {
