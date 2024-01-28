@@ -1,21 +1,12 @@
 #!/usr/bin/env -S node --no-warnings --loader ts-node/esm --es-module-specifier-resolution=node
 
 import { Command } from '@commander-js/extra-typings'
-import chalk from 'chalk'
 
 import { citiesList, isCity } from '@ubahnchen/cities'
-import {cityStats, logCityStats} from '@ubahnchen/cities/node'
-import {
-  downloadCity,
-  gtfsToSqlite,
-  gtfsUrlToSqlite,
-} from '@ubahnchen/gtfs-to-sqlite'
+import { cityStats, logCityStats } from '@ubahnchen/cities/node'
+import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
-const pckg = await import('../../package.json', {
-  assert: {
-    type: 'json',
-  },
-})
+const pckg = await import('../../package.json', { assert: { type: 'json' } })
 
 const program = new Command()
 
@@ -32,13 +23,13 @@ program
 
 program
   .command('cities')
-  .description('List all cities')
+  .description('list all cities')
   .action(() => console.log(citiesList.join('\t')))
 
 program
   .command('download')
   .description(
-    'Download and extract the GTFS data for a city. Skipping if the files are already up to date.',
+    'download and extract the GTFS data for a city. Skipping if the files are already up to date',
   )
   .option('-c, --city <city>', 'City name')
   .option('-f, --force', 'Rewrite existing file')
@@ -49,7 +40,7 @@ program
 
 program
   .command('to-sqlite')
-  .description('Store the GTFS CSV data into a SQLite database.')
+  .description('store the GTFS CSV data into a SQLite database')
   .option('-c, --city <city>', 'City name')
   .action(async ({ city }) => {
     const cities = getCities(city)
@@ -57,16 +48,15 @@ program
   })
 
 program
-  .command('stats')
-  .alias('stat')
-  .description('Show the status of the ubahnchen assets')
+  .command('status')
+  .description('show the status of the ubahnchen assets')
   .option('-c, --city <city>', 'City name')
   .action(async ({ city }) => {
     const cities = getCities(city)
     const stats = await Promise.all(cities.map((city) => cityStats(city)))
     for (const stat of stats) {
       console.log()
-      await logCityStats(stat)
+      logCityStats(stat)
     }
     console.log()
   })
