@@ -132,7 +132,7 @@ export const seedStopPairsBasicInner = async ({
   database.pragma('synchronous = OFF')
   database.pragma('journal_mode = OFF')
 
-  const inserter = chunkify(
+  const r = await chunkify(
     (v: StopPairPayload[]) => drizzled.insert(stopPairs).values(v),
     async (pusher_) => {
       const pusher = (sp: StopPairPayload) => {
@@ -157,8 +157,6 @@ export const seedStopPairsBasicInner = async ({
     },
     CHUNK_SIZE,
   )
-
-  const r = await inserter
 
   database.pragma('foreign_keys = ON')
   database.pragma('synchronous = ON')
