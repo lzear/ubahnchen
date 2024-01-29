@@ -62,7 +62,14 @@ SELECT route_id FROM routes WHERE route_type NOT IN (109, 400);
 DELETE FROM trips WHERE route_id IN (SELECT route_id FROM routes_to_delete);
 
 -- 3. Delete related data in stop_times using deleted trips
-DELETE FROM stop_times WHERE trip_id NOT IN (SELECT trip_id FROM trips);
+-- DELETE FROM stop_times WHERE trip_id NOT IN (SELECT trip_id FROM trips);
+DELETE FROM stop_times
+WHERE trip_id NOT IN (
+  SELECT stop_times.trip_id
+  FROM stop_times
+  LEFT JOIN trips ON stop_times.trip_id = trips.trip_id
+  WHERE trips.trip_id IS NULL
+);
 
 -- 4. At this point, you might want to clean up stops, but the given schema does not show any direct relation between stops and routes.
 -- So, we'll skip deleting from stops. However, if there's an indirect relationship, further analysis would be needed.
