@@ -5,8 +5,7 @@ import { drizzleTables, getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
 import { preparedInsertsBulk } from '../../inserts'
-
-import { seedStopPairs } from './index'
+import { seedStopPairs } from '../10-seed-stop-pairs'
 
 const city = 'berlin'
 

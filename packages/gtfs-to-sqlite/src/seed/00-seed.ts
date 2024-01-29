@@ -48,7 +48,7 @@ export const seedDatabase = async (
   await updateTrips({ ...defaultOptions, tripStartEnd })
   await seedStopPairs(defaultOptions)
 
-  makeIndexes(defaultOptions)
+  await makeIndexes(defaultOptions)
 
   return database
 }
