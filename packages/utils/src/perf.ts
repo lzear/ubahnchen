@@ -8,13 +8,21 @@ export class PerfSimple {
   protected start: number | undefined
   protected end: number | undefined
   protected lastMark: number | undefined
+  protected marks: {
+    text?: string
+    time: number
+    delta: number
+  }[] = []
 
   public go() {
-    if (!this.start) this.start = performance.now()
+    if (this.start) return
+    this.start = performance.now()
+    this.marks = [{ text: 'START', time: this.start, delta: 0 }]
   }
 
   public stop() {
     this.end = performance.now()
+    this.marks.push({ text: 'END', time: this.end, delta: this.getTimeDelta() })
   }
 
   duration() {
@@ -33,19 +41,38 @@ export class PerfSimple {
     return d && humanizeTime(d)
   }
 
-  displayDurationDelta() {
+  getTimeDelta() {
     const previous = this.lastMark || this.start
     const now = performance.now()
-    const r = previous && now - previous
+    const delta = previous && now - previous
     this.lastMark = now
-    return r
+    return delta || -1
   }
 
   log(message: string) {
+    const mark = this.record(message)
+
     console.log(
-      `${humanizeTime(this.displayDurationDelta() || -1).padStart(
+      `\n${`${humanizeTime(mark.time)} (+${humanizeTime(mark.delta)})`.padEnd(
         15,
       )} ${message}`,
+    )
+  }
+
+  record(message: string) {
+    const delta = this.getTimeDelta()
+    const mark = { text: message, time: performance.now(), delta }
+    this.marks.push(mark)
+    return mark
+  }
+
+  logMarks() {
+    console.table(
+      this.marks.map((mark) => ({
+        ...mark,
+        delta: humanizeTime(mark.delta),
+        time: humanizeTime(mark.time),
+      })),
     )
   }
 }
@@ -57,10 +84,15 @@ export class Perf extends PerfSimple {
 
   private buckets = new Map<number, number>()
 
-  constructor(argument?: { sampleDurationMs?: number; totalCount?: number }) {
+  constructor(argument?: {
+    sampleDurationMs?: number
+    totalCount?: number
+    go?: boolean
+  }) {
     super()
     this.sampleDurationMs = argument?.sampleDurationMs || 1000
     this.totalCount = argument?.totalCount
+    if (argument?.go) this.go()
   }
 
   public tick(count: number) {
