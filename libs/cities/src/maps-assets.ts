@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 import type { City } from '@ubahnchen/cities'
-import { paths } from '@ubahnchen/cities/node'
+import { P } from '@ubahnchen/cities/node'
 import { initializeFileIfNotExists } from '@ubahnchen/node'
 
 import type { StopsPositions } from './map-asset-type'
@@ -51,7 +51,7 @@ export class MapAssets<
     protected map: string,
     protected name: N,
   ) {
-    super(path.join(paths(city).MAPS_DATA, map, `${name}.json`))
+    super(path.join(P(city, map).BUILD.DIR, `${name}.json`))
   }
 }
 
