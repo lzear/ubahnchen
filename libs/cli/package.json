@@ -11,7 +11,8 @@
     "ubhn": "./src/bin/index.ts"
   },
   "scripts": {
-    "ubhn": "./src/bin/index.ts"
+    "ubhn": "./src/bin/index.ts",
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
     "@commander-js/extra-typings": "^12.0.0",
@@ -33,4 +34,3 @@
     "extends": "../../package.json"
   }
 }
-

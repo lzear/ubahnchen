@@ -1,6 +1,9 @@
 {
   "name": "@ubahnchen/tsconfig",
   "version": "0.0.0",
+  "scripts": {
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
+  },
   "devDependencies": {
     "@ubahnchen/eslint-config": "*"
   },

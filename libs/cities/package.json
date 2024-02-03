@@ -13,9 +13,7 @@
   },
   "scripts": {
     "codegen": "./src/bin/codegen.ts",
-    "to-sqlite": "./src/bin/to-sqlite.ts",
-    "minify": "./src/bin/minify.ts",
-    "filter-sqlite": "./src/bin/filter-sqlite.ts"
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
     "@types/lodash": "^4.14.202",
