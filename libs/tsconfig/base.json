@@ -4,7 +4,7 @@
   "ts-node": {
     "experimentalSpecifierResolution": "node",
     "transpileOnly": true,
-    "esm": true,
+    "esm": true
   },
   "compilerOptions": {
     "composite": true,

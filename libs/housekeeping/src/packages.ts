@@ -1,10 +1,10 @@
 import * as fs from 'node:fs'
 import path from 'node:path'
 
-import { projectRoot } from '@ubahnchen/paths'
+import { P } from '@ubahnchen/cities/node'
 
 const listContent = (directoryPath: string) =>
-  fs.readdirSync(path.join(projectRoot, directoryPath), {
+  fs.readdirSync(path.join(P.PROJECT_ROOT, directoryPath), {
     withFileTypes: true,
   })
 

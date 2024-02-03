@@ -5,11 +5,13 @@
   "exports": "./src/index.ts",
   "main": "src/index.ts",
   "scripts": {
-    "generate": "drizzle-kit generate:sqlite && drizzle-kit generate:sqlite"
+    "generate": "drizzle-kit generate:sqlite && drizzle-kit generate:sqlite",
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
     "@types/better-sqlite3": "^7.6.9",
     "@types/node-fetch": "^2.6.11",
+    "@ubahnchen/cities": "*",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
     "better-sqlite3": "^9.4.0",

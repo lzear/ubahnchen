@@ -1,4 +1,4 @@
-import { describe, expect, it } from '@jest/globals'
+import { expect, it } from '@jest/globals'
 
 import { Temporary } from '@ubahnchen/node'
 
