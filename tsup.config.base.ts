@@ -7,7 +7,7 @@ export const defaultConfig = (
   ...config,
   clean: !options.watch,
   target: 'esnext',
-  dts: true,
+  // dts: true,
   minify: !options.watch,
   loader: {
     '.node': 'file',
