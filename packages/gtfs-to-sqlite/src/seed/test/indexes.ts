@@ -1,6 +1,6 @@
 #!/usr/bin/env -S node --prof --no-warnings --loader ts-node/esm
 
-import { paths } from '@ubahnchen/cities/node'
+import { P } from '@ubahnchen/cities/node'
 import { getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
@@ -10,19 +10,19 @@ import { makeIndexes } from '../11-make-indexes'
 
 const city = 'berlin'
 
-const p = paths(city)
+const p = P(city)
 
-const databasePath = p.SQLITE_BIG
-const gtfsDirectory = p.GTFS_CSV_DIR
-const database = getDatabase(p.SQLITE_BIG)
+const databasePath = p.SQLITE.BIG
+const gtfsDirectory = p.GTFS.CSV.DIR
+const database = getDatabase(p.SQLITE.BIG)
 
-export const dropIndexes = async (database: DefaultOptions['database']) => {
+export const dropIndexes = (database: DefaultOptions['database']) => {
   database.exec(`DROP INDEX IF EXISTS idx_trip_id;`)
   database.exec(`DROP INDEX IF EXISTS idx_arrival_time;`)
   database.exec(`DROP INDEX IF EXISTS idx_departure_time;`)
 }
 
-await dropIndexes(database.database)
+dropIndexes(database.database)
 
 await makeIndexes({
   ...database,

@@ -6,15 +6,15 @@ import { truthy } from '@ubahnchen/utils'
 
 import type { City, GTFS } from '../index'
 import { getMap } from '../map'
-import { paths } from '../paths'
+import { P } from '../paths'
 
 import type { Stop, StopPair } from './types'
 
 export const getDatabaseForCity = (city: City) =>
-  getDatabase(paths(city).SQLITE_BIG)
+  getDatabase(P(city).SQLITE.BIG)
 
 export const getSmallDatabaseForCity = (city: City) =>
-  getDatabase(paths(city).SQLITE_SMALL)
+  getDatabase(P(city).SQLITE.SMALL)
 
 const { stopPairs, routes } = drizzleTables
 

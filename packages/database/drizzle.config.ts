@@ -1,6 +1,6 @@
 import type { Config } from 'drizzle-kit'
 
-import { paths } from '@ubahnchen/cities/node'
+import { P } from '@ubahnchen/cities/node'
 
 export const small = {
   out: './migrations-folder',
@@ -8,7 +8,7 @@ export const small = {
   breakpoints: true,
   driver: 'better-sqlite',
   dbCredentials: {
-    url: paths('berlin').SQLITE_SMALL,
+    url: P('berlin').SQLITE.SMALL,
   },
 } satisfies Config
 
@@ -18,7 +18,7 @@ export const big = {
   breakpoints: true,
   driver: 'better-sqlite',
   dbCredentials: {
-    url: paths('berlin').SQLITE_BIG,
+    url: P('berlin').SQLITE.BIG,
   },
 } satisfies Config
 

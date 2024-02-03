@@ -1,7 +1,7 @@
 import extract from 'extract-zip'
 
 import type { City } from '@ubahnchen/cities'
-import { gtfsConfig, paths } from '@ubahnchen/cities/node'
+import { gtfsConfig, P } from '@ubahnchen/cities/node'
 import { downloadOnceOra } from '@ubahnchen/node'
 
 import { gtfsToSqlite } from './gtfs-to-sqlite'
@@ -14,10 +14,10 @@ type Options = {
 const useDrizzle = false
 
 export const downloadCity = async ({ force, city }: Options) => {
-  const p = paths(city)
+  const p = P(city)
   const config = await gtfsConfig(city)
-  await downloadOnceOra(city, config.gtfs.url, p.GTFS_ZIP, force, () =>
-    extract(p.GTFS_ZIP, { dir: p.GTFS_CSV_DIR }),
+  await downloadOnceOra(city, config.gtfs.url, p.GTFS.ZIP, force, () =>
+    extract(p.GTFS.ZIP, { dir: p.GTFS.CSV.DIR }),
   )
 }
 

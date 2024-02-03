@@ -1,6 +1,6 @@
 #!/usr/bin/env -S node --prof --no-warnings --loader ts-node/esm
 
-import { paths } from '@ubahnchen/cities/node'
+import { P } from '@ubahnchen/cities/node'
 import { drizzleTables, getDatabase } from '@ubahnchen/database'
 import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
 
@@ -9,11 +9,11 @@ import { seedStopTimes } from '../08-seed-stop-times/08-01-seed-stop-times'
 
 const city = 'berlin'
 
-const p = paths(city)
+const p = P(city)
 
-const databasePath = p.SQLITE_BIG
-const gtfsDirectory = p.GTFS_CSV_DIR
-const database = getDatabase(p.SQLITE_BIG)
+const databasePath = p.SQLITE.BIG
+const gtfsDirectory = p.GTFS.CSV.DIR
+const database = getDatabase(p.SQLITE.BIG)
 
 const { stopTimes } = drizzleTables
 

@@ -14,18 +14,18 @@ import { MapQueries } from './maps/map-queries'
 import type { City } from './index'
 import { cities } from './index'
 import { MapAssetName, MapAssets } from './maps-assets'
-import { paths, svgArray, svgFilesDone, svgs } from './paths'
+import { P, svgArray, svgFilesDone, svgs } from './paths'
 
 export const isZipUpToDate = async (city: City) => {
   const { gtfs } = cities[city]
-  const p = paths(city)
-  return await isAlreadyUpToDate(gtfs.url, p.GTFS_ZIP)
+  const p = P(city)
+  return await isAlreadyUpToDate(gtfs.url, p.GTFS.ZIP)
 }
 
 export const zipStats = async (city: City) => {
   const [[isUpToDate, headers], sizes] = await Promise.all([
     isZipUpToDate(city),
-    fileSize(paths(city).GTFS_ZIP),
+    fileSize(P(city).GTFS.ZIP),
   ])
   return {
     isUpToDate,
@@ -37,11 +37,11 @@ export const zipStats = async (city: City) => {
 }
 
 const csvStats = async (city: City) => {
-  const p = paths(city)
-  const csvFiles = await fs.promises.readdir(p.GTFS_CSV_DIR)
+  const p = P(city)
+  const csvFiles = await fs.promises.readdir(p.GTFS.CSV.DIR)
   const files = await Promise.all(
     csvFiles.map(async (file) => {
-      const fpath = path.join(p.GTFS_CSV_DIR, file)
+      const fpath = path.join(p.GTFS.CSV.DIR, file)
       const { size, prettySize } = await fileSize(fpath)
       const lines = countLines(fpath)
       return { file, size, prettySize, lines } as const
@@ -54,10 +54,10 @@ const csvStats = async (city: City) => {
 }
 
 const cityDbStats = async (city: City) => {
-  const p = paths(city)
+  const p = P(city)
   const [big, small] = await Promise.all([
-    dbStats(p.SQLITE_BIG),
-    dbStats(p.SQLITE_SMALL),
+    dbStats(p.SQLITE.BIG),
+    dbStats(p.SQLITE.SMALL),
   ])
   return { big, small }
 }
