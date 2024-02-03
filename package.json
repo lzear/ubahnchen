@@ -53,7 +53,7 @@
   "type": "module",
   "workspaces": {
     "packages": [
-      "apps/*",
+      "_apps/*",
       "libs/*",
       "packages/*",
       "tests/*"

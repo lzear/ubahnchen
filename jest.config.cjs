@@ -1,6 +1,7 @@
 /** @type {import('jest').Config} */
 
 module.exports = {
+  modulePathIgnorePatterns: ['apps'],
   verbose: true,
   testMatch: ['<rootDir>/**/*.test.ts'],
   collectCoverageFrom: ['<rootDir>/**/src/**/*.{js,jsx,ts,tsx}'],
