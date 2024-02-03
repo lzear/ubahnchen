@@ -18,7 +18,7 @@
     "filter-sqlite": "./src/bin/filter-sqlite.ts"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.201",
+    "@types/lodash": "^4.14.202",
     "@ubahnchen/database": "*",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
@@ -32,8 +32,8 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/eslint": "^8.44.7",
-    "eslint": "^8.53.0"
+    "@types/eslint": "^8.56.2",
+    "eslint": "^8.56.0"
   },
   "volta": {
     "extends": "../../package.json"
