@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@ubahnchen/utils": "*",
-    "ora": "^7.0.1",
+    "ora": "^8.0.1",
     "pretty-bytes": "^6.1.1",
     "tmp": "^0.2.1"
   },

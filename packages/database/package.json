@@ -8,25 +8,25 @@
     "generate": "drizzle-kit generate:sqlite && drizzle-kit generate:sqlite"
   },
   "dependencies": {
-    "@types/better-sqlite3": "^7.6.7",
-    "@types/node-fetch": "^2.6.9",
+    "@types/better-sqlite3": "^7.6.9",
+    "@types/node-fetch": "^2.6.11",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
-    "better-sqlite3": "^9.0.0",
-    "csv-parse": "^5.5.2",
-    "drizzle-orm": "^0.28.6",
+    "better-sqlite3": "^9.4.0",
+    "csv-parse": "^5.5.3",
+    "drizzle-orm": "^0.29.3",
     "extract-zip": "^2.0.1",
-    "fast-csv": "^4.3.6",
+    "fast-csv": "^5.0.0",
     "gtfs-types": "^3.0.0",
     "node-fetch": "^3.3.2",
-    "ora": "^7.0.1",
-    "ts-node": "^10.9.1"
+    "ora": "^8.0.1",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@ubahnchen/eslint-config": "*",
-    "drizzle-kit": "^0.19.13",
-    "tsup": "^7.2.0"
+    "drizzle-kit": "^0.20.14",
+    "tsup": "^8.0.1"
   },
   "volta": {
     "extends": "../../package.json"

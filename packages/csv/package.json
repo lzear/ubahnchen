@@ -10,20 +10,20 @@
     "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
   },
   "dependencies": {
-    "@fast-csv/format": "^4.3.5",
+    "@fast-csv/format": "^5.0.0",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
-    "fast-csv": "^4.3.6",
-    "humanize-duration": "^3.30.0",
-    "ora": "^7.0.1",
+    "fast-csv": "^5.0.0",
+    "humanize-duration": "^3.31.0",
+    "ora": "^8.0.1",
     "papaparse": "^5.4.1"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
-    "@types/humanize-duration": "^3.27.3",
-    "@types/papaparse": "^5.3.11",
+    "@types/humanize-duration": "^3.27.4",
+    "@types/papaparse": "^5.3.14",
     "@ubahnchen/eslint-config": "*",
-    "tsup": "^7.2.0"
+    "tsup": "^8.0.1"
   },
   "volta": {
     "extends": "../../package.json"
