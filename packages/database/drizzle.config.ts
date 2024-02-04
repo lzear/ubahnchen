@@ -1,14 +1,15 @@
 import type { Config } from 'drizzle-kit'
 
-import { P } from '@ubahnchen/cities/node'
-
 export const small = {
   out: './migrations-folder',
   schema: './src/small',
   breakpoints: true,
   driver: 'better-sqlite',
   dbCredentials: {
-    url: P('berlin').SQLITE.SMALL,
+    // @TODO: Fix this avoiding
+    // Invalid package dependency graph: cyclic dependency detected:
+    //         @ubahnchen/database, @ubahnchen/cities
+    url: 'FIXME',
   },
 } satisfies Config
 
@@ -18,7 +19,10 @@ export const big = {
   breakpoints: true,
   driver: 'better-sqlite',
   dbCredentials: {
-    url: P('berlin').SQLITE.BIG,
+    // @TODO: Fix this avoiding
+    // Invalid package dependency graph: cyclic dependency detected:
+    //         @ubahnchen/database, @ubahnchen/cities
+    url: 'FIXME',
   },
 } satisfies Config
 
