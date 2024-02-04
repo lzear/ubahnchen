@@ -1,25 +1,22 @@
 'use server'
 
-import type { City } from '@ubahnchen/cities'
+import { revalidatePath } from 'next/cache'
 
-import { ActionCityMapIO } from '../../../app/_server/actions'
-
-export type StopsPositions = {
-  [stopId: string]: {
-    stop_name: string
-    stop_id: string
-    point: [number, number]
-  }
-}
-
-const actionIO = (city: City, map: string) =>
-  new ActionCityMapIO<StopsPositions>(city, map, 'place-stops')
+import type { City, StopsPositions } from '@ubahnchen/cities'
+import { mapAsset, MapAssetName } from '@ubahnchen/cities/node'
 
 export const getStopPositions = async (city: City, map: string) =>
-  actionIO(city, map).read({})
+  mapAsset(city, map, MapAssetName.PLACE_STOPS).read({})
 
-export const recordStopPosition = (params: {
+export const recordStopPosition = async (params: {
   city: City
   map: string
   stops: StopsPositions
-}) => actionIO(params.city, params.map).write(params.stops)
+}) => {
+  await mapAsset(params.city, params.map, MapAssetName.PLACE_STOPS).write(
+    params.stops,
+  )
+  revalidatePath(
+    `/dev/${params.city}/${params.map}/${MapAssetName.PLACE_STOPS}`,
+  )
+}

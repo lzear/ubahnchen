@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import Link from 'next/link'
 
-import type { Stop, StopPair } from '../../../../_server/gtfs/types'
+import type { Stop, StopPair } from '@ubahnchen/cities'
 
 export const StopPairsList = ({
   stopPairs,

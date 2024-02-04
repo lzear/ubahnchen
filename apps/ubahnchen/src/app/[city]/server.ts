@@ -1,14 +1,11 @@
 import _ from 'lodash'
 
-import type { City } from '@ubahnchen/cities'
+import type { City, Route, Shape, Stop, StopPair } from '@ubahnchen/cities'
 
 import 'server-only'
 
 import { getRouteShapes } from '../../components/server/get-route-shapes'
-import { getRoutes } from '../_server/gtfs/get-routes'
-import { getStopPairs } from '../_server/gtfs/get-stop-pairs'
-import { getStops } from '../_server/gtfs/get-stops'
-import type { Route, Shape, Stop, StopPair } from '../_server/gtfs/types'
+import { getRoutes, getStopPairs, getStops } from '../_server/gtfs/queries'
 
 import type { parseUrlParameters } from './search-parameters'
 
@@ -35,7 +32,7 @@ export const server = async (
   const selectedRouteTypes =
     parameters.RouteType ?? [allRouteTypes[0]].filter(Boolean)
 
-  const stops = await getStops({ city, onlyParents: false })
+  const stops = getStops(city, false)
   const stopPairsGroups = await Promise.all(
     selectedRouteTypes.map((routeType) => getStopPairs(city, [routeType])),
   )

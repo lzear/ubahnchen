@@ -1,11 +1,7 @@
 'use server'
 
 import type { City } from '@ubahnchen/cities'
-
-import { ActionCityMapIO } from '../../../../_server/actions'
-
-const actionIO = (city: City, map: string) =>
-  new ActionCityMapIO<string[]>(city, map, 'split-shapes')
+import { mapAsset, MapAssetName } from '@ubahnchen/cities/node'
 
 export const saveShapes = async ({
   city,
@@ -15,11 +11,7 @@ export const saveShapes = async ({
   city: City
   map: string
   shapeIds: string[]
-}) => {
-  await actionIO(city, map).write(shapeIds)
-}
+}) => mapAsset(city, map, MapAssetName.SPLIT_SHAPES).write(shapeIds)
 
-export const getShapes = async (a: { city: City; map: string }) => {
-  const { city, map } = a
-  return actionIO(city, map).read([])
-}
+export const getShapes = async (a: { city: City; map: string }) =>
+  mapAsset(a.city, a.map, MapAssetName.SPLIT_SHAPES).read([])

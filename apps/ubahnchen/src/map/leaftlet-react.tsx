@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 import { Circle, Polyline, useMap, useMapEvents } from 'react-leaflet'
 import dynamic from 'next/dynamic'
 
-import type { Shape } from '../app/_server/gtfs/types'
+import type { Shape } from '@ubahnchen/cities'
+
 import type { Edge, Node } from '../app/[city]/save.action'
 import { save } from '../app/[city]/save.action'
 import { TileLayer } from '../lll'

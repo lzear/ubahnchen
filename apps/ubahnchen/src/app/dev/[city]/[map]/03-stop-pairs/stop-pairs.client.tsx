@@ -3,11 +3,9 @@
 import { useEffect, useMemo, useState, useTransition } from 'react'
 import _ from 'lodash'
 
-import { truthy } from '@ubahnchen/utils'
+import type { StopPair, StopsPositions } from '@ubahnchen/cities'
 
-import type { StopsPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
 import { Pinch } from '../../../../_components/pinch'
-import type { StopPair } from '../../../../_server/gtfs/types'
 import { svgs } from '../../../svgs'
 import type { CityMapParam } from '../params'
 
@@ -69,7 +67,7 @@ export const StopPairsClient = ({
   cityMap: CityMapParam
   routeName?: string
 }) => {
-  console.log('🦺 antoinelog stopPairs', stopPairs);
+  console.log('🦺 antoinelog stopPairs', stopPairs)
 
   // return <div>sfd</div>
   const { city, map } = cityMap
@@ -89,7 +87,7 @@ export const StopPairsClient = ({
   }, [])
 
   const paths = [...svgElement?.querySelectorAll('path')]
-  console.log('🦺 antoinelog paths', paths);
+  console.log('🦺 antoinelog paths', paths)
 
   const vertices = []
   // const vertices = useMemo(() => {

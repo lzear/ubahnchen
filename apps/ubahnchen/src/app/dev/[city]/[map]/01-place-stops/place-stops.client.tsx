@@ -2,15 +2,13 @@
 
 import React, { useState } from 'react'
 
-import type { City } from '@ubahnchen/cities'
+import type { City, Stop, StopPair, StopsPositions } from '@ubahnchen/cities'
 
-import type { StopsPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
 import { SvgSource } from '../../../../../components/client/place-stops/svg-source'
 import { SvgTarget } from '../../../../../components/client/place-stops/svg-target'
 import type { Size } from '../../../../../components/client/place-stops/types'
 import type { Point } from '../../../../_components/geometry/utils'
 import { Pinch } from '../../../../_components/pinch'
-import type { Stop, StopPair } from '../../../../_server/gtfs/types'
 
 type Props = {
   city: City

@@ -1,7 +1,7 @@
 import { cities } from '@ubahnchen/cities'
 
 import { getStopPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
-import { getUsedStops } from '../../../../_server/gtfs/get-used-stops'
+import { getUsedStops } from '../../../../_server/gtfs/queries'
 import type { CityMapParam } from '../params'
 
 import { StopPairsClient } from './stop-pairs.client'
@@ -15,12 +15,7 @@ const StopPairsComponent = async (props: {
   const routeName = props.searchParams['route-name']
   if (!map || !city) throw new Error('Need city and map!')
   const cityConfig = cities[city]
-  const mapConfig = cityConfig.maps[map]
-  const { stopPairs, stops } = await getUsedStops({
-    city,
-    onlyParents: true,
-    mapConfig,
-  })
+  const { stopPairs, stops } = getUsedStops(city, map, true)
   const stopPositions = await getStopPositions(city, map)
   return (
     <div>

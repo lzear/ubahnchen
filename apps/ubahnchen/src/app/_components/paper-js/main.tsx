@@ -5,7 +5,6 @@ import * as Paper from 'paper'
 import paper from 'paper'
 
 import type { CityMapParam } from '../../dev/[city]/[map]/params'
-import { trpc } from '../trpc'
 
 import { useGestures } from './gestures'
 
@@ -22,23 +21,6 @@ export const importSvg = (
       onLoad: (svgItem: paper.Item) => resolve(svgItem),
     }),
   )
-
-function IndexPage() {
-  const hello = trpc.hello.useQuery({ text: 'client' })
-  console.log('🦺 antoinelog hello', hello);
-
-  if (!hello.data) {
-    return <div>Loading...</div>
-  }
-  return (
-    <div>
-      <p>{hello.data.greeting}</p>
-    </div>
-  )
-}
-
-const Wr = trpc.withTRPC(IndexPage)
-
 
 const PaperJsMain = (props: CityMapParam) => {
   const canvasReference = useRef<HTMLCanvasElement>(null)
@@ -61,7 +43,6 @@ const PaperJsMain = (props: CityMapParam) => {
     <div>
       <div>paperjs</div>
 
-      <Wr />
       <canvas
         className="absolute top-0 h-screen touch-none"
         // key={hidpi ? 'on' : 'off'}

@@ -1,11 +1,9 @@
 import _ from 'lodash'
 
-import type { City } from '@ubahnchen/cities'
-import { cities } from '@ubahnchen/cities'
+import type { City, StopPair } from '@ubahnchen/cities'
 
 import { SelectUrlParam } from '../../../app/_components/url-params/select'
-import { getUsedStops } from '../../../app/_server/gtfs/get-used-stops'
-import type { StopPair } from '../../../app/_server/gtfs/types'
+import { getUsedStops } from '../../../app/_server/gtfs/queries'
 import { getStopPositions } from '../place-stops/save-points-positions.action'
 
 import { PlacePathsClient } from './place-paths.client'
@@ -21,14 +19,7 @@ const getPairKey = (sp: StopPair) =>
   ].join('-')
 
 export const PlacePathsServer = async ({ city, map, routeName }: Props) => {
-  const cityConfig = cities[city]
-  const mapConfig = cityConfig.maps[map]
-
-  const { stopPairs } = await getUsedStops({
-    city,
-    onlyParents: true,
-    mapConfig,
-  })
+  const { stopPairs } = getUsedStops(city, map, true)
   const routeNames = _.uniq(
     stopPairs.map((pair) => pair.routes.route_name),
   ).sort((a, b) => a.localeCompare(b))

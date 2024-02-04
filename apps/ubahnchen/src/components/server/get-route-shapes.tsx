@@ -1,10 +1,9 @@
 import { eq } from 'drizzle-orm'
 
+import type { Shape } from '@ubahnchen/cities'
 import { drizzleTables } from '@ubahnchen/database'
 
 import 'server-only'
-
-import type { Shape } from '../../app/_server/gtfs/types'
 
 import { getDatabaseForCity } from './get-database-for-city'
 import { lru } from './singletons'

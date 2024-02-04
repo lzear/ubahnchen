@@ -5,7 +5,7 @@ import type { FullGestureState } from '@use-gesture/react'
 import { useDrag } from '@use-gesture/react'
 import _ from 'lodash'
 
-import type { City } from '@ubahnchen/cities'
+import type { City, Stop, StopPair, StopsPositions } from '@ubahnchen/cities'
 
 import { affineWithDelaunay } from '../../../app/_components/geometry/translate-points/01-affine-with-delaunay'
 import { gravityTranslate } from '../../../app/_components/geometry/translate-points/02-gravity'
@@ -13,12 +13,10 @@ import type { Point, Vector } from '../../../app/_components/geometry/utils'
 import { distance } from '../../../app/_components/geometry/utils'
 import { Loading } from '../../../app/_components/loading'
 import { pinchScaleRef } from '../../../app/_components/pinch'
-import type { Stop, StopPair } from '../../../app/_server/gtfs/types'
 import { findClosestIdx } from '../../../app/dev/[city]/[map]/01-place-stops/place-stops.client'
 import { UrlParamType, useUrlParams } from '../../url-params/url-params'
 import { translate1 } from '../springs/translate'
 
-import type { StopsPositions } from './save-points-positions.action'
 import { recordStopPosition } from './save-points-positions.action'
 import type { Size } from './types'
 
