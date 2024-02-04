@@ -10,14 +10,11 @@ export const generateStaticParams = () =>
   }))
 
 const Page = ({ params }: { params: CityMapParam }) => {
-  console.log('🦺 antoinelog params', params)
   const { city } = params
 
   if (!isCity(city)) throw new Error('Need city and map!')
 
   return redirect(`/${city}/u`)
-
-
 }
 
 export default Page

@@ -1,4 +1,4 @@
-import type { Stop, StopPair } from '../_server/gtfs/types'
+import type { Stop, StopPair } from '@ubahnchen/cities'
 
 type Props = {
   unassignedStopPairs?: StopPair[]
@@ -34,8 +34,8 @@ export const UnassignedStopPairsTable = (props: Props) => {
               <td>{index}</td>
               <td>{pair.stop_pairs.idx}</td>
               <th>{pair.routes.route_name}</th>
-              <td>{stopById[pair.stop_pairs.stop_id_1].stop_name}</td>
-              <td>{stopById[pair.stop_pairs.stop_id_2].stop_name}</td>
+              <td>{stopById[pair.stop_pairs.stop_id_1]?.stop_name}</td>
+              <td>{stopById[pair.stop_pairs.stop_id_2]?.stop_name}</td>
               <td>{pair.stop_pairs.count}</td>
             </tr>
           ))}

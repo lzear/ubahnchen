@@ -17,7 +17,8 @@ const SplitShapesClient = (props: {
   const [isRendered, setIsRendered] = useState(false)
   const { city, map } = props.cityMap
 
-  const ImportedSvg = svgs[city][map].splitShapes
+  const ImportedSvg = svgs[city]?.[map]?.splitShapes
+  if (!ImportedSvg) throw new Error(`No svg for ${city} ${map}`)
   const [shapeIds, setShapeIds] = useState(props.shapeIds)
   const svgContainerRef = useRef<HTMLDivElement | null>(null)
   const [isPending, startTransition] = useTransition()
@@ -92,7 +93,10 @@ const SplitShapesClient = (props: {
             width={svgSource?.getAttribute('width') || undefined}
             viewBox={svgSource?.getAttribute('viewBox') || undefined}
           >
-            <g dangerouslySetInnerHTML={{ __html: shapes.join('') }} />
+            <g
+              dangerouslySetInnerHTML={{ __html: shapes.join('') }}
+              fill="transparent"
+            />
             {/*{shapes}*/}
           </svg>
         )}

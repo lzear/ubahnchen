@@ -12,7 +12,7 @@ export type Vertex = {
 }
 
 const actionIO = (city: City, map: string) =>
-  new ActionCityMapIO<Vertex[]>(city, map, 'vertices')
+  new ActionCityMapIO<'vertices', Vertex[]>(city, map, 'vertices')
 
 export const saveVertices = async ({
   city,

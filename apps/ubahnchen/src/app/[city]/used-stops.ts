@@ -1,4 +1,4 @@
-import type { Stop, StopPair } from '../_server/gtfs/types'
+import type { Stop, StopPair } from '@ubahnchen/cities'
 
 export const usedStopIds = ({
   stopPairs,
