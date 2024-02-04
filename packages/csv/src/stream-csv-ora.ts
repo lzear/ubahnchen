@@ -29,7 +29,7 @@ export const defaultTextPerf = ({ perf, ora }: OraTxt) =>
     .join('  ∙  ')
 
 export const successText = ({ perf, ora }: OraTxt) =>
-  [ora?.successText || ora?.text, ...(perf ? perf.displayFinal() : [])]
+  [ora?.successText ?? ora?.text, ...(perf ? perf.displayFinal() : [])]
     .filter(Boolean)
     .join('  ∙  ')
 

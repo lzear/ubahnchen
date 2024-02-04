@@ -1,12 +1,11 @@
 const eslintConfig = {
-  plugins: ['jsonc', 'simple-import-sort'],
+  plugins: ['jsonc', 'simple-import-sort', '@typescript-eslint'],
 
-  // parser: "@babel/eslint-parser",
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/stylistic-type-checked',
+
     'next/core-web-vitals',
     'plugin:import/recommended',
     'plugin:import/typescript',
@@ -23,7 +22,12 @@ const eslintConfig = {
     '@next/next/no-html-link-for-pages': 0,
     'no-html-link-for-pages': 0,
     '@typescript-eslint/ban-ts-comment': 0,
+    '@typescript-eslint/consistent-type-definitions': 0, // idc about type vs interface
     '@typescript-eslint/consistent-type-imports': 2,
+    '@typescript-eslint/prefer-nullish-coalescing': [
+      2,
+      { ignoreMixedLogicalExpressions: true },
+    ],
     '@typescript-eslint/no-floating-promises': 2,
     '@typescript-eslint/no-unused-vars': [
       2,
@@ -143,6 +147,7 @@ const eslintConfig = {
   //   // Required for certain syntax usages
   //   ecmaVersion: 2020,
   // },
+
   parser: '@typescript-eslint/parser',
   parserOptions: {
     // tsconfigRootDir: __dirname,
@@ -150,6 +155,7 @@ const eslintConfig = {
       './tsconfig.json',
       './*/*/tsconfig.json',
       './packages/*/tsconfig.json',
+      './libs/*/tsconfig.json',
     ],
     extraFileExtensions: ['.json', '.md'],
   },

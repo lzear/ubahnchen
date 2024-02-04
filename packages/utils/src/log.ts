@@ -1,10 +1,6 @@
 import stripAnsi from 'strip-ansi'
 
-function padStart(
-  inputString: string,
-  targetLength: number,
-  padString: string = ' ',
-) {
+function padStart(inputString: string, targetLength: number, padString = ' ') {
   const stripped = stripAnsi(inputString)
   return stripped.length >= targetLength
     ? inputString
@@ -33,7 +29,7 @@ export const log2DArray = (
 
   return data.map((row) =>
     row
-      .map((cell, i) => padStart(String(cell), columnWidths[i] || 1))
+      .map((cell, i) => padStart(String(cell), columnWidths[i] ?? 1))
       .join(separator),
   )
 }

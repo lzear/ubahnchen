@@ -28,7 +28,7 @@ const newString = await Promise.all(
       )
       return currentReadme.toString()
     } catch (error) {
-      if ((error as { code?: string })['code'] === 'ENOENT') return
+      if ((error as { code?: string }).code === 'ENOENT') return
       throw error
     }
   }),

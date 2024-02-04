@@ -14,7 +14,7 @@ export type GtfsIteratorOptions = {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type FixIndexSignature<T> = { [k: string]: any } & T
+export type FixIndexSignature<T> = Record<string, any> & T
 
 export type GtfsKeys = keyof GtfsTypes
 
@@ -37,7 +37,7 @@ export class GtfsIterator {
       streamCsvPerfOra<FixIndexSignature<GtfsCsvTypes[K]>>(
         {
           filePath: this.filePath(type),
-          parserOptions: parserOptions || { headers: true },
+          parserOptions: parserOptions ?? { headers: true },
           ora: { text: type.padEnd(14) },
         },
         onData,

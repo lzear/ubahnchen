@@ -1,4 +1,4 @@
-export const schemaMinify: string =
+export const schemaMinify =
   //language=SQL
   `
 PRAGMA foreign_keys=0;
