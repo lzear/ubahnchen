@@ -42,11 +42,11 @@ export class PerfSimple {
   }
 
   getTimeDelta() {
-    const previous = this.lastMark || this.start
+    const previous = this.lastMark ?? this.start
     const now = performance.now()
     const delta = previous && now - previous
     this.lastMark = now
-    return delta || -1
+    return delta ?? -1
   }
 
   log(message: string) {
@@ -90,7 +90,7 @@ export class Perf extends PerfSimple {
     go?: boolean
   }) {
     super()
-    this.sampleDurationMs = argument?.sampleDurationMs || 1000
+    this.sampleDurationMs = argument?.sampleDurationMs ?? 1000
     this.totalCount = argument?.totalCount
     if (argument?.go) this.go()
   }
@@ -101,7 +101,7 @@ export class Perf extends PerfSimple {
 
     const bucketKey = Math.floor(now - this.start / this.sampleDurationMs)
 
-    const v = this.buckets.get(bucketKey) || 0
+    const v = this.buckets.get(bucketKey) ?? 0
     this.buckets.set(bucketKey, v + count)
     this.count = this.count + count
   }

@@ -57,7 +57,7 @@ export const filterStops = ({ source, target }: SourceTarget) => {
     .sort((a) => (a.parent_station ? 1 : -1))
     .map((s) => ({
       ...s,
-      parent_station: s.parent_station || undefined,
+      parent_station: s.parent_station ?? undefined,
     }))
 
   const chunks = _.chunk(all, 10)

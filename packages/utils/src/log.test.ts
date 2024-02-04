@@ -19,7 +19,7 @@ describe(logStrings, () => {
 
   beforeEach(() => {
     consoleLogSpy = jest.spyOn(console, 'log')
-    consoleLogSpy.mockImplementation(() => {})
+    consoleLogSpy.mockImplementation(() => null)
   })
 
   afterEach(() => {

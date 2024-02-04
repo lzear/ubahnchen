@@ -15,9 +15,10 @@ type Headers = {
 
 const getHeaders = async (url: string): Promise<Headers> => {
   const { headers } = await fetch(url, { method: 'HEAD' })
+  if (!headers) throw new Error('no headers')
   return {
-    etag: headers.get('etag') as string,
-    'last-modified': headers.get('last-modified') as string,
+    etag: headers.get('etag')!,
+    'last-modified': headers.get('last-modified')!,
     'content-length': Number(headers.get('content-length')),
   }
 }

@@ -5,7 +5,7 @@ import type { ParserOptionsArgs } from 'fast-csv'
 import * as csv from 'fast-csv'
 import Papa from 'papaparse'
 
-export type Row = { [key: string]: string | number | undefined | null }
+export type Row = Record<string, string | number | undefined | null>
 
 export type DataCsv<T> = { row: T; index: number; stream: ReadStream }
 
