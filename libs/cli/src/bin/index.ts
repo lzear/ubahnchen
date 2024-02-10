@@ -7,6 +7,7 @@ import { cityStats, logCityStats } from '@ubahnchen/cities/node'
 import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
 import { annotate } from '../annotate'
+import { copyPublicAssets } from '../copy-assets'
 
 const pckg = await import('../../package.json', { assert: { type: 'json' } })
 
@@ -68,5 +69,11 @@ program
   .description("add 'ubhn' data attributes to the SVGs")
   .option('-c, --city <city>', 'City name')
   .action(({ city }) => annotate(getCities(city)))
+
+program
+  .command('public-assets')
+  .description('copy the public assets (SVGs) to app/ubahnchen/public')
+  .option('-c, --city <city>', 'City name')
+  .action(({ city }) => copyPublicAssets(getCities(city)))
 
 program.parse()
