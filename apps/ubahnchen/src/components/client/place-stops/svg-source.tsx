@@ -6,7 +6,7 @@ import type { City, Stop } from '@ubahnchen/cities'
 import type { Point } from '../../../app/_components/geometry/utils'
 import { getCenter } from '../../../app/[city]/svg-center'
 import { findClosestIdx } from '../../../app/dev/[city]/[map]/01-place-stops/place-stops.client'
-import { svgs } from '../../../app/dev/svgs'
+import { useLoadSvg } from '../../../app/dev/svg/load'
 
 type Props = {
   city: City
@@ -19,9 +19,7 @@ type Props = {
 export const SvgSource = ({ city, map, setSize, setCandidates }: Props) => {
   const svgContainerRef = useRef<HTMLDivElement | null>(null)
 
-  const ImportedSvg = svgs[city]?.[map]?.placePoints
-
-  if (!ImportedSvg) throw new Error('No SVG found')
+  const d = useLoadSvg(`/${city}/${map}/svg/10-annoted.svg`, svgContainerRef)
 
   useEffect(() => {
     const svg = svgContainerRef.current?.getElementsByTagName('svg')[0]
@@ -38,11 +36,14 @@ export const SvgSource = ({ city, map, setSize, setCandidates }: Props) => {
         findCandidates(svg).map((p) => [p[0] - svgBount.x, p[1] - svgBount.y]),
       )
     }
-  }, [city, map, setCandidates, setSize])
+  }, [city, map, setCandidates, setSize, d.data])
 
   return (
-    <div ref={svgContainerRef} className="relative">
-      <ImportedSvg />
+    <div>
+      <div ref={svgContainerRef} className="relative">
+        {/*<ImportedSvg />*/}
+        {/*<Image src={src} width={100} height={100} unoptimized  />*/}
+      </div>
     </div>
   )
 }
@@ -55,7 +56,7 @@ const findElementCenters = (svg: SVGSVGElement) => {
   return [...rects, ...circles, ...ellipses, ...p].map((el) => getCenter(el))
 }
 
-const findCandidates = (svg: SVGSVGElement, noNeighbors: boolean = false) => {
+const findCandidates = (svg: SVGSVGElement, noNeighbors = false) => {
   const centers = findElementCenters(svg)
 
   if (!noNeighbors) return centers
