@@ -9,7 +9,8 @@ module.exports = {
     '\\.[jt]sx?$': ['ts-jest', { useESM: true }],
   },
   moduleNameMapper: {
-    '(.+)\\.js': '$1',
+    // '(.+)\\.js': '$1',
+    '^@/(.*)$': '<rootDir>/$1', // for jsdom?
   },
   extensionsToTreatAsEsm: ['.ts'],
 }

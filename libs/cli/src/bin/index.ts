@@ -6,6 +6,8 @@ import { citiesList, isCity } from '@ubahnchen/cities'
 import { cityStats, logCityStats } from '@ubahnchen/cities/node'
 import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
+import { annotate } from '../annotate'
+
 const pckg = await import('../../package.json', { assert: { type: 'json' } })
 
 const program = new Command()
@@ -60,5 +62,11 @@ program
     }
     console.log()
   })
+
+program
+  .command('annotate-svg')
+  .description("add 'ubhn' data attributes to the SVGs")
+  .option('-c, --city <city>', 'City name')
+  .action(({ city }) => annotate(getCities(city)))
 
 program.parse()
