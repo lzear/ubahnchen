@@ -2,6 +2,8 @@ import fs from 'node:fs'
 import * as path from 'node:path'
 import * as url from 'node:url'
 
+import _ from 'lodash'
+
 import type { City } from './index'
 
 const buildPaths = {
@@ -20,9 +22,14 @@ const SRC_DATA_DIR = path.join(PROJECT_ROOT, 'libs/cities/src/data')
 
 export const svgs = {
   INITIAL_00: '00-original.svg',
+  FIGMAED_01: '01-figma.svg',
+  SVGOMGD_02: '02-svgomg.svg',
   ANNOTED_10: '10-annoted.svg',
   MINIMAL_20: '20-minimal.svg',
-}
+} as const
+
+export const svgsPublic = _.pick(svgs, ['ANNOTED_10', 'MINIMAL_20'])
+
 const R = {
   PROJECT_ROOT,
   BUILD_DIR: path.join(PROJECT_ROOT, 'build'),
@@ -58,7 +65,7 @@ const mapPaths = <C extends City>(city: C, map: string) => {
   const SRC_SVG = {} as Record<Svgs, string>
   const PUBLIC_SVG_DIR = path.join(CITY_P.PUBLIC.DIR, map, 'svg')
   const PUBLIC_SVG = {} as Record<Svgs, string>
-  for (const key of Object.keys(svgs) as Svgs[]) {
+  for (const key of Object.keys(svgs) as SvgsPublic[]) {
     SRC_SVG[key] = path.join(SRC_SVG_DIR, svgs[key])
     PUBLIC_SVG[key] = path.join(CITY_P.PUBLIC.DIR, map, 'svg', svgs[key])
   }
@@ -95,8 +102,12 @@ export const P: typeof pathsFunction & typeof R = pathsFunction
 Object.assign(P, R)
 
 export const svgArray = Object.keys(svgs) as (keyof typeof svgs)[]
+export const svgPublicArray = Object.keys(
+  svgsPublic,
+) as (keyof typeof svgsPublic)[]
 
 export type Svgs = keyof typeof svgs
+export type SvgsPublic = keyof typeof svgsPublic
 
 export const svgFilesDone = (city: City, map: string) => {
   const files = P(city, map).SRC.SVG
