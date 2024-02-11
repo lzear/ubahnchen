@@ -1,6 +1,6 @@
 import type { DBSingleton } from '@ubahnchen/database'
 import { getDatabase } from '@ubahnchen/database'
-import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
+import { GtfsIterator } from '@ubahnchen/gtfs'
 
 import { inserter } from '../inserts'
 import type { Inserter } from '../inserts/type'

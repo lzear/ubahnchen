@@ -1,4 +1,4 @@
-import { gtfsTimeToSeconds } from '@ubahnchen/gtfs-helpers'
+import { gtfsTimeToSeconds } from '@ubahnchen/gtfs'
 
 import { preparedInsertsBulk } from '../../inserts'
 import type { Pusher } from '../../inserts/type'

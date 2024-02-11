@@ -2,7 +2,7 @@
 
 import { P } from '@ubahnchen/cities/node'
 import { getDatabase } from '@ubahnchen/database'
-import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
+import { GtfsIterator } from '@ubahnchen/gtfs'
 
 import { preparedInsertsBulk } from '../../inserts'
 import type { DefaultOptions } from '../00-seed'

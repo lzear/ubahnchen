@@ -2,7 +2,7 @@
 
 import { P } from '@ubahnchen/cities/node'
 import { drizzleTables, getDatabase } from '@ubahnchen/database'
-import { GtfsIterator } from '@ubahnchen/gtfs-helpers'
+import { GtfsIterator } from '@ubahnchen/gtfs'
 
 import { preparedInsertsBulk } from '../../inserts'
 import { seedStopPairs } from '../10-seed-stop-pairs'
