@@ -10,7 +10,7 @@ export const annotate = (cc: City[]) => {
   for (const c of cc)
     for (const m of Object.keys(cities[c].maps))
       try {
-        annotateSvg(P(c, m).SRC.SVG.INITIAL_00, P(c, m).SRC.SVG.ANNOTED_10)
+        annotateSvg(P(c, m).SRC.SVG.SVGOMGD_02, P(c, m).SRC.SVG.ANNOTED_10)
         array.push(['✅ ', c, m])
       } catch {
         array.push(['❌ ', c, m])
