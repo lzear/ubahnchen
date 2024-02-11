@@ -30,5 +30,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.20.1"
   }
 }

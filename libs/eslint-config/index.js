@@ -1,7 +1,13 @@
 const eslintConfig = {
-  plugins: ['jsonc', 'simple-import-sort', '@typescript-eslint'],
+  plugins: [
+    'jsonc',
+    'simple-import-sort',
+    '@typescript-eslint',
+    '@tanstack/query',
+  ],
 
   extends: [
+    'plugin:@tanstack/eslint-plugin-query/recommended',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
