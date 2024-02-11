@@ -1,11 +1,11 @@
 'use client'
 
 import type { MouseEvent } from 'react'
-import { useMemo, useRef, useState, useTransition } from 'react'
+import { useEffect, useMemo, useRef, useState, useTransition } from 'react'
 import _ from 'lodash'
 
 import { Pinch } from '../../../../_components/pinch'
-import { svgs } from '../../../svgs'
+import { useLoadSvg } from '../../../svg/load'
 import type { CityMapParam } from '../params'
 
 import { saveShapes } from './split-shapes.action'
@@ -17,8 +17,8 @@ const SplitShapesClient = (props: {
   const [isRendered, setIsRendered] = useState(false)
   const { city, map } = props.cityMap
 
-  const ImportedSvg = svgs[city]?.[map]?.splitShapes
-  if (!ImportedSvg) throw new Error(`No svg for ${city} ${map}`)
+  // const ImportedSvg = svgs[city]?.[map]?.splitShapes
+  // if (!ImportedSvg) throw new Error(`No svg for ${city} ${map}`)
   const [shapeIds, setShapeIds] = useState(props.shapeIds)
   const svgContainerRef = useRef<HTMLDivElement | null>(null)
   const [isPending, startTransition] = useTransition()
@@ -52,46 +52,63 @@ const SplitShapesClient = (props: {
   }, [selectedShapes, isRendered])
   const refXY = useRef<null | [number, number]>(null)
 
+  const s = useLoadSvg(`/${city}/${map}/svg/10-annoted.svg`, svgContainerRef)
+
+  useEffect(() => {
+    if (s.data) setIsRendered(true)
+  }, [s])
   return (
     <div>
       <Pinch>
-        <div id="source-ubhchn" ref={svgContainerRef} className="relative">
-          <ImportedSvg
-            onLoad={() => {
-              setIsRendered(true)
-            }}
-            onMouseOver={() => setIsRendered(true)}
-            onMouseDown={(e: MouseEvent<SVGSVGElement>) => {
-              refXY.current = [e.pageX, e.pageY]
-            }}
-            onMouseUp={(e: MouseEvent<SVGSVGElement>) => {
-              if (!refXY.current) return
+        <div
+          id="source-ubhchn"
+          ref={svgContainerRef}
+          className="relative"
+          onMouseOver={() => setIsRendered(true)}
+          onMouseDown={(e: MouseEvent<SVGSVGElement>) => {
+            console.log('🦺 antoinelog e', e)
 
-              const [x1, y1] = refXY.current
-              const [x2, y2] = [e.pageX, e.pageY]
-              const distance = Math.hypot(x2 - x1, y2 - y1)
+            refXY.current = [e.pageX, e.pageY]
+          }}
+          onMouseUp={(e: MouseEvent<SVGSVGElement>) => {
+            console.log('🦺 antoinelog e', e)
 
-              refXY.current = null
-              if (distance > 2) {
-                return
-              }
+            if (!refXY.current) return
 
-              const target = e.target as SVGSVGElement
-              const id = target.dataset.ubhchn
+            const [x1, y1] = refXY.current
+            const [x2, y2] = [e.pageX, e.pageY]
+            const distance = Math.hypot(x2 - x1, y2 - y1)
 
-              if (id)
-                setShapeIds((ids) =>
-                  ids.includes(id) ? _.without(ids, id) : [...ids, id],
-                )
-            }}
-          />
+            refXY.current = null
+            if (distance > 2) {
+              return
+            }
+
+            const target = e.target as SVGSVGElement
+            console.log('🦺 antoinelog target', target);
+            
+            const id = target.dataset.ubhchn
+
+            if (id)
+              setShapeIds((ids) =>
+                ids.includes(id) ? _.without(ids, id) : [...ids, id],
+              )
+          }}
+        >
+          <div
+          // onLoad={() => {
+          //   setIsRendered(true)
+          // }}
+          >
+            loading...
+          </div>
         </div>
         {isRendered && svgSource && (
           <svg
             id="target-ubhchn"
-            height={svgSource?.getAttribute('height') || undefined}
-            width={svgSource?.getAttribute('width') || undefined}
-            viewBox={svgSource?.getAttribute('viewBox') || undefined}
+            height={svgSource?.getAttribute('height') ?? undefined}
+            width={svgSource?.getAttribute('width') ?? undefined}
+            viewBox={svgSource?.getAttribute('viewBox') ?? undefined}
           >
             <g
               dangerouslySetInnerHTML={{ __html: shapes.join('') }}
