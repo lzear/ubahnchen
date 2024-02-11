@@ -1,5 +1,5 @@
 {
-  "name": "@ubahnchen/gtfs-helpers",
+  "name": "@ubahnchen/gtfs",
   "version": "0.0.0",
   "type": "module",
   "exports": "./src/index.ts",

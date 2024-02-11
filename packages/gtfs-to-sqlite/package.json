@@ -20,7 +20,7 @@
     "@ubahnchen/cities": "*",
     "@ubahnchen/csv": "*",
     "@ubahnchen/database": "*",
-    "@ubahnchen/gtfs-helpers": "*",
+    "@ubahnchen/gtfs": "*",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
     "better-sqlite3": "^9.4.0",
