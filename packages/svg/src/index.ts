@@ -1,0 +1,1 @@
+export { filterSvg } from './filter'
