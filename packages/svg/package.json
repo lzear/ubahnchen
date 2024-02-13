@@ -1,0 +1,25 @@
+{
+  "name": "@ubahnchen/svg",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./node": {
+      "import": "./src/node.ts",
+      "require": "./src/node.ts",
+      "types": "./src/node.ts"
+    }
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
+    "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
