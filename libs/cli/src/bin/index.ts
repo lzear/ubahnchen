@@ -11,10 +11,11 @@ import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 import { annotate } from '../annotate'
 import { copyPublicAssets } from '../copy-assets'
 import { filterLines } from '../filter-lines'
+import { mergeLines } from '../merge-lines'
 
 const pckg = await import('../../package.json', { assert: { type: 'json' } })
 
-const program = new Command()
+const program = new Command('ubhn')
 
 const getCities = (city: string | undefined) => {
   if (!city) return [...citiesList]
@@ -23,7 +24,7 @@ const getCities = (city: string | undefined) => {
 }
 
 program
-  .name('ubahnchen')
+  .name('ubhn')
   .description('Internal CLI for the ubahnchen project')
   .version(pckg.version)
 
@@ -94,6 +95,12 @@ program
   .description('filter the SVGs to keep only the lines')
   .option('-c, --city <city>', 'City name')
   .action(({ city }) => filterLines(getCities(city)))
+
+program
+  .command('svg-merge-lines')
+  .description('merge the SVG lines by color')
+  .option('-c, --city <city>', 'City name')
+  .action(({ city }) => mergeLines(getCities(city)))
 
 program
   .command('public-assets')

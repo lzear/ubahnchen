@@ -26,6 +26,7 @@ export const svgs = {
   SVGOMGD_02: '02-svgomg.svg',
   ANNOTED_10: '10-annoted.svg',
   FILTLIN_11: '11-filtlin.svg',
+  MERGEDL_12: '12-mergedl.svg',
   MINIMAL_20: '20-minimal.svg',
 } as const
 
