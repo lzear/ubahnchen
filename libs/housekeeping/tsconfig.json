@@ -1,5 +1,5 @@
 {
   "extends": "@ubahnchen/tsconfig/base.json",
   "include": ["*.json", ".*.cjs", "**/*", "**/*.test.ts"],
-  "exclude": ["dist"],
+  "exclude": ["dist"]
 }

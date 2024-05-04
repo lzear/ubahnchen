@@ -16,10 +16,15 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
     "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/jsdom": "latest",
+    "chalk": "^5.3.0",
+    "paper": "^0.12.17"
+  },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
-    "@ubahnchen/node": "*"
+    "@ubahnchen/node": "*",
+    "tsup": "^8.0.2"
   },
   "volta": {
     "extends": "../../package.json"

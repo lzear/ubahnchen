@@ -49,11 +49,12 @@ export const affineWithDelaunay = (
     )
     const minDistance = Math.min(...distances)
     const closestTriangleIndex = originTriangles.findIndex(
-      (triangle, index) => distances[index] === minDistance,
+      (_triangle, index) => distances[index] === minDistance,
     )
 
-    return gravityTranslate(vectorsFromTuple(tuples[closestTriangleIndex]))(
-      point,
-    )
+    const trio = tuples[closestTriangleIndex]
+    if (!trio) throw new Error('No trio')
+    // if (!trio) return gravityTranslate(vectors)(point)
+    return gravityTranslate(vectorsFromTuple(trio))(point)
   }
 }

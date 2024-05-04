@@ -23,7 +23,7 @@ export const zUrlParameters = z.object({
       v
         ?.split('-')
         .map(Number)
-        .filter((n) => !Number.isNaN(n)) || [],
+        .filter((n) => !Number.isNaN(n)) ?? [],
   ),
   [UrlParameter.StraightLines]: zBoolean,
   [UrlParameter.MergeStops]: zBoolean,

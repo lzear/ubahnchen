@@ -9,7 +9,7 @@ export interface SaveData {
 
 export interface Edge {
   id: number | string
-  positions: Array<[number, number]>
+  positions: [number, number][]
 }
 
 export interface Node {

@@ -83,7 +83,11 @@ const useNewPoints = ({
   candidates: Point[] | null
 }) => {
   const vectors: Vector[] = Object.entries(targets).map(
-    ([stopId, { point }]) => [origins[stopId].point, point],
+    ([stopId, { point }]) => {
+      const origin = origins[stopId]
+      if (!origin) throw new Error(`Origin not found for stopId: ${stopId}`)
+      return [origin.point, point]
+    },
   )
   const transform = useDelaunay()
     ? affineWithDelaunay(vectors)
@@ -108,17 +112,18 @@ const useNewPoints = ({
   for (const [stopId, { point }] of Object.entries(targets)) {
     const closestPointIdx = findClosestIdx(point, mutableCandidates)
     const [closestCandidate] = mutableCandidates.splice(closestPointIdx, 1)
+    if (!closestCandidate) throw new Error('No closest candidate found')
     placedOnCandidates[stopId] = closestCandidate
     stopsToPlace.delete(stopId)
   }
 
   while (stopsToPlace.size > 0 && mutableCandidates.length > 0) {
     const stopId = stopsToPlace.values().next().value as string
-    const closestPointIdx = findClosestIdx(
-      transformedPoints[stopId],
-      mutableCandidates,
-    )
+    const p = transformedPoints[stopId]
+    if (!p) throw new Error(`No transformed point for stopId: ${stopId}`)
+    const closestPointIdx = findClosestIdx(p, mutableCandidates)
     const [closestCandidate] = mutableCandidates.splice(closestPointIdx, 1)
+    if (!closestCandidate) throw new Error('No closest candidate found')
     placedOnCandidates[stopId] = closestCandidate
     stopsToPlace.delete(stopId)
   }
@@ -138,14 +143,17 @@ const useStopPlacementState = (
 
   const addPlacedStop = (stopId: string, clickedPoint: Point) => {
     const stop = origins[stopId]
+    if (!stop) throw new Error(`Stop not found for stopId: ${stopId}`)
+
     const closestPointIdx = candidates
       ? findClosestIdx(clickedPoint, candidates)
       : -1
+    const p = candidates[closestPointIdx]
     const point =
-      closestPointIdx > -1 &&
-      distance(candidates[closestPointIdx], clickedPoint) < 50
+      p && distance(p, clickedPoint) < 50
         ? candidates[closestPointIdx]
         : clickedPoint
+    if (!point) throw new Error('No point')
     setPlacedStops((placedStops) => ({
       ...placedStops,
       [stopId]: { point, stop_id: stop.stop_id, stop_name: stop.stop_name },
@@ -157,7 +165,7 @@ const useStopPlacementState = (
   const wipStops = useNewPoints({
     origins,
     targets,
-    magnet: mag || false,
+    magnet: mag ?? false,
     candidates,
   })
 
@@ -187,7 +195,13 @@ export const SvgTarget = ({
   const wipStops = Object.values(state.wip)
 
   const svgContainerRef = useRef<HTMLDivElement | null>(null)
-  const pointsRef = useRef<Point[]>(wipStops.map((s) => s.point))
+  const pointsRef = useRef<Point[]>(
+    wipStops.map((s) => {
+      const p = s.point
+      if (!p) throw new Error('No point')
+      return p
+    }),
+  )
   const vectorsReference = useRef<Vector[]>([])
   const offsetReference = useRef<Point>()
   const selected = useRef<number | null>(null)
@@ -199,21 +213,30 @@ export const SvgTarget = ({
     color: string
   }>(pointsRef.current.length, (index) => {
     const point = pointsRef.current[index]
+    if (!point) throw new Error('No point')
+
+    const stop = wipStops[index]
+    if (!stop) throw new Error('No stop')
+
     return {
       x: point[0],
       y: point[1],
-      color: wipStops[index].isPlaced ? 'green' : 'gray',
-      r: wipStops[index].isPlaced ? 3 : 9,
+      color: stop.isPlaced ? 'green' : 'gray',
+      r: stop.isPlaced ? 3 : 9,
     }
   })
 
   useEffect(() => {
-    api.start((index) => ({
-      x: wipStops[index].point[0],
-      y: wipStops[index].point[1],
-      color: wipStops[index].isPlaced ? 'green' : 'gray',
-      r: wipStops[index].isPlaced ? 3 : 9,
-    }))
+    void api.start((index) => {
+      const stop = wipStops[index]
+      if (!stop?.point) throw new Error('No stop')
+      return {
+        x: stop.point[0],
+        y: stop.point[1],
+        color: stop.isPlaced ? 'green' : 'gray',
+        r: stop.isPlaced ? 3 : 9,
+      }
+    })
   }, [api, wipStops])
 
   const bind = useDrag((gesture: G) => {
@@ -221,8 +244,10 @@ export const SvgTarget = ({
     event.preventDefault()
     // eslint-disable-next-line unicorn/consistent-destructuring
     const index = (gesture.args as [number])[0]
-    if (first)
-      offsetReference.current = [springs[index].x.get(), springs[index].y.get()]
+    const spring = springs[index]
+
+    if (!spring) throw new Error('No spring')
+    if (first) offsetReference.current = [spring.x.get(), spring.y.get()]
 
     const pinchScale = pinchScaleRef.current
     const pos: Point | null =
@@ -238,8 +263,11 @@ export const SvgTarget = ({
     const released = isReleased(gesture)
 
     if (released) {
-      state.addPlacedStop(wipStops[index].stop_id, pos)
+      const stop = wipStops[index]
+      if (!stop?.stop_id) throw new Error('No stop')
+      state.addPlacedStop(stop.stop_id, pos)
       const point = pointsRef.current[index]
+      if (!point) throw new Error('No point')
       const newVector: Vector = [point, pos]
       vectorsReference.current = [
         ...vectorsReference.current.filter(
@@ -247,7 +275,7 @@ export const SvgTarget = ({
         ),
         newVector,
       ]
-    } else api.start(translate1({ index, pos }))
+    } else void api.start(translate1({ index, pos }))
   })
   return (
     <div ref={svgContainerRef} className="absolute top-0">
@@ -255,9 +283,11 @@ export const SvgTarget = ({
         {stopPairs.map((sp) => {
           const stopInPair1 = stopById[sp.stop_pairs.stop_id_1]
           const stopInPair2 = stopById[sp.stop_pairs.stop_id_2]
+          if (!stopInPair1) throw new Error('No stop')
+          if (!stopInPair2) throw new Error('No stop')
           const match1 = state.wip[stopInPair1.stop_id]
           const match2 = state.wip[stopInPair2.stop_id]
-          if (!match1 || !match2) return null
+          if (!match1?.point || !match2?.point) return null
           return (
             <line
               key={sp.stop_pairs.idx}
@@ -283,28 +313,33 @@ export const SvgTarget = ({
             />
           ))}
         </g>
-        {springs.map((p, index) => (
-          <animated.g
-            key={index}
-            fill={p.color}
-            transform={to([p.x, p.y], (x, y) => `translate(${x}, ${y})`)}
-          >
-            <text fill="#333" style={{ fontSize: 12, pointerEvents: 'none' }}>
-              {wipStops[index].stop_name}
-            </text>
-            <circle
-              {...bind(index)}
-              cx={0}
-              cy={0}
-              r={wipStops[index].isPlaced ? 3 : 9}
-              style={{ cursor: 'pointer', touchAction: 'none' }}
-              onDoubleClick={(e) => {
-                state.unplaceStop(wipStops[index].stop_id)
-                e.preventDefault()
-              }}
-            />
-          </animated.g>
-        ))}
+        {springs.map((p, index) => {
+          const stop = wipStops[index]
+          if (!stop) throw new Error('No stop')
+          return (
+            <animated.g
+              key={index}
+              fill={p.color}
+              transform={to([p.x, p.y], (x, y) => `translate(${x}, ${y})`)}
+            >
+              <text fill="#333" style={{ fontSize: 12, pointerEvents: 'none' }}>
+                {stop.stop_name}
+              </text>
+              <circle
+                {...bind(index)}
+                cx={0}
+                cy={0}
+                r={stop.isPlaced ? 3 : 9}
+                style={{ cursor: 'pointer', touchAction: 'none' }}
+                onDoubleClick={(e) => {
+                  if (!stop.stop_id) throw new Error('No stop')
+                  state.unplaceStop(stop.stop_id)
+                  e.preventDefault()
+                }}
+              />
+            </animated.g>
+          )
+        })}
       </svg>
 
       <button

@@ -114,6 +114,7 @@ const eslintConfig = {
       },
     ],
     'simple-import-sort/exports': 2,
+    'unicorn/no-abusive-eslint-disable': 0,
     'unicorn/no-null': 0,
     'unicorn/prevent-abbreviations': 0, // annoying
   },

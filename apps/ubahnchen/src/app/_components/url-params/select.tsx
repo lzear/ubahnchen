@@ -24,7 +24,7 @@ export const SelectUrlParam = ({
   const searchParameters = useSearchParams()
   const pathname = usePathname()
   const parameters = new URLSearchParams(searchParameters.toString())
-  const value = parameters.get(name) || undefined
+  const value = parameters.get(name) ?? undefined
   return (
     <div
       className={twMerge('form-control w-full max-w-xs', className)}
@@ -33,7 +33,6 @@ export const SelectUrlParam = ({
       <label>{label}</label>
       <select
         className="select select-xs"
-        placeholder="Select a route type"
         value={value}
         onChange={(event) => {
           const parameters = new URLSearchParams(searchParameters.toString())
