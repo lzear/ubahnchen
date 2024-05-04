@@ -5,6 +5,7 @@ dist
 **/dist
 tmp
 /out-tsc
+build
 
 # dependencies
 node_modules
@@ -48,6 +49,7 @@ Thumbs.db
 **/.next
 **/.vercel
 
+.nx
 **/.turbo
 .turbo
 /libs/rust/target/**
