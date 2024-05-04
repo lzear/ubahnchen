@@ -39,6 +39,8 @@ describe('workspaces', () => {
         "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
         "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
         "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
+        "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
+        "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
         "next lint",
       ]
     `)
