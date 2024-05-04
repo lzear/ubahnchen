@@ -9,15 +9,15 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
-    "@types/better-sqlite3": "^7.6.9",
+    "@types/better-sqlite3": "^7.6.10",
     "@types/node-fetch": "^2.6.11",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
-    "better-sqlite3": "^9.4.0",
-    "csv-parse": "^5.5.3",
-    "drizzle-orm": "^0.29.3",
+    "better-sqlite3": "^9.6.0",
+    "csv-parse": "^5.5.5",
+    "drizzle-orm": "^0.30.10",
     "extract-zip": "^2.0.1",
-    "fast-csv": "^5.0.0",
+    "fast-csv": "^5.0.1",
     "gtfs-types": "^3.0.0",
     "node-fetch": "^3.3.2",
     "ora": "^8.0.1",
@@ -26,8 +26,8 @@
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@ubahnchen/eslint-config": "*",
-    "drizzle-kit": "^0.20.14",
-    "tsup": "^8.0.1"
+    "drizzle-kit": "^0.20.17",
+    "tsup": "^8.0.2"
   },
   "volta": {
     "extends": "../../package.json"

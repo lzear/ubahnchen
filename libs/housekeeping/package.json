@@ -19,10 +19,10 @@
     "@ubahnchen/cities": "*",
     "@ubahnchen/utils": "*",
     "chokidar-cli": "^3.0.0",
-    "typedoc": "^0.25.7",
-    "typedoc-plugin-coverage": "^2.2.0",
+    "typedoc": "^0.25.13",
+    "typedoc-plugin-coverage": "^3.1.1",
     "typedoc-plugin-keywords": "^1.6.0",
-    "typedoc-plugin-markdown": "^3.17.1",
+    "typedoc-plugin-markdown": "^4.0.0",
     "typedoc-theme-hierarchy": "^4.1.2",
     "yargs": "^17.7.2"
   },

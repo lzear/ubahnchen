@@ -13,7 +13,7 @@
     "@ubahnchen/utils": "*",
     "ora": "^8.0.1",
     "pretty-bytes": "^6.1.1",
-    "tmp": "^0.2.1"
+    "tmp": "^0.2.3"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
