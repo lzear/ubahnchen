@@ -15,7 +15,7 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
-    "@commander-js/extra-typings": "^12.0.0",
+    "@commander-js/extra-typings": "^12.0.1",
     "@ubahnchen/cities": "*",
     "@ubahnchen/gtfs-to-sqlite": "*",
     "@ubahnchen/node": "*",
@@ -27,13 +27,13 @@
     "svgo": "*",
     "svgpath": "^2.6.0",
     "yargs": "^17.7.2",
-    "zod": "^3.22.4"
+    "zod": "^3.23.6"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.2",
+    "@types/eslint": "^8.56.10",
     "@types/jsdom": "^21.1.6",
     "@jest/globals": "^29.7.0",
-    "eslint": "^8.56.0"
+    "eslint": "^9.2.0"
   },
   "volta": {
     "extends": "../../package.json"
