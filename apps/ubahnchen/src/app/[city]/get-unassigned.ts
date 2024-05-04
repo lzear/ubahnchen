@@ -1,8 +1,6 @@
 'use server'
 
-import type { City } from '@ubahnchen/cities'
-
-import type { Stop, StopPair } from '../_server/gtfs/types'
+import type { City, Stop, StopPair } from '@ubahnchen/cities'
 
 import { getMapData } from './actions'
 import { usedStops } from './used-stops'
@@ -15,8 +13,9 @@ export const getUnassignedStopsFilePath = async (
 ) => {
   const json = await getMapData(city, map)
   return usedStops({ stopPairs, stopById, onlyParents: true })
-    .filter((stop) => !json.stops[stop.stop_id])
+    .filter((stop) => stop && !json.stops[stop.stop_id])
     .sort((a, b) => {
+      if (!a || !b) return 0
       if (a.parent_station && !b.parent_station) return -1
       if (!a.parent_station && b.parent_station) return 1
       return a.stop_lat - b.stop_lat

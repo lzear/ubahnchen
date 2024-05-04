@@ -85,8 +85,8 @@ const SplitShapesClient = (props: {
             }
 
             const target = e.target as SVGSVGElement
-            console.log('🦺 antoinelog target', target);
-            
+            console.log('🦺 antoinelog target', target)
+
             const id = target.dataset.ubhchn
 
             if (id)

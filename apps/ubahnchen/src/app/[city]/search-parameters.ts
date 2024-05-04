@@ -32,7 +32,7 @@ export const parseUrlParameters = (
           v
             ?.split('-')
             .map(Number)
-            .filter((n) => !Number.isNaN(n)) || []
+            .filter((n) => !Number.isNaN(n)) ?? []
         )
       }),
       StraightLines: zBoolean,

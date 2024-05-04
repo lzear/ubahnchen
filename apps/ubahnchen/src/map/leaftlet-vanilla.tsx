@@ -24,7 +24,7 @@ type SStop = {
 }
 
 type Props = {
-  mapData?: { stops: { [stopId: string]: { position: [number, number] } } }
+  mapData?: { stops: Record<string, { position: [number, number] }> }
   mergeStops: boolean
   stopById: Record<string, SStop>
   stops: SStop[]

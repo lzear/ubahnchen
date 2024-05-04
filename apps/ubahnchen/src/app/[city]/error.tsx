@@ -1,6 +1,6 @@
 'use client'
 
-const ErrorPage = (props) => {
+const ErrorPage = () => {
   return <div>Something went wrong</div>
 }
 

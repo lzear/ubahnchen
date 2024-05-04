@@ -22,7 +22,7 @@ export const server = async (
   city: City,
   parameters: ReturnType<typeof parseUrlParameters>,
 ): Promise<R> => {
-  const routes = await getRoutes(city)
+  const routes = getRoutes(city)
   if (!routes) throw new Error(`No routes found for ${city}`)
   if (routes.length === 0) throw new Error(`No routes found for ${city}`)
 

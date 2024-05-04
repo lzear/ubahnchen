@@ -49,6 +49,7 @@ export const TranslatePointsSvg = ({ count }: Props) => {
     pointsReference.current.length,
     (a) => {
       const point = pointsReference.current[a]
+      if (!point) throw new Error('no point')
       return {
         x: point[0],
         y: point[1],
@@ -59,8 +60,9 @@ export const TranslatePointsSvg = ({ count }: Props) => {
   const tran = useCallback(
     (points: Point[]) => {
       const newPointFunction = affineWithDelaunay(vectorsReference.current)
-      api.start((index) => {
+      void api.start((index) => {
         const point = points[index]
+        if (!point) throw new Error('no point')
         const newPoint = newPointFunction(point)
         return {
           x: newPoint[0],
@@ -90,8 +92,10 @@ export const TranslatePointsSvg = ({ count }: Props) => {
     // eslint-disable-next-line unicorn/consistent-destructuring
     const index = (gesture.args as [number])[0]
 
+    const spring = springs[index]
+    if (!spring) throw new Error('no spring')
     if (first) {
-      offsetReference.current = [springs[index].x.get(), springs[index].y.get()]
+      offsetReference.current = [spring.x.get(), spring.y.get()]
     }
     const pos: Point | false =
       (!first &&
@@ -113,6 +117,7 @@ export const TranslatePointsSvg = ({ count }: Props) => {
 
     if (released) {
       const point = pointsReference.current[index]
+      if (!point) throw new Error('no point')
       const newVector: Vector = [
         point,
         // [point[0] + movement[0], point[1] + movement[1]],
@@ -126,7 +131,7 @@ export const TranslatePointsSvg = ({ count }: Props) => {
       ]
 
       tran(pointsReference.current)
-    } else api.start(translate1({ index, pos }))
+    } else void api.start(translate1({ index, pos }))
   })
 
   return (
@@ -160,6 +165,7 @@ export const TranslatePointsSvg = ({ count }: Props) => {
             {...bind(index)}
             onDoubleClick={() => {
               const point = pointsReference.current[index]
+              if (!point) throw new Error('no point')
               vectorsReference.current = vectorsReference.current.filter(
                 ([o]) => o[0] !== point[0] || o[1] !== point[1],
               )

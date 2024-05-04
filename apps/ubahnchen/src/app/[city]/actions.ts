@@ -13,20 +13,22 @@ export const getDataFilePath = (city: City, map: string) => {
 }
 
 type Json = {
-  stops: {
-    [stopId: string]: {
+  stops: Record<
+    string,
+    {
       position: [number, number]
       name: string
       id: string
     }
-  }
-  stopPairs: {
-    [idx: string]: {
+  >
+  stopPairs: Record<
+    string,
+    {
       route_id: string
       stop_id_1: string
       stop_id_2: string
     }
-  }
+  >
 }
 
 export const getMapData = async (city: City, map: string) => {

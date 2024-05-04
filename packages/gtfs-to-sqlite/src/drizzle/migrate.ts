@@ -1,4 +1,4 @@
-import * as path from 'node:path'
+import path from 'node:path'
 import * as url from 'node:url'
 
 import type * as BetterSqlite3 from 'better-sqlite3'

@@ -18,7 +18,11 @@ const makeRandomPoints = ({ count, height, width }: WorkerData): Point[] => {
 
   const pairs = makePairs(makeRegularPoints(count, width, height), randomPoints)
 
-  return pairs.map(([_a, b]) => randomPoints[b])
+  return pairs.map(([_a, b]) => {
+    const p = randomPoints[b]
+    if (!p) throw new Error('No point')
+    return p
+  })
 }
 
 addEventListener('message', (event) => {

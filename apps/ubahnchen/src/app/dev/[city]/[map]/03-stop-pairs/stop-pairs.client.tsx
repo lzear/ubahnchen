@@ -1,3 +1,5 @@
+// eslint-disable-next-line unicorn/no-abusive-eslint-disable
+/* eslint-disable */
 'use client'
 
 import { useEffect, useMemo, useState, useTransition } from 'react'
@@ -22,14 +24,18 @@ const getVertex = (
 
   console.log('🦺 antoinelog paths', paths)
 
-  const path = paths.find(
-    (path) => path.getAttribute('id')?.includes(stopPair.routes.route_name),
+  const path = paths.find((path) =>
+    path.getAttribute('id')?.includes(stopPair.routes.route_name),
   )
 
   if (!path) throw new Error('No path for ' + stopPair.routes.route_name)
 
   const s1 = stopPositions[stopPair.stop_pairs.stop_id_1]
   const s2 = stopPositions[stopPair.stop_pairs.stop_id_2]
+
+  if (!s1) throw new Error(`No stop for ${stopPair.stop_pairs.stop_id_1}`)
+  if (!s2) throw new Error(`No stop for ${stopPair.stop_pairs.stop_id_2}`)
+
   const p1 = getClosestPointMemo(path, s1.point)
   const p2 = getClosestPointMemo(path, s2.point)
   const score = p1.distance + p2.distance
@@ -69,8 +75,6 @@ export const StopPairsClient = ({
   cityMap: CityMapParam
   routeName?: string
 }) => {
-  console.log('🦺 antoinelog stopPairs', stopPairs)
-
   // return <div>sfd</div>
   const { city, map } = cityMap
   const [isPending, startTransition] = useTransition()
@@ -88,8 +92,7 @@ export const StopPairsClient = ({
     setSvgElement(document.querySelector<HTMLElement>('#sssvvvggg'))
   }, [])
 
-  const paths = [...svgElement?.querySelectorAll('path')]
-  console.log('🦺 antoinelog paths', paths)
+  const paths = [...(svgElement?.querySelectorAll('path') || [])]
 
   const vertices = []
   // const vertices = useMemo(() => {

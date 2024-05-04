@@ -22,7 +22,7 @@ export const importSvg = (
     }),
   )
 
-const PaperJsMain = (props: CityMapParam) => {
+const PaperJsMain = (_props: CityMapParam) => {
   const canvasReference = useRef<HTMLCanvasElement>(null)
 
   useLayoutEffect(() => {

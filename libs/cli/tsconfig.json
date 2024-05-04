@@ -3,6 +3,6 @@
   "include": ["*.json", ".*.cjs", "**/*"],
 
   "compilerOptions": {
-    "esModuleInterop": true,
-  },
+    "esModuleInterop": true
+  }
 }
