@@ -3,6 +3,8 @@ import path from 'node:path'
 
 import type { City } from '@ubahnchen/cities'
 import { P } from '@ubahnchen/cities/node'
+import type { Json, JsonSchema } from '@ubahnchen/json'
+import { canonicalizeToString } from '@ubahnchen/json'
 import { initializeFileIfNotExists } from '@ubahnchen/node'
 
 import type { StopsPositions } from './map-asset-type'
@@ -17,8 +19,11 @@ export type AssetTypes = {
   [MapAssetName.SPLIT_SHAPES]: string[]
 }
 
-class FileAssets<T> {
-  constructor(private filePath: string) {}
+class FileAssets<T extends Json, S extends JsonSchema | undefined = undefined> {
+  constructor(
+    private filePath: string,
+    protected schema?: S | undefined,
+  ) {}
 
   async read(defaultValue?: T): Promise<T> {
     await initializeFileIfNotExists(this.filePath)
@@ -38,20 +43,25 @@ class FileAssets<T> {
   }
 
   public async write(data: T) {
-    return fs.promises.writeFile(this.filePath, JSON.stringify(data))
+    return fs.promises.writeFile(
+      this.filePath,
+      canonicalizeToString(data, this.schema),
+    )
   }
 }
 
 export class MapAssets<
   N extends MapAssetName,
-  T = AssetTypes[N],
-> extends FileAssets<T> {
+  T extends Json = AssetTypes[N],
+  S extends JsonSchema | undefined = undefined,
+> extends FileAssets<T, S> {
   constructor(
     protected city: City,
     protected map: string,
     protected name: N,
+    protected schema?: S,
   ) {
-    super(path.join(P(city, map).BUILD.DIR, `${name}.json`))
+    super(path.join(P(city, map).BUILD.DIR, `${name}.json`), schema)
   }
 }
 

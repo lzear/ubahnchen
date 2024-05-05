@@ -18,6 +18,7 @@
   "dependencies": {
     "@types/lodash": "^4.17.1",
     "@ubahnchen/database": "*",
+    "@ubahnchen/json": "*",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
     "chalk": "^5.3.0",
