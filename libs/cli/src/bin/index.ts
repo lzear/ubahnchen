@@ -10,6 +10,7 @@ import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
 import { annotate } from '../annotate'
 import { copyPublicAssets } from '../copy-assets'
+import { filterLines } from '../filter-lines'
 
 const pckg = await import('../../package.json', { assert: { type: 'json' } })
 
@@ -83,10 +84,16 @@ program
   })
 
 program
-  .command('annotate-svg')
+  .command('svg-annotate')
   .description("add 'ubhn' data attributes to the SVGs")
   .option('-c, --city <city>', 'City name')
   .action(({ city }) => annotate(getCities(city)))
+
+program
+  .command('svg-filter-lines')
+  .description('filter the SVGs to keep only the lines')
+  .option('-c, --city <city>', 'City name')
+  .action(({ city }) => filterLines(getCities(city)))
 
 program
   .command('public-assets')
