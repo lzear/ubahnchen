@@ -4,6 +4,8 @@ import { P } from '@ubahnchen/cities/node'
 import { annotateSvgFile } from '@ubahnchen/svg/node'
 import { log2DArray, logStrings } from '@ubahnchen/utils'
 
+import { X_ATTRIBUTE } from './consts'
+
 export const annotate = async (cc: City[]) => {
   const array = [] as [string, string, string][]
   for (const c of cc)
@@ -12,7 +14,7 @@ export const annotate = async (cc: City[]) => {
         await annotateSvgFile(
           P(c, m).SRC.SVG.SVGOMGD_02,
           P(c, m).SRC.SVG.ANNOTED_10,
-          'ubhnchn',
+          X_ATTRIBUTE,
         )
         array.push(['✅ ', c, m])
       } catch {
