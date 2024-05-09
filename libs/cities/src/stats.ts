@@ -28,6 +28,7 @@ export const zipStats = async (city: City) => {
     fileSize(P(city).GTFS.ZIP),
   ])
   return {
+    isOkay: isUpToDate,
     isUpToDate,
     ...headers,
     ...sizes,
@@ -50,7 +51,7 @@ const csvStats = async (city: City) => {
   const lines = _.sum(files.map(({ lines }) => lines))
   const size = _.sum(files.map(({ size }) => size))
   const prettySize = prettyBytes(size)
-  return { files, total: { lines, size, prettySize } }
+  return { isOkay: true, files, total: { lines, size, prettySize } }
 }
 
 const cityDbStats = async (city: City) => {
@@ -59,17 +60,27 @@ const cityDbStats = async (city: City) => {
     dbStats(p.SQLITE.BIG),
     dbStats(p.SQLITE.SMALL),
   ])
-  return { big, small }
+  return { isOkay: Boolean(big && small), big, small }
 }
 
-const mapsStats = (city: City) =>
-  Promise.all(
-    Object.keys(cities[city].maps).map(async (map) => ({
-      city,
-      map,
-      stats: await mapStats(city, map),
-    })),
+const mapsStats = async (city: City) => {
+  const maps = await Promise.all(
+    Object.keys(cities[city].maps).map(async (map) => {
+      const stats = await mapStats(city, map)
+      return {
+        isOkay: !!stats?.isOkay,
+        city,
+        map,
+        stats,
+      }
+    }),
   )
+
+  return {
+    isOkay: maps.every((v) => v.isOkay),
+    maps,
+  }
+}
 
 const mapStats = async (city: City, map: string) => {
   const mapStopsPlacements = new MapAssets(city, map, MapAssetName.PLACE_STOPS)
@@ -79,11 +90,15 @@ const mapStats = async (city: City, map: string) => {
     const mapQueries = new MapQueries(city)
     const usedStops = mapQueries.usedStops(map, true)
 
+    const stops = usedStops.stops.length
+    const placedStops = Object.keys(placeStops).length
+    const svgs = svgFilesDone(city, map)
     return {
+      isOkay: stops === placedStops && Object.values(svgs).every(Boolean),
       map,
-      stops: usedStops.stops.length,
-      placedStops: Object.keys(placeStops).length,
-      svgs: svgFilesDone(city, map),
+      stops,
+      placedStops,
+      svgs,
     }
   } catch (error) {
     console.error(error)
@@ -107,13 +122,14 @@ const dbStats = async (dbPath: string) => {
 }
 
 export const cityStats = async (city: City) => {
-  const [zip, csv, db, maps] = await Promise.all([
+  const r = await Promise.all([
     zipStats(city),
     csvStats(city),
     cityDbStats(city),
     mapsStats(city),
   ] as const)
-  return { city, zip, csv, db, maps }
+  const [zip, csv, db, maps] = r
+  return { city, zip, csv, db, maps, isOkay: r.every((v) => v.isOkay) }
 }
 
 export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
@@ -226,15 +242,15 @@ export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
     )
   } else console.log(chalk.red.bold(`⚠️ DB small missing`))
 
-  if (s.maps.length > 0) console.log(chalk.green.bold(`🗺️ Maps`))
+  if (s.maps.maps.length > 0) console.log(chalk.green.bold(`🗺️ Maps`))
   else console.log(chalk.red.bold(`⚠️ Maps missing`))
   logStrings(
     log2DArray(
       [
-        ['', ...s.maps.map((v) => v.map)],
+        ['', ...s.maps.maps.map((v) => v.map)],
         [
           'placed stops',
-          ...s.maps.map((v) => {
+          ...s.maps.maps.map((v) => {
             if (!v.stats) return chalk.red('❌ ')
             const { stops, placedStops } = v.stats
             const color = stops === placedStops ? chalk.green : chalk.red
@@ -243,7 +259,7 @@ export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
         ],
         ...svgArray.map((key) => [
           svgs[key],
-          ...s.maps.map((v) =>
+          ...s.maps.maps.map((v) =>
             v.stats?.svgs[key] ? chalk.green('✅ ') : chalk.red('❌ '),
           ),
         ]),
