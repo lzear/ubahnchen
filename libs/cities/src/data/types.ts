@@ -1,3 +1,12 @@
+export type License = {
+  name: string
+  author?: {
+    name: string
+    url?: string
+  }
+  source?: string
+}
+
 export type MapConfig = {
   name: string
   file: string
@@ -5,6 +14,7 @@ export type MapConfig = {
   here: string
   routeTypes: number[]
   stopsFilter?: (stop: { stop_lat: number; stop_lon: number }) => boolean
+  license?: License
 }
 
 export type GtfsConfig = {
