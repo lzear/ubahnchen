@@ -1,5 +1,7 @@
 #!/usr/bin/env -S node --no-warnings --loader ts-node/esm --es-module-specifier-resolution=node
 
+import * as process from 'node:process'
+
 import { Command } from '@commander-js/extra-typings'
 
 import { citiesList, isCity } from '@ubahnchen/cities'
@@ -62,6 +64,22 @@ program
       logCityStats(stat)
     }
     console.log()
+
+    const notOkay = stats
+      .filter((stat) => !stat.isOkay)
+      .map((stat) => ({
+        city: stat.city,
+        notOkay: (['zip', 'csv', 'db', 'maps'] as const).filter(
+          (k) => !stat[k].isOkay,
+        ),
+      }))
+    if (notOkay.length > 0) {
+      console.error('❌ Some cities are not ready')
+      console.table(notOkay)
+      return process.exit(1)
+    }
+    console.log('✅ All cities are okay')
+    return process.exit(0)
   })
 
 program
