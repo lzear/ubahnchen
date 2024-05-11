@@ -8,6 +8,7 @@ import { citiesList } from '@ubahnchen/cities'
 import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
 import { annotate } from '../annotate'
+import { buildAllPathfinding } from '../build-pathfindings'
 import { copyPublicAssets } from '../copy-assets'
 import { filterLines } from '../filter-lines'
 import { getCities } from '../get-cities'
@@ -56,6 +57,15 @@ program
   .action(async ({ city }) => {
     const cities = getCities(city)
     for (const c of cities) await gtfsToSqlite({ city: c }, false)
+  })
+
+program
+  .command('find-paths')
+  .description('builds the pathfinding data for a city')
+  .option('-c, --city <city>', 'City name')
+  .option('-m, --map <map>', 'Map name')
+  .action(async ({ city, map }) => {
+    await buildAllPathfinding(getCities(city), map)
   })
 
 const svgCommands = program.command('svg').description('manage svg files')

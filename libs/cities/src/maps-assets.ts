@@ -6,17 +6,20 @@ import { P } from '@ubahnchen/cities/node'
 import type { Json, JsonSchema } from '@ubahnchen/json'
 import { canonicalizeToString } from '@ubahnchen/json'
 import { initializeFileIfNotExists } from '@ubahnchen/node'
+import type { ShortestPath } from '@ubahnchen/svg'
 
 import type { StopsPositions } from './map-asset-type'
 
 export enum MapAssetName {
   PLACE_STOPS = 'place-stops',
   SPLIT_SHAPES = 'split-shapes',
+  PAIRS_PATHS = 'pairs-paths',
 }
 
 export type AssetTypes = {
   [MapAssetName.PLACE_STOPS]: StopsPositions
   [MapAssetName.SPLIT_SHAPES]: string[]
+  [MapAssetName.PAIRS_PATHS]: Record<string, ShortestPath>
 }
 
 class FileAssets<T extends Json, S extends JsonSchema | undefined = undefined> {
@@ -46,6 +49,7 @@ class FileAssets<T extends Json, S extends JsonSchema | undefined = undefined> {
     return fs.promises.writeFile(
       this.filePath,
       canonicalizeToString(data, this.schema),
+      // data,
     )
   }
 }

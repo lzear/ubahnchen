@@ -1,2 +1,6 @@
 export { annotate } from './annotate'
 export { filterSvg } from './filter'
+export { findShortestPath, type ShortestPath } from './find-path/dijkstra'
+export { getClosestPoint } from './find-path/get-closest-point'
+export { pathfindingEdges } from './find-path/pathfinding-edges'
+export { pathfindingNodes } from './find-path/pathfinding-nodes'
