@@ -59,7 +59,8 @@ describe(P, () => {
       },
       PUBLIC: {
         SVG: {
-          ANNOTED_10: '/apps/ubahnchen/public/berlin/u/svg/10-annoted.svg',
+          STEP_10_ANNOTATED:
+            '/apps/ubahnchen/public/berlin/u/svg/10-annoted.svg',
           DIR: '/apps/ubahnchen/public/berlin/u/svg',
           INITIAL_00: '/apps/ubahnchen/public/berlin/u/svg/00-original.svg',
           MINIMAL_20: '/apps/ubahnchen/public/berlin/u/svg/20-minimal.svg',
@@ -67,7 +68,8 @@ describe(P, () => {
       },
       SRC: {
         SVG: {
-          ANNOTED_10: '/libs/cities/src/data/berlin/u/svg/10-annoted.svg',
+          STEP_10_ANNOTATED:
+            '/libs/cities/src/data/berlin/u/svg/10-annoted.svg',
           DIR: '/libs/cities/src/data/berlin/u/svg',
           INITIAL_00: '/libs/cities/src/data/berlin/u/svg/00-original.svg',
           MINIMAL_20: '/libs/cities/src/data/berlin/u/svg/20-minimal.svg',

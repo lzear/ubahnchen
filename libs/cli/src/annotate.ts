@@ -12,8 +12,8 @@ export const annotate = async (cc: City[]) => {
     for (const m of Object.keys(cities[c].maps))
       try {
         await annotateSvgFile(
-          P(c, m).SRC.SVG.SVGOMGD_02,
-          P(c, m).SRC.SVG.ANNOTED_10,
+          P(c, m).SRC.SVG.STEP_02_SVGOMGED,
+          P(c, m).SRC.SVG.STEP_10_ANNOTATED,
           X_ATTRIBUTE,
         )
         array.push(['✅ ', c, m])

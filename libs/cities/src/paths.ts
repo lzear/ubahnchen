@@ -20,17 +20,28 @@ const PROJECT_ROOT = path.join(currentDir, '../../..')
 
 const SRC_DATA_DIR = path.join(PROJECT_ROOT, 'libs/cities/src/data')
 
-export const svgs = {
-  INITIAL_00: '00-original.svg',
-  FIGMAED_01: '01-figma.svg',
-  SVGOMGD_02: '02-svgomg.svg',
-  ANNOTED_10: '10-annoted.svg',
-  FILTLIN_11: '11-filtlin.svg',
-  MERGEDL_12: '12-mergedl.svg',
-  MINIMAL_20: '20-minimal.svg',
+const SVG = {
+  STEP_00_ORIGINAL: 'STEP_00_ORIGINAL',
+  STEP_01_FIGMAED: 'STEP_01_FIGMAED',
+  STEP_02_SVGOMGED: 'STEP_02_SVGOMGED',
+  STEP_10_ANNOTATED: 'STEP_10_ANNOTATED',
+  STEP_20_LINES_ONLY: 'STEP_20_LINES_ONLY',
+  STEP_21_LINES_MERGED: 'STEP_21_LINES_MERGED',
 } as const
 
-export const svgsPublic = _.pick(svgs, ['ANNOTED_10', 'MINIMAL_20'])
+export const svgs = {
+  [SVG.STEP_00_ORIGINAL]: '00-original.svg',
+  [SVG.STEP_01_FIGMAED]: '01-simplified-via-figma.svg',
+  [SVG.STEP_02_SVGOMGED]: '02-simplified-via-svgomg.svg',
+  [SVG.STEP_10_ANNOTATED]: '10-annotated.svg',
+  [SVG.STEP_20_LINES_ONLY]: '20-lines-only.svg',
+  [SVG.STEP_21_LINES_MERGED]: '21-lines-merged.svg',
+} as const
+
+export const svgsPublic = _.pick(svgs, [
+  SVG.STEP_10_ANNOTATED,
+  SVG.STEP_21_LINES_MERGED,
+])
 
 const R = {
   PROJECT_ROOT,
@@ -99,8 +110,7 @@ function pathsFunction(city?: City, map?: string) {
   return mapPaths(city, map)
 }
 
-// @ts-ignore
-export const P: typeof pathsFunction & typeof R = pathsFunction
+export const P = pathsFunction as typeof pathsFunction & typeof R
 Object.assign(P, R)
 
 export const svgArray = Object.keys(svgs) as (keyof typeof svgs)[]

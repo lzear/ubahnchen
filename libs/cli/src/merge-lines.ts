@@ -13,8 +13,8 @@ export const mergeLines = async (cc: City[]) => {
     for (const m of Object.keys(cities[c].maps))
       try {
         await mergePathsFile(
-          P(c, m).SRC.SVG.FILTLIN_11,
-          P(c, m).SRC.SVG.MERGEDL_12,
+          P(c, m).SRC.SVG.STEP_20_LINES_ONLY,
+          P(c, m).SRC.SVG.STEP_21_LINES_MERGED,
         )
         array.push(['✅ ', c, m])
       } catch (error) {

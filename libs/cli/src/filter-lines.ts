@@ -16,8 +16,8 @@ export const filterLines = async (cc: City[]) => {
       try {
         const shapes = await getShapes({ city: c, map: m })
         await filterSvgFile(
-          P(c, m).SRC.SVG.ANNOTED_10,
-          P(c, m).SRC.SVG.FILTLIN_11,
+          P(c, m).SRC.SVG.STEP_10_ANNOTATED,
+          P(c, m).SRC.SVG.STEP_20_LINES_ONLY,
           (line) =>
             !!line.dataset[X_ATTRIBUTE] &&
             shapes.includes(line.dataset[X_ATTRIBUTE]),
