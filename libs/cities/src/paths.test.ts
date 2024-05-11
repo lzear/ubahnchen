@@ -59,20 +59,36 @@ describe(P, () => {
       },
       PUBLIC: {
         SVG: {
-          STEP_10_ANNOTATED:
-            '/apps/ubahnchen/public/berlin/u/svg/10-annoted.svg',
           DIR: '/apps/ubahnchen/public/berlin/u/svg',
-          INITIAL_00: '/apps/ubahnchen/public/berlin/u/svg/00-original.svg',
-          MINIMAL_20: '/apps/ubahnchen/public/berlin/u/svg/20-minimal.svg',
+          STEP_00_ORIGINAL:
+            '/apps/ubahnchen/public/berlin/u/svg/00-original.svg',
+          STEP_01_FIGMAED:
+            '/apps/ubahnchen/public/berlin/u/svg/01-simplified-via-figma.svg',
+          STEP_02_SVGOMGED:
+            '/apps/ubahnchen/public/berlin/u/svg/02-simplified-via-svgomg.svg',
+          STEP_10_ANNOTATED:
+            '/apps/ubahnchen/public/berlin/u/svg/10-annotated.svg',
+          STEP_20_LINES_ONLY:
+            '/apps/ubahnchen/public/berlin/u/svg/20-lines-only.svg',
+          STEP_21_LINES_MERGED:
+            '/apps/ubahnchen/public/berlin/u/svg/21-lines-merged.svg',
         },
       },
       SRC: {
         SVG: {
-          STEP_10_ANNOTATED:
-            '/libs/cities/src/data/berlin/u/svg/10-annoted.svg',
           DIR: '/libs/cities/src/data/berlin/u/svg',
-          INITIAL_00: '/libs/cities/src/data/berlin/u/svg/00-original.svg',
-          MINIMAL_20: '/libs/cities/src/data/berlin/u/svg/20-minimal.svg',
+          STEP_00_ORIGINAL:
+            '/libs/cities/src/data/berlin/u/svg/00-original.svg',
+          STEP_01_FIGMAED:
+            '/libs/cities/src/data/berlin/u/svg/01-simplified-via-figma.svg',
+          STEP_02_SVGOMGED:
+            '/libs/cities/src/data/berlin/u/svg/02-simplified-via-svgomg.svg',
+          STEP_10_ANNOTATED:
+            '/libs/cities/src/data/berlin/u/svg/10-annotated.svg',
+          STEP_20_LINES_ONLY:
+            '/libs/cities/src/data/berlin/u/svg/20-lines-only.svg',
+          STEP_21_LINES_MERGED:
+            '/libs/cities/src/data/berlin/u/svg/21-lines-merged.svg',
         },
       },
     })

@@ -5,7 +5,7 @@ dist
 **/dist
 tmp
 /out-tsc
-build
+build/**/gtfs
 
 # dependencies
 node_modules
