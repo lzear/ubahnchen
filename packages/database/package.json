@@ -1,6 +1,7 @@
 {
   "name": "@ubahnchen/database",
   "version": "0.0.1",
+  "license": "MIT",
   "type": "module",
   "exports": "./src/index.ts",
   "main": "src/index.ts",

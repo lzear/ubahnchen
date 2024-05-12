@@ -1,6 +1,7 @@
 {
   "name": "@ubahnchen/cities",
   "version": "0.0.1",
+  "license": "MIT",
   "type": "module",
   "main": "src/index.ts",
   "exports": {

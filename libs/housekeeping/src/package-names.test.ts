@@ -45,6 +45,37 @@ describe('workspaces', () => {
       ]
     `)
   })
+
+  it('has license', async () => {
+    const lintScripts = await Promise.all(
+      WORKSPACES.flatMap((workspace) =>
+        listDirectories(workspace).map(async (directory) => {
+          const package_ = await getPackageJson(workspace, directory)
+          return `${package_.license as string} ${package_.name as string}`
+        }),
+      ),
+    )
+    expect(lintScripts).toMatchInlineSnapshot(`
+      [
+        "MIT @ubahnchen/csv",
+        "MIT @ubahnchen/database",
+        "MIT @ubahnchen/gtfs",
+        "MIT @ubahnchen/gtfs-to-sqlite",
+        "MIT @ubahnchen/json",
+        "MIT @ubahnchen/node",
+        "MIT @ubahnchen/svg",
+        "MIT @ubahnchen/utils",
+        "MIT @ubahnchen/cities",
+        "MIT @ubahnchen/cli",
+        "MIT @ubahnchen/eslint-config",
+        "MIT @ubahnchen/housekeeping",
+        "MIT @ubahnchen/prisma",
+        "MIT @ubahnchen/tsconfig",
+        "MIT @ubahnchen/ubahnchen",
+      ]
+    `)
+  })
+
   describe.each(WORKSPACES)('%p', (workspace) => {
     const directories: string[] = listDirectories(workspace)
 
@@ -64,6 +95,12 @@ describe('workspaces', () => {
         expect(2).toBe(2)
         const package_ = await getPackageJson(workspace, directory)
         expect(package_.scripts).toMatchObject({ lint: /lint/ })
+      })
+
+      it('has license', async () => {
+        expect(2).toBe(2)
+        const package_ = await getPackageJson(workspace, directory)
+        expect(package_.license).toBe('MIT')
       })
     })
   })

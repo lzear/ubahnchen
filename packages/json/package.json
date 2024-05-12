@@ -1,6 +1,7 @@
 {
   "name": "@ubahnchen/json",
   "version": "0.0.0",
+  "license": "MIT",
   "type": "module",
   "exports": "./src/index.ts",
   "main": "src/index.ts",
@@ -9,8 +10,7 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
     "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@types/humanize-duration": "^3.27.4",
