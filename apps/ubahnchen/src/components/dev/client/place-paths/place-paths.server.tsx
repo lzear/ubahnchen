@@ -1,9 +1,9 @@
 import _ from 'lodash'
 
+import { SelectUrlParam } from '@/app/_components/url-params/select'
+import { getUsedStops } from '@/app/_server/gtfs/queries'
 import type { City, StopPair } from '@ubahnchen/cities'
 
-import { SelectUrlParam } from '../../../app/_components/url-params/select'
-import { getUsedStops } from '../../../app/_server/gtfs/queries'
 import { getStopPositions } from '../place-stops/save-points-positions.action'
 
 import { PlacePathsClient } from './place-paths.client'

@@ -1,7 +1,7 @@
+import { getUsedStops } from '@/app/_server/gtfs/queries'
+import { getStopPositions } from '@/components/dev/client/place-stops/save-points-positions.action'
 import { cities } from '@ubahnchen/cities'
 
-import { getStopPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
-import { getUsedStops } from '../../../../_server/gtfs/queries'
 import type { CityMapParam } from '../params'
 
 import { StopPairsClient } from './stop-pairs.client'

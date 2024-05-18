@@ -1,7 +1,6 @@
+import { getUsedStops } from '@/app/_server/gtfs/queries'
+import { getStopPositions } from '@/components/dev/client/place-stops/save-points-positions.action'
 import type { City } from '@ubahnchen/cities'
-
-import { getStopPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
-import { getUsedStops } from '../../../../_server/gtfs/queries'
 
 type Props = {
   city: City

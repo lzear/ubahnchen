@@ -1,12 +1,11 @@
 import React from 'react'
 import _ from 'lodash'
 
+import { getUsedStops } from '@/app/_server/gtfs/queries'
+import { getStopPositions } from '@/components/dev/client/place-stops/save-points-positions.action'
 import type { City } from '@ubahnchen/cities'
 
 import 'server-only'
-
-import { getStopPositions } from '../../../../../components/client/place-stops/save-points-positions.action'
-import { getUsedStops } from '../../../../_server/gtfs/queries'
 
 import { PlaceStopsInfo } from './info'
 import { PlaceStopsClient } from './place-stops.client'

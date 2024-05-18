@@ -1,11 +1,10 @@
+import type { UrlParameterValue } from '@/app/[city]/search-parameters'
+import { MapPicker } from '@/components/dev/client/map-picker'
+import { PlacePathsServer } from '@/components/dev/client/place-paths/place-paths.server'
+import { UrlParameter, zUrlParameters } from '@/components/dev/url-params'
 import type { City } from '@ubahnchen/cities'
 
 import 'server-only'
-
-import { MapPicker } from '../../../../components/client/map-picker'
-import { PlacePathsServer } from '../../../../components/client/place-paths/place-paths.server'
-import { UrlParameter, zUrlParameters } from '../../../../components/url-params'
-import type { UrlParameterValue } from '../../../[city]/search-parameters'
 
 import 'leaflet/dist/leaflet.css'
 

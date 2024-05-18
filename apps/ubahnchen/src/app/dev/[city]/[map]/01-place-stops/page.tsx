@@ -1,7 +1,8 @@
+import type { UrlParameterValue } from '@/app/[city]/search-parameters'
+import { ToggleUrlParameter } from '@/components/dev/server/toggle-checkbox'
+
 import 'server-only'
 
-import { ToggleUrlParameter } from '../../../../../components/server/toggle-checkbox'
-import type { UrlParameterValue } from '../../../../[city]/search-parameters'
 import type { CityMapParam } from '../params'
 
 import { PlaceStopsServer } from './place-stops.server'

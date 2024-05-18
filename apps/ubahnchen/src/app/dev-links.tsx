@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+import { Button } from '@/components/ui/button'
 import { citiesList } from '@ubahnchen/cities'
 
 export default function DevLinks() {
@@ -7,13 +8,13 @@ export default function DevLinks() {
     <div className="center flex h-screen content-center items-center justify-center gap-2 align-middle">
       {citiesList.map((city) => (
         <Link key={city} href={`/${city}`}>
-          <button key={city} className="btn">
+          <Button key={city} className="btn">
             {city}
-          </button>
+          </Button>
         </Link>
       ))}
       <Link href="/dev">
-        <button className="btn">Dev</button>
+        <Button className="btn">Dev</Button>
       </Link>
     </div>
   )

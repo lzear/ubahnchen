@@ -52,7 +52,7 @@ const SplitShapesClient = (props: {
   }, [selectedShapes, isRendered])
   const refXY = useRef<null | [number, number]>(null)
 
-  const s = useLoadSvg(`/${city}/${map}/svg/10-annoted.svg`, svgContainerRef)
+  const s = useLoadSvg(`/${city}/${map}/svg/10-annotated.svg`, svgContainerRef)
 
   useEffect(() => {
     if (s.data) setIsRendered(true)
@@ -66,13 +66,9 @@ const SplitShapesClient = (props: {
           className="relative"
           onMouseOver={() => setIsRendered(true)}
           onMouseDown={(e: MouseEvent<SVGSVGElement>) => {
-            console.log('🦺 antoinelog e', e)
-
             refXY.current = [e.pageX, e.pageY]
           }}
           onMouseUp={(e: MouseEvent<SVGSVGElement>) => {
-            console.log('🦺 antoinelog e', e)
-
             if (!refXY.current) return
 
             const [x1, y1] = refXY.current

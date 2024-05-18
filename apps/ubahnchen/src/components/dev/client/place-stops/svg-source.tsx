@@ -1,12 +1,11 @@
 import type { ComponentProps } from 'react'
 import React, { useEffect, useRef } from 'react'
 
+import type { Point } from '@/app/_components/geometry/utils'
+import { getCenter } from '@/app/[city]/svg-center'
+import { findClosestIdx } from '@/app/dev/[city]/[map]/01-place-stops/place-stops.client'
+import { useLoadSvg } from '@/app/dev/svg/load'
 import type { City, Stop } from '@ubahnchen/cities'
-
-import type { Point } from '../../../app/_components/geometry/utils'
-import { getCenter } from '../../../app/[city]/svg-center'
-import { findClosestIdx } from '../../../app/dev/[city]/[map]/01-place-stops/place-stops.client'
-import { useLoadSvg } from '../../../app/dev/svg/load'
 
 type Props = {
   city: City
@@ -19,7 +18,7 @@ type Props = {
 export const SvgSource = ({ city, map, setSize, setCandidates }: Props) => {
   const svgContainerRef = useRef<HTMLDivElement | null>(null)
 
-  const d = useLoadSvg(`/${city}/${map}/svg/10-annoted.svg`, svgContainerRef)
+  const d = useLoadSvg(`/${city}/${map}/svg/10-annotated.svg`, svgContainerRef)
 
   useEffect(() => {
     const svg = svgContainerRef.current?.getElementsByTagName('svg')[0]
