@@ -10,7 +10,7 @@ const nextConfig = {
     esmExternals: true,
   },
   transpilePackages: ['@ubahnchen/cities'],
-  webpack(config) {
+  webpack(config, { isServer }) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg'),
@@ -59,6 +59,10 @@ const nextConfig = {
     config.module = {
       ...config.module,
       exprContextCritical: false,
+    }
+
+    if (isServer) {
+      config.resolve.alias['paper'] = false;
     }
     return config
   },
