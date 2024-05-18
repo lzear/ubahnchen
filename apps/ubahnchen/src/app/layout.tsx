@@ -3,11 +3,25 @@
 // const inter = Inter({ subsets: ['latin'] })
 
 import type { ReactNode } from 'react'
+import { Fira_Sans, JetBrains_Mono } from 'next/font/google'
 
 import { ReactQuery } from './providers/react-query'
 
 import './globals.css'
 import 'tailwindcss/tailwind.css'
+
+const fira = Fira_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-fira',
+  weight: '400',
+})
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains-mono',
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,8 +30,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen">
+    <html lang="en" className={`${fira.variable} ${jetBrainsMono.variable}`}>
+      <body className="min-h-screen font-fira">
         <ReactQuery>{children}</ReactQuery>
       </body>
     </html>
