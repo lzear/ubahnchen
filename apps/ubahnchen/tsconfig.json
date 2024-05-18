@@ -3,10 +3,27 @@
   "compilerOptions": {
     "moduleResolution": "bundler",
     "module": "ESNext",
+    "target": "es5", // set to es2022 to run scripts
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "allowJs": true,
-    "incremental": true,
-    "jsx": "preserve",
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
@@ -16,14 +33,13 @@
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "*.json",
-    ".*.cjs",
-    "**/*"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "./cypress.config.js",
+    "cypress"
   ]
 }
