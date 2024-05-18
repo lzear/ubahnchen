@@ -15,11 +15,13 @@ const findOnePath = ({
   stopPair,
   stopsPositions,
   svgString,
+  precision,
 }: {
   stops: Stop[]
   stopPair: StopPair
   stopsPositions: StopsPositions
   svgString: string
+  precision: number
 }) => {
   const getParent = (stopId: string) => {
     const parent =
@@ -37,7 +39,7 @@ const findOnePath = ({
   return findShortestPathStr(
     svgString,
     [parent1.point, parent2.point],
-    20_000_000,
+    precision,
   )
 }
 
@@ -72,6 +74,7 @@ const buildPathfindingForMap = async (city: City, map: string) => {
           stopPair,
           stopsPositions,
           svgString,
+          precision: 20_000_000,
         })
       }
       return shortestPathByPair

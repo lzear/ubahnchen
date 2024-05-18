@@ -19,7 +19,9 @@ describe(pathfindingNodes, () => {
       [12, 12],
     ]
     expect(
-      pathfindingNodes([svgPath], startEnd, 4).map((v) => _.omit(v, 'path')),
+      pathfindingNodes([svgPath], startEnd, 4_000_000).map((v) =>
+        _.omit(v, 'path'),
+      ),
     ).toMatchInlineSnapshot(`
       [
         {
@@ -50,33 +52,6 @@ describe(pathfindingNodes, () => {
         {
           "index": 3,
           "pathIndex": "abc",
-          "pathLength": 4,
-          "point": [
-            4.000000000000001,
-            0,
-          ],
-        },
-        {
-          "index": 4,
-          "pathIndex": "abc",
-          "pathLength": 8,
-          "point": [
-            7.999999999999999,
-            0,
-          ],
-        },
-        {
-          "index": 5,
-          "pathIndex": "abc",
-          "pathLength": 12,
-          "point": [
-            10,
-            2.0000000000000004,
-          ],
-        },
-        {
-          "index": 6,
-          "pathIndex": "abc",
           "pathLength": 15,
           "point": [
             10,
@@ -84,7 +59,7 @@ describe(pathfindingNodes, () => {
           ],
         },
         {
-          "index": 7,
+          "index": 4,
           "pathIndex": "abc",
           "pathLength": 2,
           "point": [
@@ -93,7 +68,7 @@ describe(pathfindingNodes, () => {
           ],
         },
         {
-          "index": 8,
+          "index": 5,
           "pathIndex": "abc",
           "pathLength": 15,
           "point": [
@@ -102,7 +77,7 @@ describe(pathfindingNodes, () => {
           ],
         },
         {
-          "index": 9,
+          "index": 6,
           "pathIndex": "abc",
           "pathLength": 0,
           "point": [
@@ -111,34 +86,7 @@ describe(pathfindingNodes, () => {
           ],
         },
         {
-          "index": 10,
-          "pathIndex": "abc",
-          "pathLength": 4,
-          "point": [
-            4.000000000000001,
-            0,
-          ],
-        },
-        {
-          "index": 11,
-          "pathIndex": "abc",
-          "pathLength": 8,
-          "point": [
-            7.999999999999999,
-            0,
-          ],
-        },
-        {
-          "index": 12,
-          "pathIndex": "abc",
-          "pathLength": 12,
-          "point": [
-            10,
-            2.0000000000000004,
-          ],
-        },
-        {
-          "index": 13,
+          "index": 7,
           "pathIndex": "abc",
           "pathLength": 15,
           "point": [

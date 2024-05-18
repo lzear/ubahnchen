@@ -18,7 +18,7 @@ describe(pathfindingEdges, () => {
       [2, 2],
       [12, 12],
     ]
-    const points = pathfindingNodes([svgPath], startEnd, 4)
-    expect(pathfindingEdges(points).length).toBe(314)
+    const points = pathfindingNodes([svgPath], startEnd, 40_000)
+    expect(pathfindingEdges(points).length).toBe(86)
   })
 })

@@ -8,7 +8,7 @@ type Point = [number, number]
 export const findShortestPathStr = (
   svgString: string,
   startEnd: [Point, Point],
-  precision = 1,
+  precision: number,
 ) => {
   jsdomGlobal()
 
