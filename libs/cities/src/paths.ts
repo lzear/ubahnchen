@@ -50,6 +50,8 @@ const R = {
   SRC_DATA_DIR: path.join(PROJECT_ROOT, 'libs/cities/src/data'),
 }
 
+export type CityPaths = ReturnType<typeof cityPaths>
+
 const cityPaths = <C extends City>(city: C) => ({
   GTFS: {
     CSV: {
@@ -71,6 +73,8 @@ const cityPaths = <C extends City>(city: C) => ({
     DIR: path.join(SRC_DATA_DIR, city),
   },
 })
+
+export type MapPaths = ReturnType<typeof mapPaths>
 
 const mapPaths = <C extends City>(city: C, map: string) => {
   const CITY_P = P(city)
@@ -102,8 +106,8 @@ const mapPaths = <C extends City>(city: C, map: string) => {
 }
 
 function pathsFunction(): typeof R
-function pathsFunction(city: City): ReturnType<typeof cityPaths>
-function pathsFunction(city: City, map: string): ReturnType<typeof mapPaths>
+function pathsFunction(city: City): CityPaths
+function pathsFunction(city: City, map: string): MapPaths
 function pathsFunction(city?: City, map?: string) {
   if (!city) return R
   if (!map) return cityPaths(city)
