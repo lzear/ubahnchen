@@ -1,10 +1,9 @@
-import type { Format, Options } from 'tsup'
+import type {Format, Options} from 'tsup'
 
 export const defaultConfig = (
-  config: Omit<Options, 'external' | 'format' | 'minify' | 'dts'>,
+  config: Omit<Options, 'external' | 'minify'>,
   options: Options,
 ): Options => ({
-  ...config,
   clean: !options.watch,
   target: 'esnext',
   // dts: true,
@@ -14,4 +13,5 @@ export const defaultConfig = (
   },
   format: ['esm'] as Format[],
   // external: ['fsevents'],
+  ...config
 })

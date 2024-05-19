@@ -41,6 +41,7 @@ describe('workspaces', () => {
         "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
         "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
         "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
+        "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
         "next lint",
       ]
     `)
@@ -59,6 +60,7 @@ describe('workspaces', () => {
       [
         "MIT @ubahnchen/csv",
         "MIT @ubahnchen/database",
+        "MIT @ubahnchen/eslint-plugin",
         "MIT @ubahnchen/gtfs",
         "MIT @ubahnchen/gtfs-to-sqlite",
         "MIT @ubahnchen/json",

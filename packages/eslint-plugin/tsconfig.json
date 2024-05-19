@@ -1,0 +1,11 @@
+{
+  "extends": "@ubahnchen/tsconfig/base.json",
+  "exclude": ["node_modules", "dist"],
+  "include": ["*.json", ".*.cjs", "**/*"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

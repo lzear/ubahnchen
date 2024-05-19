@@ -4,8 +4,8 @@ const eslintConfig = {
     'simple-import-sort',
     '@typescript-eslint',
     '@tanstack/query',
+    '@ubahnchen',
   ],
-
   extends: [
     'plugin:@tanstack/eslint-plugin-query/recommended',
     'eslint:recommended',
@@ -121,6 +121,8 @@ const eslintConfig = {
     'unicorn/no-abusive-eslint-disable': 0,
     'unicorn/no-null': 0,
     'unicorn/prevent-abbreviations': 0, // annoying
+
+    '@ubahnchen/prefer-relative-imports': 2,
   },
   overrides: [
     {

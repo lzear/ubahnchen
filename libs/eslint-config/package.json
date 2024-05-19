@@ -7,6 +7,7 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
+    "@ubahnchen/eslint-plugin": "*",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",

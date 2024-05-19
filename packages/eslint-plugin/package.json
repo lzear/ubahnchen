@@ -1,0 +1,29 @@
+{
+  "name": "@ubahnchen/eslint-plugin",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
+    "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
+  },
+  "dependencies": {
+    "@typescript-eslint/utils": "^7",
+    "eslint": "^8",
+    "eslint-module-utils": "^2",
+    "tsup": "^8"
+  },
+  "devDependencies": {},
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
