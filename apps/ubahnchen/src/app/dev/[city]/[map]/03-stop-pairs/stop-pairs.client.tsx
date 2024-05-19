@@ -7,11 +7,11 @@ import _ from 'lodash'
 
 import type { StopPair, StopsPositions } from '@ubahnchen/cities'
 
-import { Pinch } from '../../../../_components/pinch'
 import { svgs } from '../../../svgs'
 import type { CityMapParam } from '../params'
 
 import { saveVertices } from './stop-pairs.action'
+import {Pinch} from "@/components/dev/client/pinch";
 
 const RADIUS = 24
 
@@ -49,6 +49,8 @@ const getVertex = (
     .map((path) => {
       const s1 = stopPositions[stopPair.stop_pairs.stop_id_1]
       const s2 = stopPositions[stopPair.stop_pairs.stop_id_2]
+      if (!s1) throw new Error(`No stop for ${stopPair.stop_pairs.stop_id_1}`)
+      if (!s2) throw new Error(`No stop for ${stopPair.stop_pairs.stop_id_2}`)
       const p1 = getClosestPointMemo(path, s1.point)
       const p2 = getClosestPointMemo(path, s2.point)
       const score = p1.distance + p2.distance
@@ -91,7 +93,7 @@ export const StopPairsClient = ({
   }, [])
 
   const paths = [...(svgElement?.querySelectorAll('path') || [])]
-
+  // @ts-ignore
   const vertices = []
   // const vertices = useMemo(() => {
   //   if (!svgElement) return null
@@ -125,6 +127,7 @@ export const StopPairsClient = ({
   //
   const cirlces = useMemo(
     () =>
+      // @ts-ignore
       vertices?.flatMap((vertex, idx) => {
         const delta = vertex.p2.length - vertex.p1.length
         const x = (rangeValue / 100) * delta
@@ -168,7 +171,7 @@ export const StopPairsClient = ({
           />,
         ]
       }),
-
+    // @ts-ignore
     [rangeValue, vertices],
   )
   const cs = useMemo(
@@ -194,6 +197,8 @@ export const StopPairsClient = ({
         const stop1 = stopPositions[stopPair.stop_pairs.stop_id_1]
         const stop2 = stopPositions[stopPair.stop_pairs.stop_id_2]
         const lineColor = lineColors[stopPair.routes.route_name]
+        if (!stop1) throw new Error('No stop1 for ' + stopPair.stop_pairs.stop_id_1)
+        if (!stop2) throw new Error('No stop2 for ' + stopPair.stop_pairs.stop_id_2)
         if (!lineColor)
           throw new Error('No lineColor for ' + stopPair.routes.route_name)
         return (
@@ -213,11 +218,12 @@ export const StopPairsClient = ({
     [lineColors, stopPairsFiltered, stopPositions],
   )
 
-  const ImportedSvg = svgs[city][map].stopPairs
+  const ImportedSvg = svgs[city][map]?.stopPairs
+  const verticesDao = false
   return (
     <div>
       <Pinch>
-        <ImportedSvg id="sssvvvggg" className="opacity-20" />
+        {ImportedSvg && <ImportedSvg id="sssvvvggg" className="opacity-20"/>}
         {svgElement && (
           <svg
             className="absolute top-0"

@@ -17,8 +17,8 @@ export const linearish = (vectors: Vector[]) => {
       const dx = target[0] - origin[0]
       const dy = target[1] - origin[1]
       t = [
-        t[0] + dx * normalizedWeights[index],
-        t[1] + dy * normalizedWeights[index],
+        t[0] + dx * normalizedWeights[index]!,
+        t[1] + dy * normalizedWeights[index]!,
       ]
     }
     return [x + t[0], y + t[1]]

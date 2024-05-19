@@ -5,14 +5,11 @@ import { animated, useSprings } from '@react-spring/web'
 import type { FullGestureState } from '@use-gesture/react'
 import { useDrag } from '@use-gesture/react'
 
-import { makeRandomPoints } from '@/app/_components/geometry/random-points-grid/02-sort'
 import { translate1 } from '@/components/dev/client/springs/translate'
 import { useBooleanUrlParameter } from '@/components/dev/server/toggle-checkbox'
-
-import { affineWithDelaunay } from '../../_components/geometry/translate-points/01-affine-with-delaunay'
-import { makeRegularPoints } from '../../_components/geometry/utils'
-
-// import { gravityTranslate } from './implementations/02-gravity'
+import { makeRandomPoints } from '@/services/dev/geometry/random-points-grid'
+import { translatePoints } from '@/services/dev/geometry/translate-points'
+import { makeRegularPoints } from '@/services/dev/geometry/utils'
 
 type Point = [number, number]
 type Vector = [Point, Point]
@@ -31,7 +28,7 @@ type Props = {
 
 const makePoints = (random: boolean, n: number) =>
   random
-    ? makeRandomPoints(n, WIDTH, HEIGHT)
+    ? makeRandomPoints.SORT(n, WIDTH, HEIGHT)
     : makeRegularPoints(n, WIDTH, HEIGHT)
 
 export const TranslatePointsSvg = ({ count }: Props) => {
@@ -60,7 +57,7 @@ export const TranslatePointsSvg = ({ count }: Props) => {
   )
   const tran = useCallback(
     (points: Point[]) => {
-      const newPointFunction = affineWithDelaunay(vectorsReference.current)
+      const newPointFunction = translatePoints.GRAVITY(vectorsReference.current)
       void api.start((index) => {
         const point = points[index]
         if (!point) throw new Error('no point')

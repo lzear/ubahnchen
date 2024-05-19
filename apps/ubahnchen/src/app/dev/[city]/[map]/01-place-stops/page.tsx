@@ -1,4 +1,4 @@
-import type { UrlParameterValue } from '@/app/[city]/search-parameters'
+import type { UrlParameterValue } from '@/components/dev/search-parameters'
 import { ToggleUrlParameter } from '@/components/dev/server/toggle-checkbox'
 
 import 'server-only'
@@ -6,8 +6,6 @@ import 'server-only'
 import type { CityMapParam } from '../params'
 
 import { PlaceStopsServer } from './place-stops.server'
-
-import 'leaflet/dist/leaflet.css'
 
 const PlaceStops = (props: {
   params: CityMapParam

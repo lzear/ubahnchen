@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 
-import { pointsExtent } from '@/app/_components/geometry/utils'
-import { Pinch } from '@/app/_components/pinch'
+import { Pinch } from '@/components/dev/client/pinch'
+import { pointsExtent } from '@/services/dev/geometry/utils'
 import type { City, StopPair, StopsPositions } from '@ubahnchen/cities'
 
 import { SvgSource } from './svg-source'

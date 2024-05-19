@@ -1,6 +1,6 @@
-import type { UrlParameterValue } from '@/app/[city]/search-parameters'
 import { MapPicker } from '@/components/dev/client/map-picker'
 import { PlacePathsServer } from '@/components/dev/client/place-paths/place-paths.server'
+import type { UrlParameterValue } from '@/components/dev/search-parameters'
 import { UrlParameter, zUrlParameters } from '@/components/dev/url-params'
 import type { City } from '@ubahnchen/cities'
 

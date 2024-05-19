@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from 'react'
 
-import { nextAppMapImports } from '@/app/_components/svg/import-map'
+import { nextAppMapImports } from '@/components/dev/import-map'
 import type { City } from '@ubahnchen/cities'
 
 export const SvgSource = ({

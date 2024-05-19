@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react'
 
-import type { Point } from '@/app/_components/geometry/utils'
-import { Pinch } from '@/app/_components/pinch'
+import { Pinch } from '@/components/dev/client/pinch'
 import { SvgSource } from '@/components/dev/client/place-stops/svg-source'
 import { SvgTarget } from '@/components/dev/client/place-stops/svg-target'
 import type { Size } from '@/components/dev/client/place-stops/types'
+import type { Point } from '@/services/dev/geometry/utils'
 import type { City, Stop, StopPair, StopsPositions } from '@ubahnchen/cities'
 
 type Props = {

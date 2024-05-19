@@ -1,4 +1,4 @@
-import DevLinks from './dev-links'
+import DevLinks from '@/components/dev/dev-links'
 
 const env = process.env.NODE_ENV
 export default function Home() {

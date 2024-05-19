@@ -1,10 +1,10 @@
 import type { ComponentProps } from 'react'
 import React, { useEffect, useRef } from 'react'
 
-import type { Point } from '@/app/_components/geometry/utils'
-import { getCenter } from '@/app/[city]/svg-center'
 import { findClosestIdx } from '@/app/dev/[city]/[map]/01-place-stops/place-stops.client'
-import { useLoadSvg } from '@/app/dev/svg/load'
+import { useLoadSvg } from '@/components/dev/svg/load'
+import { getCenter } from '@/components/dev/svg-center'
+import type { Point } from '@/services/dev/geometry/utils'
 import type { City, Stop } from '@ubahnchen/cities'
 
 type Props = {

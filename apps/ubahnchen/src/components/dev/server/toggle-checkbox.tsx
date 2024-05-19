@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { zBoolean } from '@/app/[city]/search-parameters'
+import { zBoolean } from '@/components/dev/search-parameters'
 
 type Props = {
   checked: boolean
@@ -36,7 +36,7 @@ export const useBooleanUrlParameter = (
 ) => {
   const searchParameters = useSearchParams()
   return (
-    zBoolean.parse(searchParameters.get(urlParameter)) ?? defaultValue ?? false
+    zBoolean.parse(searchParameters?.get(urlParameter)) ?? defaultValue ?? false
   )
 }
 
@@ -52,7 +52,7 @@ export const ToggleUrlParameter = ({
   return (
     <ToggleCheckbox
       onChange={(newValue) => {
-        const parameters = new URLSearchParams(searchParameters.toString())
+        const parameters = new URLSearchParams(searchParameters?.toString())
         parameters.set(urlParameter, String(newValue))
         router.replace(`${pathname}?${parameters.toString()}`)
       }}

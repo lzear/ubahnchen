@@ -1,8 +1,7 @@
 'use server'
 
+import { ActionCityMapIO } from '@/components/dev/server/actions'
 import type { City } from '@ubahnchen/cities'
-
-import { ActionCityMapIO } from '../../../../_server/actions'
 
 export type Vertex = {
   stop_id_1: string

@@ -23,7 +23,7 @@ export const SelectUrlParam = ({
   const router = useRouter()
   const searchParameters = useSearchParams()
   const pathname = usePathname()
-  const parameters = new URLSearchParams(searchParameters.toString())
+  const parameters = new URLSearchParams(searchParameters?.toString())
   const value = parameters.get(name) ?? undefined
   return (
     <div
@@ -35,7 +35,7 @@ export const SelectUrlParam = ({
         className="select select-xs"
         value={value}
         onChange={(event) => {
-          const parameters = new URLSearchParams(searchParameters.toString())
+          const parameters = new URLSearchParams(searchParameters?.toString())
           parameters.set(name, event.target.value)
           router.replace(`${pathname}?${parameters.toString()}`)
         }}

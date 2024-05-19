@@ -1,5 +1,5 @@
-import { getUsedStops } from '@/app/_server/gtfs/queries'
 import { getStopPositions } from '@/components/dev/client/place-stops/save-points-positions.action'
+import { getUsedStops } from '@/components/dev/server/queries'
 import { cities } from '@ubahnchen/cities'
 
 import type { CityMapParam } from '../params'

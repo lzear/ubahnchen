@@ -1,11 +1,11 @@
 'use client'
 
-import type { MouseEvent } from 'react'
 import { useEffect, useMemo, useRef, useState, useTransition } from 'react'
 import _ from 'lodash'
 
-import { Pinch } from '../../../../_components/pinch'
-import { useLoadSvg } from '../../../svg/load'
+import { Pinch } from '@/components/dev/client/pinch'
+import { useLoadSvg } from '@/components/dev/svg/load'
+
 import type { CityMapParam } from '../params'
 
 import { saveShapes } from './split-shapes.action'
@@ -65,10 +65,10 @@ const SplitShapesClient = (props: {
           ref={svgContainerRef}
           className="relative"
           onMouseOver={() => setIsRendered(true)}
-          onMouseDown={(e: MouseEvent<SVGSVGElement>) => {
+          onMouseDown={(e) => {
             refXY.current = [e.pageX, e.pageY]
           }}
-          onMouseUp={(e: MouseEvent<SVGSVGElement>) => {
+          onMouseUp={(e) => {
             if (!refXY.current) return
 
             const [x1, y1] = refXY.current
@@ -81,7 +81,6 @@ const SplitShapesClient = (props: {
             }
 
             const target = e.target as SVGSVGElement
-            console.log('🦺 antoinelog target', target)
 
             const id = target.dataset.ubhchn
 

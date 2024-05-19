@@ -5,7 +5,7 @@
 import type { ReactNode } from 'react'
 import { Fira_Sans, JetBrains_Mono } from 'next/font/google'
 
-import { ReactQuery } from './providers/react-query'
+import { ReactQuery } from '@/components/providers/react-query'
 
 import './globals.css'
 import 'tailwindcss/tailwind.css'
