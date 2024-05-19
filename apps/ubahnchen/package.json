@@ -84,6 +84,5 @@
   "volta": {
     "extends": "../../package.json"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
