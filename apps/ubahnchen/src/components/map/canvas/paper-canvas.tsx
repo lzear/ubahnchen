@@ -2,9 +2,10 @@
 
 import React from 'react'
 
-import { hidpi } from '@/components/map/canvas/consts'
-import { usePaper } from '@/components/map/canvas/use-paper'
 import type { MapPaths } from '@ubahnchen/cities/node'
+
+import { hidpi } from './consts'
+import { usePaper } from './use-paper'
 
 export const PaperCanvas = ({ mapPaths }: { mapPaths: MapPaths }) => {
   const { canvasReference } = usePaper({ mapPaths })

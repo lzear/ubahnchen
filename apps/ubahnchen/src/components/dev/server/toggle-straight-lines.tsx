@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { UrlParameter } from '@/components/dev/url-params'
+import { UrlParameter } from '../url-params'
 
 import { ToggleCheckbox } from './toggle-checkbox'
 

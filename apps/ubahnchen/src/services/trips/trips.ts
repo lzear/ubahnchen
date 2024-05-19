@@ -1,12 +1,13 @@
 import type { FetchQueryOptions } from '@tanstack/react-query'
 
 import type { TripByHour } from '@/pages/api/_keyframes'
-import { KeyEncoder } from '@/services/react-query/key-encode'
-import { noRefetch } from '@/services/react-query/no-refetch'
-import { queryClient } from '@/services/react-query/query-client'
-import { TimeGranola } from '@/services/time/time-granola'
 import type { City } from '@ubahnchen/cities'
 import { truthy } from '@ubahnchen/utils'
+
+import { KeyEncoder } from '../react-query/key-encode'
+import { noRefetch } from '../react-query/no-refetch'
+import { queryClient } from '../react-query/query-client'
+import { TimeGranola } from '../time/time-granola'
 
 type TripsHourKey = readonly ['trips', string, boolean, City, string]
 

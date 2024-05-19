@@ -1,11 +1,9 @@
 import { useLayoutEffect, useRef } from 'react'
 import * as Paper from 'paper'
 
-import {
-  convertPublicPath,
-  importSvg,
-} from '@/components/map/canvas/import-svg'
 import type { MapPaths } from '@ubahnchen/cities/node'
+
+import { convertPublicPath, importSvg } from './import-svg'
 
 export const usePaper = ({ mapPaths }: { mapPaths: MapPaths }) => {
   const canvasReference = useRef<HTMLCanvasElement>(null)

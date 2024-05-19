@@ -2,7 +2,7 @@ import type { ParsedUrlQuery } from 'node:querystring'
 
 import { useRouter } from 'next/router'
 
-import { useUbahnStore } from '@/store/index'
+import { useUbahnStore } from './index'
 
 type UrlParametersType = {
   map: 'U' | 'SU'

@@ -2,8 +2,9 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { UrlParameter } from '@/components/dev/url-params'
 import { gtfsTypes } from '@/gtfs-data/gtfs-types'
+
+import { UrlParameter } from '../url-params'
 
 export const SelectRouteType = ({
   options,
