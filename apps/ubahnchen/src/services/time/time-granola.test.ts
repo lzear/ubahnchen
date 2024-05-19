@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { expect, jest } from '@jest/globals'
 
 import { TimeGranola } from './time-granola'

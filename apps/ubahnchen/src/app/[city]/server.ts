@@ -1,10 +1,10 @@
 import _ from 'lodash'
 
+import { getRouteShapes } from '@/components/dev/server/get-route-shapes'
 import type { City, Route, Shape, Stop, StopPair } from '@ubahnchen/cities'
 
 import 'server-only'
 
-import { getRouteShapes } from '../../components/server/get-route-shapes'
 import { getRoutes, getStopPairs, getStops } from '../_server/gtfs/queries'
 
 import type { parseUrlParameters } from './search-parameters'

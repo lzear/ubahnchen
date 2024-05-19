@@ -5,9 +5,10 @@ import { animated, useSprings } from '@react-spring/web'
 import type { FullGestureState } from '@use-gesture/react'
 import { useDrag } from '@use-gesture/react'
 
-import { translate1 } from '../../../components/client/springs/translate'
-import { useBooleanUrlParameter } from '../../../components/server/toggle-checkbox'
-import { makeRandomPoints } from '../../_components/geometry/random-points-grid/02-sort'
+import { makeRandomPoints } from '@/app/_components/geometry/random-points-grid/02-sort'
+import { translate1 } from '@/components/dev/client/springs/translate'
+import { useBooleanUrlParameter } from '@/components/dev/server/toggle-checkbox'
+
 import { affineWithDelaunay } from '../../_components/geometry/translate-points/01-affine-with-delaunay'
 import { makeRegularPoints } from '../../_components/geometry/utils'
 

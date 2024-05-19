@@ -2,9 +2,8 @@
 
 import type { ComponentProps } from 'react'
 
+import { nextAppMapImports } from '@/app/_components/svg/import-map'
 import type { City } from '@ubahnchen/cities'
-
-import { nextAppMapImports } from '../../../app/_components/svg/import-map'
 
 export const SvgSource = ({
   city,
@@ -12,5 +11,6 @@ export const SvgSource = ({
   ...svgProps
 }: { city: City; map: string } & ComponentProps<'svg'>) => {
   const ImportedSvg = nextAppMapImports[city][map]
+  // @ts-ignore
   return <ImportedSvg {...svgProps} />
 }

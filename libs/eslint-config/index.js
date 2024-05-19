@@ -99,17 +99,21 @@ const eslintConfig = {
             '^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)',
           ],
           // Packages. `react` related packages come first.
-          ['^react', '^@?\\w'],
+          ['^react', String.raw`^@?\w`],
           // Internal packages.
-          ['^(@|@ubahnchen)(\\/.*|$)'],
+          [String.raw`^(@|@ubahnchen)(\/.*|$)`],
           // Side effect imports.
-          ['^\\u0000'],
+          [String.raw`^\u0000`],
           // Parent imports. Put `..` last.
-          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          [String.raw`^\.\.(?!/?$)`, String.raw`^\.\./?$`],
           // Other relative imports. Put same-folder imports and `.` last.
-          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+          [
+            String.raw`^\./(?=.*/)(?!/?$)`,
+            String.raw`^\.(?!/?$)`,
+            String.raw`^\./?$`,
+          ],
           // Style imports.
-          ['^.+\\.s?css$'],
+          [String.raw`^.+\.s?css$`],
         ],
       },
     ],
@@ -157,6 +161,7 @@ const eslintConfig = {
 
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    // project: true,
     // tsconfigRootDir: __dirname,
     project: [
       './tsconfig.json',

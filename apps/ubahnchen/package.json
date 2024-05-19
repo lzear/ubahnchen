@@ -14,13 +14,16 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@jest/globals": "^27.4.7",
     "@mdx-js/loader": "^3.0.1",
     "@next/mdx": "^14.2.3",
     "@radix-ui/react-slider": "^1.1.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@react-spring/web": "^9.7.3",
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/typography": "^0.5.13",
     "@tanstack/react-query": "^5.34.1",
+    "@total-typescript/ts-reset": "^0.5.1",
     "@trpc/client": "^10.45.2",
     "@trpc/next": "^10.45.2",
     "@trpc/react-query": "^10.45.2",
@@ -82,8 +85,5 @@
     "extends": "../../package.json"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0",
-    "@total-typescript/ts-reset": "^0.5.1",
-    "canvas": "^2.11.2"
   }
 }

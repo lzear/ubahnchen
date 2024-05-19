@@ -2,8 +2,8 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { UrlParameter } from '../../app/[city]/search-parameters'
-import { gtfsTypes } from '../../gtfs-data/gtfs-types'
+import { UrlParameter } from '@/components/dev/url-params'
+import { gtfsTypes } from '@/gtfs-data/gtfs-types'
 
 export const SelectRouteType = ({
   options,
@@ -19,10 +19,9 @@ export const SelectRouteType = ({
     <div className="form-control w-full max-w-xs">
       <select
         className="select select-xs"
-        placeholder="Select a route type"
         value="vvv"
         onChange={(v) => {
-          const parameters = new URLSearchParams(searchParameters.toString())
+          const parameters = new URLSearchParams(searchParameters?.toString())
           const clicked = Number(v.target.value)
           const newValues = value.includes(clicked)
             ? value.filter((v) => v !== clicked)

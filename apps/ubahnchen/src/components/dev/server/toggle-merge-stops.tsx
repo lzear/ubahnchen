@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { UrlParameter } from '../../app/[city]/search-parameters'
+import { UrlParameter } from '@/components/dev/url-params'
 
 import { ToggleCheckbox } from './toggle-checkbox'
 
@@ -15,7 +15,7 @@ export const ToggleMergeStops = ({ checked }: Props) => {
   return (
     <ToggleCheckbox
       onChange={(newValue) => {
-        const parameters = new URLSearchParams(searchParameters.toString())
+        const parameters = new URLSearchParams(searchParameters?.toString())
         parameters.set(UrlParameter.MergeStops, String(newValue))
         router.replace(`${pathname}?${parameters.toString()}`)
       }}

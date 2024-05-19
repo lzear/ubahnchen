@@ -2,10 +2,9 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
+import { UrlParameter } from '@/components/dev/url-params'
 import type { City } from '@ubahnchen/cities'
 import { cities } from '@ubahnchen/cities'
-
-import { UrlParameter } from '../../app/[city]/search-parameters'
 
 export const MapPicker = ({ city }: { city: City }) => {
   const { maps } = cities[city]
@@ -18,9 +17,8 @@ export const MapPicker = ({ city }: { city: City }) => {
     <div className="form-control w-full max-w-xs">
       <select
         className="select select-xs"
-        placeholder="Select a route type"
         onChange={(v) => {
-          const parameters = new URLSearchParams(searchParameters.toString())
+          const parameters = new URLSearchParams(searchParameters?.toString())
           const clicked = String(v.target.value)
           parameters.set(UrlParameter.Map, clicked)
           router.replace(`${pathname}?${parameters.toString()}`)

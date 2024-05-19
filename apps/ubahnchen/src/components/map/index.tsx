@@ -1,4 +1,4 @@
-import PaperCanvas from '@/components/map/canvas/paper-canvas'
+import { PaperCanvas } from '@/components/map/canvas/paper-canvas'
 import type { City } from '@ubahnchen/cities'
 import type { MapPaths } from '@ubahnchen/cities/node'
 import { P } from '@ubahnchen/cities/node'
