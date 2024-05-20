@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:../../cities/berlin/dist/gtfs/gtfs.sqlite"
+  url      = "file:../../build/berlin/gtfs/gtfs.big.sqlite"
 }
 
 model calendar {
@@ -97,8 +97,8 @@ model stop_times {
   trips          trips  @relation(fields: [trip_id], references: [trip_id], onDelete: NoAction, onUpdate: NoAction)
 
   @@index([departure_time], map: "idx_departure_time")
-  @@index([arrival_time], map: "idx_arrival_time")
   @@index([trip_id], map: "idx_trip_id")
+  @@index([arrival_time], map: "idx_arrival_time")
   @@index([trip_id], map: "idx_stop_times_trip_id")
 }
 

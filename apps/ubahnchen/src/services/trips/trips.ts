@@ -1,6 +1,8 @@
 import type { FetchQueryOptions } from '@tanstack/react-query'
 
 import type { TripByHour } from '@/pages/api/_keyframes'
+import type { Pair } from '@/pages/api/pairs'
+import type { RoutesDao } from '@/pages/api/routes-dao'
 import type { City } from '@ubahnchen/cities'
 import { truthy } from '@ubahnchen/utils'
 
@@ -8,6 +10,8 @@ import { KeyEncoder } from '../react-query/key-encode'
 import { noRefetch } from '../react-query/no-refetch'
 import { queryClient } from '../react-query/query-client'
 import { TimeGranola } from '../time/time-granola'
+import { getVirtualTime } from '../time/virtual-time'
+import { Train } from '../trains/train'
 
 type TripsHourKey = readonly ['trips', string, boolean, City, string]
 
@@ -120,34 +124,24 @@ export const getTripsHourAndNextMaybePromises = (
   return [tripsPreCache, tripsNow, tripsNext].filter(truthy)
 }
 
-const tripKey = (trip: TripByHour) => {
+export const tripKey = (trip: TripByHour) => {
   return `${trip.day}|${trip.trip_id}`
 }
 
 class TripsFetcher {
-  private date: Date | undefined = undefined
+  private trains = new Map<string, Train>()
 
-  private trips = new Map<string, TripByHour>()
-
-  private isExpired(trip: TripByHour) {
-    if (!this.date) return false
-    const endDate = new Date(trip.end_time * 1000)
-    return endDate < this.date
+  static isExpired(trip: TripByHour, date: number) {
+    return trip.end_time * 1000 < +date
   }
 
   private addTrips(trips: TripByHour[]) {
     for (const trip of trips)
-      if (this.trips.has(tripKey(trip))) continue
-      else if (this.isExpired(trip)) continue
-      else this.trips.set(tripKey(trip), trip)
-
-    if (this.date)
-      for (const [tripKey, trip] of this.trips)
-        if (this.isExpired(trip)) this.trips.delete(tripKey)
+      if (this.trains.has(tripKey(trip))) continue
+      else this.trains.set(tripKey(trip), new Train(trip))
   }
 
   async fetch(paramsOuter: ParamsOuter) {
-    this.date = paramsOuter.date
     const paramsInner = {
       ...paramsOuter,
       date: new TimeGranola(paramsOuter.date),
@@ -155,11 +149,25 @@ class TripsFetcher {
     const maybePromises = getTripsHourAndNextMaybePromises(paramsInner)
     const awaitedTrips = await Promise.all(maybePromises)
     this.addTrips(awaitedTrips.flat())
-    return this.trips
+    return this.trains
   }
 
-  public getTrips() {
-    return this.trips
+  public getTrains() {
+    return this.trains
+  }
+
+  public onFrame(pairs: Pair[], routes: RoutesDao[]) {
+    const virtualTime = getVirtualTime()
+    const vTime = +virtualTime
+
+    for (const [, train] of this.trains.entries()) {
+      if (train.trip.end_time * 1000 < vTime) {
+        train.remove()
+        this.trains.delete(tripKey(train.trip))
+        continue
+      }
+      train.move(vTime, pairs, routes)
+    }
   }
 }
 

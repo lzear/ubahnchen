@@ -1,6 +1,4 @@
-import * as paper from 'paper'
-
-import { hidpiFactor } from '@/components/map/canvas/consts'
+import Paper from 'paper'
 
 export const convertPublicPath = (path: string): string => {
   const keep = path.split('/public/')[1]
@@ -11,6 +9,9 @@ export const convertPublicPath = (path: string): string => {
   return `/${keep}`
 }
 
+export let upaths: paper.Path[] | null = null
+export let gTrains: paper.Group | null = null
+
 export const importSvg = async (
   svgPath: string,
   g: paper.Item,
@@ -20,7 +21,10 @@ export const importSvg = async (
     g.importSVG(svgPath, {
       ...options,
       onLoad: (svgItem: paper.Item) => {
-        svgItem.position = paper.view.center.divide(hidpiFactor)
+        // svgItem.position = paper.view.center.divide(hidpiFactor)
+        const activeLayer = Paper.project.activeLayer
+        upaths = svgItem.children as paper.Path[]
+        gTrains = activeLayer.addChild(new Paper.Group()) as paper.Group
         return resolve(svgItem)
       },
     }),

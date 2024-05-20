@@ -1,42 +1,34 @@
+import { useShallow } from 'zustand/react/shallow'
+
+import { useUbahnStore } from '@/store'
+
+type VirtualTimeParams = {
+  virtualTimeZero: number
+  setAt: number
+  speed: number
+  paused: boolean
+}
+
+const selectVirtualTime = (state: VirtualTimeParams) => state
+
 export const computeVirtualTime = ({
   virtualTimeZero,
   setAt,
   speed,
   paused,
-}: {
-  virtualTimeZero: number
-  setAt: number
-  speed: number
-  paused: boolean
-}) => {
+}: VirtualTimeParams) => {
   if (paused) return new Date(virtualTimeZero)
   const now = +Date.now()
   const diffX = (now - setAt) * speed
   return new Date(virtualTimeZero + diffX)
 }
 
-export const getVirtualTimeObject = ({
-  virtualTimeZero,
-  setAt,
-  speed,
-  paused,
-}: {
-  virtualTimeZero: number
-  setAt: number
-  speed: number
-  paused: boolean
-}) => {
-  const virtualDate = computeVirtualTime({
-    virtualTimeZero,
-    setAt,
-    speed,
-    paused,
-  })
+export const useVirtualTime = () => {
+  const payload = useUbahnStore(useShallow(selectVirtualTime))
+  return computeVirtualTime(payload)
+}
 
-  const virtualTime = +virtualDate
-  return {
-    virtualDate,
-    virtualTime,
-    virtualTimeS: virtualTime / 1000,
-  }
+export const getVirtualTime = () => {
+  const state = useUbahnStore.getState()
+  return computeVirtualTime(state)
 }

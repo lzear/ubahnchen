@@ -2,11 +2,13 @@ import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useShallow } from 'zustand/react/shallow'
 
-import { getRouteTypes } from '@/services/routes/routes'
-import { getVirtualTimeObject } from '@/services/time/virtual-time'
-import { tripsFetcher } from '@/services/trips/trips'
 import { useUbahnStore } from '@/store'
 import type { City } from '@ubahnchen/cities'
+
+import { getRouteTypes } from '../routes/routes'
+import { computeVirtualTime, getVirtualTime } from '../time/virtual-time'
+
+import { tripsFetcher } from './trips'
 
 export const useTrips = (city: City, map: string) => {
   const { speed, virtualTimeZero, setAt, paused } = useUbahnStore(
@@ -18,7 +20,7 @@ export const useTrips = (city: City, map: string) => {
     })),
   )
 
-  const { virtualDate } = getVirtualTimeObject({
+  const virtualDate = computeVirtualTime({
     virtualTimeZero,
     setAt,
     speed,
@@ -50,6 +52,19 @@ export const useTripsHour = (city: City, map: string) => {
       .then((t) => {
         return unpause()
       })
+
+    const int = setInterval(() => {
+      const date = getVirtualTime()
+      void tripsFetcher.fetch({
+        date,
+        city,
+        routeTypes: routeTypesStr.split(',').map(Number),
+      })
+    }, 1000)
+
+    return () => {
+      clearInterval(int)
+    }
   }, [city, routeTypes, routeTypesStr, unpause])
-  return tripsFetcher.getTrips()
+  return tripsFetcher.getTrains()
 }
