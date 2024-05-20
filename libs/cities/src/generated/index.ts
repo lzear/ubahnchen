@@ -1,4 +1,4 @@
-import { config as berlin } from './cities/berlin/index'
+import { config as berlin } from './cities/berlin'
 
 export const cities = { berlin }
 
