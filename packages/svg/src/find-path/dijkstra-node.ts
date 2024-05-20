@@ -1,9 +1,9 @@
 import jsdomGlobal from 'jsdom-global'
 
+import type { Point } from '@ubahnchen/utils'
+
 import { findShortestPath } from './dijkstra'
 import { pathfindingNodes } from './pathfinding-nodes'
-
-type Point = [number, number]
 
 export const findShortestPathStr = (
   svgString: string,

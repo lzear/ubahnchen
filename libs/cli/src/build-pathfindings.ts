@@ -3,10 +3,11 @@ import fs from 'node:fs'
 import { oraPromise } from 'ora'
 
 import type { City, Stop, StopPair, StopsPositions } from '@ubahnchen/cities'
-import { cities, getMap } from '@ubahnchen/cities'
+import { cities, getMap, logLineTag } from '@ubahnchen/cities'
 import { MapAssetName, MapAssets, MapQueries, P } from '@ubahnchen/cities/node'
 import { defaultTextPerf, successText } from '@ubahnchen/csv'
 import type { ShortestPath } from '@ubahnchen/svg'
+import { removeJumps } from '@ubahnchen/svg'
 import { findShortestPathStr } from '@ubahnchen/svg/node'
 import { Perf, wait } from '@ubahnchen/utils'
 
@@ -36,18 +37,22 @@ const findOnePath = ({
   const parent1 = getParent(stopPair.stop_pairs.stop_id_1)
   const parent2 = getParent(stopPair.stop_pairs.stop_id_2)
 
-  return findShortestPathStr(
+  const pathWithJumps = findShortestPathStr(
     svgString,
     [parent1.point, parent2.point],
     precision,
   )
+
+  return removeJumps(pathWithJumps)
 }
 
 const buildPathfindingForMap = async (city: City, map: string) => {
   const mapConfig = getMap(city, map)
 
   const mapQueries = new MapQueries(city)
-  const stopPairs = mapQueries.stopPairs(mapConfig.routeTypes)
+  const stopPairs = mapQueries
+    .stopPairs(mapConfig.routeTypes)
+    .sort((a, b) => a.routes.route_name.localeCompare(b.routes.route_name))
   const stops = mapQueries.stops({ onlyParents: false })
 
   const stopPositionsAsset = new MapAssets(city, map, MapAssetName.PLACE_STOPS)
@@ -67,7 +72,10 @@ const buildPathfindingForMap = async (city: City, map: string) => {
       const shortestPathByPair: Record<string, ShortestPath> = {}
       for (const [_index, stopPair] of stopPairs.entries()) {
         perf?.tick(1)
-        ora.text = defaultTextPerf({ perf, ora: { text } })
+        ora.text =
+          defaultTextPerf({ perf, ora: { text } }) +
+          '\t' +
+          logLineTag(city, stopPair.routes.route_name)
         await wait(0)
         shortestPathByPair[stopPair.stop_pairs.idx] = findOnePath({
           stops,

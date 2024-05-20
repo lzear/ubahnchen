@@ -7,6 +7,8 @@ import { expect } from '@jest/globals'
 import jsdomGlobal from 'jsdom-global'
 import { createSVGWindow } from 'svgdom'
 
+import type { Point } from '@ubahnchen/utils'
+
 import { findShortestPath } from './dijkstra'
 import { pathfindingEdges } from './pathfinding-edges'
 import { pathfindingNodes } from './pathfinding-nodes'
@@ -16,8 +18,6 @@ jsdomGlobal()
 global.DOMParser = window.DOMParser
 
 // global.DOMParser = window.DOMParser
-
-type Point = [number, number]
 
 describe(findShortestPath, () => {
   it('normalize paths', () => {

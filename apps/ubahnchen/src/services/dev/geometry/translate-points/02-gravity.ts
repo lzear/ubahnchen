@@ -1,6 +1,8 @@
 import _ from 'lodash'
 
-import type { Point, Vector } from '../utils'
+import type { Point } from '@ubahnchen/utils'
+
+import type { Vector } from '../utils'
 
 export const gravityTranslate = (vectors: Vector[]) => {
   return ([x, y]: Point): Point => {
@@ -17,8 +19,8 @@ export const gravityTranslate = (vectors: Vector[]) => {
       const dx = target[0] - origin[0]
       const dy = target[1] - origin[1]
       t = [
-        t[0] + dx * normalizedWeights[index],
-        t[1] + dy * normalizedWeights[index],
+        t[0] + dx * normalizedWeights[index]!,
+        t[1] + dy * normalizedWeights[index]!,
       ]
     }
     return [x + t[0], y + t[1]]

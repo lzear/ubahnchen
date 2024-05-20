@@ -1,6 +1,7 @@
 import _ from 'lodash'
 
-export type Point = [number, number]
+import type { Point } from '@ubahnchen/utils'
+
 export type Vector = [Point, Point]
 export type Triangle = [Point, Point, Point]
 

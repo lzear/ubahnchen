@@ -10,8 +10,8 @@ import { useBooleanUrlParameter } from '@/components/dev/server/toggle-checkbox'
 import { makeRandomPoints } from '@/services/dev/geometry/random-points-grid'
 import { translatePoints } from '@/services/dev/geometry/translate-points'
 import { makeRegularPoints } from '@/services/dev/geometry/utils'
+import type { Point } from '@ubahnchen/utils'
 
-type Point = [number, number]
 type Vector = [Point, Point]
 
 const WIDTH = 650

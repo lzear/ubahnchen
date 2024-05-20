@@ -1,10 +1,10 @@
 import { expect } from '@jest/globals'
 import { createSVGWindow } from 'svgdom'
 
+import type { Point } from '@ubahnchen/utils'
+
 import { pathfindingEdges } from './pathfinding-edges'
 import { pathfindingNodes } from './pathfinding-nodes'
-
-type Point = [number, number]
 
 describe(pathfindingEdges, () => {
   it('normalize paths', () => {

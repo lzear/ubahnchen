@@ -1,6 +1,7 @@
 import _ from 'lodash'
 
-import type { Point } from '../utils'
+import type { Point } from '@ubahnchen/utils'
+
 import { randomPoint } from '../utils'
 
 export const makeRandomPoints = (

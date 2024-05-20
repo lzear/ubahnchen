@@ -1,6 +1,6 @@
-import type { BaseNode, PathfindingNode } from './pathfinding-nodes'
+import type { Point } from '@ubahnchen/utils'
 
-type Point = [number, number]
+import type { BaseNode, PathfindingNode } from './pathfinding-nodes'
 
 export type PathfindingEdge = {
   distance: number

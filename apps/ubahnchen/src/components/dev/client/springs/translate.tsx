@@ -1,4 +1,4 @@
-import type { Point } from '@/app/_components/geometry/utils'
+import type { Point } from '@ubahnchen/utils'
 
 export const translate1 =
   (selectedPoint: { index: number; pos: Point }) => (index: number) => {

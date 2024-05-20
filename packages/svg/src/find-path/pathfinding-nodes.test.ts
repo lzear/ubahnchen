@@ -2,9 +2,9 @@ import { expect } from '@jest/globals'
 import _ from 'lodash'
 import { createSVGWindow } from 'svgdom'
 
-import { pathfindingNodes } from './pathfinding-nodes'
+import type { Point } from '@ubahnchen/utils'
 
-type Point = [number, number]
+import { pathfindingNodes } from './pathfinding-nodes'
 
 describe(pathfindingNodes, () => {
   it('normalize paths', () => {

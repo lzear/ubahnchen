@@ -1,9 +1,8 @@
 // @ts-ignore
-// import munkres from 'munkres-js'
-//
 import munkres from 'hungarian-on3'
 
-import type { Point } from '../utils'
+import type { Point } from '@ubahnchen/utils'
+
 import { distance } from '../utils'
 
 const munkresTs = (matrix: number[][]) => {

@@ -74,7 +74,7 @@ const getDistanceThroughPath = (
   return Math.abs(to.pathLength - from.pathLength)
 }
 
-type PathEdge = {
+export type PathEdge = {
   from: PathfindingNode | BaseNode
   to: PathfindingNode | BaseNode
   distance: number

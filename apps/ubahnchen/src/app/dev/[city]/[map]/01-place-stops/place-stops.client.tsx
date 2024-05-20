@@ -6,8 +6,8 @@ import { Pinch } from '@/components/dev/client/pinch'
 import { SvgSource } from '@/components/dev/client/place-stops/svg-source'
 import { SvgTarget } from '@/components/dev/client/place-stops/svg-target'
 import type { Size } from '@/components/dev/client/place-stops/types'
-import type { Point } from '@/services/dev/geometry/utils'
 import type { City, Stop, StopPair, StopsPositions } from '@ubahnchen/cities'
+import type { Point } from '@ubahnchen/utils'
 
 type Props = {
   city: City

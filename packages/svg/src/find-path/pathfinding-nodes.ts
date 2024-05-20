@@ -1,8 +1,8 @@
 import paper from 'paper'
 
-import { getClosestPointPaper } from './get-closest-point'
+import type { Point } from '@ubahnchen/utils'
 
-type Point = [number, number]
+import { getClosestPointPaper } from './get-closest-point'
 
 const domPointToTuple = (point: DOMPoint | paper.Point): Point => [
   point.x,

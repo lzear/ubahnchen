@@ -16,3 +16,4 @@ export {
 export { type Truthy, truthy } from './truthy'
 export { toTuples, type Tuple } from './tuple'
 export { wait } from './wait'
+export type Point = [number, number]

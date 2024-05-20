@@ -13,6 +13,7 @@ import { log2DArray, logStrings, prettyNumber } from '@ubahnchen/utils'
 import { MapQueries } from './maps/map-queries'
 import type { City } from './index'
 import { cities } from './index'
+import { logLineTag } from './log-line-tag'
 import { MapAssetName, MapAssets } from './maps-assets'
 import { P, svgArray, svgFilesDone, svgs } from './paths'
 
@@ -244,8 +245,8 @@ export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
 
   console.log(chalk.bold(`🎨 Colors`))
   console.log(
-    ...Object.entries(cities[s.city].gtfs.lineColors).map(([name, colors]) =>
-      chalk.bold.hex(colors.text).bgHex(colors.bg)(`\u00A0${name}\u00A0`),
+    ...Object.keys(cities[s.city].gtfs.lineColors).map((name) =>
+      logLineTag(s.city, name),
     ),
   )
   console.log()
