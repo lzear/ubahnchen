@@ -17,7 +17,12 @@ export type MapConfig = {
   license?: License
 }
 
+export type LineColor = {
+  bg: string
+  text: string
+}
+
 export type GtfsConfig = {
   url: string
-  lineColors: Record<string, string>
+  lineColors: Record<string, LineColor>
 }

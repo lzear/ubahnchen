@@ -1,14 +1,14 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-import type { City } from '@ubahnchen/cities'
-import { P } from '@ubahnchen/cities/node'
 import type { Json, JsonSchema } from '@ubahnchen/json'
 import { canonicalizeToString } from '@ubahnchen/json'
 import { initializeFileIfNotExists } from '@ubahnchen/node'
 import type { ShortestPath } from '@ubahnchen/svg'
 
+import type { City } from './index'
 import type { StopsPositions } from './map-asset-type'
+import { P } from './paths'
 
 export enum MapAssetName {
   PLACE_STOPS = 'place-stops',

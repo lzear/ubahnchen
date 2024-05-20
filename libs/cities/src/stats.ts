@@ -242,8 +242,17 @@ export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
     )
   } else console.log(chalk.red.bold(`⚠️ DB small missing`))
 
+  console.log(chalk.bold(`🎨 Colors`))
+  console.log(
+    ...Object.entries(cities[s.city].gtfs.lineColors).map(([name, colors]) =>
+      chalk.bold.hex(colors.text).bgHex(colors.bg)(`\u00A0${name}\u00A0`),
+    ),
+  )
+  console.log()
+
   if (s.maps.maps.length > 0) console.log(chalk.green.bold(`🗺️ Maps`))
   else console.log(chalk.red.bold(`⚠️ Maps missing`))
+
   logStrings(
     log2DArray(
       [
