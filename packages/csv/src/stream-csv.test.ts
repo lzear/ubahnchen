@@ -19,7 +19,7 @@ describe(streamCsvFactory, () => {
   afterAll(() => temporary.cleanup())
 
   it('streams csv file - headers are handled by default', async () => {
-    const callback = jest.fn()
+    const callback = vi.fn()
     const streamCsv = streamCsvFactory({
       filePath: temporary.file(),
     })
@@ -29,7 +29,7 @@ describe(streamCsvFactory, () => {
   })
 
   it('streams csv file with headers', async () => {
-    const callback = jest.fn()
+    const callback = vi.fn()
     const streamCsv = streamCsvFactory({
       filePath: temporary.file(),
       parserOptions: { headers: true },

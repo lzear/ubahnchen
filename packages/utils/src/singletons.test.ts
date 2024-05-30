@@ -9,7 +9,7 @@ import {
 
 describe(SingletonUnique, () => {
   it('calls the function once', () => {
-    const mock = jest.fn()
+    const mock = vi.fn()
     const singleton = new SingletonUnique(mock)
     singleton.run()
     expect(mock).toHaveBeenCalledTimes(1)
@@ -18,7 +18,7 @@ describe(SingletonUnique, () => {
   })
 
   it('clears', () => {
-    const mock = jest.fn()
+    const mock = vi.fn()
     const singleton = new SingletonUnique(mock)
     singleton.run()
     expect(mock).toHaveBeenCalledTimes(1)
@@ -31,7 +31,7 @@ describe(SingletonUnique, () => {
   })
 
   it('deletes', () => {
-    const mock = jest.fn((a: number, b: number) => a + b)
+    const mock = vi.fn((a: number, b: number) => a + b)
     const singleton = new Singletons(mock, defaultSerializer)
     expect(singleton.run(1, 2)).toBe(3)
     expect(mock).toHaveBeenCalledTimes(1)

@@ -20,7 +20,7 @@ describe(withPerfOra, () => {
   afterAll(() => temporary.cleanup())
 
   it('streams csv file - handles headers by default', async () => {
-    const callback = jest.fn()
+    const callback = vi.fn()
     const r = await streamCsvPerfOra(
       {
         filePath: temporary.file(),
@@ -34,7 +34,7 @@ describe(withPerfOra, () => {
   })
 
   it('streams csv file with headers', async () => {
-    const callback = jest.fn()
+    const callback = vi.fn()
     await streamCsvPerfOra(
       {
         filePath: temporary.file(),

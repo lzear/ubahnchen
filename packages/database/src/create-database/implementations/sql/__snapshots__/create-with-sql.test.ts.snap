@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`createWithSql creates with SQLite 1`] = `
+exports[`createWithSql > creates with SQLite 1`] = `
 "-- TABLE calendar
 CREATE TABLE calendar
   (

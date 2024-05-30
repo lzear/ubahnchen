@@ -55,6 +55,8 @@ const eslintConfig = {
           '**/*.config.*',
           '*.config.*',
           'tsup.config.ts',
+          '**/vitest.config.ts',
+          '**/vitest.config.js',
         ],
       },
     ],

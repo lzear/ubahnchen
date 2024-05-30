@@ -1,5 +1,3 @@
-import jsdomGlobal from 'jsdom-global'
-
 import type { Point } from '@ubahnchen/utils'
 
 import { findShortestPath } from './dijkstra'
@@ -10,10 +8,6 @@ export const findShortestPathStr = (
   startEnd: [Point, Point],
   precision: number,
 ) => {
-  jsdomGlobal()
-
-  global.DOMParser = window.DOMParser
-
   const parser = new DOMParser()
   const paths = [
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment

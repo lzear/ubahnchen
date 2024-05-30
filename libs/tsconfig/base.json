@@ -31,7 +31,7 @@
     "resolveJsonModule": true,
     "removeComments": true,
     "sourceMap": true,
-    "types": ["node"]
+    "types": ["node", "vitest/globals"]
   },
   "include": ["*.json", ".*.cjs"]
 }

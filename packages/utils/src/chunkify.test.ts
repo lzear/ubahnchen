@@ -4,9 +4,8 @@ describe(chunkify, () => {
   it('processes data in specified chunk sizes', async () => {
     const mockData = Array.from({ length: 10 }, (_, i) => i)
     const chunkSize = 2
-    // @ts-ignore
-    const processChunk = jest.fn<(n: number[]) => void>().mockResolvedValue()
-    const run = jest.fn((pusher: (n: number) => void) => {
+    const processChunk = vi.fn<[number[]]>().mockResolvedValue(null)
+    const run = vi.fn((pusher: (n: number) => void) => {
       for (const d of mockData) pusher(d)
       return 'done'
     })

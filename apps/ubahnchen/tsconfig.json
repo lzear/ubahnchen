@@ -29,7 +29,8 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "types": ["node", "vitest/globals"]
   },
   "include": [
     "next-env.d.ts",

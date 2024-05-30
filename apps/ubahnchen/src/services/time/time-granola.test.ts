@@ -1,7 +1,7 @@
 import { TimeGranola } from './time-granola'
 
 describe(TimeGranola, () => {
-  jest.useFakeTimers().setSystemTime(new Date('2020-01-01'))
+  vi.useFakeTimers().setSystemTime(new Date('2020-01-01'))
   it('should granularize date UTC', () => {
     const date = new Date('2021-01-01T12:34:56Z')
     const granularized = TimeGranola.granularize(date)

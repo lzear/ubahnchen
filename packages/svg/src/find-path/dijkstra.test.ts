@@ -2,8 +2,6 @@ import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-import jsdomGlobal from 'jsdom-global'
 import { createSVGWindow } from 'svgdom'
 
 import type { Point } from '@ubahnchen/utils'
@@ -12,9 +10,9 @@ import { findShortestPath } from './dijkstra'
 import { pathfindingEdges } from './pathfinding-edges'
 import { pathfindingNodes } from './pathfinding-nodes'
 
-jsdomGlobal()
+// jsdomGlobal()
 
-global.DOMParser = window.DOMParser
+// global.DOMParser = window.DOMParser
 
 // global.DOMParser = window.DOMParser
 

@@ -1,3 +1,5 @@
+import type { MockInstance } from 'vitest'
+
 import { log2DArray, logStrings, prettyNumber } from './log'
 
 describe(prettyNumber, () => {
@@ -13,10 +15,10 @@ describe(prettyNumber, () => {
 })
 
 describe(logStrings, () => {
-  let consoleLogSpy: jest.SpiedFunction<typeof console.log>
+  let consoleLogSpy: MockInstance
 
   beforeEach(() => {
-    consoleLogSpy = jest.spyOn(console, 'log')
+    consoleLogSpy = vitest.spyOn(console, 'log')
     consoleLogSpy.mockImplementation(() => null)
   })
 

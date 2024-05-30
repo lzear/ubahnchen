@@ -8,7 +8,7 @@ describe(PerfSimple, () => {
   })
 
   afterEach(() => {
-    jest.restoreAllMocks()
+    vi.restoreAllMocks()
   })
 
   it('starts and stops correctly', () => {
@@ -26,7 +26,7 @@ describe(Perf, () => {
   })
 
   afterEach(() => {
-    jest.restoreAllMocks()
+    vi.restoreAllMocks()
   })
 
   it('ticks correctly', () => {

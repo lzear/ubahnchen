@@ -5,7 +5,8 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "devDependencies": {
-    "@ubahnchen/eslint-config": "*"
+    "@ubahnchen/eslint-config": "*",
+    "vitest": "^1.6.0"
   },
   "private": true,
   "license": "MIT",
