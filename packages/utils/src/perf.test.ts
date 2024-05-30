@@ -1,5 +1,3 @@
-import { jest } from '@jest/globals'
-
 import { Perf, PerfSimple } from './perf'
 
 describe(PerfSimple, () => {

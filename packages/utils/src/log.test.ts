@@ -1,5 +1,3 @@
-import { jest } from '@jest/globals'
-
 import { log2DArray, logStrings, prettyNumber } from './log'
 
 describe(prettyNumber, () => {

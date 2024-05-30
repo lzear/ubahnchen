@@ -2,7 +2,6 @@ import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
 
-import { expect } from '@jest/globals'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import jsdomGlobal from 'jsdom-global'
 import { createSVGWindow } from 'svgdom'

@@ -7,8 +7,7 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsup",
-    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
-    "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
     "color": "^4.2.3",
@@ -17,7 +16,6 @@
     "strip-ansi": "^7.1.0"
   },
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
     "@types/color": "^3.0.6",
     "@ubahnchen/eslint-config": "*",
     "@ubahnchen/tsconfig": "*"

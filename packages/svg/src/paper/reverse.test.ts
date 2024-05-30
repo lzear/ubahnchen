@@ -1,5 +1,3 @@
-import { expect } from '@jest/globals'
-
 import { reverse } from './reverse'
 
 describe(reverse, () => {

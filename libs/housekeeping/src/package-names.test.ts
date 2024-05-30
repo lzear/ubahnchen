@@ -1,5 +1,3 @@
-import { describe, it } from '@jest/globals'
-
 import { P } from '@ubahnchen/cities/node'
 
 import { listDirectories } from './packages'

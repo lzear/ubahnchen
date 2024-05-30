@@ -12,8 +12,6 @@
     "ncu": "npx npm-check-updates --workspaces --upgrade --root",
     "depcheck": "lerna exec --no-bail --stream -- depcheck",
     "sort-packages": "npx sort-package-json \"package.json\" \"**/*/package.json\"",
-    "test": "node --experimental-vm-modules --no-warnings node_modules/.bin/jest",
-    "test-coverage": "yarn test --coverage",
     "turbo-test": "turbo run test"
   },
   "devDependencies": {
@@ -21,13 +19,10 @@
     "@babel/preset-env": "^7.24.5",
     "@babel/preset-react": "^7.24.1",
     "@babel/preset-typescript": "^7.24.1",
-    "@jest/globals": "^29.7.0",
-    "@types/jest": "^29.5.12",
     "@types/jsdom": "^21.1.6",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
     "@ubahnchen/cli": "*",
-    "babel-jest": "^29.7.0",
     "babel-plugin-transform-import-meta": "^2.2.1",
     "babel-preset-typescript": "^7.0.0-alpha.19",
     "del-cli": "^5.1.0",
@@ -35,7 +30,6 @@
     "eslint": "^8",
     "eslint-config-next": "^14.2.3",
     "esm": "^3.2.25",
-    "jest": "30.0.0-alpha.2",
     "jsdom": "^24.0.0",
     "jsonc-eslint-parser": "^2.4.0",
     "lerna": "^8.1.2",
@@ -43,7 +37,6 @@
     "prettier": "^3.2.5",
     "prettier-plugin-sql-cst": "^0.11.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "ts-jest": "^29.1.2",
     "tsup": "^8.0.2",
     "turbo": "^1.13.3",
     "typescript": "^5.4.5"

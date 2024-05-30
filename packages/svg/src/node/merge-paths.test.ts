@@ -2,8 +2,6 @@ import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
 
-import { describe, expect } from '@jest/globals'
-
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { P } from '@ubahnchen/cities/node'
 import { Temporary } from '@ubahnchen/node'

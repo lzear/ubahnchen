@@ -1,5 +1,3 @@
-import { jest } from '@jest/globals'
-
 import { chunkify } from './chunkify'
 
 describe(chunkify, () => {

@@ -1,5 +1,3 @@
-import { expect, it } from '@jest/globals'
-
 import { Temporary } from '@ubahnchen/node'
 
 import { getSchema } from '../../get-schema'

@@ -7,8 +7,7 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsup",
-    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
-    "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
     "@ubahnchen/utils": "*",
@@ -17,7 +16,6 @@
     "tmp": "^0.2.3"
   },
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
     "@types/tmp": "^0.2.6",
     "@ubahnchen/eslint-config": "*",
     "@ubahnchen/tsconfig": "*"

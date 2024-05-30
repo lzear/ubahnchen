@@ -1,4 +1,3 @@
-import { expect } from '@jest/globals'
 import _ from 'lodash'
 import { createSVGWindow } from 'svgdom'
 

@@ -14,8 +14,7 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsup",
-    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
-    "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
     "@types/jsdom": "^21",
@@ -28,7 +27,6 @@
     "parse-svg-path": "^0.1.2"
   },
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
     "@types/abs-svg-path": "^0.1.3",
     "@types/lodash": "^4.17.1",
     "@types/svgdom": "^0.1.2",

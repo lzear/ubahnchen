@@ -12,8 +12,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md",
-    "test": "node --loader ts-node/esm --es-module-specifier-resolution=node --experimental-vm-modules --no-warnings ../../node_modules/.bin/jest --config ../../jest.config.cjs --rootDir=./"
+    "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
     "@types/better-sqlite3": "^7.6.10",
@@ -38,7 +37,6 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
     "@types/lodash": "^4.17.1",
     "@ubahnchen/eslint-config": "*",
     "tsup": "^8.0.2"

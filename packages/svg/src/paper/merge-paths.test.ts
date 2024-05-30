@@ -1,5 +1,3 @@
-import { expect } from '@jest/globals'
-
 import { mergePaths } from './merge-paths'
 
 describe(mergePaths, () => {

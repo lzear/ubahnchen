@@ -1,5 +1,3 @@
-import { expect } from '@jest/globals'
-
 import { humanizeTime } from './humanize-time'
 
 describe(humanizeTime, () => {

@@ -1,5 +1,3 @@
-import { jest } from '@jest/globals'
-
 import { Temporary } from '@ubahnchen/node'
 
 import { streamCsvFactory } from './stream-csv'

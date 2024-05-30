@@ -1,5 +1,3 @@
-import { expect } from '@jest/globals'
-
 import { normalize } from './normalize'
 
 describe(normalize, () => {

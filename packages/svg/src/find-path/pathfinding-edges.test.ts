@@ -1,4 +1,3 @@
-import { expect } from '@jest/globals'
 import { createSVGWindow } from 'svgdom'
 
 import type { Point } from '@ubahnchen/utils'

@@ -25,7 +25,6 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "@jest/globals": "^29.7.0",
     "@ubahnchen/eslint-config": "*",
     "drizzle-kit": "^0.20.17",
     "tsup": "^8.0.2"

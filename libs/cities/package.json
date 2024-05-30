@@ -17,7 +17,6 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
-    "@jest/globals": "^27.4.6",
     "@types/lodash": "^4.17.1",
     "@ubahnchen/database": "*",
     "@ubahnchen/json": "*",

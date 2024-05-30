@@ -1,5 +1,3 @@
-import { describe, expect } from '@jest/globals'
-
 import type { Json, JsonSchema } from './canonicalize'
 import { canonicalize, canonicalizeToString } from './canonicalize'
 

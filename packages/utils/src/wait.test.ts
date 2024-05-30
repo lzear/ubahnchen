@@ -1,5 +1,3 @@
-import { expect } from '@jest/globals'
-
 import { wait } from './wait'
 
 describe(wait, () => {

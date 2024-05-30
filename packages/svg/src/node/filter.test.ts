@@ -2,8 +2,6 @@ import fs from 'node:fs'
 import path from 'node:path'
 import url from 'node:url'
 
-import { expect } from '@jest/globals'
-
 import { Temporary } from '@ubahnchen/node'
 
 import { filterSvg } from '../filter'
