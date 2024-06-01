@@ -5,11 +5,7 @@
   "type": "module",
   "exports": "./src/index.ts",
   "main": "src/index.ts",
-  "bin": {
-    "merge-readme": "src/bin/merge-readme.ts"
-  },
   "scripts": {
-    "merge-readme": "./src/bin/merge-readme.ts",
     "typedoc": "typedoc",
     "typedoc-watch": "chokidar \"../../packages/**/*\" -c \"yarn typedoc\"",
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
