@@ -26,7 +26,10 @@ type Props = {
   count: number
 }
 
-const makePoints = (random: boolean, n: number) =>
+const makePoints: (r: boolean, n: number) => Point[] = (
+  random: boolean,
+  n: number,
+) =>
   random
     ? makeRandomPoints.SORT(n, WIDTH, HEIGHT)
     : makeRegularPoints(n, WIDTH, HEIGHT)

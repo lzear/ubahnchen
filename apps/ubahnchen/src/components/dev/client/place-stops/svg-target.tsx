@@ -6,7 +6,6 @@ import { useDrag } from '@use-gesture/react'
 import _ from 'lodash'
 
 import { findClosestIdx } from '@/app/dev/[city]/[map]/01-place-stops/place-stops.client'
-import { pinchScaleRef } from '@/components/dev/client/pinch'
 import { Loading } from '@/components/dev/loading'
 import { affineWithDelaunay } from '@/services/dev/geometry/translate-points/01-affine-with-delaunay'
 import { gravityTranslate } from '@/services/dev/geometry/translate-points/02-gravity'
@@ -16,6 +15,7 @@ import type { City, Stop, StopPair, StopsPositions } from '@ubahnchen/cities'
 import type { Point } from '@ubahnchen/utils'
 
 import { UrlParamType, useUrlParams } from '../../url-params/url-params'
+import { pinchScaleRef } from '../pinch'
 import { translate1 } from '../springs/translate'
 
 import { recordStopPosition } from './save-points-positions.action'
@@ -90,7 +90,7 @@ const useNewPoints = ({
       return [origin.point, point]
     },
   )
-  const transform = useDelaunay()
+  const transform: (p: Point) => Point = useDelaunay()
     ? affineWithDelaunay(vectors)
     : gravityTranslate(vectors)
 

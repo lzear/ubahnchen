@@ -1,20 +1,23 @@
 import { Delaunay } from 'd3-delaunay'
 import _ from 'lodash'
 
+import type { Point } from '@ubahnchen/utils'
 import { toTuples } from '@ubahnchen/utils'
 
 import { affineTransformationFromTriangles } from '../affine-transformation'
 import { isInPolygon } from '../is-in-polygon'
-import type { Point, Triangle, Vector } from '../utils'
+import type { Triangle, Vector } from '../utils'
 import { distance } from '../utils'
 
 import { gravityTranslate } from './02-gravity'
 
-const trislate = (vectors: [Vector, Vector, Vector]) => (point: Point) => {
-  const t1: Triangle = [vectors[0][0], vectors[1][0], vectors[2][0]]
-  const t2: Triangle = [vectors[0][1], vectors[1][1], vectors[2][1]]
-  return affineTransformationFromTriangles(t1, t2)(point)
-}
+const trislate =
+  (vectors: [Vector, Vector, Vector]) =>
+  (point: Point): Point => {
+    const t1: Triangle = [vectors[0][0], vectors[1][0], vectors[2][0]]
+    const t2: Triangle = [vectors[0][1], vectors[1][1], vectors[2][1]]
+    return affineTransformationFromTriangles(t1, t2)(point)
+  }
 
 export const affineWithDelaunay = (
   vectors: Vector[],

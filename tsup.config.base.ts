@@ -1,4 +1,4 @@
-import type {Format, Options} from 'tsup'
+import type { Format, Options } from 'tsup'
 
 export const defaultConfig = (
   config: Omit<Options, 'external' | 'minify'>,
@@ -13,5 +13,5 @@ export const defaultConfig = (
   },
   format: ['esm'] as Format[],
   // external: ['fsevents'],
-  ...config
+  ...config,
 })

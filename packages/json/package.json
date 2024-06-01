@@ -14,6 +14,7 @@
     "@types/humanize-duration": "^3.27.4",
     "@types/papaparse": "^5.3.14",
     "@ubahnchen/eslint-config": "*",
+    "@ubahnchen/tsconfig": "*",
     "tsup": "^8.0.2"
   },
   "volta": {

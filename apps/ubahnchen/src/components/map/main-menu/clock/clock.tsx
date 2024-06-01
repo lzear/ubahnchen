@@ -2,10 +2,11 @@
 
 import React, { useRef } from 'react'
 
-import { Ticking } from '@/components/map/main-menu/clock/ticking'
 import { Button } from '@/components/ui/button'
 import { formatTzInLocale } from '@/services/time/date-helpers'
 import { useUbahnStore } from '@/store'
+
+import { Ticking } from './ticking'
 
 const timeZone = 'Europe/Berlin'
 

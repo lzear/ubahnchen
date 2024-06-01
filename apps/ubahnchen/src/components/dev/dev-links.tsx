@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
-import { Button } from '@/components/ui/button'
 import { citiesList } from '@ubahnchen/cities'
+
+import { Button } from '../ui/button'
 
 export default function DevLinks() {
   return (

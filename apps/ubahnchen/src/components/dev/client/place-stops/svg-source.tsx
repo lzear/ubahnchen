@@ -4,8 +4,8 @@ import React, { useEffect, useRef } from 'react'
 import { findClosestIdx } from '@/app/dev/[city]/[map]/01-place-stops/place-stops.client'
 import { useLoadSvg } from '@/components/dev/svg/load'
 import { getCenter } from '@/components/dev/svg-center'
-import type { Point } from '@/services/dev/geometry/utils'
 import type { City, Stop } from '@ubahnchen/cities'
+import type { Point } from '@ubahnchen/utils'
 
 type Props = {
   city: City

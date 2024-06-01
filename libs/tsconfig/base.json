@@ -26,12 +26,21 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "lib": ["esnext", "dom", "DOM.Iterable", "ScriptHost"],
-
     "module": "esnext",
     "resolveJsonModule": true,
     "removeComments": true,
     "sourceMap": true,
     "types": ["node", "vitest/globals"]
   },
-  "include": ["*.json", ".*.cjs"]
+  "include": [
+    "*.json",
+    ".*.cjs",
+    "../../tsup.config.base",
+    "tsup.config.base",
+    "../../tsup.config.base.ts",
+    "tsup.config.base.ts",
+    "../../vitest.shared.ts",
+    "vitest.shared.ts",
+    "@ubahnchen/tsconfig/vitest.shared.ts"
+  ]
 }

@@ -12,7 +12,7 @@ import _ from 'lodash'
 import * as paper from 'paper'
 import Paper from 'paper'
 
-import { hidpi } from '@/components/map/canvas/consts'
+import { hidpi } from './consts'
 
 const ZOOM_SPEED = 0.002
 const ZOM_MAX = 200

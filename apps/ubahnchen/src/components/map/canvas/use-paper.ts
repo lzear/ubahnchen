@@ -1,9 +1,9 @@
 import { useLayoutEffect, useRef } from 'react'
 import * as Paper from 'paper'
 
-import { useGestures } from '@/components/map/canvas/gestures'
 import type { MapPaths } from '@ubahnchen/cities/node'
 
+import { useGestures } from './gestures'
 import { convertPublicPath, importSvg } from './import-svg'
 
 export const usePaper = ({ mapPaths }: { mapPaths: MapPaths }) => {

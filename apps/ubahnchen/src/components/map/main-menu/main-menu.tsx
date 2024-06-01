@@ -1,6 +1,6 @@
-import { Clock } from '@/components/map/main-menu/clock/clock'
-import { Speed } from '@/components/map/main-menu/speed'
-import { Trips } from '@/components/map/main-menu/trips/trips'
+import { Clock } from './clock/clock'
+import { Trips } from './trips/trips'
+import { Speed } from './speed'
 
 export const MainMenu = () => {
   return (

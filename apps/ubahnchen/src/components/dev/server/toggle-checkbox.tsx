@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { zBoolean } from '@/components/dev/search-parameters'
+import { zBoolean } from '../search-parameters'
 
 type Props = {
   checked: boolean
