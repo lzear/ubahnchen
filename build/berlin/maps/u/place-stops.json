@@ -1366,13 +1366,5 @@
     ],
     "stop_id": "de:11000:900012102",
     "stop_name": "U Kochstr./Checkpoint Charlie (Berlin)"
-  },
-  "070201075507": {
-    "point": [
-      1217.8399658203125,
-      852.7449951171875
-    ],
-    "stop_id": "070201075507",
-    "stop_name": "U Britz-Süd (Berlin)"
   }
 }
