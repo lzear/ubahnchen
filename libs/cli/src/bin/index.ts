@@ -4,6 +4,7 @@ import * as process from 'node:process'
 
 import { Command } from '@commander-js/extra-typings'
 
+import type { City } from '@ubahnchen/cities'
 import { citiesList } from '@ubahnchen/cities'
 import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
@@ -68,6 +69,18 @@ program
     await buildAllPathfinding(getCities(city), map)
   })
 
+program
+  .command('all')
+  .description('run all commands')
+  .option('-c, --city <city>', 'City name')
+  .action(async ({ city }) => {
+    const cities = getCities(city)
+    for (const c of cities) await downloadCity({ city: c })
+    for (const c of cities) await gtfsToSqlite({ city: c }, false)
+    await buildAllPathfinding(cities)
+    await svgAll(cities)
+  })
+
 const svgCommands = program.command('svg').description('manage svg files')
 
 svgCommands
@@ -93,5 +106,18 @@ svgCommands
   .description('copy the public assets (SVGs) to app/ubahnchen/public')
   .option('-c, --city <city>', 'City name')
   .action(({ city }) => copyPublicAssets(getCities(city)))
+
+svgCommands
+  .command('all')
+  .description('run all svg commands')
+  .option('-c, --city <city>', 'City name')
+  .action(({ city }) => svgAll(getCities(city)))
+
+const svgAll = async (c: City[]) => {
+  await annotate(c)
+  await filterLines(c)
+  await mergeLines(c)
+  await copyPublicAssets(c)
+}
 
 program.parse()
