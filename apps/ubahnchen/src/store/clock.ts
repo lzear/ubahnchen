@@ -4,7 +4,7 @@ import { computeVirtualTime } from '@/services/time/virtual-time'
 
 import type { StateCreatorWithSubscribe } from './types'
 
-const INITIAL_SPEED = 500
+export const INITIAL_SPEED = 500
 
 interface ClockSliceValues {
   frameDelta?: number
@@ -17,6 +17,7 @@ interface ClockSliceValues {
   setSpeed: (speed: number) => void
   setVirtualTimeZero: (virtualTimeZero?: number) => void
   paused: boolean
+  loading: boolean
   pause: () => void
   unpause: () => void
 }
@@ -40,6 +41,7 @@ export const createClockSlice: StateCreatorWithSubscribe<ClockSlice> = (
     day,
     setDay: (day: string) => set({ day }),
     speed: INITIAL_SPEED,
+    loading: true,
     setSpeed: (speed: number) =>
       set(({ virtualTimeZero, paused, setAt, speed: oldSpeed }) => {
         const currentVirtualTime = +computeVirtualTime({
@@ -50,6 +52,7 @@ export const createClockSlice: StateCreatorWithSubscribe<ClockSlice> = (
         })
         const now = +Date.now()
         return {
+          paused: false,
           speed,
           setAt: now,
           virtualTimeZero: currentVirtualTime,

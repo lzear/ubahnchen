@@ -50,7 +50,10 @@ export const useTripsHour = (city: City, map: string) => {
         routeTypes: routeTypesStr.split(',').map(Number),
       })
       .then((t) => {
-        return unpause()
+        return useUbahnStore.setState({
+          loading: false,
+          paused: false,
+        })
       })
 
     const int = setInterval(() => {
