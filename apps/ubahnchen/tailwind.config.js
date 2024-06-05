@@ -8,6 +8,7 @@ const tailwindConfig = {
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
+    './app/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
   prefix: '',
@@ -20,6 +21,10 @@ const tailwindConfig = {
       },
     },
     extend: {
+      transitionDuration: {
+        '2000': '2000ms',
+        '20000': '20000ms',
+      },
       fontFamily: {
         fira: ['var(--font-fira)'],
         mono: ['var(--font-jetbrains-mono)'],
@@ -66,12 +71,12 @@ const tailwindConfig = {
       },
       keyframes: {
         'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          from: {height: '0'},
+          to: {height: 'var(--radix-accordion-content-height)'},
         },
         'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+          from: {height: 'var(--radix-accordion-content-height)'},
+          to: {height: '0'},
         },
       },
       animation: {
@@ -80,7 +85,9 @@ const tailwindConfig = {
       },
     },
   },
-  plugins: [tailwindTypography, tailwindcssAnimate],
+  plugins: [tailwindTypography,
+    // tailwindcssAnimate
+  ],
 }
 
 export default tailwindConfig

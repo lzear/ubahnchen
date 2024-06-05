@@ -26,7 +26,10 @@ const makeCity = async (city: string) => {
   const files = await fs.promises.readdir(path.resolve(srcPath, 'data', city), {
     withFileTypes: true,
   })
-  const maps = files.filter((f) => f.isDirectory()).map((f) => f.name)
+  const maps = files
+    .filter((f) => f.isDirectory())
+    .map((f) => f.name)
+    .filter((name) => !name.startsWith('_'))
   const importMaps = maps.map(
     (m) => `import { config as ${m} } from '../../../data/${city}/${m}'`,
   )

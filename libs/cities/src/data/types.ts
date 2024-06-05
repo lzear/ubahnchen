@@ -25,4 +25,7 @@ export type LineColor = {
 export type GtfsConfig = {
   url: string
   lineColors: Record<string, LineColor>
+  colors: string[]
+  color: string
+  font: { className: string }
 }
