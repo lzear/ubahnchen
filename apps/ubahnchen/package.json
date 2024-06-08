@@ -65,6 +65,7 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-leaflet": "^4.2.1",
+    "react-resizable-panels": "^2.0.19",
     "react-zoom-pan-pinch": "^3.4.4",
     "server-only": "^0.0.1",
     "styled-jsx": "^5.1.2",
