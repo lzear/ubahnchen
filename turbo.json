@@ -1,8 +1,10 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "tasks": {
     "download": {
-      "outputs": ["dist/zip/**"],
+      "outputs": [
+        "dist/zip/**"
+      ],
       "dependsOn": []
     },
     "build": {
@@ -13,18 +15,27 @@
         "api/**",
         "public/build/**"
       ],
-      "dependsOn": ["^build", "json-graph"]
+      "dependsOn": [
+        "^build",
+        "json-graph"
+      ]
     },
     "json-graph": {
       "outputs": [],
-      "dependsOn": ["build-sqlite"]
+      "dependsOn": [
+        "build-sqlite"
+      ]
     },
     "build-sqlite": {
       "outputs": [],
-      "dependsOn": ["download"]
+      "dependsOn": [
+        "download"
+      ]
     },
     "test": {
-      "outputs": ["coverage/**"],
+      "outputs": [
+        "coverage/**"
+      ],
       "dependsOn": []
     },
     "lint": {
