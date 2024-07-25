@@ -25,6 +25,8 @@ const SVG = {
   STEP_01_FIGMAED: 'STEP_01_FIGMAED',
   STEP_02_SVGOMGED: 'STEP_02_SVGOMGED',
   STEP_10_ANNOTATED: 'STEP_10_ANNOTATED',
+  STEP_11_LINES_STATIONS: 'STEP_11_LINES_STATIONS',
+  STEP_12_SPLIT_PATHS: 'STEP_12_SPLIT_PATHS',
   STEP_20_LINES_ONLY: 'STEP_20_LINES_ONLY',
   STEP_21_LINES_MERGED: 'STEP_21_LINES_MERGED',
 } as const
@@ -34,6 +36,8 @@ export const svgs = {
   [SVG.STEP_01_FIGMAED]: '01-simplified-via-figma.svg',
   [SVG.STEP_02_SVGOMGED]: '02-simplified-via-svgomg.svg',
   [SVG.STEP_10_ANNOTATED]: '10-annotated.svg',
+  [SVG.STEP_11_LINES_STATIONS]: '11-lines-stations.svg',
+  [SVG.STEP_12_SPLIT_PATHS]: '12-split-paths.svg',
   [SVG.STEP_20_LINES_ONLY]: '20-lines-only.svg',
   [SVG.STEP_21_LINES_MERGED]: '21-lines-merged.svg',
 } as const
