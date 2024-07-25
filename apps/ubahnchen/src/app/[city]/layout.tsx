@@ -1,11 +1,31 @@
 import type { ReactNode } from 'react'
+import localFont from 'next/font/local'
 
 import { ThemeProvider } from '@/components/providers/theme-provider'
-import { cities, isCity } from '@ubahnchen/cities'
+import { isCity } from '@ubahnchen/cities'
 
 type Props = {
   children: ReactNode
   params: { city?: string }
+}
+
+const berlin = localFont({
+  src: [
+    {
+      path: './_font/BerlinTypeWeb-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './_font/BerlinTypeWeb-Regular.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+})
+
+const fonts = {
+  berlin,
 }
 
 const CityLayout = ({ children, params }: Props) => {
@@ -15,8 +35,6 @@ const CityLayout = ({ children, params }: Props) => {
     throw new Error('Need city!')
   }
 
-  const cityConfig = cities[city]
-
   return (
     <ThemeProvider
       attribute="class"
@@ -25,7 +43,7 @@ const CityLayout = ({ children, params }: Props) => {
       // disableTransitionOnChange
       // forcedTheme={city}
     >
-      <div className={cityConfig.gtfs.font.className}>{children}</div>
+      <div className={fonts[city]?.className}>{children}</div>
     </ThemeProvider>
   )
 }
