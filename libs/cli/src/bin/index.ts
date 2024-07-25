@@ -14,6 +14,7 @@ import { copyPublicAssets } from '../copy-assets'
 import { filterLines } from '../filter-lines'
 import { getCities } from '../get-cities'
 import { mergeLines } from '../merge-lines'
+import { splitPaths } from '../split-paths'
 import { getStatus } from '../status'
 
 const pckg = await import('../../package.json', { assert: { type: 'json' } })
@@ -84,6 +85,12 @@ program
 const svgCommands = program.command('svg').description('manage svg files')
 
 svgCommands
+  .command('split')
+  .description("split svg paths so there are no 'jumps'")
+  .option('-c, --city <city>', 'City name')
+  .action(({ city }) => splitPaths(getCities(city)))
+
+svgCommands
   .command('annotate')
   .description("add 'ubhn' data attributes to the SVGs")
   .option('-c, --city <city>', 'City name')
@@ -99,7 +106,8 @@ svgCommands
   .command('merge-lines')
   .description('merge the SVG lines by color')
   .option('-c, --city <city>', 'City name')
-  .action(({ city }) => mergeLines(getCities(city)))
+  .option('-m, --map <map>', 'Map name')
+  .action(({ city, map }) => mergeLines(getCities(city), map))
 
 svgCommands
   .command('copy')
@@ -115,6 +123,7 @@ svgCommands
 
 const svgAll = async (c: City[]) => {
   await annotate(c)
+  await splitPaths(c)
   await filterLines(c)
   await mergeLines(c)
   await copyPublicAssets(c)
