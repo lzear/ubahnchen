@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "color": "^4.2.3",
-    "humanize-duration": "^3.32.0",
+    "humanize-duration": "^3.32.1",
     "lodash": "^4.17.21",
     "strip-ansi": "^7.1.0"
   },

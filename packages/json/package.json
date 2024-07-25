@@ -15,7 +15,7 @@
     "@types/papaparse": "^5.3.14",
     "@ubahnchen/eslint-config": "*",
     "@ubahnchen/tsconfig": "*",
-    "tsup": "^8.0.2"
+    "tsup": "^8.2.3"
   },
   "volta": {
     "extends": "../../package.json"

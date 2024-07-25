@@ -6,7 +6,7 @@
   },
   "devDependencies": {
     "@ubahnchen/eslint-config": "*",
-    "vitest": "^1.6.0"
+    "vitest": "^2.0.4"
   },
   "private": true,
   "license": "MIT",

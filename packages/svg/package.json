@@ -24,17 +24,17 @@
     "jsdom-global": "^3.0.2",
     "lodash": "^4.17.21",
     "normalize-svg-path": "^1.1.0",
-    "paper": "^0.12.17",
+    "paper": "^0.12.18",
     "parse-svg-path": "^0.1.2"
   },
   "devDependencies": {
     "@types/abs-svg-path": "^0.1.3",
-    "@types/lodash": "^4.17.1",
+    "@types/lodash": "^4.17.7",
     "@types/svgdom": "^0.1.2",
     "@ubahnchen/node": "*",
-    "jsdom": "^24.0.0",
+    "jsdom": "^24.1.1",
     "svgdom": "^0.1.19",
-    "tsup": "^8.0.2"
+    "tsup": "^8.2.3"
   },
   "volta": {
     "extends": "../../package.json"

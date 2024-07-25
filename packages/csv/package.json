@@ -14,7 +14,7 @@
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
     "fast-csv": "^5.0.1",
-    "humanize-duration": "^3.32.0",
+    "humanize-duration": "^3.32.1",
     "ora": "^8.0.1",
     "papaparse": "^5.4.1"
   },
@@ -22,7 +22,7 @@
     "@types/humanize-duration": "^3.27.4",
     "@types/papaparse": "^5.3.14",
     "@ubahnchen/eslint-config": "*",
-    "tsup": "^8.0.2"
+    "tsup": "^8.2.3"
   },
   "volta": {
     "extends": "../../package.json"
