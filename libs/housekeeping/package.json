@@ -13,13 +13,13 @@
   "dependencies": {
     "@ubahnchen/cities": "*",
     "@ubahnchen/utils": "*",
-    "chokidar-cli": "^3.0.0",
-    "typedoc": "^0.26.5",
-    "typedoc-plugin-coverage": "^3.3.0",
-    "typedoc-plugin-keywords": "^1.6.0",
-    "typedoc-plugin-markdown": "^4.2.3",
-    "typedoc-theme-hierarchy": "^5.0.3",
-    "yargs": "^17.7.2"
+    "chokidar-cli": "^3",
+    "typedoc": "^0",
+    "typedoc-plugin-coverage": "^3",
+    "typedoc-plugin-keywords": "^1",
+    "typedoc-plugin-markdown": "^4",
+    "typedoc-theme-hierarchy": "^5",
+    "yargs": "^17"
   },
   "devDependencies": {},
   "volta": {

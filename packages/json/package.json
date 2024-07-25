@@ -11,11 +11,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/humanize-duration": "^3.27.4",
-    "@types/papaparse": "^5.3.14",
+    "@types/humanize-duration": "^3",
+    "@types/papaparse": "^5",
     "@ubahnchen/eslint-config": "*",
     "@ubahnchen/tsconfig": "*",
-    "tsup": "^8.2.3"
+    "tsup": "^8"
   },
   "volta": {
     "extends": "../../package.json"

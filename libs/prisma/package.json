@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
-    "prisma": "^5.17.0"
+    "prisma": "^5"
   },
   "volta": {
     "extends": "../../package.json"

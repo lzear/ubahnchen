@@ -10,13 +10,13 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
-    "color": "^4.2.3",
-    "humanize-duration": "^3.32.1",
-    "lodash": "^4.17.21",
-    "strip-ansi": "^7.1.0"
+    "color": "^4",
+    "humanize-duration": "^3",
+    "lodash": "^4",
+    "strip-ansi": "^7"
   },
   "devDependencies": {
-    "@types/color": "^3.0.6",
+    "@types/color": "^3",
     "@ubahnchen/eslint-config": "*",
     "@ubahnchen/tsconfig": "*"
   },

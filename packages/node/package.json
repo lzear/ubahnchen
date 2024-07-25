@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@ubahnchen/utils": "*",
-    "ora": "^8.0.1",
-    "pretty-bytes": "^6.1.1",
-    "tmp": "^0.2.3"
+    "ora": "^8",
+    "pretty-bytes": "^6",
+    "tmp": "^0"
   },
   "devDependencies": {
-    "@types/tmp": "^0.2.6",
+    "@types/tmp": "^0",
     "@ubahnchen/eslint-config": "*",
     "@ubahnchen/tsconfig": "*"
   },

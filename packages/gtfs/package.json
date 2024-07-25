@@ -12,8 +12,8 @@
   "dependencies": {
     "@ubahnchen/csv": "*",
     "@ubahnchen/node": "*",
-    "gtfs-types": "^4.0.0",
-    "tsup": "^8.2.3"
+    "gtfs-types": "^4",
+    "tsup": "^8"
   },
   "devDependencies": {
     "@ubahnchen/eslint-config": "*",

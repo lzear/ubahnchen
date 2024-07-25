@@ -15,31 +15,31 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
-    "@types/better-sqlite3": "^7.6.11",
-    "@types/node-fetch": "^2.6.11",
+    "@types/better-sqlite3": "^7",
+    "@types/node-fetch": "^2",
     "@ubahnchen/cities": "*",
     "@ubahnchen/csv": "*",
     "@ubahnchen/database": "*",
     "@ubahnchen/gtfs": "*",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
-    "better-sqlite3": "^11.1.2",
-    "csv-parse": "^5.5.6",
-    "drizzle-orm": "^0.32.1",
-    "extract-zip": "^2.0.1",
-    "fast-csv": "^5.0.1",
-    "gtfs": "^4.13.1",
-    "gtfs-types": "^4.0.0",
-    "lodash": "^4.17.21",
-    "node-fetch": "^3.3.2",
-    "ora": "^8.0.1",
-    "p-limit": "^4.0.0",
-    "ts-node": "^10.9.2"
+    "better-sqlite3": "^11",
+    "csv-parse": "^5",
+    "drizzle-orm": "^0",
+    "extract-zip": "^2",
+    "fast-csv": "^5",
+    "gtfs": "^4",
+    "gtfs-types": "^4",
+    "lodash": "^4",
+    "node-fetch": "^3",
+    "ora": "^8",
+    "p-limit": "^4",
+    "ts-node": "^10"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.7",
+    "@types/lodash": "^4",
     "@ubahnchen/eslint-config": "*",
-    "tsup": "^8.2.3"
+    "tsup": "^8"
   },
   "volta": {
     "extends": "../../package.json"

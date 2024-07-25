@@ -10,19 +10,19 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
-    "@fast-csv/format": "^5.0.0",
+    "@fast-csv/format": "^5",
     "@ubahnchen/node": "*",
     "@ubahnchen/utils": "*",
-    "fast-csv": "^5.0.1",
-    "humanize-duration": "^3.32.1",
-    "ora": "^8.0.1",
-    "papaparse": "^5.4.1"
+    "fast-csv": "^5",
+    "humanize-duration": "^3",
+    "ora": "^8",
+    "papaparse": "^5"
   },
   "devDependencies": {
-    "@types/humanize-duration": "^3.27.4",
-    "@types/papaparse": "^5.3.14",
+    "@types/humanize-duration": "^3",
+    "@types/papaparse": "^5",
     "@ubahnchen/eslint-config": "*",
-    "tsup": "^8.2.3"
+    "tsup": "^8"
   },
   "volta": {
     "extends": "../../package.json"
