@@ -18,7 +18,10 @@ type Props = {
 export const SvgSource = ({ city, map, setSize, setCandidates }: Props) => {
   const svgContainerRef = useRef<HTMLDivElement | null>(null)
 
-  const d = useLoadSvg(`/${city}/${map}/svg/10-annotated.svg`, svgContainerRef)
+  const d = useLoadSvg(
+    `/${city}/${map}/svg/12-split-paths.svg`,
+    svgContainerRef,
+  )
 
   useEffect(() => {
     const svg = svgContainerRef.current?.getElementsByTagName('svg')[0]

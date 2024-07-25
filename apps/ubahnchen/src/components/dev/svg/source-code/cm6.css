@@ -1,0 +1,8 @@
+.cm-editor {
+  height: 100%;
+}
+
+.cm6 {
+  min-height: 0;
+  flex: 0 1 auto;
+}

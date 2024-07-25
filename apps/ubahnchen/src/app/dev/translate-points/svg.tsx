@@ -137,7 +137,7 @@ export const TranslatePointsSvg = ({ count }: Props) => {
 
   return (
     <div>
-      <svg width={WIDTH} height={HEIGHT} className="relative">
+      <svg width={WIDTH} height={HEIGHT} className="relative overflow-visible">
         {/*{points.map((p, index) => (*/}
         {/*  <animated.circle*/}
         {/*    key={index}*/}

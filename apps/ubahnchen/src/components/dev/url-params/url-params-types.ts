@@ -1,4 +1,3 @@
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { z } from 'zod'
 
 export enum UrlParamType {
@@ -45,30 +44,4 @@ const format: {
   [UrlParamType.Number]: String,
   [UrlParamType.Boolean]: String,
   [UrlParamType.NumberArray]: (v) => v.map(String).join('-'),
-}
-
-export const useUrlParams = <
-  TypeName extends UrlParamType,
-  ActualType extends Types[TypeName] = Types[TypeName],
->({
-  name,
-  type,
-}: {
-  name: string
-  type: TypeName
-}) => {
-  const router = useRouter()
-  const params = useSearchParams()
-  const pathname = usePathname()
-  const value = params
-    ? (parse[type](params.get(name)) as ActualType | null)
-    : null
-  const setValue = (newValue: ActualType) => {
-    const parameters = new URLSearchParams(params?.toString())
-    if (newValue === null || newValue === undefined) parameters.delete(name)
-    else parameters.set(name, format[type](newValue))
-
-    router.replace(`${pathname}?${parameters.toString()}`)
-  }
-  return { value, setValue }
 }

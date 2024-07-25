@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codemirror/lang-xml": "^6.1.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mdx-js/loader": "^3.0.1",
@@ -37,7 +38,9 @@
     "@ubahnchen/node": "*",
     "@ubahnchen/tsconfig": "*",
     "@ubahnchen/utils": "*",
+    "@uiw/react-codemirror": "^4.23.0",
     "@use-gesture/react": "^10.3.1",
+    "@use-gesture/vanilla": "^10.3.1",
     "autoprefixer": "^10.4.19",
     "bufferutil": "^4.0.8",
     "canvas": "^2.11.2",
@@ -52,6 +55,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "framer-motion": "^11.1.7",
+    "highlight.js": "^11.9.0",
     "hungarian-on3": "^0.3.1",
     "jotai": "^2.8.0",
     "leaflet": "^1.9.4",
@@ -78,6 +82,7 @@
     "type-fest": "^4.18.1",
     "typescript": "5.4.5",
     "utf-8-validate": "^6.0.3",
+    "xml-formatter": "^3.6.2",
     "zod": "^3.23.6",
     "zustand": "^4.5.2"
   },

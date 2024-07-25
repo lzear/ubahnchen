@@ -1,5 +1,7 @@
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import { z } from 'zod'
+
+import { searchParamsServerContext } from '../svg/search-params-server-context'
 
 export enum UrlParamType {
   String = 'string',
@@ -47,7 +49,7 @@ const format: {
   [UrlParamType.NumberArray]: (v) => v.map(String).join('-'),
 }
 
-export const useUrlParams = <
+export const useUrlParamsServer = <
   TypeName extends UrlParamType,
   ActualType extends Types[TypeName] = Types[TypeName],
 >({
@@ -57,18 +59,14 @@ export const useUrlParams = <
   name: string
   type: TypeName
 }) => {
-  const router = useRouter()
-  const params = useSearchParams()
-  const pathname = usePathname()
-  const value = params
-    ? (parse[type](params.get(name)) as ActualType | null)
-    : null
+  const params = searchParamsServerContext.getParams()
+  const value = params ? (parse[type](params[name]) as ActualType | null) : null
   const setValue = (newValue: ActualType) => {
     const parameters = new URLSearchParams(params?.toString())
     if (newValue === null || newValue === undefined) parameters.delete(name)
     else parameters.set(name, format[type](newValue))
 
-    router.replace(`${pathname}?${parameters.toString()}`)
+    redirect(`${''}?${parameters.toString()}`)
   }
   return { value, setValue }
 }
