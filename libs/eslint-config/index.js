@@ -18,7 +18,7 @@ const eslintConfig = {
     'plugin:jsonc/recommended-with-jsonc',
     // 'plugin:jsx-a11y/recommended',
     'plugin:markdown/recommended',
-    // 'plugin:tailwindcss/recommended',
+    'plugin:tailwindcss/recommended',
     'plugin:unicorn/recommended',
     'plugin:prettier/recommended',
     // 'plugin:package-json/recommended',
