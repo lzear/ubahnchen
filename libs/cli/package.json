@@ -25,6 +25,7 @@
     "@ubahnchen/utils": "*",
     "chalk": "^5",
     "commander": "^12",
+    "gtfs-to-geojson": "^3.7.5",
     "jsdom-global": "^3",
     "ora": "*",
     "pretty-bytes": "^6",

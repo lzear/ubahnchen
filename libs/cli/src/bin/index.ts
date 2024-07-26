@@ -5,7 +5,7 @@ import * as process from 'node:process'
 import { Command } from '@commander-js/extra-typings'
 
 import type { City } from '@ubahnchen/cities'
-import { citiesList } from '@ubahnchen/cities'
+import { cities, citiesList } from '@ubahnchen/cities'
 import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
 import { annotate } from '../annotate'
@@ -15,6 +15,7 @@ import { filterLines } from '../filter-lines'
 import { getCities } from '../get-cities'
 import { mergeLines } from '../merge-lines'
 import { splitPaths } from '../split-paths'
+import { makeGeoJSON } from '../sqlite-to-geojson'
 import { getStatus } from '../status'
 
 const pckg = await import('../../package.json', { assert: { type: 'json' } })
@@ -48,8 +49,8 @@ program
   .option('-c, --city <city>', 'City name')
   .option('-f, --force', 'Rewrite existing file')
   .action(async ({ city, force }) => {
-    const cities = getCities(city)
-    for (const c of cities) await downloadCity({ city: c, force: !!force })
+    for (const c of getCities(city))
+      await downloadCity({ city: c, force: !!force })
   })
 
 program
@@ -57,8 +58,7 @@ program
   .description('store the GTFS CSV data into a SQLite database')
   .option('-c, --city <city>', 'City name')
   .action(async ({ city }) => {
-    const cities = getCities(city)
-    for (const c of cities) await gtfsToSqlite({ city: c }, false)
+    for (const c of getCities(city)) await gtfsToSqlite({ city: c }, false)
   })
 
 program
@@ -80,6 +80,19 @@ program
     for (const c of cities) await gtfsToSqlite({ city: c }, false)
     await buildAllPathfinding(cities)
     await svgAll(cities)
+  })
+
+program
+  .command('to-geojson')
+  .description(
+    'generate GeoJSON from GTFS data with straight lines (to visualize at https://geojson.io/)',
+  )
+  .option('-c, --city <city>', 'City name')
+  .option('-m, --map <map>', 'Map name')
+  .action(async ({ city, map }) => {
+    for (const c of getCities(city))
+      for (const m of map ? [map] : Object.keys(cities[c].maps))
+        await makeGeoJSON(c, m)
   })
 
 const svgCommands = program.command('svg').description('manage svg files')
