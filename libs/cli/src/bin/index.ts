@@ -12,6 +12,7 @@ import { annotate } from '../annotate'
 import { buildAllPathfinding } from '../build-pathfindings'
 import { copyPublicAssets } from '../copy-assets'
 import { filterLines } from '../filter-lines'
+import { geojsonToSvg } from '../geojson-to-svg'
 import { getCities } from '../get-cities'
 import { mergeLines } from '../merge-lines'
 import { splitPaths } from '../split-paths'
@@ -133,6 +134,18 @@ svgCommands
   .description('run all svg commands')
   .option('-c, --city <city>', 'City name')
   .action(({ city }) => svgAll(getCities(city)))
+
+svgCommands
+  .command('geojson-to-svg')
+  .description('convert a GeoJSON file to an SVG file')
+  .option('-c, --city <city>', 'City name')
+  .option('-m, --map <map>', 'Map name')
+  .action(async ({ city, map }) => {
+    console.log('geojson-to-svg', city, map)
+    for (const c of getCities(city))
+      for (const m of map ? [map] : Object.keys(cities[c].maps))
+        await geojsonToSvg(c, m)
+  })
 
 const svgAll = async (c: City[]) => {
   await annotate(c)

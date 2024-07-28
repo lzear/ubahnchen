@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 
 import type { City } from '@ubahnchen/cities'
+import { cities } from '@ubahnchen/cities'
 import { MapQueries, P } from '@ubahnchen/cities/node'
 
 /**
@@ -8,6 +9,13 @@ import { MapQueries, P } from '@ubahnchen/cities/node'
  * This can be used to visualize the city's map
  * for example at https://geojson.io/
  */
+
+const getLineColors = (city: City, lineName: string) => {
+  const lineColors = cities[city].gtfs.lineColors
+  const color = lineColors[lineName]?.bg
+  if (!color) throw new Error(`Missing color (${city}, ${lineName})`)
+  return color
+}
 
 export const makeGeoJSON = async (city: City, map: string) => {
   const mapQueries = new MapQueries(city)
@@ -23,7 +31,11 @@ export const makeGeoJSON = async (city: City, map: string) => {
   const stopById = new Map(stops.map((stop) => [stop.stop_id, stop]))
   const geoJsonLines = stopPairs.map(({ stop_pairs, routes }) => ({
     type: 'Feature' as const,
-    properties: { stop_pairs, routes },
+    properties: {
+      stop_pairs,
+      routes,
+      color: getLineColors(city, routes.route_name),
+    },
     geometry: {
       type: 'LineString' as const,
       coordinates: [
