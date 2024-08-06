@@ -17,40 +17,67 @@
 // from "Graphics Gems", Academic Press, 1990
 // Modifications and optimizations of original algorithm by Jürg Lehni.
 
-/**
- * @name PathFitter
- * @class
- * @private
- */
-const PathFitter = Base.extend({
-  initialize(path) {
-    const points = (this.points = []),
-      segments = path._segments,
-      closed = path._closed
-    // Copy over points from path and filter out adjacent duplicates.
-    for (var i = 0, prev, l = segments.length; i < l; i++) {
-      const point = segments[i].point
-      if (!prev?.equals(point)) {
-        points.push((prev = point.clone()))
-      }
+import type { Point } from '@ubahnchen/utils'
+
+import { add, distance, dot, eq, mul, negate, normalize, subs } from '../point'
+
+const EPSILON = 1e-12
+const MACHINE_EPSILON = 1.12e-16
+
+const isMachineZero = (val: number) =>
+  val >= -MACHINE_EPSILON && val <= MACHINE_EPSILON
+
+type Segment =
+  | Point
+  | [number, number, number, number]
+  | [number, number, number, number, number, number]
+  | [number, number, null, null, number, number]
+
+const isNumber = (val: unknown): val is number => typeof val === 'number'
+
+const setHandleOut = (segment: Segment, point: Point) => {
+  const newSegment: Segment =
+    isNumber(segment[2]) && isNumber(segment[3])
+      ? [segment[0], segment[1], segment[2], segment[3], point[0], point[1]]
+      : [segment[0], segment[1], null, null, point[0], point[1]]
+
+  for (let i = 2; i < newSegment.length; i++) segment[i] = newSegment[i]!
+}
+
+export class Fit {
+  points: Point[]
+  closed: boolean
+
+  constructor(points: Point[], closed: boolean) {
+    this.points = []
+    this.closed = closed
+
+    let prev
+    for (const point_ of points) {
+      const point: Point = [...point_]
+      if (point && (!prev || !eq(prev, point))) this.points.push([...point])
+      prev = point
     }
     // We need to duplicate the first and last segment when simplifying a
     // closed path.
     if (closed) {
-      points.unshift(points.at(-1))
-      points.push(points[1]) // The point previously at index 0 is now 1.
+      const last = this.points.at(-1)
+      const first = this.points[0]
+      if (last && first) {
+        this.points.unshift(last)
+        this.points.push(first)
+      }
     }
-    this.closed = closed
-  },
+  }
 
-  fit(error) {
-    let points = this.points,
-      length = points.length,
-      segments = null
+  fit(error: number) {
+    const points = this.points
+    const length = points.length
+    let segments: Point[] | null = null
     if (length > 0) {
       // To support reducing paths with multiple points in the same place
       // to one segment:
-      segments = [new Segment(points[0])]
+      segments = [points[0]!]
       if (length > 1) {
         this.fitCubic(
           segments,
@@ -58,9 +85,9 @@ const PathFitter = Base.extend({
           0,
           length - 1,
           // Left Tangent
-          points[1].subtract(points[0]),
+          subs(points[1]!, points[0]!),
           // Right Tangent
-          points[length - 2].subtract(points[length - 1]),
+          subs(points[length - 2]!, points[length - 1]!),
         )
         // Remove the duplicated segments for closed paths again.
         if (this.closed) {
@@ -70,29 +97,36 @@ const PathFitter = Base.extend({
       }
     }
     return segments
-  },
+  }
 
   // Fit a Bezier curve to a (sub)set of digitized points
-  fitCubic(segments, error, first, last, tan1, tan2) {
+  fitCubic(
+    segments: Point[],
+    error: number,
+    first: number,
+    last: number,
+    tan1: Point,
+    tan2: Point,
+  ) {
     const points = this.points
     //  Use heuristic if region only has two points in it
     if (last - first === 1) {
-      const pt1 = points[first],
-        pt2 = points[last],
-        dist = pt1.getDistance(pt2) / 3
+      const pt1 = points[first]!
+      const pt2 = points[last]!
+      const dist = distance(pt1, pt2) / 3
       this.addCurve(segments, [
         pt1,
-        pt1.add(tan1.normalize(dist)),
-        pt2.add(tan2.normalize(dist)),
+        add(pt1, normalize(tan1, dist)),
+        add(pt2, normalize(tan2, dist)),
         pt2,
       ])
       return
     }
     // Parameterize points, and attempt to fit curve
-    let uPrime = this.chordLengthParameterize(first, last),
-      maxError = Math.max(error, error * error),
-      split,
-      parametersInOrder = true
+    const uPrime = this.chordLengthParameterize(first, last)
+    let maxError = Math.max(error, error * error)
+    let split = Infinity
+    let parametersInOrder = true
     // Try 4 iterations
     for (let i = 0; i <= 4; i++) {
       const curve = this.generateBezier(first, last, uPrime, tan1, tan2)
@@ -109,61 +143,67 @@ const PathFitter = Base.extend({
       maxError = max.error
     }
     // Fitting failed -- split at max error point and fit recursively
-    const tanCenter = points[split - 1].subtract(points[split + 1])
+    const tanCenter = subs(points[split - 1]!, points[split + 1]!)
     this.fitCubic(segments, error, first, split, tan1, tanCenter)
-    this.fitCubic(segments, error, split, last, tanCenter.negate(), tan2)
-  },
+    this.fitCubic(segments, error, split, last, negate(tanCenter), tan2)
+  }
 
-  addCurve(segments, curve) {
-    const prev = segments.at(-1)
-    prev.setHandleOut(curve[1].subtract(curve[0]))
-    segments.push(new Segment(curve[3], curve[2].subtract(curve[3])))
-  },
+  addCurve(segments: Segment[], curve: Point[]) {
+    const prev = segments.at(-1)!
+    setHandleOut(prev, subs(curve[1]!, curve[0]!))
+    segments.push([...curve[3]!, ...subs(curve[2]!, curve[3]!)])
+  }
 
   // Use least-squares method to find Bezier control points for region.
-  generateBezier(first, last, uPrime, tan1, tan2) {
-    const epsilon = /*#=*/ Numerical.EPSILON,
-      abs = Math.abs,
-      points = this.points,
-      pt1 = points[first],
-      pt2 = points[last],
-      // Create the C and X matrices
-      C = [
-        [0, 0],
-        [0, 0],
-      ],
-      X = [0, 0]
+  generateBezier(
+    first: number,
+    last: number,
+    uPrime: number[],
+    tan1: Point,
+    tan2: Point,
+  ) {
+    const epsilon = EPSILON
+    const abs = Math.abs
+    const points = this.points
+    const pt1 = points[first]!
+    const pt2 = points[last]!
+    // Create the C and X matrices
+    const C = [
+      [0, 0],
+      [0, 0],
+    ] as [[number, number], [number, number]]
+    const X: Point = [0, 0]
 
     for (let i = 0, l = last - first + 1; i < l; i++) {
-      const u = uPrime[i],
-        t = 1 - u,
-        b = 3 * u * t,
-        b0 = t * t * t,
-        b1 = b * t,
-        b2 = b * u,
-        b3 = u * u * u,
-        a1 = tan1.normalize(b1),
-        a2 = tan2.normalize(b2),
-        tmp = points[first + i]
-          .subtract(pt1.multiply(b0 + b1))
-          .subtract(pt2.multiply(b2 + b3))
-      C[0][0] += a1.dot(a1)
-      C[0][1] += a1.dot(a2)
-      // C[1][0] += a1.dot(a2);
+      const u = uPrime[i]!
+      const t = 1 - u
+      const b = 3 * u * t
+      const b0 = t * t * t
+      const b1 = b * t
+      const b2 = b * u
+      const b3 = u * u * u
+      const a1 = normalize(tan1, b1)
+      const a2 = normalize(tan2, b2)
+      const tmp = subs(
+        subs(points[first + i]!, mul(pt1, b0 + b1)),
+        mul(pt2, b2 + b3),
+      )
+      C[0][0] += dot(a1, a1)
+      C[0][1] += dot(a1, a2)
       C[1][0] = C[0][1]
-      C[1][1] += a2.dot(a2)
-      X[0] += a1.dot(tmp)
-      X[1] += a2.dot(tmp)
+      C[1][1] += dot(a2, a2)
+      X[0] += dot(a1, tmp)
+      X[1] += dot(a2, tmp)
     }
 
     // Compute the determinants of C and X
-    let detC0C1 = C[0][0] * C[1][1] - C[1][0] * C[0][1],
-      alpha1,
-      alpha2
+    const detC0C1 = C[0][0] * C[1][1] - C[1][0] * C[0][1]
+    let alpha1
+    let alpha2
     if (abs(detC0C1) > epsilon) {
       // Kramer's rule
-      const detC0X = C[0][0] * X[1] - C[1][0] * X[0],
-        detXC1 = X[0] * C[1][1] - X[1] * C[0][1]
+      const detC0X = C[0][0] * X[1] - C[1][0] * X[0]
+      const detXC1 = X[0] * C[1][1] - X[1] * C[0][1]
       // Derive alpha values
       alpha1 = detXC1 / detC0C1
       alpha2 = detC0X / detC0C1
@@ -178,10 +218,10 @@ const PathFitter = Base.extend({
     // If alpha negative, use the Wu/Barsky heuristic (see text)
     // (if alpha is 0, you get coincident control points that lead to
     // divide by zero in any subsequent NewtonRaphsonRootFind() call.
-    let segLength = pt2.getDistance(pt1),
-      eps = epsilon * segLength,
-      handle1,
-      handle2
+    const segLength = distance(pt1, pt2)
+    const eps = epsilon * segLength
+    let handle1
+    let handle2
     if (alpha1 < eps || alpha2 < eps) {
       // fall back on standard (probably inaccurate) formula,
       // and subdivide further if needed.
@@ -189,12 +229,12 @@ const PathFitter = Base.extend({
     } else {
       // Check if the found control points are in the right order when
       // projected onto the line through pt1 and pt2.
-      const line = pt2.subtract(pt1)
+      const line = subs(pt2, pt1)
       // Control points 1 and 2 are positioned an alpha distance out
       // on the tangent vectors, left and right, respectively
-      handle1 = tan1.normalize(alpha1)
-      handle2 = tan2.normalize(alpha2)
-      if (handle1.dot(line) - handle2.dot(line) > segLength * segLength) {
+      handle1 = normalize(tan1, alpha1)
+      handle2 = normalize(tan2, alpha2)
+      if (dot(handle1, line) - dot(handle2, line) > segLength * segLength) {
         // Fall back to the Wu/Barsky heuristic above.
         alpha1 = alpha2 = segLength / 3
         handle1 = handle2 = null // Force recalculation
@@ -205,83 +245,83 @@ const PathFitter = Base.extend({
     // positioned exactly at the first and last data points
     return [
       pt1,
-      pt1.add(handle1 || tan1.normalize(alpha1)),
-      pt2.add(handle2 || tan2.normalize(alpha2)),
+      add(pt1, handle1 ?? normalize(tan1, alpha1)),
+      add(pt2, handle2 ?? normalize(tan2, alpha2)),
       pt2,
     ]
-  },
+  }
 
   // Given set of points and their parameterization, try to find
   // a better parameterization.
-  reparameterize(first, last, u, curve) {
-    for (var i = first; i <= last; i++) {
-      u[i - first] = this.findRoot(curve, this.points[i], u[i - first])
+  reparameterize(first: number, last: number, u: number[], curve: Point[]) {
+    for (let i = first; i <= last; i++) {
+      u[i - first] = this.findRoot(curve, this.points[i]!, u[i - first]!)
     }
     // Detect if the new parameterization has reordered the points.
     // In that case, we would fit the points of the path in the wrong order.
-    for (var i = 1, l = u.length; i < l; i++) {
-      if (u[i] <= u[i - 1]) return false
+    for (let i = 1, l = u.length; i < l; i++) {
+      if (u[i]! <= u[i - 1]!) return false
     }
     return true
-  },
+  }
 
   // Use Newton-Raphson iteration to find better root.
-  findRoot(curve, point, u) {
-    const curve1 = [],
-      curve2 = []
+  findRoot(curve: Point[], point: Point, u: number) {
+    const curve1: Point[] = []
+    const curve2: Point[] = []
     // Generate control vertices for Q'
-    for (var i = 0; i <= 2; i++) {
-      curve1[i] = curve[i + 1].subtract(curve[i]).multiply(3)
+    for (let i = 0; i <= 2; i++) {
+      curve1[i] = mul(subs(curve[i + 1]!, curve[i]!), 3)
     }
     // Generate control vertices for Q''
-    for (var i = 0; i <= 1; i++) {
-      curve2[i] = curve1[i + 1].subtract(curve1[i]).multiply(2)
+    for (let i = 0; i <= 1; i++) {
+      curve2[i] = mul(subs(curve1[i + 1]!, curve1[i]!), 2)
     }
     // Compute Q(u), Q'(u) and Q''(u)
-    const pt = this.evaluate(3, curve, u),
-      pt1 = this.evaluate(2, curve1, u),
-      pt2 = this.evaluate(1, curve2, u),
-      diff = pt.subtract(point),
-      df = pt1.dot(pt1) + diff.dot(pt2)
+    const pt = this.evaluate(3, curve, u)!
+    const pt1 = this.evaluate(2, curve1, u)!
+    const pt2 = this.evaluate(1, curve2, u)!
+    const diff = subs(pt, point)
+    const df = dot(pt1, pt1) + dot(diff, pt2)
     // u = u - f(u) / f'(u)
-    return Numerical.isMachineZero(df) ? u : u - diff.dot(pt1) / df
-  },
+    return isMachineZero(df) ? u : u - dot(diff, pt1) / df
+  }
 
   // Evaluate a bezier curve at a particular parameter value
-  evaluate(degree, curve, t) {
+  evaluate(degree: number, curve: Point[], t: number) {
     // Copy array
     const tmp = [...curve]
     // Triangle computation
     for (let i = 1; i <= degree; i++) {
       for (let j = 0; j <= degree - i; j++) {
-        tmp[j] = tmp[j].multiply(1 - t).add(tmp[j + 1].multiply(t))
+        tmp[j] = add(mul(tmp[j]!, 1 - t), mul(tmp[j + 1]!, t))
       }
     }
     return tmp[0]
-  },
+  }
 
   // Assign parameter values to digitized points
   // using relative distances between points.
-  chordLengthParameterize(first, last) {
+  chordLengthParameterize(first: number, last: number) {
     const u = [0]
-    for (var i = first + 1; i <= last; i++) {
+    for (let i = first + 1; i <= last; i++) {
       u[i - first] =
-        u[i - first - 1] + this.points[i].getDistance(this.points[i - 1])
+        u[i - first - 1]! + distance(this.points[i]!, this.points[i - 1]!)
     }
-    for (var i = 1, m = last - first; i <= m; i++) {
-      u[i] /= u[m]
+    for (let i = 1, m = last - first; i <= m; i++) {
+      u[i]! /= u[m]!
     }
     return u
-  },
+  }
 
   // Find the maximum squared distance of digitized points to fitted curve.
-  findMaxError(first, last, curve, u) {
+  findMaxError(first: number, last: number, curve: Point[], u: number[]) {
     let index = Math.floor((last - first + 1) / 2),
       maxDist = 0
     for (let i = first + 1; i < last; i++) {
-      const P = this.evaluate(3, curve, u[i - first])
-      const v = P.subtract(this.points[i])
-      const dist = v.x * v.x + v.y * v.y // squared
+      const P = this.evaluate(3, curve, u[i - first]!)
+      const v = subs(P!, this.points[i]!)
+      const dist = dot(v, v) // squared
       if (dist >= maxDist) {
         maxDist = dist
         index = i
@@ -291,5 +331,5 @@ const PathFitter = Base.extend({
       error: maxDist,
       index,
     }
-  },
-})
+  }
+}
