@@ -18,6 +18,7 @@
     "@radix-ui/react-select": "^2",
     "@radix-ui/react-slider": "^1",
     "@radix-ui/react-slot": "^1",
+    "@radix-ui/react-switch": "^1.1.0",
     "@radix-ui/react-toggle": "^1",
     "@react-spring/web": "^9",
     "@svgr/webpack": "^8",
