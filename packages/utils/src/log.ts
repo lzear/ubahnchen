@@ -1,10 +1,12 @@
 import stripAnsi from 'strip-ansi'
 
+const printedLength = (s: string) => [...stripAnsi(s)].length
+
 function padStart(inputString: string, targetLength: number, padString = ' ') {
-  const stripped = stripAnsi(inputString)
-  return stripped.length >= targetLength
+  const printedL = printedLength(inputString)
+  return printedL >= targetLength
     ? inputString
-    : padString.repeat(targetLength - stripped.length) + inputString
+    : padString.repeat(targetLength - printedL) + inputString
 }
 
 export const log2DArray = (
@@ -19,11 +21,8 @@ export const log2DArray = (
   for (const row of data) {
     for (const [i, cell] of row.entries()) {
       const cellStr = String(cell)
-      const cellStrNoAnsi = stripAnsi(cellStr)
-      columnWidths[i] = Math.max(
-        columnWidths[i] ?? 1,
-        [...cellStrNoAnsi].length + 1,
-      )
+      const printedL = printedLength(cellStr)
+      columnWidths[i] = Math.max(columnWidths[i] ?? 1, printedL + 1)
     }
   }
 
@@ -52,3 +51,17 @@ export const prettyNumber = (
       ? 0
       : options?.maximumFractionDigits,
   }).format(n)
+
+export const wrapLines = (words: string[], width: number) => {
+  const lines: string[] = []
+  let line = ''
+  for (const word of words) {
+    if (line.length > 0 && printedLength(line + ' ' + word) > width) {
+      lines.push(line.trim())
+      line = ''
+    }
+    line += word + ' '
+  }
+  lines.push(line.trim())
+  return lines
+}

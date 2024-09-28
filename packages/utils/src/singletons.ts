@@ -92,7 +92,31 @@ export class SingletonUnique<A extends any[], R> extends Singletons<A, R> {
   }
 }
 
-export class ClearableSingletons extends Set<Singletons<any, any>> {
+class SetLike<T> {
+  private set = new Set<T>()
+
+  public add(value: T) {
+    this.set.add(value)
+  }
+
+  public delete(value: T) {
+    this.set.delete(value)
+  }
+
+  public clear() {
+    this.set.clear()
+  }
+
+  public has(value: T) {
+    return this.set.has(value)
+  }
+
+  public get size() {
+    return this.set.size
+  }
+}
+
+export class ClearableSingletons extends SetLike<Singletons<any, any>> {
   constructor() {
     super()
   }

@@ -1,4 +1,6 @@
-import { findSimilarColor } from './color'
+import { expect } from 'vitest'
+
+import { colorDistance, findSimilarColor } from './color'
 
 describe(findSimilarColor, () => {
   it('finds similar when same', () => {
@@ -32,5 +34,12 @@ describe(findSimilarColor, () => {
     expect(() => findSimilarColor('yellow', [])).toThrow(
       'Could not find most similar color',
     )
+  })
+  it('has color distance between 0 and 1', () => {
+    expect(colorDistance('#f00', '#f00')).toBe(0)
+    expect(colorDistance('#fff', '#000')).toBe(1)
+    expect(colorDistance('#f00', '#0f0')).toBe(0.816_496_580_927_726_1)
+    expect(colorDistance('#f00', '#00f')).toBe(0.816_496_580_927_726_1)
+    expect(colorDistance('#f00', '#e00')).toBe(0.038_490_017_945_975_05)
   })
 })

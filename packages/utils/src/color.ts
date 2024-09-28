@@ -25,7 +25,7 @@ export function colorDistance(
   const gDiff = g1 - g2
   const bDiff = b1 - b2
 
-  return Math.hypot(rDiff, gDiff, bDiff)
+  return Math.hypot(rDiff / 255, gDiff / 255, bDiff / 255) / Math.sqrt(3)
 }
 
 export function findSimilarColor<C extends string>(
@@ -50,4 +50,21 @@ export function findSimilarColor<C extends string>(
     throw new Error('Could not find most similar color')
   }
   return mostSimilarColor
+}
+
+// https://stackoverflow.com/a/41491220/4823861
+export const textLightOrDark = (
+  bgColor: string | Color,
+  light = '#fff',
+  dark = '#000',
+) => {
+  if (typeof bgColor === 'string') bgColor = Color(bgColor)
+  const c = [
+    bgColor.red() / 255,
+    bgColor.green() / 255,
+    bgColor.blue() / 255,
+  ].map((col) =>
+    col <= 0.039_28 ? col / 12.92 : Math.pow((col + 0.055) / 1.055, 2.4),
+  ) as [number, number, number]
+  return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2] > 0.179 ? dark : light
 }
