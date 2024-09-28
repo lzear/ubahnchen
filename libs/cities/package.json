@@ -27,7 +27,7 @@
     "jsdom-global": "^3",
     "lodash": "^4",
     "pretty-bytes": "^6",
-    "svgo": "*",
+    "svgo": "^3",
     "svgpath": "^2",
     "yargs": "^17",
     "zod": "^3"
