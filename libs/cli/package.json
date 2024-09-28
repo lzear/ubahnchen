@@ -19,14 +19,17 @@
     "@commander-js/extra-typings": "^12",
     "@ubahnchen/cities": "*",
     "@ubahnchen/csv": "*",
+    "@ubahnchen/database": "*",
     "@ubahnchen/gtfs-to-sqlite": "*",
     "@ubahnchen/node": "*",
     "@ubahnchen/svg": "*",
     "@ubahnchen/utils": "*",
     "chalk": "^5",
     "commander": "^12",
-    "gtfs-to-geojson": "^3.7.5",
+    "d3-geo": "^3.1.1",
+    "gtfs-to-geojson": "^3.7.6",
     "jsdom-global": "^3",
+    "lodash": "^4",
     "ora": "*",
     "pretty-bytes": "^6",
     "svgo": "*",
@@ -35,8 +38,10 @@
     "zod": "^3"
   },
   "devDependencies": {
+    "@types/d3-geo": "^3.1.0",
     "@types/eslint": "^9",
     "@types/jsdom": "^21",
+    "@types/lodash": "^4",
     "eslint": "^8"
   },
   "volta": {

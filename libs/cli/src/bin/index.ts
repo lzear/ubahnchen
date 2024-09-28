@@ -9,7 +9,7 @@ import { cities, citiesList } from '@ubahnchen/cities'
 import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
 import { annotate } from '../annotate'
-import { buildAllPathfinding } from '../build-pathfindings'
+import { buildPaths } from '../build-paths'
 import { copyPublicAssets } from '../copy-assets'
 import { filterLines } from '../filter-lines'
 import { geojsonToSvg } from '../geojson-to-svg'
@@ -63,15 +63,6 @@ program
   })
 
 program
-  .command('find-paths')
-  .description('builds the pathfinding data for a city')
-  .option('-c, --city <city>', 'City name')
-  .option('-m, --map <map>', 'Map name')
-  .action(async ({ city, map }) => {
-    await buildAllPathfinding(getCities(city), map)
-  })
-
-program
   .command('all')
   .description('run all commands')
   .option('-c, --city <city>', 'City name')
@@ -79,7 +70,6 @@ program
     const cities = getCities(city)
     for (const c of cities) await downloadCity({ city: c })
     for (const c of cities) await gtfsToSqlite({ city: c }, false)
-    await buildAllPathfinding(cities)
     await svgAll(cities)
   })
 
@@ -94,6 +84,17 @@ program
     for (const c of getCities(city))
       for (const m of map ? [map] : Object.keys(cities[c].maps))
         await makeGeoJSON(c, m)
+  })
+
+program
+  .command('build-paths')
+  .description('build paths for the SVGs')
+  .option('-c, --city <city>', 'City name')
+  .option('-m, --map <map>', 'Map name')
+  .action(async ({ city, map }) => {
+    console.log(`antoinelog 234`, 234)
+
+    for (const c of getCities(city)) await buildPaths(c, map)
   })
 
 const svgCommands = program.command('svg').description('manage svg files')
