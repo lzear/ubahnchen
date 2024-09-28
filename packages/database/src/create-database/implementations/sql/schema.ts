@@ -129,6 +129,16 @@ CREATE TABLE stop_pairs_validation
      FOREIGN KEY (stop_id_between) REFERENCES stops      (stop_id)
   );
 
+CREATE TABLE stop_pairs_svg_paths (
+    stop_pair_idx integer NOT NULL,
+    map text NOT NULL,
+    waypoints text NOT NULL,
+    length real NOT NULL,
+    FOREIGN KEY (stop_pair_idx) REFERENCES stop_pairs(idx) ON UPDATE no action ON DELETE no action
+);
+
+CREATE UNIQUE INDEX uniquePerMap ON stop_pairs_svg_paths (stop_pair_idx,map);
+
 -- CREATE INDEX route_name_idx ON routes (route_name);
 
 CREATE INDEX IF NOT EXISTS idx_route_name ON routes (route_name);

@@ -13,7 +13,7 @@ CREATE TABLE `calendar` (
 --> statement-breakpoint
 CREATE TABLE `calendar_dates` (
 	`idx` integer PRIMARY KEY NOT NULL,
-	`service_id` integer NOT NULL,
+	`service_id` text NOT NULL,
 	`date` text NOT NULL,
 	`is_removing` integer NOT NULL
 );
@@ -40,9 +40,17 @@ CREATE TABLE `stop_pairs` (
 	`route_id` text NOT NULL,
 	`count` integer NOT NULL,
 	`is_one_way` integer NOT NULL,
-	FOREIGN KEY (`stop_id_1`) REFERENCES `stops`(`stop_id`),
-	FOREIGN KEY (`stop_id_2`) REFERENCES `stops`(`stop_id`),
-	FOREIGN KEY (`route_id`) REFERENCES `routes`(`route_id`)
+	FOREIGN KEY (`stop_id_1`) REFERENCES `stops`(`stop_id`) ON UPDATE no action ON DELETE no action,
+	FOREIGN KEY (`stop_id_2`) REFERENCES `stops`(`stop_id`) ON UPDATE no action ON DELETE no action,
+	FOREIGN KEY (`route_id`) REFERENCES `routes`(`route_id`) ON UPDATE no action ON DELETE no action
+);
+--> statement-breakpoint
+CREATE TABLE `stop_pairs_svg_paths` (
+	`stop_pair_idx` integer NOT NULL,
+	`map` text NOT NULL,
+	`waypoints` text NOT NULL,
+	`length` real NOT NULL,
+	FOREIGN KEY (`stop_pair_idx`) REFERENCES `stop_pairs`(`idx`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
 CREATE TABLE `stop_times` (
@@ -60,7 +68,7 @@ CREATE TABLE `stops` (
 	`stop_lat` real NOT NULL,
 	`stop_lon` real NOT NULL,
 	`parent_station` text,
-	FOREIGN KEY (`parent_station`) REFERENCES `stops`(`stop_id`)
+	FOREIGN KEY (`parent_station`) REFERENCES `stops`(`stop_id`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
 CREATE TABLE `trips` (
@@ -71,9 +79,10 @@ CREATE TABLE `trips` (
 	`trip_headsign` text NOT NULL,
 	`start_time` integer,
 	`end_time` integer,
-	FOREIGN KEY (`route_id`) REFERENCES `routes`(`route_id`)
+	FOREIGN KEY (`route_id`) REFERENCES `routes`(`route_id`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
 CREATE INDEX `route_name_idx` ON `routes` (`route_name`);--> statement-breakpoint
 CREATE UNIQUE INDEX `uniqueIdx` ON `stop_pairs` (`idx`);--> statement-breakpoint
-CREATE UNIQUE INDEX `uniqueRouteStops` ON `stop_pairs` (`route_id`,`stop_id_1`,`stop_id_2`);
+CREATE UNIQUE INDEX `uniqueRouteStops` ON `stop_pairs` (`route_id`,`stop_id_1`,`stop_id_2`);--> statement-breakpoint
+CREATE UNIQUE INDEX `uniquePerMap` ON `stop_pairs_svg_paths` (`stop_pair_idx`,`map`);

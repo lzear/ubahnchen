@@ -146,6 +146,16 @@ CREATE TABLE stop_pairs_validation
   )
 -- INDEX sqlite_autoindex_stop_pairs_validation_1
 
+-- TABLE stop_pairs_svg_paths
+CREATE TABLE stop_pairs_svg_paths (
+    stop_pair_idx integer NOT NULL,
+    map text NOT NULL,
+    waypoints text NOT NULL,
+    length real NOT NULL,
+    FOREIGN KEY (stop_pair_idx) REFERENCES stop_pairs(idx) ON UPDATE no action ON DELETE no action
+)
+-- INDEX uniquePerMap
+CREATE UNIQUE INDEX uniquePerMap ON stop_pairs_svg_paths (stop_pair_idx,map)
 -- INDEX idx_route_name
 CREATE INDEX idx_route_name ON routes (route_name)
 -- INDEX idx_stop_times_trip_id

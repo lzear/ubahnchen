@@ -1,12 +1,12 @@
 {
-  "version": "5",
+  "version": "7",
   "dialect": "sqlite",
   "entries": [
     {
       "idx": 0,
-      "version": "5",
-      "when": 1685999094703,
-      "tag": "0000_lucky_ghost_rider",
+      "version": "6",
+      "when": 1725785630956,
+      "tag": "0000_thick_blue_shield",
       "breakpoints": true
     }
   ]

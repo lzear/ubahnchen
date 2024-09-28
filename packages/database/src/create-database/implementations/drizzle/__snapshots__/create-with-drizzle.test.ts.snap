@@ -1,0 +1,117 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`createWithDrizzle > creates with SQLite 1`] = `
+"-- TABLE __drizzle_migrations
+CREATE TABLE "__drizzle_migrations" (
+				id SERIAL PRIMARY KEY,
+				hash text NOT NULL,
+				created_at numeric
+			)
+-- INDEX sqlite_autoindex___drizzle_migrations_1
+
+-- TABLE calendar
+CREATE TABLE \`calendar\` (
+	\`service_id\` text PRIMARY KEY NOT NULL,
+	\`monday\` integer NOT NULL,
+	\`tuesday\` integer NOT NULL,
+	\`wednesday\` integer NOT NULL,
+	\`thursday\` integer NOT NULL,
+	\`friday\` integer NOT NULL,
+	\`saturday\` integer NOT NULL,
+	\`sunday\` integer NOT NULL,
+	\`start_date\` text NOT NULL,
+	\`end_date\` text NOT NULL
+)
+-- INDEX sqlite_autoindex_calendar_1
+
+-- TABLE calendar_dates
+CREATE TABLE \`calendar_dates\` (
+	\`idx\` integer PRIMARY KEY NOT NULL,
+	\`service_id\` text NOT NULL,
+	\`date\` text NOT NULL,
+	\`is_removing\` integer NOT NULL
+)
+-- TABLE routes
+CREATE TABLE \`routes\` (
+	\`route_id\` text PRIMARY KEY NOT NULL,
+	\`route_name\` text NOT NULL,
+	\`route_type\` integer NOT NULL
+)
+-- INDEX sqlite_autoindex_routes_1
+
+-- TABLE shapes
+CREATE TABLE \`shapes\` (
+	\`shape_id\` text PRIMARY KEY NOT NULL,
+	\`shape_pts\` text NOT NULL,
+	\`lat_min\` real NOT NULL,
+	\`lat_max\` real NOT NULL,
+	\`lon_min\` real NOT NULL,
+	\`lon_max\` real NOT NULL
+)
+-- INDEX sqlite_autoindex_shapes_1
+
+-- TABLE stop_pairs
+CREATE TABLE \`stop_pairs\` (
+	\`idx\` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	\`stop_id_1\` text NOT NULL,
+	\`stop_id_2\` text NOT NULL,
+	\`route_id\` text NOT NULL,
+	\`count\` integer NOT NULL,
+	\`is_one_way\` integer NOT NULL,
+	FOREIGN KEY (\`stop_id_1\`) REFERENCES \`stops\`(\`stop_id\`) ON UPDATE no action ON DELETE no action,
+	FOREIGN KEY (\`stop_id_2\`) REFERENCES \`stops\`(\`stop_id\`) ON UPDATE no action ON DELETE no action,
+	FOREIGN KEY (\`route_id\`) REFERENCES \`routes\`(\`route_id\`) ON UPDATE no action ON DELETE no action
+)
+-- TABLE sqlite_sequence
+CREATE TABLE sqlite_sequence(name,seq)
+-- TABLE stop_pairs_svg_paths
+CREATE TABLE \`stop_pairs_svg_paths\` (
+	\`stop_pair_idx\` integer NOT NULL,
+	\`map\` text NOT NULL,
+	\`waypoints\` text NOT NULL,
+	\`length\` real NOT NULL,
+	FOREIGN KEY (\`stop_pair_idx\`) REFERENCES \`stop_pairs\`(\`idx\`) ON UPDATE no action ON DELETE no action
+)
+-- TABLE stop_times
+CREATE TABLE \`stop_times\` (
+	\`idx\` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	\`trip_id\` text NOT NULL,
+	\`arrival_time\` integer NOT NULL,
+	\`departure_time\` integer NOT NULL,
+	\`stop_id\` text NOT NULL,
+	\`stop_sequence\` integer NOT NULL
+)
+-- TABLE stops
+CREATE TABLE \`stops\` (
+	\`stop_id\` text PRIMARY KEY NOT NULL,
+	\`stop_name\` text NOT NULL,
+	\`stop_lat\` real NOT NULL,
+	\`stop_lon\` real NOT NULL,
+	\`parent_station\` text,
+	FOREIGN KEY (\`parent_station\`) REFERENCES \`stops\`(\`stop_id\`) ON UPDATE no action ON DELETE no action
+)
+-- INDEX sqlite_autoindex_stops_1
+
+-- TABLE trips
+CREATE TABLE \`trips\` (
+	\`route_id\` text NOT NULL,
+	\`shape_id\` text,
+	\`service_id\` text NOT NULL,
+	\`trip_id\` text PRIMARY KEY NOT NULL,
+	\`trip_headsign\` text NOT NULL,
+	\`start_time\` integer,
+	\`end_time\` integer,
+	FOREIGN KEY (\`route_id\`) REFERENCES \`routes\`(\`route_id\`) ON UPDATE no action ON DELETE no action
+)
+-- INDEX sqlite_autoindex_trips_1
+
+-- INDEX route_name_idx
+CREATE INDEX \`route_name_idx\` ON \`routes\` (\`route_name\`)
+-- INDEX uniqueIdx
+CREATE UNIQUE INDEX \`uniqueIdx\` ON \`stop_pairs\` (\`idx\`)
+-- INDEX uniqueRouteStops
+CREATE UNIQUE INDEX \`uniqueRouteStops\` ON \`stop_pairs\` (\`route_id\`,\`stop_id_1\`,\`stop_id_2\`)
+-- INDEX uniquePerMap
+CREATE UNIQUE INDEX \`uniquePerMap\` ON \`stop_pairs_svg_paths\` (\`stop_pair_idx\`,\`map\`)
+"
+`;

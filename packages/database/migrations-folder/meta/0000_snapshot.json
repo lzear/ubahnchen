@@ -1,7 +1,7 @@
 {
-  "version": "5",
+  "version": "6",
   "dialect": "sqlite",
-  "id": "6cd01359-94e7-4445-9c04-6516e7df73b1",
+  "id": "97588996-2e7b-43ae-8cf4-46ffb832e8e2",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "calendar": {
@@ -11,7 +11,8 @@
           "name": "service_id",
           "type": "text",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "monday": {
           "name": "monday",
@@ -66,18 +67,21 @@
           "name": "start_date",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "end_date": {
           "name": "end_date",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         }
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "calendar_dates": {
       "name": "calendar_dates",
@@ -91,7 +95,7 @@
         },
         "service_id": {
           "name": "service_id",
-          "type": "integer",
+          "type": "text",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false
@@ -100,7 +104,8 @@
           "name": "date",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "is_removing": {
           "name": "is_removing",
@@ -112,7 +117,8 @@
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "routes": {
       "name": "routes",
@@ -121,13 +127,15 @@
           "name": "route_id",
           "type": "text",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "route_name": {
           "name": "route_name",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "route_type": {
           "name": "route_type",
@@ -147,7 +155,8 @@
         }
       },
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "shapes": {
       "name": "shapes",
@@ -156,42 +165,49 @@
           "name": "shape_id",
           "type": "text",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "shape_pts": {
           "name": "shape_pts",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "lat_min": {
           "name": "lat_min",
           "type": "real",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "lat_max": {
           "name": "lat_max",
           "type": "real",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "lon_min": {
           "name": "lon_min",
           "type": "real",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "lon_max": {
           "name": "lon_max",
           "type": "real",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         }
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "stop_pairs": {
       "name": "stop_pairs",
@@ -207,19 +223,22 @@
           "name": "stop_id_1",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "stop_id_2": {
           "name": "stop_id_2",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "route_id": {
           "name": "route_id",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "count": {
           "name": "count",
@@ -264,7 +283,9 @@
           ],
           "columnsTo": [
             "stop_id"
-          ]
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
         },
         "stop_pairs_stop_id_2_stops_stop_id_fk": {
           "name": "stop_pairs_stop_id_2_stops_stop_id_fk",
@@ -275,7 +296,9 @@
           ],
           "columnsTo": [
             "stop_id"
-          ]
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
         },
         "stop_pairs_route_id_routes_route_id_fk": {
           "name": "stop_pairs_route_id_routes_route_id_fk",
@@ -286,10 +309,73 @@
           ],
           "columnsTo": [
             "route_id"
-          ]
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
         }
       },
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "stop_pairs_svg_paths": {
+      "name": "stop_pairs_svg_paths",
+      "columns": {
+        "stop_pair_idx": {
+          "name": "stop_pair_idx",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "map": {
+          "name": "map",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "waypoints": {
+          "name": "waypoints",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "length": {
+          "name": "length",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "uniquePerMap": {
+          "name": "uniquePerMap",
+          "columns": [
+            "stop_pair_idx",
+            "map"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "stop_pairs_svg_paths_stop_pair_idx_stop_pairs_idx_fk": {
+          "name": "stop_pairs_svg_paths_stop_pair_idx_stop_pairs_idx_fk",
+          "tableFrom": "stop_pairs_svg_paths",
+          "tableTo": "stop_pairs",
+          "columnsFrom": [
+            "stop_pair_idx"
+          ],
+          "columnsTo": [
+            "idx"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "stop_times": {
       "name": "stop_times",
@@ -305,7 +391,8 @@
           "name": "trip_id",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "arrival_time": {
           "name": "arrival_time",
@@ -325,7 +412,8 @@
           "name": "stop_id",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "stop_sequence": {
           "name": "stop_sequence",
@@ -337,7 +425,8 @@
       },
       "indexes": {},
       "foreignKeys": {},
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "stops": {
       "name": "stops",
@@ -346,31 +435,36 @@
           "name": "stop_id",
           "type": "text",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "stop_name": {
           "name": "stop_name",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "stop_lat": {
           "name": "stop_lat",
           "type": "real",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "stop_lon": {
           "name": "stop_lon",
           "type": "real",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "parent_station": {
           "name": "parent_station",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": false,
+          "autoincrement": false
         }
       },
       "indexes": {},
@@ -384,10 +478,13 @@
           ],
           "columnsTo": [
             "stop_id"
-          ]
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
         }
       },
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     },
     "trips": {
       "name": "trips",
@@ -396,31 +493,36 @@
           "name": "route_id",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "shape_id": {
           "name": "shape_id",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": false,
+          "autoincrement": false
         },
         "service_id": {
           "name": "service_id",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "trip_id": {
           "name": "trip_id",
           "type": "text",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "trip_headsign": {
           "name": "trip_headsign",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "start_time": {
           "name": "start_time",
@@ -448,10 +550,13 @@
           ],
           "columnsTo": [
             "route_id"
-          ]
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
         }
       },
-      "compositePrimaryKeys": {}
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
     }
   },
   "enums": {},
@@ -459,5 +564,8 @@
     "schemas": {},
     "tables": {},
     "columns": {}
+  },
+  "internal": {
+    "indexes": {}
   }
 }

@@ -1,10 +1,10 @@
 import type { Config } from 'drizzle-kit'
 
 export const small = {
+  dialect: 'sqlite',
   out: './migrations-folder',
   schema: './src/small',
   breakpoints: true,
-  driver: 'better-sqlite',
   dbCredentials: {
     // @TODO: Fix this avoiding
     // Invalid package dependency graph: cyclic dependency detected:
@@ -14,10 +14,10 @@ export const small = {
 } satisfies Config
 
 export const big = {
+  dialect: 'sqlite',
   out: './migrations-folder',
   schema: './src/drizzle',
   breakpoints: true,
-  driver: 'better-sqlite',
   dbCredentials: {
     // @TODO: Fix this avoiding
     // Invalid package dependency graph: cyclic dependency detected:
