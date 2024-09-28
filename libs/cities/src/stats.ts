@@ -8,7 +8,12 @@ import prettyBytes from 'pretty-bytes'
 
 import { getDatabase } from '@ubahnchen/database'
 import { countLines, fileSize, isAlreadyUpToDate } from '@ubahnchen/node'
-import { log2DArray, logStrings, prettyNumber } from '@ubahnchen/utils'
+import {
+  log2DArray,
+  logStrings,
+  prettyNumber,
+  wrapLines,
+} from '@ubahnchen/utils'
 
 import { MapQueries } from './maps/map-queries'
 import type { City } from './index'
@@ -242,12 +247,20 @@ export const logCityStats = (s: Awaited<ReturnType<typeof cityStats>>) => {
       '\t',
     )
   } else console.log(chalk.red.bold(`⚠️ DB small missing`))
+  process.stdout.on('resize', () => {
+    // terminalWidth = process.stdout.columns;
+    console.log('Terminal resized. New width:', process.stdout.columns)
+  })
 
   console.log(chalk.bold(`🎨 Colors`))
   console.log(
-    ...Object.keys(cities[s.city].gtfs.lineColors).map((name) =>
-      logLineTag(s.city, name),
-    ),
+    '\t' +
+      wrapLines(
+        Object.keys(cities[s.city].gtfs.lineColors).map((name) =>
+          logLineTag(s.city, name),
+        ),
+        50,
+      ).join('\n\t'),
   )
   console.log()
 

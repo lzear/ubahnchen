@@ -68,6 +68,10 @@ describe(P, () => {
             '/apps/ubahnchen/public/berlin/u/svg/02-simplified-via-svgomg.svg',
           STEP_10_ANNOTATED:
             '/apps/ubahnchen/public/berlin/u/svg/10-annotated.svg',
+          STEP_11_LINES_STATIONS:
+            '/apps/ubahnchen/public/berlin/u/svg/11-lines-stations.svg',
+          STEP_12_SPLIT_PATHS:
+            '/apps/ubahnchen/public/berlin/u/svg/12-split-paths.svg',
           STEP_20_LINES_ONLY:
             '/apps/ubahnchen/public/berlin/u/svg/20-lines-only.svg',
           STEP_21_LINES_MERGED:
@@ -85,6 +89,10 @@ describe(P, () => {
             '/libs/cities/src/data/berlin/u/svg/02-simplified-via-svgomg.svg',
           STEP_10_ANNOTATED:
             '/libs/cities/src/data/berlin/u/svg/10-annotated.svg',
+          STEP_11_LINES_STATIONS:
+            '/libs/cities/src/data/berlin/u/svg/11-lines-stations.svg',
+          STEP_12_SPLIT_PATHS:
+            '/libs/cities/src/data/berlin/u/svg/12-split-paths.svg',
           STEP_20_LINES_ONLY:
             '/libs/cities/src/data/berlin/u/svg/20-lines-only.svg',
           STEP_21_LINES_MERGED:

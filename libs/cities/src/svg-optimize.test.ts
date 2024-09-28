@@ -12,7 +12,7 @@ describe('svg-optimize', () => {
       path.dirname(url.fileURLToPath(import.meta.url)),
       'data',
       map,
-      'svg/01-place-stop-input.svg',
+      'svg/00-original.svg',
     )
     const outputPath = path.resolve(
       inputPath,
