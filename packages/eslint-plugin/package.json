@@ -16,7 +16,7 @@
     "lint": "eslint . --ext js,ts,jsx,tsx,cjs,json,md"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^7",
+    "@typescript-eslint/utils": "^8",
     "eslint": "^8",
     "eslint-module-utils": "^2",
     "tsup": "^8"

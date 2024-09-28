@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as eslintUtils from '@typescript-eslint/utils'
-import {RuleWithMetaAndName} from "@typescript-eslint/utils/eslint-utils";
-import {RuleListener, RuleModule} from "@typescript-eslint/utils/ts-eslint";
+import { RuleWithMetaAndName } from '@typescript-eslint/utils/eslint-utils'
+import { RuleListener, RuleModule } from '@typescript-eslint/utils/ts-eslint'
 
 export let createEslintRule: <
   TOptions extends readonly unknown[],
@@ -15,5 +15,5 @@ export let createEslintRule: <
   TOptions,
   RuleListener
 > = eslintUtils.ESLintUtils.RuleCreator(
-  ruleName => `https://www.dont.ninja/rules/${ruleName}`,
+  (ruleName) => `https://www.dont.ninja/rules/${ruleName}`,
 )
