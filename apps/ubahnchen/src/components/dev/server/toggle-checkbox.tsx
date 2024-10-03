@@ -11,15 +11,14 @@ type Props = {
 }
 
 export const ToggleCheckbox = ({ checked, onChange, label }: Props) => (
-  <div className="form-control">
-    <label className="label cursor-pointer justify-start gap-2 p-1">
+  <div>
+    <label className="cursor-pointer justify-start gap-2 p-1">
       <input
         type="checkbox"
         checked={checked}
-        className="checkbox checkbox-sm"
         onChange={(event) => onChange(event.target.checked)}
       />
-      <span className="label-text">{label}</span>
+      <span>{label}</span>
     </label>
   </div>
 )

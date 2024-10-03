@@ -23,7 +23,7 @@ export const StopPairsList = ({
         {routeNames.map((routeName) => (
           <span key={routeName}>
             <Link href={`?route-name=${routeName}`}>
-              <button className="btn btn-xs">{routeName}</button>
+              <button>{routeName}</button>
             </Link>
           </span>
         ))}

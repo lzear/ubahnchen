@@ -19,7 +19,7 @@ const PlacePaths = (props: {
   return (
     <main className="h-screen">
       {map && <PlacePathsServer city={city} map={map} routeName={routeName} />}
-      <div className="card bg-base-100 absolute bottom-0 left-0 z-20 gap-2 p-2 opacity-70 shadow-xl">
+      <div className="absolute bottom-0 left-0 z-20 gap-2 p-2 opacity-70 shadow-xl">
         <MapPicker city={city} />
       </div>
     </main>

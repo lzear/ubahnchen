@@ -11,7 +11,7 @@ export const PaperCanvas = ({ mapPaths }: { mapPaths: MapPaths }) => {
   const { canvasReference } = usePaper({ mapPaths })
   return (
     <canvas
-      className="l-dvw fixed inset-0 h-dvh touch-none"
+      className="fixed inset-0 h-dvh touch-none"
       // key={hidpi ? 'on' : 'off'}
       // @ts-expect-error
       resize="true"

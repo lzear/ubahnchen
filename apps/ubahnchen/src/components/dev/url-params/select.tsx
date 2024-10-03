@@ -32,7 +32,6 @@ export const SelectUrlParam = ({
     >
       <label>{label}</label>
       <select
-        className="select select-xs"
         value={value}
         onChange={(event) => {
           const parameters = new URLSearchParams(searchParameters?.toString())
@@ -45,11 +44,7 @@ export const SelectUrlParam = ({
           Select route
         </option>
         {options.map((option) => (
-          <option
-            value={option.value}
-            key={option.value}
-            className="label-text"
-          >
+          <option value={option.value} key={option.value}>
             {option.label}
           </option>
         ))}

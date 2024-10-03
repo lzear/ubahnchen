@@ -116,7 +116,6 @@ const SplitShapesClient = (props: {
           {shapeIds.map((id) => (
             <button
               key={id}
-              className="btn btn-xs"
               onMouseEnter={() => {
                 const s = [
                   ...document.querySelectorAll<HTMLElement>('#target-ubhchn *'),
@@ -138,12 +137,11 @@ const SplitShapesClient = (props: {
 
         <div>
           <button
-            className="btn"
             onClick={() =>
               startTransition(() => saveShapes({ city, map, shapeIds }))
             }
           >
-            {isPending && <span className="loading loading-spinner" />}
+            {isPending && <span>loading</span>}
             Save
           </button>
         </div>

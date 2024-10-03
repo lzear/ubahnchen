@@ -344,7 +344,7 @@ export const SvgTarget = ({
       </svg>
 
       <button
-        className="btn btn-xs fixed bottom-2 right-2 z-40"
+        className="fixed bottom-2 right-2 z-40"
         onClick={() =>
           startTransition(() =>
             recordStopPosition({ city, map, stops: state.targets }),

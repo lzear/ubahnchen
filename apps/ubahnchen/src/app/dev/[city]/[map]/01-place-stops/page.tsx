@@ -16,7 +16,7 @@ const PlaceStops = (props: {
   return (
     <main className="h-screen">
       <PlaceStopsServer city={city} map={map} />
-      <div className="card bg-base-100 absolute bottom-0 left-0 z-20 gap-2 p-2 opacity-70 shadow-xl">
+      <div className="absolute bottom-0 left-0 z-20 gap-2 p-2 opacity-70 shadow-xl">
         <ToggleUrlParameter
           label="Magnet"
           urlParameter="magnet"
