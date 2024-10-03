@@ -18,7 +18,7 @@ describe('workspaces', () => {
         listDirectories(workspace).map(async (directory) => {
           const package_ = await getPackageJson(workspace, directory)
           // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-          // @ts-ignore
+          // @ts-expect-error
           return package_.scripts?.lint as string
         }),
       ),

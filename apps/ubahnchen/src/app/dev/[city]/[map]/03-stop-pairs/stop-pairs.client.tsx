@@ -11,7 +11,7 @@ import { svgs } from '../../../svgs'
 import type { CityMapParam } from '../params'
 
 import { saveVertices } from './stop-pairs.action'
-import {Pinch} from "@/components/dev/client/pinch";
+import { Pinch } from '@/components/dev/client/pinch'
 
 const RADIUS = 24
 
@@ -93,7 +93,7 @@ export const StopPairsClient = ({
   }, [])
 
   const paths = [...(svgElement?.querySelectorAll('path') || [])]
-  // @ts-ignore
+  // @ts-expect-error
   const vertices = []
   // const vertices = useMemo(() => {
   //   if (!svgElement) return null
@@ -127,7 +127,7 @@ export const StopPairsClient = ({
   //
   const cirlces = useMemo(
     () =>
-      // @ts-ignore
+      // @ts-expect-error
       vertices?.flatMap((vertex, idx) => {
         const delta = vertex.p2.length - vertex.p1.length
         const x = (rangeValue / 100) * delta
@@ -171,7 +171,7 @@ export const StopPairsClient = ({
           />,
         ]
       }),
-    // @ts-ignore
+    // @ts-expect-error
     [rangeValue, vertices],
   )
   const cs = useMemo(
@@ -197,8 +197,10 @@ export const StopPairsClient = ({
         const stop1 = stopPositions[stopPair.stop_pairs.stop_id_1]
         const stop2 = stopPositions[stopPair.stop_pairs.stop_id_2]
         const lineColor = lineColors[stopPair.routes.route_name]
-        if (!stop1) throw new Error('No stop1 for ' + stopPair.stop_pairs.stop_id_1)
-        if (!stop2) throw new Error('No stop2 for ' + stopPair.stop_pairs.stop_id_2)
+        if (!stop1)
+          throw new Error('No stop1 for ' + stopPair.stop_pairs.stop_id_1)
+        if (!stop2)
+          throw new Error('No stop2 for ' + stopPair.stop_pairs.stop_id_2)
         if (!lineColor)
           throw new Error('No lineColor for ' + stopPair.routes.route_name)
         return (
@@ -223,7 +225,7 @@ export const StopPairsClient = ({
   return (
     <div>
       <Pinch>
-        {ImportedSvg && <ImportedSvg id="sssvvvggg" className="opacity-20"/>}
+        {ImportedSvg && <ImportedSvg id="sssvvvggg" className="opacity-20" />}
         {svgElement && (
           <svg
             className="absolute top-0"

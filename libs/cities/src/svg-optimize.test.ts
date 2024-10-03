@@ -31,5 +31,7 @@ describe('svg-optimize', () => {
       ],
     })
     fs.writeFileSync(outputPath, result2.data)
+
+    expect(result2).toMatchSnapshot()
   })
 })

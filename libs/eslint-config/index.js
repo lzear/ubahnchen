@@ -1,35 +1,36 @@
+// eslint-enable sort-keys
+
 const eslintConfig = {
   plugins: [
     'jsonc',
     'simple-import-sort',
-    '@typescript-eslint',
     '@tanstack/query',
     '@ubahnchen',
+    'vitest',
   ],
   extends: [
-    'plugin:@tanstack/eslint-plugin-query/recommended',
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended-type-checked',
-    'plugin:@typescript-eslint/stylistic-type-checked',
-
     'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/strict',
+    'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
+    'plugin:vitest/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:jsonc/recommended-with-jsonc',
-    // 'plugin:jsx-a11y/recommended',
     'plugin:markdown/recommended',
     'plugin:tailwindcss/recommended',
     'plugin:unicorn/recommended',
     'plugin:prettier/recommended',
-    // 'plugin:package-json/recommended',
-    // 'turbo',
   ],
+  /* eslint-enable sort-keys */
   rules: {
     '@next/next/no-html-link-for-pages': 0,
-    'no-html-link-for-pages': 0,
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/consistent-type-definitions': 0, // idc about type vs interface
     '@typescript-eslint/consistent-type-imports': 2,
+    '@typescript-eslint/no-non-null-assertion': 0,
     '@typescript-eslint/prefer-nullish-coalescing': [
       2,
       { ignoreMixedLogicalExpressions: true },
@@ -84,10 +85,14 @@ const eslintConfig = {
       },
       // ...
     ],
+    'no-html-link-for-pages': 0,
     'object-shorthand': 2,
     'react/jsx-closing-tag-location': 2,
     'react/jsx-curly-brace-presence': [2, 'never'],
+    'react/prop-types': 0,
+    '@typescript-eslint/no-duplicate-enum-values': 0,
     'react/self-closing-comp': 2,
+    'vitest/valid-title': 0, // until versions is updated
     'simple-import-sort/imports': [
       2,
       {
@@ -173,7 +178,12 @@ const eslintConfig = {
       './packages/*/tsconfig.json',
       './libs/*/tsconfig.json',
     ],
-    extraFileExtensions: ['.json', '.md'],
+    // extraFileExtensions: ['.json', '.md'],
+  },
+
+  env: {
+    // ... your other environments
+    'vitest/env': true,
   },
 }
 

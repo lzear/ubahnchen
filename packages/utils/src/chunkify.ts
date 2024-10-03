@@ -1,5 +1,5 @@
 export const chunkify = async <T, R>(
-  processChunk_: (chunk: T[]) => Promise<unknown> | void,
+  processChunk_: (chunk: T[]) => Promise<unknown> | undefined,
   run: (pusher: (row: T) => void) => Promise<R> | R,
   chunkSize: number,
 ) => {

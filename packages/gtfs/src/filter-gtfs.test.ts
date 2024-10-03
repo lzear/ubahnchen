@@ -9,7 +9,7 @@ describe(filterGtfs, () => {
       filters: [
         [
           'routes' as const,
-          // @ts-ignore
+          // @ts-expect-error
           (route: CsvRoute) => route.route_id === '17512_400',
         ],
       ],
@@ -93,9 +93,9 @@ await filterGtfs({
   targetDir: 'tmpberlin',
   filters: {
     // agency: (a) => (['796'] as (string | undefined)[]).includes(a.agency_id),
-    // @ts-ignore
+    // @ts-expect-error
     // routes: (r) => r.route_type === VehicleType.GENERIC_URBAN_RAIL,
-    // @ts-ignore
+    // @ts-expect-error
     routes: (r) => r.route_type === '400',
     trips: (t, index) => index % 113 === 0,
   },

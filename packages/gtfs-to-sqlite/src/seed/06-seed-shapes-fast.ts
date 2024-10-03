@@ -43,24 +43,19 @@ export const seedShapes = async ({
       let is0indexed: boolean | undefined
       await gtfsIterator.iterate('shapes')(({ row }) => {
         if (is0indexed === undefined) {
-          // @ts-ignore
           if (row.shape_pt_sequence === '0') is0indexed = true
-          // @ts-ignore
           else if (row.shape_pt_sequence === '1') is0indexed = false
           else
             throw new Error(`row.shape_pt_sequence: ${row.shape_pt_sequence}`)
         }
         if (!current || current?.shape_id !== row.shape_id) {
-          // @ts-ignore
           if (row.shape_pt_sequence !== (is0indexed ? '0' : '1'))
             throw new Error(`row.shape_pt_sequence: ${row.shape_pt_sequence}`)
           if (current) send(current)
           current = { shape_id: row.shape_id, pts: [] }
         }
         current.pts.push({
-          // @ts-ignore
           shape_pt_lat: row.shape_pt_lat,
-          // @ts-ignore
           shape_pt_lon: row.shape_pt_lon,
         })
         if (

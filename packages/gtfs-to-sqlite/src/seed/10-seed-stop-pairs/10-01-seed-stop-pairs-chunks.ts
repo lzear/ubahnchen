@@ -100,7 +100,7 @@ const insertStopPairsForRoute = async ({
 }: {
   drizzled: BetterSQLite3Database
   route: RouteDatum
-  pusher: (v: StopPairPayload) => Promise<unknown> | void
+  pusher: (v: StopPairPayload) => Promise<unknown> | undefined
 }) => {
   const stopTimesData = await getStopTimesForRoute(drizzled, route.route_id)
   const stopPairsCounts = countStopPairs(stopTimesData)
@@ -135,7 +135,7 @@ export const seedStopPairsBasicInner = async ({
   const r = await chunkify(
     (v: StopPairPayload[]) => drizzled.insert(stopPairs).values(v),
     async (pusher_) => {
-      const pusher = (sp: StopPairPayload) => {
+      const pusher = (sp: StopPairPayload): undefined => {
         pusher_(sp)
         perfInsert.tick(1)
       }

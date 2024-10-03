@@ -4,7 +4,6 @@ export class PerfFunction<F extends (...arguments_: any[]) => any> {
   public wrapped: (...args: Parameters<F>) => Promise<ReturnType<F>>
 
   constructor(private fn: F) {
-    // @ts-ignore
     this.wrapped = async (
       ...arguments_: Parameters<F>
     ): Promise<ReturnType<F>> => {

@@ -27,7 +27,7 @@ describe(canonicalize, () => {
       }"
     `)
   })
-  it('should canonicalize JSON', () => {
+  it('should canonicalize JSON 2', () => {
     const schema: JsonSchema = {
       $schema: 'http://json-schema.org/draft-07/schema#',
       title: 'Person',

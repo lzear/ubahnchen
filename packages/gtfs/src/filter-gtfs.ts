@@ -38,6 +38,7 @@ export type IndexFields = (typeof gtfsIndexes)[IndexNames]
 type FinalSets = Record<IndexNames, Set<string> | undefined>
 
 const indexes: {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   [K in GtfsKeys]: IndexNames[]
 } = {
   agency: ['agency'],
@@ -104,7 +105,7 @@ const filterOneFile = async <K extends GtfsKeys>({
     finalSets.stops = await addStopsParents({
       gtfsCopy,
       finalSets,
-      // @ts-ignore
+      // @ts-expect-error
       filter,
     })
   }

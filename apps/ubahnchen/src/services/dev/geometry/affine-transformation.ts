@@ -7,7 +7,7 @@ import type { Triangle } from './utils'
 
 // somehow the types are wrong without this
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
-// @ts-ignore
+// @ts-expect-error
 const math = mathjs as mathjs.MathJsStatic
 
 const affineTransformation = (triangle1: Triangle, triangle2: Triangle) => {
@@ -25,7 +25,7 @@ const affineTransformation = (triangle1: Triangle, triangle2: Triangle) => {
   const X = math.lusolve(A, B)
   const [a, b, e, c, d, f] = X.toArray()
   const mc = [[a, b, e].flat(), [c, d, f].flat()]
-  // @ts-ignore
+  // @ts-expect-error
   return math.matrix(mc)
 }
 

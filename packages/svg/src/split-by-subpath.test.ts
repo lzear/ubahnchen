@@ -24,6 +24,8 @@ describe(splitSvgSubpaths, () => {
 
     const result = splitSvgSubpaths(svgElement)
 
+    expect(result).toMatchInlineSnapshot()
+
     const resultString = new XMLSerializer().serializeToString(result)
 
     await fs.promises.writeFile(output, resultString)

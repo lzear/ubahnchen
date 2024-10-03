@@ -36,7 +36,7 @@ const canonicalizeObject = <O extends Record<string, Json>>(
 
   // eslint-disable-next-line unicorn/no-array-reduce
   return keys.reduce((acc: O, key: keyof O) => {
-    // @ts-ignore
+    // @ts-expect-error
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     acc[key] = canonicalize(obj[key], schema?.properties?.[key])
     return acc
@@ -56,11 +56,11 @@ export const canonicalize = <O extends Json>(
   schema?: JsonSchema,
 ): O => {
   if (Array.isArray(data))
-    // @ts-ignore
+    // @ts-expect-error
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return canonicalizeArray(data, schema)
   else if (typeof data === 'object' && data !== null)
-    // @ts-ignore
+    // @ts-expect-error
     return canonicalizeObject(data, schema)
   else return data
 }

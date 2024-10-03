@@ -65,11 +65,11 @@ export const preferRelativeImports = createEslintRule<Options, MESSAGE_ID>({
     },
   },
   defaultOptions: [],
-  // @ts-ignore
+  // @ts-expect-error
   create: (context: Rule.RuleContext): RuleListener => {
     const myPath = context.physicalFilename || context.filename
     const checkSourceValue = (node: TSESTree.ImportDeclaration) => {
-      // @ts-ignore
+      // @ts-expect-error
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const nodeValue: string = node.value
       const relativePath = relativize(myPath, nodeValue, context)
@@ -92,7 +92,7 @@ export const preferRelativeImports = createEslintRule<Options, MESSAGE_ID>({
       return {}
     }
 
-    // @ts-ignore
+    // @ts-expect-error
     return moduleVisitor(checkSourceValue)
   },
 }) satisfies RuleModule<MESSAGE_ID>

@@ -68,7 +68,7 @@ export const Kruskal = () => {
   return (
     <Pinch>
       <SvgFromCode />
-      {/*<TwoPoints />*/}
+      <TwoPoints />
     </Pinch>
   )
 }

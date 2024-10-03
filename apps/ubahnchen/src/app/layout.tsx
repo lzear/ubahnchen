@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       lang="en"
       className={`${fira.variable} ${jetBrainsMono.variable} overscroll-none`}
     >
-      <body className="min-h-screen font-fira overscroll-none">
+      <body className="min-h-screen overscroll-none font-fira">
         <ReactQuery>{children}</ReactQuery>
       </body>
     </html>

@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 
 import { ToggleUrlParameter } from '@/components/dev/server/toggle-checkbox'
 
-// @ts-ignore
+// @ts-expect-error
 const TranslatePointsSvg = dynamic(() => import('./svg.tsx'), {
   loading: () => <p className="absolute">loading...</p>,
   ssr: false,

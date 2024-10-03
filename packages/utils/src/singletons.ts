@@ -117,10 +117,6 @@ class SetLike<T> {
 }
 
 export class ClearableSingletons extends SetLike<Singletons<any, any>> {
-  constructor() {
-    super()
-  }
-
   public create<A extends any[], R, S extends (...arguments_: A) => string>(
     promise: (...arguments_: A) => R,
     serializer: S,

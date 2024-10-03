@@ -1,4 +1,4 @@
-// @ts-ignore
+// @ts-expect-error
 import munkres from 'hungarian-on3'
 
 import type { Point } from '@ubahnchen/utils'

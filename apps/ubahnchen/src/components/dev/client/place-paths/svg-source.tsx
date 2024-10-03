@@ -11,6 +11,6 @@ export const SvgSource = ({
   ...svgProps
 }: { city: City; map: string } & ComponentProps<'svg'>) => {
   const ImportedSvg = nextAppMapImports[city][map]
-  // @ts-ignore
+  // @ts-expect-error
   return <ImportedSvg {...svgProps} />
 }

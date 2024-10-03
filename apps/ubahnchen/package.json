@@ -39,6 +39,7 @@
     "@types/react-dom": "^18",
     "@ubahnchen/cities": "*",
     "@ubahnchen/database": "*",
+    "@ubahnchen/eslint-config": "*",
     "@ubahnchen/node": "*",
     "@ubahnchen/tsconfig": "*",
     "@ubahnchen/utils": "*",

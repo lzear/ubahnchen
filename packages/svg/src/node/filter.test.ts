@@ -28,7 +28,7 @@ const filteredPath = path.resolve(
 )
 
 const theFilter = (el: SVGElement) =>
-  // @ts-ignore
+  // @ts-expect-error
   idsToKeep.has(Number.parseInt(el?.dataset?.ubhchn))
 
 describe(filterSvg, () => {

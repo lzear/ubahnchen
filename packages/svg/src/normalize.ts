@@ -1,11 +1,11 @@
 /* eslint-disable unicorn/no-array-callback-reference */
 import absolutize from 'abs-svg-path'
-// @ts-ignore
+// @ts-expect-error
 import normalizeSvgPath from 'normalize-svg-path'
-// @ts-ignore
+// @ts-expect-error
 import parse from 'parse-svg-path'
 
-// @ts-ignore
+// @ts-expect-error
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-return
 export const normalize = (d: string): string => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment

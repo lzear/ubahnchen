@@ -47,6 +47,7 @@ describe(SingletonUnique, () => {
 })
 
 describe(singletonize, () => {
+  // eslint-disable-next-line vitest/expect-expect
   it('required custom serializer if params arent serializable', () => {
     singletonize(() => null)
     singletonize(() => null, { serializer: defaultSerializer })

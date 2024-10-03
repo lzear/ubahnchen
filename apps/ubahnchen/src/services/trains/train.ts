@@ -9,7 +9,7 @@ import json from '../../../../../build/berlin/maps/u/pairs-paths.json' assert { 
 import { lineColors } from '../colors/line-colors'
 import { tripKey } from '../trips/trips'
 
-// @ts-ignore
+// @ts-expect-error
 const pairWays = json as Record<string, Way>
 
 export interface Way {
@@ -72,7 +72,7 @@ export class Train {
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const fillColor: string =
-      // @ts-ignore
+      // @ts-expect-error
       lineColors[routeName] ?? '#000000'
 
     if (!fillColor) throw new Error('fillColor not found for ' + routeName)

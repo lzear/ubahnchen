@@ -75,7 +75,7 @@ const getJump = (point: Point, path: SVGPathElement, index: number) => {
 }
 
 const getPathIndex = (path: SVGPathElement) => {
-  // @ts-ignore
+  // @ts-expect-error
   // eslint-disable-next-line unicorn/prefer-dom-node-dataset
   const idx: string = path.getAttribute('data-ubhnchn')
 

@@ -49,7 +49,7 @@ export const useTripsHour = (city: City, map: string) => {
         city,
         routeTypes: routeTypesStr.split(',').map(Number),
       })
-      .then((t) => {
+      .then(() => {
         return useUbahnStore.setState({
           loading: false,
           paused: false,

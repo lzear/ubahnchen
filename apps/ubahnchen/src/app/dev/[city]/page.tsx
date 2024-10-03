@@ -7,7 +7,7 @@ const Dev = (props: { params: { city: City } }) => {
   const { city } = props.params
   const config = cities[city]
   return (
-    <article className="prose md:prose-lg lg:prose-xl m-auto p-10">
+    <article className="prose m-auto p-10 md:prose-lg lg:prose-xl">
       <DevCity city={city} cityConfig={config} />
     </article>
   )

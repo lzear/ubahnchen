@@ -67,9 +67,10 @@ export const SvgFromCode = () => {
     if (!svg) return
 
     addDraggableCircles(svg)
+    const c = circles.current
     return () => {
-      for (const [, circle] of circles.current) circle?.remove()
-      circles.current.clear()
+      for (const [, circle] of c) circle?.remove()
+      c.clear()
     }
   }, [code]) // Re-run when `code` changes
 
