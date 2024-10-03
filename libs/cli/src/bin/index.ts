@@ -4,7 +4,6 @@ import * as process from 'node:process'
 
 import { Command } from '@commander-js/extra-typings'
 
-import type { City } from '@ubahnchen/cities'
 import { cities, citiesList } from '@ubahnchen/cities'
 import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 
@@ -15,6 +14,7 @@ import { filterLines } from '../filter-lines'
 import { geojsonToSvg } from '../geojson-to-svg'
 import { getCities } from '../get-cities'
 import { mergeLines } from '../merge-lines'
+import { mergeSvgs } from '../merge-svgs'
 import { splitPaths } from '../split-paths'
 import { makeGeoJSON } from '../sqlite-to-geojson'
 import { getStatus } from '../status'
@@ -63,17 +63,6 @@ program
   })
 
 program
-  .command('all')
-  .description('run all commands')
-  .option('-c, --city <city>', 'City name')
-  .action(async ({ city }) => {
-    const cities = getCities(city)
-    for (const c of cities) await downloadCity({ city: c })
-    for (const c of cities) await gtfsToSqlite({ city: c }, false)
-    await svgAll(cities)
-  })
-
-program
   .command('to-geojson')
   .description(
     'generate GeoJSON from GTFS data with straight lines (to visualize at https://geojson.io/)',
@@ -109,7 +98,8 @@ svgCommands
   .command('annotate')
   .description("add 'ubhn' data attributes to the SVGs")
   .option('-c, --city <city>', 'City name')
-  .action(({ city }) => annotate(getCities(city)))
+  .option('-m, --map <map>', 'Map name')
+  .action(({ city, map }) => annotate(getCities(city), map))
 
 svgCommands
   .command('filter-lines')
@@ -131,10 +121,11 @@ svgCommands
   .action(({ city }) => copyPublicAssets(getCities(city)))
 
 svgCommands
-  .command('all')
-  .description('run all svg commands')
+  .command('merge-stations-lines')
+  .description('merge stations and lines SVGs into one')
   .option('-c, --city <city>', 'City name')
-  .action(({ city }) => svgAll(getCities(city)))
+  .option('-m, --map <map>', 'Map name')
+  .action(({ city, map }) => mergeSvgs(getCities(city), map))
 
 svgCommands
   .command('geojson-to-svg')
@@ -142,18 +133,9 @@ svgCommands
   .option('-c, --city <city>', 'City name')
   .option('-m, --map <map>', 'Map name')
   .action(async ({ city, map }) => {
-    console.log('geojson-to-svg', city, map)
     for (const c of getCities(city))
       for (const m of map ? [map] : Object.keys(cities[c].maps))
         await geojsonToSvg(c, m)
   })
-
-const svgAll = async (c: City[]) => {
-  await annotate(c)
-  await splitPaths(c)
-  await filterLines(c)
-  await mergeLines(c)
-  await copyPublicAssets(c)
-}
 
 program.parse()

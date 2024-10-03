@@ -20,31 +20,29 @@ const PROJECT_ROOT = path.join(currentDir, '../../..')
 
 const SRC_DATA_DIR = path.join(PROJECT_ROOT, 'libs/cities/src/data')
 
-const SVG = {
+export const SVG = {
   STEP_00_ORIGINAL: 'STEP_00_ORIGINAL',
-  STEP_01_FIGMAED: 'STEP_01_FIGMAED',
-  STEP_02_SVGOMGED: 'STEP_02_SVGOMGED',
-  STEP_10_ANNOTATED: 'STEP_10_ANNOTATED',
-  STEP_11_LINES_STATIONS: 'STEP_11_LINES_STATIONS',
-  STEP_12_SPLIT_PATHS: 'STEP_12_SPLIT_PATHS',
-  STEP_20_LINES_ONLY: 'STEP_20_LINES_ONLY',
-  STEP_21_LINES_MERGED: 'STEP_21_LINES_MERGED',
+  STEP_10_SIMPLIFIED: 'STEP_10_SIMPLIFIED',
+  STEP_20_ANNOTATED: 'STEP_20_ANNOTATED',
+  STEP_30_JUST_LINES_N_STATIONS: 'STEP_30_JUST_LINES_N_STATIONS',
+  STEP_31_JUST_LINES: 'STEP_31_JUST_LINES',
+  STEP_32_JUST_STATIONS: 'STEP_32_JUST_STATIONS',
 } as const
 
 export const svgs = {
   [SVG.STEP_00_ORIGINAL]: '00-original.svg',
-  [SVG.STEP_01_FIGMAED]: '01-simplified-via-figma.svg',
-  [SVG.STEP_02_SVGOMGED]: '02-simplified-via-svgomg.svg',
-  [SVG.STEP_10_ANNOTATED]: '10-annotated.svg',
-  [SVG.STEP_11_LINES_STATIONS]: '11-lines-stations.svg',
-  [SVG.STEP_12_SPLIT_PATHS]: '12-split-paths.svg',
-  [SVG.STEP_20_LINES_ONLY]: '20-lines-only.svg',
-  [SVG.STEP_21_LINES_MERGED]: '21-lines-merged.svg',
+  [SVG.STEP_10_SIMPLIFIED]: '10-simplified.svg',
+  [SVG.STEP_20_ANNOTATED]: '20-annotated.svg',
+  [SVG.STEP_30_JUST_LINES_N_STATIONS]: '30-just-lines-and-stations.svg',
+  [SVG.STEP_31_JUST_LINES]: '31-just-lines.svg',
+  [SVG.STEP_32_JUST_STATIONS]: '32-just-stations.svg',
 } as const
 
 export const svgsPublic = _.pick(svgs, [
-  SVG.STEP_10_ANNOTATED,
-  SVG.STEP_21_LINES_MERGED,
+  SVG.STEP_20_ANNOTATED,
+  SVG.STEP_30_JUST_LINES_N_STATIONS,
+  SVG.STEP_31_JUST_LINES,
+  SVG.STEP_32_JUST_STATIONS,
 ])
 
 const R = {

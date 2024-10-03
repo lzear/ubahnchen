@@ -48,7 +48,7 @@ describe(filterSvg, () => {
       const f = await fs.promises.readFile(output, 'utf8')
       // eslint-disable-next-line unicorn/template-indent
       expect(f.slice(0, 500)).toMatchInlineSnapshot(
-        `"<svg xmlns="http://www.w3.org/2000/svg" width="1661" height="1004" fill="none"><path stroke="#7E5330" stroke-width="8" d="M740.256 445.979h600.224c9.11 0 14.1 5.809 14.1 5.809l56.62 56.621s4.74 5.809 14.11 5.809 14.23-5.922 14.23-5.922l171.82-171.827" data-ubhchn="3"/><path stroke="#224F86" stroke-width="8" d="M1018.06 809.578V425.545s.58-7.64-5.86-14.078c-3.29-3.284-88.796-88.795-188.577-188.576" data-ubhchn="4"/><path stroke="#8C6DAB" stroke-width="8" d="M900.304 938.59V439.909s.573-7.64-5.864"`,
+        `"<svg xmlns="http://www.w3.org/2000/svg" width="1661" height="1004" fill="none" data-ubhchn="1"><path fill="#8C6DAB" d="M694.364 180.049h-16.696a2.652 2.652 0 0 0-2.652 2.652v8.696a2.652 2.652 0 0 0 2.652 2.652h16.696a2.652 2.652 0 0 0 2.652-2.652v-8.696a2.652 2.652 0 0 0-2.652-2.652Z" data-ubhchn="3"/><path fill="#fff" d="M678.997 182.813h1.734v4.652c0 .739.021 1.217.065 1.436.074.351.251.634.53.846.279.213.661.32 1.146.32.492 0 .863-.101 1.113-.302.25-.201.4-.448.451-.741.051-.293.076-.779.076-"`,
       )
     })
     it('saves the other file', async () => {
@@ -56,7 +56,7 @@ describe(filterSvg, () => {
       const f = await fs.promises.readFile(filteredPath, 'utf8')
       // eslint-disable-next-line unicorn/template-indent
       expect(f.slice(0, 500)).toMatchInlineSnapshot(
-        `"<svg xmlns="http://www.w3.org/2000/svg" width="1661" height="1004" fill="none"><path stroke="#7E5330" stroke-width="8" d="M740.256 445.979h600.224c9.11 0 14.1 5.809 14.1 5.809l56.62 56.621s4.74 5.809 14.11 5.809 14.23-5.922 14.23-5.922l171.82-171.827" data-ubhchn="3"/><path stroke="#224F86" stroke-width="8" d="M1018.06 809.578V425.545s.58-7.64-5.86-14.078c-3.29-3.284-88.796-88.795-188.577-188.576" data-ubhchn="4"/><path stroke="#8C6DAB" stroke-width="8" d="M900.304 938.59V439.909s.573-7.64-5.864"`,
+        `"<svg xmlns="http://www.w3.org/2000/svg" width="1661" height="1004" fill="none" data-ubhchn="1"><path fill="#8C6DAB" d="M694.364 180.049h-16.696a2.652 2.652 0 0 0-2.652 2.652v8.696a2.652 2.652 0 0 0 2.652 2.652h16.696a2.652 2.652 0 0 0 2.652-2.652v-8.696a2.652 2.652 0 0 0-2.652-2.652Z" data-ubhchn="3"/><path fill="#fff" d="M678.997 182.813h1.734v4.652c0 .739.021 1.217.065 1.436.074.351.251.634.53.846.279.213.661.32 1.146.32.492 0 .863-.101 1.113-.302.25-.201.4-.448.451-.741.051-.293.076-.779.076-"`,
       )
     })
   })

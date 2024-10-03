@@ -6,11 +6,11 @@ describe(zipStats, () => {
       {
         "isOkay": false,
         "isUpToDate": false,
-        "newDate": "Fri, 27 Sep 2024 08:21:03 GMT",
+        "newDate": "Tue, 01 Oct 2024 11:15:38 GMT",
         "newHeaders": {
-          "content-length": 71579487,
-          "etag": ""66f66aef-444375f"",
-          "last-modified": "Fri, 27 Sep 2024 08:21:03 GMT",
+          "content-length": 59460142,
+          "etag": ""66fbd9da-38b4a2e"",
+          "last-modified": "Tue, 01 Oct 2024 11:15:38 GMT",
         },
         "oldDate": "Fri, 13 Sep 2024 06:52:00 GMT",
         "oldHeaders": {

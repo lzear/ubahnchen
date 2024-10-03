@@ -8,7 +8,7 @@ import { convertPublicPath, importSvg } from './import-svg'
 
 export const usePaper = ({ mapPaths }: { mapPaths: MapPaths }) => {
   const canvasReference = useRef<HTMLCanvasElement>(null)
-  const svgPath = convertPublicPath(mapPaths.PUBLIC.SVG.STEP_21_LINES_MERGED)
+  const svgPath = convertPublicPath(mapPaths.PUBLIC.SVG.STEP_31_JUST_LINES)
 
   useLayoutEffect(() => {
     const canvas = canvasReference.current

@@ -2,10 +2,10 @@ import type { HTMLProps } from 'react'
 
 import type { City } from '@ubahnchen/cities'
 
+import berlinuannotated from '../../../../../libs/cities/src/data/berlin/u/svg/10-annotated.svg'
 // import berlinSplacePoints from '../../../../../libs/cities/src/data/berlin/s/svg/04-paper-anotated.svg'
 // import berlinSpairs from '../../../../../libs/cities/src/data/berlin/s/svg/06-lines-merged.svg'
-import berlinUplacePoints from '../../../../../libs/cities/src/data/berlin/u/svg/02-simplified-via-svgomg.svg'
-import berlinuannotated from '../../../../../libs/cities/src/data/berlin/u/svg/10-annotated.svg'
+import berlinUplacePoints from '../../../../../libs/cities/src/data/berlin/u/svg/10-simplified.svg'
 
 type Svg = (props: HTMLProps<SVGElement>) => JSX.Element
 

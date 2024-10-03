@@ -19,7 +19,7 @@ export const SvgSource = ({ city, map, setSize, setCandidates }: Props) => {
   const svgContainerRef = useRef<HTMLDivElement | null>(null)
 
   const d = useLoadSvg(
-    `/${city}/${map}/svg/12-split-paths.svg`,
+    `/${city}/${map}/svg/30-just-lines-and-stations.svg`,
     svgContainerRef,
   )
 

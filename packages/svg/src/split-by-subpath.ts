@@ -6,8 +6,6 @@ export const splitSvgSubpaths = (svgElement: SVGSVGElement) => {
     const segments = d.split(/(?=M)/) // Split into subpaths on each 'M'
     if (segments.length > 1) {
       for (const segment of segments) {
-        console.log(segment)
-
         // Create a new path element
         const newPath = document.createElementNS(
           'http://www.w3.org/2000/svg',

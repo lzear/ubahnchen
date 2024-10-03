@@ -4,7 +4,6 @@ import path from 'node:path'
 import type { Json, JsonSchema } from '@ubahnchen/json'
 import { canonicalizeToString } from '@ubahnchen/json'
 import { initializeFileIfNotExists } from '@ubahnchen/node'
-import type { ShortestPath } from '@ubahnchen/svg'
 
 import type { City } from './index'
 import type { StopsPositions } from './map-asset-type'
@@ -19,7 +18,8 @@ export enum MapAssetName {
 export type AssetTypes = {
   [MapAssetName.PLACE_STOPS]: StopsPositions
   [MapAssetName.SPLIT_SHAPES]: string[]
-  [MapAssetName.PAIRS_PATHS]: Record<string, ShortestPath>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [MapAssetName.PAIRS_PATHS]: Record<string, any>
 }
 
 class FileAssets<T extends Json, S extends JsonSchema | undefined = undefined> {
