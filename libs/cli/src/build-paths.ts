@@ -9,7 +9,7 @@ import { computeDijkstra, extractSVGPaths } from '@ubahnchen/svg'
 export const buildPaths = async (c: City, m?: string) => {
   const database = getDatabase(P(c).SQLITE.BIG).drizzled
   for (const map of m ? [m] : Object.keys(cities[c].maps)) {
-    const svgPath = P(c, map).SRC.SVG.STEP_21_LINES_MERGED
+    const svgPath = P(c, map).SRC.SVG.STEP_31_JUST_LINES
     const svgString = await fs.promises.readFile(svgPath, 'utf8')
 
     const paths = extractSVGPaths(svgString)

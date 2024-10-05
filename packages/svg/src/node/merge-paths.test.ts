@@ -68,12 +68,13 @@ describe(mergePathsFile, () => {
   })
 
   describe('berlin u', () => {
+    // TODO: Update this test
     it('should merge the paths', async () => {
       const svgMerged = path.resolve(
         path.dirname(url.fileURLToPath(import.meta.url)),
         '../__tests__/30-merged-berlin.svg',
       )
-      const svgFiltered = P('berlin', 'u').SRC.SVG.STEP_20_LINES_ONLY
+      const svgFiltered = P('berlin', 'u').SRC.SVG.STEP_31_JUST_LINES
       await mergePathsFile(svgFiltered, svgMerged)
 
       const f = await fs.promises.readFile(svgMerged, 'utf8')

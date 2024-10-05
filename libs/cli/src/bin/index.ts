@@ -10,12 +10,9 @@ import { downloadCity, gtfsToSqlite } from '@ubahnchen/gtfs-to-sqlite'
 import { annotate } from '../annotate'
 import { buildPaths } from '../build-paths'
 import { copyPublicAssets } from '../copy-assets'
-import { filterLines } from '../filter-lines'
 import { geojsonToSvg } from '../geojson-to-svg'
 import { getCities } from '../get-cities'
-import { mergeLines } from '../merge-lines'
 import { mergeSvgs } from '../merge-svgs'
-import { splitPaths } from '../split-paths'
 import { makeGeoJSON } from '../sqlite-to-geojson'
 import { getStatus } from '../status'
 
@@ -89,30 +86,11 @@ program
 const svgCommands = program.command('svg').description('manage svg files')
 
 svgCommands
-  .command('split')
-  .description("split svg paths so there are no 'jumps'")
-  .option('-c, --city <city>', 'City name')
-  .action(({ city }) => splitPaths(getCities(city)))
-
-svgCommands
   .command('annotate')
   .description("add 'ubhn' data attributes to the SVGs")
   .option('-c, --city <city>', 'City name')
   .option('-m, --map <map>', 'Map name')
   .action(({ city, map }) => annotate(getCities(city), map))
-
-svgCommands
-  .command('filter-lines')
-  .description('filter the SVGs to keep only the lines')
-  .option('-c, --city <city>', 'City name')
-  .action(({ city }) => filterLines(getCities(city)))
-
-svgCommands
-  .command('merge-lines')
-  .description('merge the SVG lines by color')
-  .option('-c, --city <city>', 'City name')
-  .option('-m, --map <map>', 'Map name')
-  .action(({ city, map }) => mergeLines(getCities(city), map))
 
 svgCommands
   .command('copy')
