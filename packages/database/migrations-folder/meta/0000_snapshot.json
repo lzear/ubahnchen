@@ -148,9 +148,7 @@
       "indexes": {
         "route_name_idx": {
           "name": "route_name_idx",
-          "columns": [
-            "route_name"
-          ],
+          "columns": ["route_name"],
           "isUnique": false
         }
       },
@@ -258,18 +256,12 @@
       "indexes": {
         "uniqueIdx": {
           "name": "uniqueIdx",
-          "columns": [
-            "idx"
-          ],
+          "columns": ["idx"],
           "isUnique": true
         },
         "uniqueRouteStops": {
           "name": "uniqueRouteStops",
-          "columns": [
-            "route_id",
-            "stop_id_1",
-            "stop_id_2"
-          ],
+          "columns": ["route_id", "stop_id_1", "stop_id_2"],
           "isUnique": true
         }
       },
@@ -278,12 +270,8 @@
           "name": "stop_pairs_stop_id_1_stops_stop_id_fk",
           "tableFrom": "stop_pairs",
           "tableTo": "stops",
-          "columnsFrom": [
-            "stop_id_1"
-          ],
-          "columnsTo": [
-            "stop_id"
-          ],
+          "columnsFrom": ["stop_id_1"],
+          "columnsTo": ["stop_id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -291,12 +279,8 @@
           "name": "stop_pairs_stop_id_2_stops_stop_id_fk",
           "tableFrom": "stop_pairs",
           "tableTo": "stops",
-          "columnsFrom": [
-            "stop_id_2"
-          ],
-          "columnsTo": [
-            "stop_id"
-          ],
+          "columnsFrom": ["stop_id_2"],
+          "columnsTo": ["stop_id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -304,12 +288,8 @@
           "name": "stop_pairs_route_id_routes_route_id_fk",
           "tableFrom": "stop_pairs",
           "tableTo": "routes",
-          "columnsFrom": [
-            "route_id"
-          ],
-          "columnsTo": [
-            "route_id"
-          ],
+          "columnsFrom": ["route_id"],
+          "columnsTo": ["route_id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -352,10 +332,7 @@
       "indexes": {
         "uniquePerMap": {
           "name": "uniquePerMap",
-          "columns": [
-            "stop_pair_idx",
-            "map"
-          ],
+          "columns": ["stop_pair_idx", "map"],
           "isUnique": true
         }
       },
@@ -364,12 +341,8 @@
           "name": "stop_pairs_svg_paths_stop_pair_idx_stop_pairs_idx_fk",
           "tableFrom": "stop_pairs_svg_paths",
           "tableTo": "stop_pairs",
-          "columnsFrom": [
-            "stop_pair_idx"
-          ],
-          "columnsTo": [
-            "idx"
-          ],
+          "columnsFrom": ["stop_pair_idx"],
+          "columnsTo": ["idx"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -473,12 +446,8 @@
           "name": "stops_parent_station_stops_stop_id_fk",
           "tableFrom": "stops",
           "tableTo": "stops",
-          "columnsFrom": [
-            "parent_station"
-          ],
-          "columnsTo": [
-            "stop_id"
-          ],
+          "columnsFrom": ["parent_station"],
+          "columnsTo": ["stop_id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -545,12 +514,8 @@
           "name": "trips_route_id_routes_route_id_fk",
           "tableFrom": "trips",
           "tableTo": "routes",
-          "columnsFrom": [
-            "route_id"
-          ],
-          "columnsTo": [
-            "route_id"
-          ],
+          "columnsFrom": ["route_id"],
+          "columnsTo": ["route_id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }

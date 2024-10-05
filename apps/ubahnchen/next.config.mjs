@@ -62,7 +62,7 @@ const nextConfig = {
     }
 
     if (isServer) {
-      config.resolve.alias['paper'] = false;
+      config.resolve.alias['paper'] = false
     }
     return config
   },

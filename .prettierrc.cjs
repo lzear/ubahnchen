@@ -5,5 +5,5 @@ module.exports = {
   printWidth: 80,
   proseWrap: 'always',
   semi: false,
-  plugins: ["prettier-plugin-sql-cst"],
+  plugins: ['prettier-plugin-sql-cst'],
 }

@@ -3,7 +3,4 @@ https://en.wikipedia.org/wiki/Berlin_U-Bahn
 
 CC BY-SA 4.0
 
-
-Then passed through the following functions:
-Figma
-SVGOMG
+Then passed through the following functions: Figma SVGOMG

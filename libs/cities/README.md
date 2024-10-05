@@ -8,5 +8,6 @@
    2. Without translations
 
 TODO:
+
 1. SVG to absolute
-2. 
+2.

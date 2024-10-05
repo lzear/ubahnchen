@@ -4,11 +4,7 @@
     "moduleResolution": "bundler",
     "module": "ESNext",
     "target": "es5", // set to es2022 to run scripts
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
@@ -32,15 +28,6 @@
     "strictNullChecks": true,
     "types": ["node", "vitest/globals"]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "./cypress.config.js",
-    "cypress"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "./cypress.config.js", "cypress"]
 }
