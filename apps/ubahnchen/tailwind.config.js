@@ -14,7 +14,7 @@ const tailwindConfig = {
   prefix: '',
   theme: {
     container: {
-      center: true,
+      center: 'true',
       padding: '2rem',
       screens: {
         '2xl': '1400px',
@@ -23,7 +23,7 @@ const tailwindConfig = {
     extend: {
       transitionDuration: {
         2000: '2000ms',
-        20000: '20000ms',
+        20_000: '20000ms',
       },
       fontFamily: {
         fira: ['var(--font-fira)'],
@@ -71,12 +71,20 @@ const tailwindConfig = {
       },
       keyframes: {
         'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          from: {
+            height: '0',
+          },
+          to: {
+            height: 'var(--radix-accordion-content-height)',
+          },
         },
         'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+          from: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+          to: {
+            height: '0',
+          },
         },
       },
       animation: {
@@ -85,10 +93,7 @@ const tailwindConfig = {
       },
     },
   },
-  plugins: [
-    tailwindTypography,
-    // tailwindcssAnimate
-  ],
+  plugins: [tailwindTypography, tailwindcssAnimate],
 }
 
 export default tailwindConfig
