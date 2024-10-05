@@ -2,21 +2,27 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
+import { Checkbox } from '@/components/ui/checkbox'
+
 import { zBoolean } from '../search-parameters'
 
 type Props = {
+  id: string
   checked: boolean
   onChange: (newValue: boolean) => void
   label: string
 }
 
-export const ToggleCheckbox = ({ checked, onChange, label }: Props) => (
+export const ToggleCheckbox = ({ checked, onChange, label, id }: Props) => (
   <div>
-    <label className="cursor-pointer justify-start gap-2 p-1">
-      <input
-        type="checkbox"
+    <label
+      htmlFor={id}
+      className="flex cursor-pointer items-center space-x-2 text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+    >
+      <Checkbox
+        id={id}
         checked={checked}
-        onChange={(event) => onChange(event.target.checked)}
+        onCheckedChange={(value) => onChange(!!value)}
       />
       <span>{label}</span>
     </label>
@@ -50,6 +56,7 @@ export const ToggleUrlParameter = ({
   const pathname = usePathname()
   return (
     <ToggleCheckbox
+      id={`input${urlParameter}`}
       onChange={(newValue) => {
         const parameters = new URLSearchParams(searchParameters?.toString())
         parameters.set(urlParameter, String(newValue))
