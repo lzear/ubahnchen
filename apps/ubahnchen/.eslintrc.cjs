@@ -5,4 +5,7 @@ module.exports = {
   parserOptions: {
     project: true,
   },
+  rules: {
+    'tailwindcss/no-custom-classname': 0,
+  },
 }
