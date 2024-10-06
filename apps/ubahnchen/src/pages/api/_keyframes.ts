@@ -55,6 +55,24 @@ export type TripByHourStop = {
   departure_time: number
 }
 
+export type RunningSegment = {
+  type: 'running'
+  start_time: number
+  end_time: number
+  start_stop_id: string
+  end_stop_id: string
+  stop_pair_idx: number
+}
+
+export type PausedSegment = {
+  type: 'paused'
+  start_time: number
+  end_time: number
+  stop_id: string
+}
+
+export type TripSegment = RunningSegment | PausedSegment
+
 export type TripByHour = {
   day: string
   start_time: number
@@ -62,6 +80,7 @@ export type TripByHour = {
   route_id: string
   end_time: number
   stops: TripByHourStop[]
+  segments: TripSegment[]
 }
 
 export type TripNFrames = Omit<TripByHour, 'stops'> & {
@@ -69,3 +88,12 @@ export type TripNFrames = Omit<TripByHour, 'stops'> & {
 }
 
 export type FindTripsCount = { date: string; trip_count: number }
+
+export type Pair = {
+  idx: number
+  stop_id_1: string
+  stop_id_2: string
+  route_id: string
+  count: number
+  is_one_way: number
+}
