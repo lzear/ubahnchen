@@ -16,7 +16,7 @@ export const SourceContext = createContext<{
 
 export const SourceContextProvider = (props: {
   code: string
-  files: null | { abs: string; rel: string }[]
+  files?: null | { abs: string; rel: string }[]
   file?: string
   children: React.ReactNode
 }) => {
@@ -26,7 +26,7 @@ export const SourceContextProvider = (props: {
     <SourceContext.Provider
       value={{
         code,
-        files: props.files,
+        files: props.files ?? [],
         file: props.file,
         setCode,
       }}

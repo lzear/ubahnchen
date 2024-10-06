@@ -26,7 +26,7 @@ export const SelectOutputFn = () => {
         onValueChange={(filename: SvgAction) => setValue(filename)}
         value={value ?? undefined}
       >
-        <SelectTrigger className="h-7 gap-2 text-xs">
+        <SelectTrigger className="h-6 gap-2 text-xs">
           <span className="text-muted-foreground">Action: </span>
           <SelectValue placeholder="Select a SVG action" />
         </SelectTrigger>

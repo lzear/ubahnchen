@@ -1,14 +1,15 @@
 import React from 'react'
 
-import { Pinch } from '@/components/dev/client/pinch'
+import { Pinch } from '../pinch'
 
-import { SvgFromCode } from './svg-from-code'
+// import { Pinch } from '../pinch/01-react-zoom-pan-pinch'
+import { SvgFromCodeDragCircles } from './svg-from-code'
 
 export const PinchedSvgFromCode = () => {
   return (
     <>
       <Pinch>
-        <SvgFromCode />
+        <SvgFromCodeDragCircles />
       </Pinch>
     </>
   )

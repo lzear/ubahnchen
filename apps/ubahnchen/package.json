@@ -62,6 +62,7 @@
     "@ubahnchen/database": "*",
     "@ubahnchen/eslint-config": "*",
     "@ubahnchen/node": "*",
+    "@ubahnchen/svg": "*",
     "@ubahnchen/tsconfig": "*",
     "@ubahnchen/utils": "*",
     "@uiw/react-codemirror": "^4",

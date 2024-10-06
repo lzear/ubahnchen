@@ -63,12 +63,43 @@ export const useUrlParams = <
   const value = params
     ? (parse[type](params.get(name)) as ActualType | null)
     : null
-  const setValue = (newValue: ActualType) => {
+  const getHref = (newValue: ActualType) => {
     const parameters = new URLSearchParams(params?.toString())
     if (newValue === null || newValue === undefined) parameters.delete(name)
     else parameters.set(name, format[type](newValue))
-
-    router.replace(`${pathname}?${parameters.toString()}`)
+    return `${pathname}?${parameters.toString()}`
   }
-  return { value, setValue }
+  const setValue = (newValue: ActualType) => router.replace(getHref(newValue))
+  return { value, setValue, getHref }
+}
+
+export const useUrlParamsMulti = <
+  TypeName extends UrlParamType,
+  ActualType extends Types[TypeName] = Types[TypeName],
+>(
+  nameAndTypeArray: {
+    name: string
+    type: TypeName
+  }[],
+) => {
+  const router = useRouter()
+  const params = useSearchParams()
+  const pathname = usePathname()
+  const values = nameAndTypeArray.map(({ name, type }) =>
+    params ? (parse[type](params.get(name)) as ActualType | null) : null,
+  )
+
+  const getHref = (newValues: ActualType[]) => {
+    const parameters = new URLSearchParams(params?.toString())
+    for (const [i, { name, type }] of nameAndTypeArray.entries()) {
+      const newValue = newValues[i]
+      if (newValue === null || newValue === undefined) parameters.delete(name)
+      else parameters.set(name, format[type](newValue))
+    }
+    return `${pathname}?${parameters.toString()}`
+  }
+  const setValues = (newValues: ActualType[]) =>
+    router.replace(getHref(newValues))
+
+  return { values, setValues, getHref }
 }
