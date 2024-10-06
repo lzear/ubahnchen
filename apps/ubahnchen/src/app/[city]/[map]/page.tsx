@@ -1,10 +1,11 @@
-import { IndexDynamic } from '@/components/map/index-dynamic'
+import { cities, citiesList } from '@ubahnchen/cities'
 
-import type { CityMapParam } from '../../dev/[city]/[map]/params'
+export const dynamicParams = false
+export const dynamic = 'error'
 
-const MapPage = (props: { params: CityMapParam }) => {
-  const { city, map } = props.params
-  return <IndexDynamic city={city} map={map} />
-}
+export const generateStaticParams = () =>
+  citiesList.flatMap((city) =>
+    Object.keys(cities[city].maps).map((map) => ({ city, map })),
+  )
 
-export default MapPage
+export { MapServer as default } from '@/components/map/map-server'
