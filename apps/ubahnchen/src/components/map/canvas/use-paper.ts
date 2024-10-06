@@ -1,10 +1,13 @@
 import { useLayoutEffect, useRef } from 'react'
-import * as Paper from 'paper'
+
+import { PaperJSRenderer } from '@/services/trains/renderer/renderer-paperjs'
 
 import { useMapContext } from '../server-context/client'
 
 import { useGestures } from './gestures'
-import { convertPublicPath, importSvg } from './import-svg'
+import { convertPublicPath } from './import-svg'
+
+const instance = new PaperJSRenderer()
 
 export const usePaper = () => {
   const { mapPaths } = useMapContext()
@@ -13,11 +16,10 @@ export const usePaper = () => {
   useLayoutEffect(() => {
     const canvas = canvasReference.current
     if (canvas) {
-      const svgPath = convertPublicPath(mapPaths.PUBLIC.SVG.STEP_31_JUST_LINES)
-      Paper.setup(canvas)
-      const activeLayer = Paper.project.activeLayer
-      const gMap = activeLayer.addChild(new Paper.Group())
-      void importSvg(svgPath, gMap, { insert: true })
+      void instance.setup(
+        canvas,
+        convertPublicPath(mapPaths.PUBLIC.SVG.STEP_31_JUST_LINES),
+      )
     }
   }, [mapPaths.PUBLIC.SVG.STEP_31_JUST_LINES])
 
