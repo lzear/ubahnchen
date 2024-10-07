@@ -207,7 +207,7 @@ export const computeDijkstra = (
             : 'Jump',
         color:
           n1.type === 'Path'
-            ? (eP.find((p) => p.id === n1.pathPoint.path.id)?.color ??
+            ? (eP?.find((p) => p.id === n1.pathPoint.path.id)?.color ??
               undefined)
             : undefined,
       })),

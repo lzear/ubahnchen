@@ -19,3 +19,4 @@ export type {
 } from './gtfs-iterator'
 export { GtfsIterator } from './gtfs-iterator'
 export { gtfsTimeToSeconds } from './gtfs-time-to-seconds'
+export type { Segment } from './itineraries'

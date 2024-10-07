@@ -32,7 +32,7 @@ export const DijkstraSvg = async ({
 
         <SplitPanels
           direction="vertical"
-          panels={[<Code key="src" file={file} />, <SvgOut key="svg" />]}
+          panels={[<Code key="src" />, <SvgOut key="svg" />]}
         />
       </div>
     </SourceContextProvider>

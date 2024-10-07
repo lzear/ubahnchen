@@ -45,7 +45,7 @@ const fixupEnding = (relativePath: string, initial: string) => {
 }
 
 const countParentDirectoryPrefixes = (path: string) => {
-  const matches = path.match(/^(?:\.\.\/)+/)
+  const matches = /^(?:\.\.\/)+/.exec(path)
   return matches ? matches[0].length / 3 : 0
 }
 

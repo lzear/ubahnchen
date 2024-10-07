@@ -1,7 +1,7 @@
 import type { GtfsConfig, MapConfig } from './data/types'
 import * as generated from './generated'
 
-export type { GtfsConfig, MapConfig } from './data/types'
+export type { GtfsConfig, LineColor, MapConfig } from './data/types'
 export { logLineTag } from './log-line-tag'
 export { getMap } from './map'
 export type { StopsPositions } from './map-asset-type'

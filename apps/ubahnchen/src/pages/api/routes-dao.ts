@@ -1,5 +1,6 @@
-export type RoutesDao = {
-  route_id: string
-  route_name: string
-  route_type: number
-}
+import type { DrizzleTypes } from '@ubahnchen/database'
+
+export type RoutesDao = Pick<
+  DrizzleTypes['routes'],
+  'route_id' | 'route_name' | 'route_type'
+>

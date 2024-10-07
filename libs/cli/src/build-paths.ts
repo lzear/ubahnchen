@@ -4,6 +4,7 @@ import type { City } from '@ubahnchen/cities'
 import { cities } from '@ubahnchen/cities'
 import { mapAsset, MapAssetName, MapQueries, P } from '@ubahnchen/cities/node'
 import { drizzleTables, getDatabase } from '@ubahnchen/database'
+import type { Segment } from '@ubahnchen/gtfs'
 import { computeDijkstra, extractSVGPaths } from '@ubahnchen/svg'
 
 export const buildPaths = async (c: City, m?: string) => {
@@ -55,14 +56,17 @@ export const buildPaths = async (c: City, m?: string) => {
 
       if (withSkip.length % 2) throw new Error('Multiple paths found')
 
-      const wp: { pathId: string; lengths: [number, number] }[] = []
+      const segments: Segment[] = []
 
       let length = 0
       for (let index = 0; index < withSkip.length; index += 2) {
         const p0 = withSkip[index]
         const p1 = withSkip[index + 1]
         if (!p0 || !p1) throw new Error('No path found (!p0 || !p1)')
-        wp.push({ pathId: p0.pathId, lengths: [p0.pathLength, p1.pathLength] })
+        segments.push({
+          pathId: p0.pathId,
+          lengths: [p0.pathLength, p1.pathLength],
+        })
         length += Math.abs(p1.pathLength - p0.pathLength)
       }
 
@@ -70,7 +74,7 @@ export const buildPaths = async (c: City, m?: string) => {
         stop1: stop1.stop_id,
         stop2: stop2.stop_id,
         length,
-        paths: wp,
+        paths: segments,
       }
       itineraries.push(itinerary)
 
@@ -80,7 +84,7 @@ export const buildPaths = async (c: City, m?: string) => {
           stop_pair_idx: stop_pairs.idx,
           map,
           length,
-          waypoints: JSON.stringify(wp),
+          segments: JSON.stringify(segments),
         })
         .run()
     }

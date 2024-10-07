@@ -21,6 +21,7 @@
     "@ubahnchen/database": "*",
     "@ubahnchen/json": "*",
     "@ubahnchen/node": "*",
+    "@ubahnchen/svg": "*",
     "@ubahnchen/utils": "*",
     "chalk": "^5",
     "drizzle-orm": "^0",

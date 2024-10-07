@@ -33,7 +33,7 @@ export const useTrips = (city: City, map: string) => {
     queryKey: ['trips-hour', urlParamStr],
     queryFn: async () => {
       const response = await fetch(`/api/trips-hour?${urlParamStr}`)
-      return response.json()
+      return response.json() as Promise<unknown>
     },
   })
 }

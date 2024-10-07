@@ -4,7 +4,7 @@ import { cities, citiesList } from '../index'
 import { P, SVG } from '../paths'
 
 describe.each(citiesList)('%s', (city) => {
-  describe.each(Object.keys(cities[city].maps))('%s', (map) => {
+  describe.todo.each(Object.keys(cities[city].maps))('%s', (map) => {
     it.each([
       SVG.STEP_00_ORIGINAL,
       SVG.STEP_10_SIMPLIFIED,

@@ -1,4 +1,4 @@
-import type { Point } from '../utils'
+import type { Point } from '@ubahnchen/utils'
 
 type WorkerData = {
   count: number

@@ -119,7 +119,7 @@ const useNewPoints = ({
   }
 
   while (stopsToPlace.size > 0 && mutableCandidates.length > 0) {
-    const stopId = stopsToPlace.values().next().value as string
+    const stopId = stopsToPlace.values().next().value!
     const p = transformedPoints[stopId]
     if (!p) throw new Error(`No transformed point for stopId: ${stopId}`)
     const closestPointIdx = findClosestIdx(p, mutableCandidates)

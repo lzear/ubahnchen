@@ -136,6 +136,7 @@ const eslintConfig = {
       files: ['*.json', '*.json5', '*.jsonc'],
       parser: 'jsonc-eslint-parser',
       rules: {
+        '@typescript-eslint/no-unused-expressions': 0,
         'unicorn/numeric-separators-style': 0,
       },
     },

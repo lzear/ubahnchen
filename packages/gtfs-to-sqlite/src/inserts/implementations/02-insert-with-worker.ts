@@ -11,7 +11,7 @@ const endWorker = (worker: Worker, count: number) =>
   new Promise<void>((resolve, reject) => {
     worker.on('message', (data: End2Action) => {
       if (data.type === Messages.END2) resolve()
-      else reject(data)
+      else reject(new Error('Unexpected message'))
     })
     worker.postMessage(End1(count))
   })

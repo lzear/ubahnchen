@@ -54,7 +54,7 @@ CREATE TABLE `stop_pairs` (
 CREATE TABLE `stop_pairs_svg_paths` (
   `stop_pair_idx` INTEGER NOT NULL,
   `map` TEXT NOT NULL,
-  `waypoints` TEXT NOT NULL,
+  `segments` TEXT NOT NULL,
   `length` REAL NOT NULL,
   FOREIGN KEY (`stop_pair_idx`) REFERENCES `stop_pairs` (`idx`)
     ON UPDATE NO ACTION
