@@ -2,4 +2,5 @@ export { createWithDrizzle } from './create-database/implementations/drizzle/cre
 export { createWithSql } from './create-database/implementations/sql/create-with-sql'
 export { schemaMinify } from './create-database/implementations/sql/schema-minify'
 export * as drizzleTables from './drizzle/index'
+export type { DrizzleTypes, StopPairsSvgPaths } from './drizzle-types'
 export { type DBSingleton, getDatabase } from './singleton'

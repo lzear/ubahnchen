@@ -15,7 +15,7 @@ export const stopPairsSvgPaths = sqliteTable(
       .notNull()
       .references(() => stopPairs.idx),
     map: text('map').notNull(),
-    waypoints: text('waypoints').notNull(),
+    segments: text('segments').notNull(),
     length: real('length').notNull(),
   },
   (p) => ({

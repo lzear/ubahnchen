@@ -4,22 +4,22 @@ describe(zipStats, () => {
   it('should return stats', async () => {
     expect(await zipStats('berlin')).toMatchInlineSnapshot(`
       {
-        "isOkay": false,
-        "isUpToDate": false,
-        "newDate": "Tue, 01 Oct 2024 11:15:38 GMT",
+        "isOkay": true,
+        "isUpToDate": true,
+        "newDate": "Fri, 11 Oct 2024 08:22:40 GMT",
         "newHeaders": {
-          "content-length": 59460142,
-          "etag": ""66fbd9da-38b4a2e"",
-          "last-modified": "Tue, 01 Oct 2024 11:15:38 GMT",
+          "content-length": 60551984,
+          "etag": ""6708e050-39bf330"",
+          "last-modified": "Fri, 11 Oct 2024 08:22:40 GMT",
         },
-        "oldDate": "Fri, 13 Sep 2024 06:52:00 GMT",
+        "oldDate": "Fri, 11 Oct 2024 08:22:40 GMT",
         "oldHeaders": {
-          "content-length": 70395389,
-          "etag": ""66e3e110-43225fd"",
-          "last-modified": "Fri, 13 Sep 2024 06:52:00 GMT",
+          "content-length": 60551984,
+          "etag": ""6708e050-39bf330"",
+          "last-modified": "Fri, 11 Oct 2024 08:22:40 GMT",
         },
-        "prettySize": "70.4 MB",
-        "size": 70395389,
+        "prettySize": "60.6 MB",
+        "size": 60551984,
       }
     `)
   })

@@ -64,5 +64,8 @@
   },
   "volta": {
     "node": "20.12.1"
+  },
+  "dependencies": {
+    "@vitest/ui": "^2.1.2"
   }
 }

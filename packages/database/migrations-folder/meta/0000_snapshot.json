@@ -314,8 +314,8 @@
           "notNull": true,
           "autoincrement": false
         },
-        "waypoints": {
-          "name": "waypoints",
+        "segments": {
+          "name": "segments",
           "type": "text",
           "primaryKey": false,
           "notNull": true,

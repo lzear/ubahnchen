@@ -1,23 +1,20 @@
 import { addDays, addHours, format, getDay } from 'date-fns'
 import { toDate } from 'date-fns-tz'
-import { inArray } from 'drizzle-orm'
 import _ from 'lodash'
 
 import type { City } from '@ubahnchen/cities'
 import { P } from '@ubahnchen/cities/node'
-import { drizzleTables, getDatabase } from '@ubahnchen/database'
+import { getDatabase } from '@ubahnchen/database'
 
 import { weekDays } from './_date-utils'
-import type { Pair, TripByHour, TripByHourRow, TripSegment } from './_keyframes'
+import type { TripByHour, TripByHourRow } from './_keyframes'
 
 export const rowToTripByHourRow = ({
   tripStops,
   day,
-  pairs,
 }: {
   tripStops: TripByHourRow[]
   day: string
-  pairs: Pair[]
 }): TripByHour => {
   const noon = toDate(`${day}T12:00:00`, { timeZone: 'Europe/Berlin' })
   const gtfsDayStart = addHours(noon, -12)
@@ -36,58 +33,10 @@ export const rowToTripByHourRow = ({
     end_time: t.end_time + gtfsDayStartS,
     stops: tripStops.map((tripStop) => ({
       stop_id: tripStop.stop_id,
-      // stop_idx: tripStop.stop_idx,
-      // stop_sequence: tripStop.stop_sequence,
       arrival_time: tripStop.arrival_time + gtfsDayStartS,
       departure_time: tripStop.departure_time + gtfsDayStartS,
     })),
-    segments: makeSegments(tripStops, pairs).map(
-      ({ start_time, end_time, ...rest }) => ({
-        start_time: start_time + gtfsDayStartS,
-        end_time: end_time + gtfsDayStartS,
-        ...rest,
-      }),
-    ),
   }
-}
-
-const makeSegments = (
-  tripStops: TripByHourRow[],
-  pairs: Pair[],
-): TripSegment[] => {
-  const segments: TripSegment[] = []
-
-  let prev: { stopId: string; time: number } | undefined = undefined
-
-  for (const tripStop of tripStops) {
-    if (prev) {
-      const pair = pairs.find(
-        (p) =>
-          p.route_id === tripStop.route_id &&
-          p.stop_id_1 === prev!.stopId &&
-          p.stop_id_2 === tripStop.stop_id,
-      )
-      if (!pair) throw new Error('pair not found')
-      segments.push({
-        type: 'running',
-        start_time: prev.time,
-        end_time: tripStop.departure_time,
-        start_stop_id: prev.stopId,
-        end_stop_id: tripStop.stop_id,
-        stop_pair_idx: pair.idx,
-      })
-    }
-    if (tripStop.arrival_time !== tripStop.departure_time)
-      segments.push({
-        type: 'paused',
-        start_time: tripStop.departure_time,
-        end_time: tripStop.arrival_time,
-        stop_id: tripStop.stop_id,
-      })
-    prev = { stopId: tripStop.stop_id, time: tripStop.departure_time }
-  }
-
-  return segments
 }
 
 export const findTripsHourForDay = ({
@@ -161,19 +110,8 @@ export const findTripsHourForDay = ({
   }
   const rows = stmt.all(parameters)
 
-  const stopPairs = drizzleTables.stopPairs
-
-  const routeIds = rows.map((r) => r.route_id)
-  const uniqueRouteIds = [...new Set(routeIds)]
-
-  const pairs = database.drizzled
-    .select()
-    .from(stopPairs)
-    .where(inArray(stopPairs.route_id, uniqueRouteIds))
-    .all()
-
   return Object.values(_.groupBy(rows, 'trip_id')).map((tripStops) =>
-    rowToTripByHourRow({ tripStops, day, pairs }),
+    rowToTripByHourRow({ tripStops, day }),
   )
 }
 
@@ -209,14 +147,4 @@ export const findTripsHour = ({
   })
 
   return [...tripsYesterday, ...tripsToday]
-  //   .sort((a, b) => a.start_time - b.start_time)
-  //   .map((trip) => {
-  //     const keyframes = tripKeyFrames(trip, mapName)
-  //     const keyframes2 = tripKeyFrames2(keyframes)
-  //     const { stops, ...tripWithoutStops } = trip
-  //     return {
-  //       ...tripWithoutStops,
-  //       keyframes2,
-  //     }
-  //   })
 }

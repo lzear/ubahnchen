@@ -19,7 +19,6 @@ export const SwitchDraw = () => {
     >
       <span>Draw</span>
       <Switch
-        size="sm"
         id="switch-draw"
         onCheckedChange={(e) => setValue(e)}
         checked={value ?? false}

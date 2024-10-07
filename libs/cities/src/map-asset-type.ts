@@ -1,8 +1,10 @@
+import type { Point } from '@ubahnchen/utils'
+
 export type StopsPositions = Record<
-  string,
+  string, // stop_id
   {
     stop_name: string
     stop_id: string
-    point: [number, number]
+    point: Point
   }
 >

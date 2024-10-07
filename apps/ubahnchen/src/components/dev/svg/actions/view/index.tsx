@@ -29,10 +29,7 @@ export const ViewSvg = async ({
 
         <SplitPanels
           direction="vertical"
-          panels={[
-            <Code key="src" file={file} />,
-            <PinchedSvgFromCode key="svg" />,
-          ]}
+          panels={[<Code key="src" />, <PinchedSvgFromCode key="svg" />]}
         />
       </div>
     </SourceContextProvider>

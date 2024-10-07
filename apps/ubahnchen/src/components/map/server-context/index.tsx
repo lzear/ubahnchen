@@ -9,27 +9,28 @@ import type { City } from '@ubahnchen/cities'
 import { cities, getMap } from '@ubahnchen/cities'
 import type { MapPaths } from '@ubahnchen/cities/node'
 import { MapAssetName, MapAssets, P } from '@ubahnchen/cities/node'
-import { drizzleTables, getDatabase } from '@ubahnchen/database'
+import {
+  drizzleTables,
+  type DrizzleTypes,
+  getDatabase,
+} from '@ubahnchen/database'
+import type { Segment } from '@ubahnchen/gtfs'
 
 import { ServerContextProviderClient } from './client'
-import type { ServerContextProps, StopPair, WP } from './type'
+import type { ServerContextProps } from './type'
 
 const { stopPairsSvgPaths, stopPairs, routes, stops } = drizzleTables
 
 const getStopPathSvgs = (c: City, m: string) => {
   const database = getDatabase(P(c).SQLITE.BIG).drizzled
   return database
-    .select({
-      stopPairIdx: stopPairsSvgPaths.stop_pair_idx,
-      waypoints: stopPairsSvgPaths.waypoints,
-      length: stopPairsSvgPaths.length,
-    })
+    .select()
     .from(stopPairsSvgPaths)
     .where(eq(stopPairsSvgPaths.map, m))
     .all()
-    .map(({ waypoints, ...rest }) => ({
+    .map(({ segments, ...rest }) => ({
       ...rest,
-      waypoints: JSON.parse(waypoints) as WP[],
+      segments: JSON.parse(segments) as Segment[],
     }))
 }
 
@@ -54,7 +55,10 @@ const getStops = (c: City) => {
   return database.select().from(stops).all()
 }
 
-const getStopPairs = (c: City, routeIds: string[]): StopPair[] => {
+const getStopPairs = (
+  c: City,
+  routeIds: string[],
+): DrizzleTypes['stopPairs'][] => {
   const database = getDatabase(P(c).SQLITE.BIG).drizzled
   return database
     .select()

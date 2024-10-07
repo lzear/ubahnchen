@@ -1,6 +1,7 @@
 // import { parentPort, workerData } from 'node:worker_threads'
 
-import type { Point } from '../utils'
+import type { Point } from '@ubahnchen/utils'
+
 import { makeRegularPoints, randomPoint } from '../utils'
 
 import { makePairs } from './01-munkres'

@@ -17,7 +17,6 @@ export const Prettify = () => {
       pressed={isPretty}
       onPressedChange={() => setCode(xmlFormat(code))}
       className="h-6 border"
-      size="xs"
     >
       Pretty
     </Toggle>

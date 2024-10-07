@@ -132,7 +132,7 @@ CREATE TABLE stop_pairs_validation
 CREATE TABLE stop_pairs_svg_paths (
     stop_pair_idx integer NOT NULL,
     map text NOT NULL,
-    waypoints text NOT NULL,
+    segments text NOT NULL,
     length real NOT NULL,
     FOREIGN KEY (stop_pair_idx) REFERENCES stop_pairs(idx) ON UPDATE no action ON DELETE no action
 );

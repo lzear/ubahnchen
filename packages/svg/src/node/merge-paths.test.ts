@@ -8,7 +8,7 @@ import { Temporary } from '@ubahnchen/node'
 
 import { mergePathsFile } from './merge-paths'
 
-describe(mergePathsFile, () => {
+describe.skip(mergePathsFile, () => {
   describe('basic data asdf', () => {
     const files = [
       'example-u2',

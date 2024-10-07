@@ -1,8 +1,9 @@
 import dynamic from 'next/dynamic'
 
+import type { UrlParameterValue } from '@/components/dev/search-parameters'
+
 import 'server-only'
 
-import type { UrlParameterValue } from '../../../../[city]/search-parameters'
 import type { CityMapParam } from '../params'
 
 import { getShapes } from './split-shapes.action'
