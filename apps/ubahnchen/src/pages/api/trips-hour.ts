@@ -16,6 +16,7 @@ export const setCachingHeader = (
     'Cache-Control',
     `public, max-age=${maxAge}, s-maxage=${maxAge}`,
   )
+
 const api = (
   request: NextApiRequest,
   response: NextApiResponse<TripByHour[] | { error: string }>,

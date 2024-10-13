@@ -2,8 +2,10 @@ import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useShallow } from 'zustand/react/shallow'
 
+import { useMapContext } from '@/components/map/server-context/client'
 import { useUbahnStore } from '@/store'
 import type { City } from '@ubahnchen/cities'
+import type { DrizzleTypes } from '@ubahnchen/database'
 
 import { getRouteTypes } from '../routes/routes'
 import { computeVirtualTime, getVirtualTime } from '../time/virtual-time'
@@ -38,36 +40,20 @@ export const useTrips = (city: City, map: string) => {
   })
 }
 
-export const useTripsHour = (city: City, map: string) => {
-  const routeTypes = getRouteTypes(city, map)
-  const routeTypesStr = routeTypes.join(',')
+export const useTripsHour = () => {
+  const { city, map, routes } = useMapContext()
+  const routeTypesStr = getRouteTypes(city, map).join(',')
   const unpause = useUbahnStore((s) => s.unpause)
   useEffect(() => {
-    void tripsFetcher
-      .fetch({
-        date: new Date(),
-        city,
-        routeTypes: routeTypesStr.split(',').map(Number),
-      })
-      .then(() => {
-        return useUbahnStore.setState({
-          loading: false,
-          paused: false,
-        })
-      })
-
-    const int = setInterval(() => {
-      const date = getVirtualTime()
-      void tripsFetcher.fetch({
-        date,
-        city,
-        routeTypes: routeTypesStr.split(',').map(Number),
-      })
-    }, 1000)
-
-    return () => {
-      clearInterval(int)
-    }
-  }, [city, routeTypes, routeTypesStr, unpause])
-  return tripsFetcher.getTrains()
+    const routeTypes = routeTypesStr.split(',').map(Number)
+    const routeMap = new Map<string, DrizzleTypes['routes']>()
+    for (const route of routes) routeMap.set(route.route_id, route)
+    const f = () =>
+      tripsFetcher.fetch({ date: getVirtualTime(), city, routeTypes }, routeMap)
+    void f().then(() =>
+      useUbahnStore.setState({ loading: false, paused: false }),
+    )
+    const int = setInterval(() => void f(), 1000)
+    return () => clearInterval(int)
+  }, [city, routeTypesStr, routes, unpause])
 }

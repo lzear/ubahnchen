@@ -4,7 +4,7 @@ import { computeVirtualTime } from '@/services/time/virtual-time'
 
 import type { StateCreatorWithSubscribe } from './types'
 
-export const INITIAL_SPEED = 500
+export const INITIAL_SPEED = 50
 
 interface ClockSliceValues {
   frameDelta?: number

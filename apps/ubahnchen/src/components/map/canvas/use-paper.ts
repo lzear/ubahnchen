@@ -7,7 +7,7 @@ import { useMapContext } from '../server-context/client'
 import { useGestures } from './gestures'
 import { convertPublicPath } from './import-svg'
 
-const instance = new PaperJSRenderer()
+export const instance = new PaperJSRenderer()
 
 export const usePaper = () => {
   const { mapPaths } = useMapContext()

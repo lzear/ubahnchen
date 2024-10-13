@@ -4,9 +4,8 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { getRouteTypes } from '@/services/routes/routes'
 import { isCity } from '@ubahnchen/cities'
 import { P } from '@ubahnchen/cities/node'
+import type { DrizzleTypes } from '@ubahnchen/database'
 import { drizzleTables, getDatabase } from '@ubahnchen/database'
-
-import type { Pair } from './pairs'
 
 const ONE_WEEK = 86_400 * 7
 
@@ -20,7 +19,7 @@ export const setCachingHeader = (
   )
 const api = (
   request: NextApiRequest,
-  response: NextApiResponse<Pair[] | { error: string }>,
+  response: NextApiResponse<DrizzleTypes['stopPairs'][] | { error: string }>,
 ) => {
   const city = request.query.city
 
@@ -51,12 +50,7 @@ const api = (
   const routeIds = routesData.map((r) => r.route_id)
 
   const pairs = db.drizzled
-    .select({
-      stop_id_1: stopPairs.stop_id_1,
-      stop_id_2: stopPairs.stop_id_2,
-      idx: stopPairs.idx,
-      route_id: stopPairs.route_id,
-    })
+    .select()
     .from(stopPairs)
     .where(inArray(stopPairs.route_id, routeIds))
     .all()

@@ -19,6 +19,7 @@ export const computeVirtualTime = ({
 }: VirtualTimeParams) => {
   if (paused) return new Date(virtualTimeZero)
   const now = +Date.now()
+
   const diffX = (now - setAt) * speed
   return new Date(virtualTimeZero + diffX)
 }
