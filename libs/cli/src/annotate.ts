@@ -13,6 +13,7 @@ export const annotate = async (cc: City[], mm: string | undefined) => {
           P(c, m).SRC.SVG.STEP_10_SIMPLIFIED,
           P(c, m).SRC.SVG.STEP_20_ANNOTATED,
           'id',
+          'id-',
         )
         array.push(['✅ ', c, m])
       } catch (error) {

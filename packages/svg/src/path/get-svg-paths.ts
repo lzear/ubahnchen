@@ -25,6 +25,10 @@ export function extractSVGPaths<S extends boolean = true>(
       const d = $element.attr('d')
       const color = $element.attr('stroke')
       if (!strict) return { id, d, color } as R<S>
+
+      for (const a of ['id', 'd', 'stroke'])
+        if (!$element.attr(a))
+          throw new Error(`Missing attributes ${a} in ${$element.toString()}`)
       if (!id || !d || !color) throw new Error('Missing attributes')
       return { id, d, color }
     })
