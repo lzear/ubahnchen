@@ -1,12 +1,8 @@
 'use client'
 
-import { useTripsHour } from '@/services/trips/use-trips'
-
-import { useOnFrame } from './use-on-frame'
-
 export const Trips = () => {
-  useOnFrame()
-  useTripsHour()
+  // useOnFrame()
+  // useTripsHour()
   return (
     <div>
       trips

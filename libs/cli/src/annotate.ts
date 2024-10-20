@@ -16,9 +16,7 @@ export const annotate = async (cc: City[], mm: string | undefined) => {
           'id-',
         )
         array.push(['✅ ', c, m])
-      } catch (error) {
-        console.log(`antoinelog e`, error)
-
+      } catch {
         array.push(['❌ ', c, m])
       }
   logStrings(log2DArray(array))

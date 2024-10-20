@@ -78,8 +78,6 @@ program
   .option('-c, --city <city>', 'City name')
   .option('-m, --map <map>', 'Map name')
   .action(async ({ city, map }) => {
-    console.log(`antoinelog 234`, 234)
-
     for (const c of getCities(city)) await buildPaths(c, map)
   })
 

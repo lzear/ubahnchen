@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-return */
 
+import MonacoWebpackPlugin from 'monaco-editor-webpack-plugin'
 // import nextMdx from '@next/mdx'
 //
 // const withMDX = nextMdx()
@@ -10,12 +11,14 @@ const nextConfig = {
     esmExternals: true,
   },
   transpilePackages: ['@ubahnchen/cities'],
+
   webpack(config, { isServer }) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg'),
     )
 
+    config.plugins.push(new MonacoWebpackPlugin())
     config.module.rules.push(
       // Reapply the existing rule, but only for svg imports ending in ?url
       {

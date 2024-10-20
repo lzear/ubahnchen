@@ -39,7 +39,6 @@ describe.each(citiesList)('%s', (city) => {
       .all()
     // arbitrary value just to check if it goes low.
     // Currently, 431 stop_pairs_svg_paths
-    console.log(`antoinelog table, c`, table, c)
 
     expect(c?.count).gt(400)
   })

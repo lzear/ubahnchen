@@ -18,6 +18,7 @@ export interface ServerContextProps {
   // mapConfig: MapConfig
   // cityConfig: CityConfig
   gtfs: CityConfig['gtfs']
+  mapNames: string[]
 }
 
 export type ServerContextProviderProps = {

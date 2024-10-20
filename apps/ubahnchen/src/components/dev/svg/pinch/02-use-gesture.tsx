@@ -1,5 +1,6 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import React, { useEffect, useRef } from 'react'
 import { animated, useSpring } from '@react-spring/web'
 import {
@@ -17,10 +18,11 @@ import { isDraggingAtom } from '../show-svg/draggable-circle/02-react'
 
 const useGesture = createUseGesture([dragAction, pinchAction, wheelAction])
 
-type Props = { children: React.ReactNode }
+type Props = { children: ReactNode; className?: string }
+
 export const pinchScaleRef = { current: 1 }
 
-export const Pinch = ({ children }: Props) => {
+export const Pinch = ({ children, className }: Props) => {
   useLogMount('pinch')
 
   const [springs] = useSpring(
@@ -80,6 +82,7 @@ export const Pinch = ({ children }: Props) => {
   return (
     <animated.div
       ref={divRef}
+      className={className}
       style={{
         x: springs.x,
         y: springs.y,

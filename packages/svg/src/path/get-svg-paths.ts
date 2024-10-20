@@ -12,8 +12,6 @@ export function extractSVGPaths<S extends boolean = true>(
 
   return $('path')
     .map((_, element) => {
-      // console.log(`antoinelog element`, element)
-
       const $element = $(element)
       // return {
       //   id: $element.attr('id'),

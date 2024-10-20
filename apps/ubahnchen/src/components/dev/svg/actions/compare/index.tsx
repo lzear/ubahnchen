@@ -9,10 +9,7 @@ import { SourceContextProvider } from '@/components/dev/svg/source-code/source-c
 
 import { ActionBaseTop } from '../base/action-base-top'
 
-import { ColorPicker } from './color-picker'
-import { SvgOut } from './svg-out'
-
-export const DijkstraSvg = async ({
+export const Compare = async ({
   searchParams,
 }: {
   searchParams?: Record<string, string>
@@ -27,13 +24,9 @@ export const DijkstraSvg = async ({
       <div className="flex h-screen w-screen flex-col align-middle">
         <ActionBaseTop>
           <SelectSvgFile files={files} />
-          <ColorPicker />
         </ActionBaseTop>
 
-        <SplitPanels
-          direction="vertical"
-          panels={[<MonacoDiff key="src" />, <SvgOut key="svg" />]}
-        />
+        <SplitPanels direction="vertical" panels={[<MonacoDiff key="src" />]} />
       </div>
     </SourceContextProvider>
   )

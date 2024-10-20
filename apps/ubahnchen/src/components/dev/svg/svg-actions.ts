@@ -1,4 +1,12 @@
 export const SvgActions = {
+  // transform: {
+  //   name: 'Transform',
+  //   description: 'Operate transformations on the SVG',
+  // },
+  compare: {
+    name: 'Compare',
+    description: 'Compare two SVGs',
+  },
   view: {
     name: 'View',
     description: 'View the SVG',

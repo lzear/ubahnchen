@@ -69,9 +69,6 @@ const getStopPairs = (
 
 export const getServerProps = cache(
   async (city: City, map: string): Promise<ServerContextProps> => {
-    console.log(`antoinelog city`, city)
-    console.log(`antoinelog map`, map)
-
     const stopPairSvgs = getStopPathSvgs(city, map)
     const stopPositions = await getStopPositions(city, map)
     const mapPaths: MapPaths = P(city, map)
@@ -79,6 +76,9 @@ export const getServerProps = cache(
     const routeIds = routes.map((r) => r.route_id)
     const stopPairs = getStopPairs(city, routeIds)
     const stops = getStops(city)
+
+    const mapNames = Object.keys(cities[city].maps)
+
     return {
       city,
       map,
@@ -92,6 +92,7 @@ export const getServerProps = cache(
       // mapConfig: getMap(city, map),
       // cityConfig: cities[city],
       gtfs: cities[city].gtfs,
+      mapNames,
     }
   },
 )

@@ -23,8 +23,6 @@ export const makePairMap = (city: City, map: string): Map<string, Paaair> => {
     .where(eq(stopPairsSvgPaths.map, map))
     .all()
 
-  console.log(`antoinelog pairs[0]`, pairs[0])
-
   const maap = new Map<string, Paaair>()
   const mkey = (p: Paaair) =>
     `${p.stop_pairs.route_id}-${p.stop_pairs.stop_id_1}-${p.stop_pairs.stop_id_2}`

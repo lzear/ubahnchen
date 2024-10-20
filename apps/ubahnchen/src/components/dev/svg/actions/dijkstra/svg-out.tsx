@@ -54,8 +54,6 @@ export const SvgOut = () => {
           paths,
           color ? `#${color}` : undefined,
         )
-        console.log(`antoinelog result`, result)
-
         const svgElems: JSX.Element[] = []
         let prev = null
         let prev1 = null

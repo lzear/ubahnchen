@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Compare } from '@/components/dev/svg/actions/compare'
 import { DijkstraSvg } from '@/components/dev/svg/actions/dijkstra'
 import { DrawSvg } from '@/components/dev/svg/actions/draw'
 import { ViewSvg } from '@/components/dev/svg/actions/view'
@@ -11,6 +12,7 @@ const components = {
   draw: DrawSvg,
   view: ViewSvg,
   dijkstra: DijkstraSvg,
+  compare: Compare,
 } satisfies Record<
   SvgAction,
   React.FC<{ searchParams?: Record<string, string> }>

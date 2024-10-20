@@ -80,8 +80,6 @@ ${code.slice(idx)}`,
       )
 
     const svg = svgTempRef.current
-    console.log(`antoinelog svg`, svg)
-
     if (!svgContainerRef.current || !svg) return
     const gesture = initDrawing(svgContainerRef.current, svg)
     return () => {
